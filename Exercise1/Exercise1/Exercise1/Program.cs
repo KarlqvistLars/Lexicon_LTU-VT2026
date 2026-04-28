@@ -12,7 +12,6 @@ namespace Exercise1
             /// for the user to add, show, save, or exit the program.
             /// </summary>
             List<Employee> list = new List<Employee>();
-            Console.WriteLine(Environment.GetCommandLineArgs()[0].Replace("Exercise1.dll", ""));
             string installationPath = Environment.GetCommandLineArgs()[0].Replace("Exercise1.dll", "")+"dbfile.txt";
 
             if(File.Exists(installationPath)&& new FileInfo(installationPath).Length > 0) {
@@ -37,7 +36,6 @@ namespace Exercise1
                 {
                     Console.WriteLine("Save people");
                     FileHandler.SavePeople(list, installationPath);
-                    break;
                 }
                 else if (input == "4")
                 {
