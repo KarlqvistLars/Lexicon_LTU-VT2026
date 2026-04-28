@@ -25,9 +25,10 @@ personalregister. De har endast två krav:<br><br>
 
 ### Uppgift 1<br>
 Vilka klasser bör ingå i programmet?<br>
+#### SVAR: Employee och FileHandler.<br>
 ### Uppgift 2<br>
 Vilka attribut och metoder bör ingå i dessa klasser?<br>
 ### Uppgift 3<br>
 Skriv programmet<br>
 
-### Tillbaka 
+### [Tillbaka](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/tree/main)
