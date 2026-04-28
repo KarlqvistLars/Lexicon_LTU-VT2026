@@ -25,9 +25,14 @@ personalregister. De har endast två krav:<br><br>
 
 ### Uppgift 1<br>
 Vilka klasser bör ingå i programmet?<br>
-#### SVAR: Employee och FileHandler.<br>
+#### SVAR: Program, Employee och FileHandler.<br>
 ### Uppgift 2<br>
 Vilka attribut och metoder bör ingå i dessa klasser?<br>
+#### SVAR: 
+<br>Program - Innehåller Main, initialiseingar och menyhantering
+<br>Employee - Class som skapar person med attributen: Födelseår, namn och timlön.
+<br>FileHandler - Class som hanterar misc och filhantering<br>
+<br>
 ### Uppgift 3<br>
 Skriv programmet<br>
 
