@@ -33,6 +33,8 @@ Vilka attribut och metoder bör ingå i dessa klasser?<br>
 Program - Innehåller Main, initialiseingar och menyhantering
 <br>Employee - Class som skapar person med attributen: födelseår, namn och timlön.
 <br>FileHandler - Class som hanterar misc och filhantering<br>
+Innehåller method'erna:<br>
+AddPerson, ShowPerson, SavePeople och LoadPeople
 <br>
 ### Uppgift 3<br>
 Skriv programmet<br>
