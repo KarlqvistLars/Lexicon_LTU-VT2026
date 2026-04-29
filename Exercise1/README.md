@@ -13,7 +13,9 @@ Inlämning Instruktioner. Finns även en snabbguide att följa under C-Sharp => 
 > 7. Efter det Push med pilen uppåt. Alternativt Sync med två pilar i en cirkel.
 > 8. Kontrollera enligt punkt 4.
 > 9. Klart
-<br><br>
+
+<br>
+<br>
 Se till att skicka upp koden med god marginal innan tiden är ute!
 Bakgrund
 Ett litet företag i restaurangbranschen kontaktar dig för att utveckla ett litet
