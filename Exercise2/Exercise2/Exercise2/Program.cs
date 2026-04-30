@@ -118,7 +118,6 @@ namespace Exercise2
         /// <param name="type"></param>
         internal static void ExecuteTicketTransaction(string? input, int type)
         {
-            Console.WriteLine("Executing ticket transaction..."+ input + " " + type);
             switch (type)
             {
                 case 0:
@@ -141,7 +140,7 @@ namespace Exercise2
                 default:
                     break;
             }
-
+            Console.WriteLine("\nTryck på Enter för att återgå till menyn.");
             Console.ReadLine();
             PrintBioMenu();
         }
