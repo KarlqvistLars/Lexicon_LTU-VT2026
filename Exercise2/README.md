@@ -7,13 +7,13 @@ Skapa en huvudmeny för programmet som håller det vid liv och informerar
 användaren.
 För att skapa programmets huvudmeny ska ni göra följande:
 <br>
-- [x] 1. Berätta för användaren att de har kommit till huvudmenyn och de kommer navigera
+✔️ 1. Berätta för användaren att de har kommit till huvudmenyn och de kommer navigera
 genom att skriva in siffror för att testa olika funktioner.<br>
-- [ ] 2. Skapa skalet till en Switch-sats som till en början har Två Cases. Ett för ”0” som
+✔️ 2. Skapa skalet till en Switch-sats som till en början har Två Cases. Ett för ”0” som
 stänger ner programmet och ett default som berättar att det är felaktig input.<br>
-- [ ] 3. Skapa en oändlig iteration, alltså något som inte tar slut innan vi säger till att den
+✔️ 3. Skapa en oändlig iteration, alltså något som inte tar slut innan vi säger till att den
 ska ta slut. Detta löser ni med att skapa en egen bool med tillhörande while-loop.<br>
-- [ ] 4. Bygg ut menyn med val att exekvera de övriga övningarna.<br>
+✔️ 4. Bygg ut menyn med val att exekvera de övriga övningarna.<br>
 
 ### Menyval 1: Ungdom eller pensionär<br>
 För att exemplifiera if-satser skall ni implementera, på uppdrag av en teoretisk lokal bio,
@@ -70,8 +70,8 @@ Glöm inte att kommentera er kod noga så att ni eller andra enkelt kan förstå
 framtiden.
 Extra uppgifter för de som har tid över:
 - [ ] 1. Validera alla inputs från användaren. Se till att programmet inte kraschar vid
-felaktig input.
-- [ ] 2. Barn under fem och pensionärer över 100 går gratis.
+felaktig input.<br>
+✔️ 2. Barn under fem och pensionärer över 100 går gratis.
 - [ ] 3. Hantera flera mellanslag i rad i del 3.
 - [ ] 4. Vad du tycker verkar vara intressant att få med eller vill träna på!
 

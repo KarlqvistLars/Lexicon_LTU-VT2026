@@ -24,13 +24,13 @@ namespace Exercise2
             var ticket7 = Program.ChooseTicketType(p7);
 
             // Assert
-            Assert.Equal(Exercise2.Program.TicketType. , ticket1);
-            Assert.Equal(Exercise2.Program.TicketType.Adult, ticket2);
+            Assert.Equal(Exercise2.Program.TicketType.Free, ticket1);
+            Assert.Equal(Exercise2.Program.TicketType.Youth, ticket2);
             Assert.Equal(Exercise2.Program.TicketType.Adult, ticket3);
             Assert.Equal(Exercise2.Program.TicketType.Adult, ticket4);
-            Assert.Equal(Exercise2.Program.TicketType.Adult, ticket5);
-            Assert.Equal(Exercise2.Program.TicketType.Adult, ticket6);
-            Assert.Equal(Exercise2.Program.TicketType.Adult, ticket7);
+            Assert.Equal(Exercise2.Program.TicketType.Senior, ticket5);
+            Assert.Equal(Exercise2.Program.TicketType.Senior, ticket6);
+            Assert.Equal(Exercise2.Program.TicketType.Free, ticket7);
         }
     }
 }
