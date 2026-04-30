@@ -30,7 +30,6 @@ förlopp:<br>
 6. Om ovanstående är sant skall programmet skruva ut: Pensionärspris: 90kr
 7. Annars skall programmet skriva ut: Standardpris: 120kr
 <br>
-<br>
 Vi vill även få möjlighet att kunna räkna ut priset för ett helt sällskap. Lägg till det
 alternativet i huvudmenyn (ett case “2”). Det är även ok att ha alternativet i en undermeny.
 Vi anger då först hur många vi är som ska gå på bio. Frågar sedan efter ålder på var och en
