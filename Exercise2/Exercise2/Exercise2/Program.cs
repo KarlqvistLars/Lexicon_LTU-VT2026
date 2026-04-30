@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.IO;
-using System.Threading;
-using static Exercise2.Program;
 
 namespace Exercise2
 {
@@ -142,7 +137,7 @@ namespace Exercise2
                 default:
                     break;
             }
-            Console.WriteLine("\nTryck på Enter för att återgå till menyn.");
+            Console.WriteLine("\nTryck på Enter för att återgå till menyn...");
             Console.ReadLine();
             PrintBioMenu();
         }
@@ -234,20 +229,37 @@ namespace Exercise2
         private static void PrintLoopTenMenu()
         {
             Console.Clear();
-            Console.Write("\n\nAnge en mening: ");
+            Console.Write("\u001b[4mVälkommen till PRINT-TEN!\u001b[0m");
+            Console.Write("\nSkriv en \"oneliner\" mening: ");
             string? sentence = Console.ReadLine();
             for (int i = 0; i < COUNT_TO_TEN; i++)
             {
                 Console.WriteLine(sentence);
             }
             Console.WriteLine();
-            Console.WriteLine("\nTryck på Enter för att återgå till menyn.");
+            Console.WriteLine("\nTryck på Enter för att återgå till menyn...");
             Console.ReadLine();
             PrintProgramChoiceMenu();
         }
         private static void PrintThirdWordMenu()
         {
-            throw new NotImplementedException();
+            Console.Clear();
+            Console.Write("\u001b[4mVälkommen till Det 3:e Ordet!\u001b[0m");
+            Console.Write("\nSkriv en mening innehållande mer än 3st ord: ");
+            string? sentence = Console.ReadLine();
+            string[] words = sentence?.Split(' ') ?? Array.Empty<string>();
+            Console.WriteLine();
+            if (words.Length >= 3)
+            {
+                Console.WriteLine("Det 3:e ordet är: " + words[2]);
+            }
+            else
+            {
+                Console.WriteLine("Mening innehåller inte tillräckligt med ord.");
+            }
+            Console.WriteLine("\nTryck på Enter för att återgå till menyn...");
+            Console.ReadLine();
+            PrintProgramChoiceMenu();
         }
     }
  }
