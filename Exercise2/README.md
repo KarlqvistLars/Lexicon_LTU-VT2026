@@ -70,7 +70,7 @@ Glöm inte att kommentera er kod noga så att ni eller andra enkelt kan förstå
 framtiden.
 Extra uppgifter för de som har tid över:
 - [ ] 1. Validera alla inputs från användaren. Se till att programmet inte kraschar vid
-felaktig input.
+felaktig input.<br>
 ✔️ 2. Barn under fem och pensionärer över 100 går gratis.
 - [ ] 3. Hantera flera mellanslag i rad i del 3.
 - [ ] 4. Vad du tycker verkar vara intressant att få med eller vill träna på!
