@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 
 namespace Exercise2
@@ -8,7 +9,7 @@ namespace Exercise2
     {
         static void Main(string[] args)
         {
-            PrintHeadMenu();
+            PrintProgramChoiceMenu();
             do
             {
                 var input = Console.ReadLine();
@@ -16,10 +17,13 @@ namespace Exercise2
                 switch (input)
                 {
                     case "1":
-                        PrintMenuEnkelbiljett();
+                        PrintBioMenu();
                         break;
                     case "2":
-                        PrintMenuSamlingsbiljett();
+                        PrintLoopTenMenu();
+                        break;
+                    case "3":
+                        PrintThirdWordMenu();
                         break;
                     case "0":
                         Console.WriteLine("Exit");
@@ -30,17 +34,45 @@ namespace Exercise2
                 }
             } while (true);
         }
+
+        internal static void PrintProgramChoiceMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("\u001b[4mVälkommen till programvalmenyn!\u001b[0m");
+            Console.WriteLine("Detta är huvudmenyn för programmet.\nNi navigerar menyvalen genom att använda siffran och Enter för önskat val.\n");
+            Console.WriteLine("1. Köp biobiljett till Vuxen, Ungdom eller Pensionär.\n2. Upprepa 10ggr.\n3. Det 3:e ordet.\n0. Avsluta\n");
+            Console.Write("Ange menyval: ");
+        }
         /// <summary>
         /// Menyer för biobiljetter
         /// </summary>
         /// <returns></returns>
-        internal static void PrintHeadMenu()
+        internal static void PrintBioMenu()
         {
             Console.Clear();
             Console.WriteLine("\u001b[4mVälkommen på Bio!\u001b[0m");
             Console.WriteLine("Detta är huvudmenyn för biljettkassan.\nNi navigerar menyvalen genom att använda siffran och Enter för önskat val.\n");
-            Console.WriteLine("1. Köp enkelbiljett.\n2. Köp biljett till sällskap.\n0. Avsluta\n");
+            Console.WriteLine("1. Köp enkelbiljett.\n2. Köp biljett till sällskap.\n0. Tillbaka\n");
             Console.Write("Ange menyval: ");
+
+            var input = Console.ReadLine();
+
+            switch (input)
+            {
+                case "1":
+                    PrintMenuEnkelbiljett();
+                    break;
+                case "2":
+                    PrintMenuSamlingsbiljett();
+                    break;
+                case "0":
+                    PrintProgramChoiceMenu();
+                    return;
+                default:
+                    Console.WriteLine("Invalid input. Please try again.");
+                    break;
+            }
+
         }
         internal static void PrintMenuEnkelbiljett()
         {
@@ -82,7 +114,7 @@ namespace Exercise2
             }
 
             Console.ReadLine();
-            PrintHeadMenu();
+            PrintBioMenu();
         }
         private static void BuySingleTicket(string? input)
         {
@@ -107,6 +139,17 @@ namespace Exercise2
             }
         }
         private static void BuyCompanyTicket(string? input)
+        {
+            
+            throw new NotImplementedException();
+        }
+
+        private static void PrintThirdWordMenu()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void PrintLoopTenMenu()
         {
             throw new NotImplementedException();
         }
