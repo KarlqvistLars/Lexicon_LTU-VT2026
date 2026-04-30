@@ -7,13 +7,13 @@ Skapa en huvudmeny för programmet som håller det vid liv och informerar
 användaren.
 För att skapa programmets huvudmeny ska ni göra följande:
 <br>
-[x] 1. Berätta för användaren att de har kommit till huvudmenyn och de kommer navigera
-genom att skriva in siffror för att testa olika funktioner.
-[] 2. Skapa skalet till en Switch-sats som till en början har Två Cases. Ett för ”0” som
-stänger ner programmet och ett default som berättar att det är felaktig input.
-[] 3. Skapa en oändlig iteration, alltså något som inte tar slut innan vi säger till att den
-ska ta slut. Detta löser ni med att skapa en egen bool med tillhörande while-loop.
-[] 4. Bygg ut menyn med val att exekvera de övriga övningarna.<br>
+- [x] 1. Berätta för användaren att de har kommit till huvudmenyn och de kommer navigera
+genom att skriva in siffror för att testa olika funktioner.<br>
+- [] 2. Skapa skalet till en Switch-sats som till en början har Två Cases. Ett för ”0” som
+stänger ner programmet och ett default som berättar att det är felaktig input.<br>
+- [] 3. Skapa en oändlig iteration, alltså något som inte tar slut innan vi säger till att den
+ska ta slut. Detta löser ni med att skapa en egen bool med tillhörande while-loop.<br>
+- [] 4. Bygg ut menyn med val att exekvera de övriga övningarna.<br>
 
 ### Menyval 1: Ungdom eller pensionär<br>
 För att exemplifiera if-satser skall ni implementera, på uppdrag av en teoretisk lokal bio,
