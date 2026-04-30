@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_LTU_VT-2026\\Lexicon_LTU-VT2026\\Exercise2\\Exercise2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8FAF08EB-771D-43D4-BCAC-6B5A816443AE}|Exercise2\\Exercise2.csproj|c:\\projekt\\2026\\26014_dotnetutb\\code\\lexicon_ltu_vt-2026\\lexicon_ltu-vt2026\\exercise2\\exercise2\\exercise2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8FAF08EB-771D-43D4-BCAC-6B5A816443AE}|Exercise2\\Exercise2.csproj|solutionrelative:exercise2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CD678977-2C21-3F17-B434-A6AC068B98B5}|Exercise2\\Exercise2.csproj|c:\\projekt\\2026\\26014_dotnetutb\\code\\lexicon_ltu_vt-2026\\lexicon_ltu-vt2026\\exercise2\\exercise2\\exercise2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD678977-2C21-3F17-B434-A6AC068B98B5}|Exercise2\\Exercise2.csproj|solutionrelative:exercise2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Exercise2\\Program.cs",
               "ToolTip": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_LTU_VT-2026\\Lexicon_LTU-VT2026\\Exercise2\\Exercise2\\Exercise2\\Program.cs",
               "RelativeToolTip": "Exercise2\\Program.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAgwD8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAQwEIAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-30T10:20:31.128Z",
               "EditorCaption": ""

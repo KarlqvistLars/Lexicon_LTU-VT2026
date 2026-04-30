@@ -12,30 +12,23 @@ namespace Exercise2
             do
             {
                 var input = Console.ReadLine();
-                if (input == "1")
-                {
-                    PrintMenuEnkelbiljett();
 
-                }
-                else if (input == "2")
+                switch (input)
                 {
-                    Console.WriteLine("Show people");
-                    
-                }
-                else if (input == "3")
-                {
-                    Console.WriteLine("Save people");
-                    
-                }
-                else if (input == "4")
-                {
-                    Console.WriteLine("Exit");
-                    
-                    break;
+                    case "1":
+                        PrintMenuEnkelbiljett();
+                        break;
+                    case "2":
+                        PrintMenuSamlingsbiljett();
+                        break;
+                    case "0":
+                        Console.WriteLine("Exit");
+                        return;
+                    default:
+                        Console.WriteLine("Invalid input. Please try again.");
+                        break;
                 }
             } while (true);
-
-            Console.ReadLine();
         }
 
         /// <summary>
@@ -47,8 +40,7 @@ namespace Exercise2
             Console.Clear();
             Console.WriteLine("\u001b[4mVälkommen på Bio!\u001b[0m");
             Console.WriteLine("Detta är huvudmenyn för biljettkassan.\nNi navigerar menyvalen genom att använda siffran och Enter för önskat val.\n");
-            Console.WriteLine("1. Köp enkelbiljett.\n2. Köp biljett till sällskap.\n9. Avsluta\n");
-
+            Console.WriteLine("1. Köp enkelbiljett.\n2. Köp biljett till sällskap.\n0. Avsluta\n");
             Console.Write("Ange menyval: ");
         }
 
@@ -56,14 +48,32 @@ namespace Exercise2
         {
             Console.Clear();
             Console.WriteLine("\u001b[4mVälkommen på Bio!\u001b[0m");
-            Console.WriteLine("\n\n");
+            Console.WriteLine("\nEnkelbiljett");
             Console.WriteLine("\u001b[4mBiljettpriser\u001b[0m");
             Console.WriteLine("Vuxen: \t\t\t120kr");
             Console.WriteLine("Ungdom(under 20 år):\t80kr");
             Console.WriteLine("Pensionär(över 64år):\t120kr");
             Console.Write("Ange er ålder: ");
+            ExecuteTicketTransaction(Console.ReadLine(), 0);
         }
 
+        internal static void PrintMenuSamlingsbiljett()
+        {
+            Console.Clear();
+            Console.WriteLine("\u001b[4mVälkommen på Bio!\u001b[0m");
+            Console.WriteLine("\nSamlingsbiljett");
+            Console.WriteLine("\u001b[4mBiljettpriser\u001b[0m");
+            Console.WriteLine("Vuxen: \t\t\t120kr");
+            Console.WriteLine("Ungdom(under 20 år):\t80kr");
+            Console.WriteLine("Pensionär(över 64år):\t120kr");
+            Console.Write("Ange antal: ");
+            ExecuteTicketTransaction(Console.ReadLine(), 1);
+        }
+
+        internal static void ExecuteTicketTransaction(string? input, int type)
+        {
+            Console.WriteLine("Executing ticket transaction..."+ input + " " + type);
+        }
 
     }
  }
