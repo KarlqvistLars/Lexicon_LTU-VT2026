@@ -23,13 +23,13 @@ framgå i texten som förklarar menyn.
 För att göra detta skall ni använda er av en nästlad if-sats. Det skall ske enligt följande
 förlopp:<br>
 
-- [ ] 1. Användaren anger en ålder i siffror
-- [ ] 2. Programmet konverterar detta från en sträng till en int
-- [ ] 3. Programmet ser om personen är ungdom (under 20 år)
-- [ ] 4. Om det ovanstående är sant skall programmet skriva ut: Ungdomspris: 80kr
-- [ ] 5. Annars kollar programmet om personen är en pensionär (över 64 år)
-- [ ] 6. Om ovanstående är sant skall programmet skruva ut: Pensionärspris: 90kr
-- [ ] 7. Annars skall programmet skriva ut: Standardpris: 120kr
+- [x] 1. Användaren anger en ålder i siffror
+- [x] 2. Programmet konverterar detta från en sträng till en int
+- [x] 3. Programmet ser om personen är ungdom (under 20 år)
+- [x] 4. Om det ovanstående är sant skall programmet skriva ut: Ungdomspris: 80kr
+- [x] 5. Annars kollar programmet om personen är en pensionär (över 64 år)
+- [x] 6. Om ovanstående är sant skall programmet skruva ut: Pensionärspris: 90kr
+- [x] 7. Annars skall programmet skriva ut: Standardpris: 120kr
 <br>
 Vi vill även få möjlighet att kunna räkna ut priset för ett helt sällskap. Lägg till det
 alternativet i huvudmenyn (ett case “2”). Det är även ok att ha alternativet i en undermeny.
