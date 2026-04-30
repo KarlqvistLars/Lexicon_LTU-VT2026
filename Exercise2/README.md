@@ -1,5 +1,5 @@
 # C# Övning 2 - Flöde via loopar och strängmanipulation
-**OBS - Resultatet av övningen skall visas för lärare och godkännas innan den kan anses vara genomförd.**
+**OBS - Resultatet av övningen skall visas för lärare och godkännas innan den kan anses vara genomförd.**<br>
 Övningen kan skrivas helt i programklassen med menyn i Main-metoden.
 </br></br>
 **Huvudmeny**<br>
@@ -30,16 +30,14 @@ förlopp:<br>
 6. Om ovanstående är sant skall programmet skruva ut: Pensionärspris: 90kr
 7. Annars skall programmet skriva ut: Standardpris: 120kr
 <br>
-<br>
 Vi vill även få möjlighet att kunna räkna ut priset för ett helt sällskap. Lägg till det
 alternativet i huvudmenyn (ett case “2”). Det är även ok att ha alternativet i en undermeny.
 Vi anger då först hur många vi är som ska gå på bio. Frågar sedan efter ålder på var och en
 och skriver sedan ut en sammanfattning i konsolen som ska innehålla följande:<br>
 <br>
 ● Antal personer<br>
-● Samt totalkostnad för hela sällskapet
-<br>
-<br>
+● Samt totalkostnad för hela sällskapet<br>
+
 ### Menyval 2: Upprepa tio gånger<br>
 För att använda en annan typ av iteration skall ni här implementera en for-loop. Detta ska
 ni skapa för att upprepa något en användare skriver in tio gånger. Det ska alltså inte
