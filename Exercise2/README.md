@@ -3,7 +3,7 @@
 Övningen kan skrivas helt i programklassen med menyn i Main-metoden.
 </br></br>
 <style>
-p {color:blue;}
+p {color:#811;}
 </style>
 <p>okay</p>
 **Huvudmeny**<br>
