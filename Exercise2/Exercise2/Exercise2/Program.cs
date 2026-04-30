@@ -1,23 +1,46 @@
 ﻿using System;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Exercise2
 {
     internal class Program
     {
         const int COUNT_TO_TEN = 10;
+        /// <summary>
+        /// Enumeration för biljetttyper, där varje typ representerar en kategori av biobiljetter baserat på ålder: Vuxen, Ungdom, Pensionär och Fribiljett.
+        /// </summary>
         enum TicketType
         {
             Adult,
             Youth,
-            Senior
+            Senior,
+            Free
         }
+        /// <summary>
+        /// Enumartion för val av presentation, där varje typ representerar en kategori av biljettköp baserat på om det är en privatperson eller ett sällskap som köper biljetter.
+        /// </summary>
+        internal enum GroupType
+        {
+            Private,
+            Company
+        }
+        /// <summary>
+        /// Representerar antalet biljetter av varje typ som köpts, där varje egenskap 
+        /// (Adult, Youth, Senior, Free) håller reda på antalet biljetter av den specifika typen som har köpts.
+        /// </summary>
         protected struct Tickets
         {
             public int Adult { get; set; }
             public int Youth { get; set; }
             public int Senior { get; set; }
+            public int Free { get; set; }
         }
         protected static Tickets tickets = new Tickets();
+        /// <summary>
+        /// Programmets startpunkt, där huvudmenyn skrivs ut och användaren kan välja mellan att köpa biobiljetter, 
+        /// skriva ut en mening 10 gånger, eller skriva ut det 3:e ordet i en mening.
+        /// </summary>
+        /// <param name="args"></param>arguments används inte i detta program
         static void Main(string[] args)
         {
             PrintProgramChoiceMenu();
@@ -45,6 +68,12 @@ namespace Exercise2
                 }
             } while (true);
         }
+        /// <summary>
+        /// Skriver ut huvudmenyn för programmet, där användaren kan välja mellan att köpa biobiljetter, 
+        /// skriva ut en mening 10 gånger, eller skriva ut det 3:e ordet i en mening. 
+        /// Användaren navigerar menyvalen genom att använda siffran och Enter för önskat val. 
+        /// Menyn fortsätter att visas tills användaren väljer att avsluta programmet genom att ange "0".
+        /// </summary>
         internal static void PrintProgramChoiceMenu()
         {
             Console.Clear();
@@ -84,6 +113,9 @@ namespace Exercise2
             }
 
         }
+        /// <summary>
+        /// Skriver menyn för att köpa en enkelbiljett, där användaren anger sin ålder och biljetttypen bestäms av åldern enligt de angivna reglerna.
+        /// </summary>
         internal static void PrintMenuEnkelbiljett()
         {
             Console.Clear();
@@ -95,8 +127,11 @@ namespace Exercise2
             Console.WriteLine("Pensionär(över 64år):\t90kr\n");
             Console.Write("Ange er ålder: ");
             int age = int.TryParse(Console.ReadLine(), out int result) ? result : -1;
-            ExecuteTicketTransaction(age, 0);
+            ExecuteTicketTransaction(age, GroupType.Private);
         }
+        /// <summary>
+        /// Skriver menyn för att köpa biljetter till ett sällskap, där användaren först anger antalet personer i sällskapet och sedan åldern för varje person.
+        /// </summary>
         internal static void PrintMenuSamlingsbiljett()
         {
             Console.Clear();
@@ -108,19 +143,18 @@ namespace Exercise2
             Console.WriteLine("Pensionär(över 64år):\t90kr\n");
             Console.Write("Ange antal: ");
             int age = int.TryParse(Console.ReadLine(), out int result) ? result : -1;
-            ExecuteTicketTransaction(age, 1);
+            ExecuteTicketTransaction(age, GroupType.Company);
         }
         /// <summary>
         /// Funktioner för Biobiljetter
         /// </summary>
         /// <param name="input"></param>
         /// <param name="type"></param>
-        internal static void ExecuteTicketTransaction(int age, int type)
+        internal static void ExecuteTicketTransaction(int age, GroupType type)
         {
-            //int age = int.TryParse(input, out int result) ? result : -1;
             switch (type)
             {
-                case 0:
+                case GroupType.Private:
                     if(age >= 0)
                     {
                         if (BuyTicket(age).Youth > 0)
@@ -135,13 +169,17 @@ namespace Exercise2
                         {
                             Console.WriteLine("Pensionärsbiljett köpt för 90kr.");
                         }
+                        else if (BuyTicket(age).Free > 0)
+                        {
+                            Console.WriteLine("Fribiljett. Barn under 5 år samt pensionärer över 100 år.");
+                        }
                     }
                     else
                     {
                         Console.WriteLine("Felaktigt angiven ålder. Ingen biljett köpt.");
                     }
                     break;
-                case 1:
+                case GroupType.Company:
                     PresentTotal(BuyCompanyTicket(age));
                     break;
                 default:
@@ -151,6 +189,10 @@ namespace Exercise2
             Console.ReadLine();
             PrintBioMenu();
         }
+        /// <summary>
+        /// Totalpris och antal biljetter presenterade i en sammanställning efter köp av samlingsbiljett.
+        /// </summary>
+        /// <param name="tickets"></param>
         private static void PresentTotal(Tickets tickets)
         {
             if (tickets.Adult>0)
@@ -165,23 +207,44 @@ namespace Exercise2
             {
                 Console.WriteLine("{0}st Pensionärsbiljetter köpta för {1}kr á 90kr.", tickets.Senior, tickets.Senior * 90);
             }
-            Console.WriteLine("Total summa: {0}kr", tickets.Adult * 120 + tickets.Youth * 80 + tickets.Senior * 90);
+            if (tickets.Free > 0)
+            {
+                Console.WriteLine("{0}st Fribiljetter. Barn under 5 år samt pensionärer över 100 år.", tickets.Free);
+            }
+            Console.WriteLine("Total antal personer: {0}st Total summa: {1}kr", tickets.Free+tickets.Youth+tickets.Adult+tickets.Senior, tickets.Adult * 120 + tickets.Youth * 80 + tickets.Senior * 90);
         }
+        /// <summary>
+        /// Metod att välja biljetttyp baserat på ålder, där åldersgränserna är: Ungdom under 20 år, Pensionär över 64 år, Fribiljett under 5 år och över 100 år, samt Vuxen i övriga fall.
+        /// </summary>
+        /// <param name="age">Åldern på personen som ska köpa biljett</param>
+        /// <returns>Biljetttypen som motsvarar åldern</returns>
         private static TicketType ChooseTicketType(int age)
         {
-            if (age < 20)
+            if (age < 20 && age > 4)
             {
                 return TicketType.Youth;
             }
-            else if (age > 64)
+            else if (age > 64 && age < 100)
             {
                 return TicketType.Senior;
             }
+            else if (age < 5 || age > 100)
+            {
+                return TicketType.Free;
+            }
+
             else
             {
                 return TicketType.Adult;
             }
         }
+        /// <summary>
+        /// Skapa en biljett baserat på ålder, där biljettypen bestäms av ChooseTicketType-metoden. 
+        /// Om åldern är ogiltig (0 eller negativ) så skrivs ett felmeddelande ut och ingen biljett skapas. 
+        /// Metoden returnerar en Tickets-struktur som innehåller antalet biljetter av varje typ som köpts (i det här fallet antingen 1 av en typ eller 0 av alla typer).
+        /// </summary>
+        /// <param name="age">Åldern på personen som ska köpa biljett</param>
+        /// <returns>En Tickets-struktur som innehåller antalet biljetter av varje typ som köpts</returns>
         protected static Tickets BuyTicket(int age)
         {
             Tickets ticket = new Tickets();
@@ -198,6 +261,9 @@ namespace Exercise2
                     case TicketType.Senior:     
                         ticket.Senior++;
                         break;
+                    case TicketType.Free:
+                        ticket.Free++;
+                        break;
                     default:
                         break;
                 }
@@ -208,6 +274,11 @@ namespace Exercise2
             }
             return ticket;
         }
+        /// <summary>
+        /// Metod att köpa biljetter för ett sällskap, där användaren först anger antalet personer i sällskapet och sedan åldern för varje person.
+        /// </summary>
+        /// <param name="antal">Antalet personer i sällskapet</param>
+        /// <returns>En Tickets-struktur som innehåller antalet biljetter av varje typ som köpts för sällskapet</returns>
         private static Tickets BuyCompanyTicket(int antal)
         {
             Tickets companyTickets = new Tickets();
@@ -229,6 +300,9 @@ namespace Exercise2
                             break;
                         case TicketType.Senior:
                             companyTickets.Senior++;
+                            break;
+                        case TicketType.Free:
+                            companyTickets.Free++;
                             break;
                     }
                 }
@@ -263,8 +337,8 @@ namespace Exercise2
             Console.Write("\u001b[4mVälkommen till Det 3:e Ordet!\u001b[0m");
             Console.Write("\nSkriv en mening innehållande mer än 3st ord: ");
             string? sentence = Console.ReadLine();
-            string[] words = sentence?.Split(' ') ?? Array.Empty<string>();
-            Console.WriteLine();
+            var words = sentence?.Split(null as char[], StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
+            Console.WriteLine(words.Length);
             if (words.Length >= 3)
             {
                 Console.WriteLine("Det 3:e ordet är: " + words[2]);
