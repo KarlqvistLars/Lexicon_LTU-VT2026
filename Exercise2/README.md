@@ -13,7 +13,7 @@ genom att skriva in siffror för att testa olika funktioner.<br>
 stänger ner programmet och ett default som berättar att det är felaktig input.<br>
 - [ ] 3. Skapa en oändlig iteration, alltså något som inte tar slut innan vi säger till att den
 ska ta slut. Detta löser ni med att skapa en egen bool med tillhörande while-loop.<br>
-- [ ] 4. Bygg ut menyn med val att exekvera de övriga övningarna.<br>
+✔️ 4. Bygg ut menyn med val att exekvera de övriga övningarna.<br>
 
 ### Menyval 1: Ungdom eller pensionär<br>
 För att exemplifiera if-satser skall ni implementera, på uppdrag av en teoretisk lokal bio,
