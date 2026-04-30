@@ -48,6 +48,7 @@ namespace Exercise2
             Console.WriteLine("\u001b[4mVälkommen på Bio!\u001b[0m");
             Console.WriteLine("Detta är huvudmenyn för biljettkassan.\nNi navigerar menyvalen genom att använda siffran och Enter för önskat val.\n");
             Console.WriteLine("1. Köp enkelbiljett.\n2. Köp biljett till sällskap.\n9. Avsluta\n");
+
             Console.Write("Ange menyval: ");
         }
 
