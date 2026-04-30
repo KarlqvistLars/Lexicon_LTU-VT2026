@@ -2,10 +2,6 @@
 **OBS - Resultatet av övningen skall visas för lärare och godkännas innan den kan anses vara genomförd.**<br>
 Övningen kan skrivas helt i programklassen med menyn i Main-metoden.
 </br></br>
-<style>
-p {color:#811;}
-</style>
-<p>okay</p>
 **Huvudmeny**<br>
 Skapa en huvudmeny för programmet som håller det vid liv och informerar
 användaren.
