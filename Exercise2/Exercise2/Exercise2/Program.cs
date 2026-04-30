@@ -2,11 +2,25 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using static Exercise2.Program;
 
 namespace Exercise2
 {
     internal class Program
     {
+        enum TicketType
+        {
+            Adult,
+            Youth,
+            Senior
+        }
+        protected struct Tickets
+        {
+            public int Adult { get; set; }
+            public int Youth { get; set; }
+            public int Senior { get; set; }
+        }
+        protected static Tickets tickets = new Tickets();
         static void Main(string[] args)
         {
             PrintProgramChoiceMenu();
@@ -34,7 +48,6 @@ namespace Exercise2
                 }
             } while (true);
         }
-
         internal static void PrintProgramChoiceMenu()
         {
             Console.Clear();
@@ -98,16 +111,32 @@ namespace Exercise2
             Console.Write("Ange antal: ");
             ExecuteTicketTransaction(Console.ReadLine(), 1);
         }
+        /// <summary>
+        /// Funktioner för Biobiljetter
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="type"></param>
         internal static void ExecuteTicketTransaction(string? input, int type)
         {
             Console.WriteLine("Executing ticket transaction..."+ input + " " + type);
             switch (type)
             {
                 case 0:
-                    BuySingleTicket(input);
+                    if(BuyTicket(input).Youth > 0)
+                    {
+                        Console.WriteLine("Ungdomsbiljett köpt för 80kr.");
+                    }
+                    else if(BuyTicket(input).Adult > 0)
+                    {
+                        Console.WriteLine("Vuxenbiljett köpt för 120kr.");
+                    }
+                    else if(BuyTicket(input).Senior > 0)
+                    {
+                        Console.WriteLine("Pensionärsbiljett köpt för 90kr.");
+                    }
                     break;
                 case 1:
-                    BuyCompanyTicket(input);
+                    PresentTotal(BuyCompanyTicket(input));
                     break;
                 default:
                     break;
@@ -116,39 +145,95 @@ namespace Exercise2
             Console.ReadLine();
             PrintBioMenu();
         }
-        private static void BuySingleTicket(string? input)
+        private static void PresentTotal(Tickets tickets)
         {
+            if (tickets.Adult>0)
+            {
+                Console.WriteLine("{0}st Vuxenbiljetter köpta för {1}kr á 120kr.", tickets.Adult, tickets.Adult * 120);
+            }
+            if (tickets.Youth > 0)
+            {
+                Console.WriteLine("{0}st Ungdomsbiljetter köpta för {1}kr á 80kr.", tickets.Youth, tickets.Youth * 80);
+            }
+            if (tickets.Senior > 0)
+            {
+                Console.WriteLine("{0}st Pensionärsbiljetter köpta för {1}kr á 90kr.", tickets.Senior, tickets.Senior * 90);
+            }
+            Console.WriteLine("Total summa: {0}kr", tickets.Adult * 120 + tickets.Youth * 80 + tickets.Senior * 90);
+        }
+        private static TicketType ChooseTicketType(int age)
+        {
+            if (age < 20)
+            {
+                return TicketType.Youth;
+            }
+            else if (age > 64)
+            {
+                return TicketType.Senior;
+            }
+            else
+            {
+                return TicketType.Adult;
+            }
+        }
+        protected static Tickets BuyTicket(string? input)
+        {
+            Tickets ticket = new Tickets();
             if (int.TryParse(input, out int age))
             {
-                if (age < 20)
+                switch (ChooseTicketType(age))
                 {
-                    Console.WriteLine("Ungdomsbiljett köpt för 80kr.");
-                }
-                else if (age > 64)
-                {
-                    Console.WriteLine("Pensionärsbiljett köpt för 90kr.");
-                }
-                else
-                {
-                    Console.WriteLine("Vuxenbiljett köpt för 120kr.");
+                    case TicketType.Adult:
+                        ticket.Adult++;
+                        break;
+                    case TicketType.Youth:
+                        ticket.Youth++;
+                        break;
+                    case TicketType.Senior:     
+                        ticket.Senior++;
+                        break;
+                    default:
+                        break;
                 }
             }
             else
             {
                 Console.WriteLine("Ogiltig ålder. Försök igen.");
             }
+            return ticket;
         }
-        private static void BuyCompanyTicket(string? input)
+        private static Tickets BuyCompanyTicket(string? input)
         {
-            
-            throw new NotImplementedException();
-        }
+            int antal = int.TryParse(input, out int result) ? result : 0;
+            Tickets companyTickets = new Tickets();
 
+            for (int i = 0; i < antal; i++)
+            {
+                Console.Write("Ange ålder för biljett " + (i + 1) + ": ");
+                string? ageInput = Console.ReadLine();
+                if (ageInput != null)
+                {
+                    switch (ChooseTicketType(int.Parse(ageInput)))
+                    {
+                        case TicketType.Adult:
+                            companyTickets.Adult++;
+                            break;
+                        case TicketType.Youth:
+                            companyTickets.Youth++;
+                            break;
+                        case TicketType.Senior:
+                            companyTickets.Senior++;
+                            break;
+                    }
+                }
+            }
+            Console.WriteLine("\n\nSammanställning:\n");
+            return companyTickets;
+        }
         private static void PrintThirdWordMenu()
         {
             throw new NotImplementedException();
         }
-
         private static void PrintLoopTenMenu()
         {
             throw new NotImplementedException();
