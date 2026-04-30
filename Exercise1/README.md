@@ -2,18 +2,19 @@
 
 ## C# Övning 1 - Personalregister
 Inlämning Instruktioner. Finns även en snabbguide att följa under C-Sharp => Files => GIT
-1. Add to source control nere i högra hörnet, välj git, Alternativt Git menyn Create Git
-Repository
-2. Kryssa UR Checkboxen Private
-3. Create and Publish
-4. Kontrollera att repositoriet skapats i webbläsaren och alla filer finns med. Om så är fallet
-kan du hoppa över resten. Annars följ nästa steg.
-5. Gå till git changes i Visual Studio.
-6. Skriv in ett commit meddelande tryck på Commit
-7. Efter det Push med pilen uppåt. Alternativt Sync med två pilar i en cirkel.
-8. Kontrollera enligt punkt 4.
-9. Klart
-<br><br>
+> 1. Add to source control nere i högra hörnet, välj git, Alternativt Git menyn Create Git
+> Repository
+> 2. Kryssa UR Checkboxen Private
+> 3. Create and Publish
+> 4. Kontrollera att repositoriet skapats i webbläsaren och alla filer finns med. Om så är fallet
+> kan du hoppa över resten. Annars följ nästa steg.
+> 5. Gå till git changes i Visual Studio.
+> 6. Skriv in ett commit meddelande tryck på Commit
+> 7. Efter det Push med pilen uppåt. Alternativt Sync med två pilar i en cirkel.
+> 8. Kontrollera enligt punkt 4.
+> 9. Klart
+
+<br>
 Se till att skicka upp koden med god marginal innan tiden är ute!
 Bakgrund
 Ett litet företag i restaurangbranschen kontaktar dig för att utveckla ett litet
