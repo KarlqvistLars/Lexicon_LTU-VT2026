@@ -1,5 +1,5 @@
 # C# Övning 2 - Flöde via loopar och strängmanipulation
-**OBS - Resultatet av övningen skall visas för lärare och godkännas innan den kan anses vara genomförd.**
+**OBS - Resultatet av övningen skall visas för lärare och godkännas innan den kan anses vara genomförd.**<br>
 Övningen kan skrivas helt i programklassen med menyn i Main-metoden.
 </br></br>
 **Huvudmeny**<br>
