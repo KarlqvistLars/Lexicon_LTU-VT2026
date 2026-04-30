@@ -40,7 +40,7 @@ namespace Exercise2
                         Console.WriteLine("Exit");
                         return;
                     default:
-                        Console.WriteLine("Invalid input. Please try again.");
+                        Console.WriteLine("Felaktigt menyval. Försök igen.");
                         break;
                 }
             } while (true);
@@ -50,7 +50,7 @@ namespace Exercise2
             Console.Clear();
             Console.WriteLine("\u001b[4mVälkommen till programvalmenyn!\u001b[0m");
             Console.WriteLine("Detta är huvudmenyn för programmet.\nNi navigerar menyvalen genom att använda siffran och Enter för önskat val.\n");
-            Console.WriteLine("1. Köp biobiljett till Vuxen, Ungdom eller Pensionär.\n2. Upprepa 10ggr.\n3. Det 3:e ordet.\n0. Avsluta\n");
+            Console.WriteLine("1. Köp biobiljett.\n2. Upprepa 10ggr.\n3. Det 3:e ordet.\n0. Avsluta\n");
             Console.Write("Ange menyval: ");
         }
         /// <summary>
@@ -79,7 +79,7 @@ namespace Exercise2
                     PrintProgramChoiceMenu();
                     return;
                 default:
-                    Console.WriteLine("Invalid input. Please try again.");
+                    Console.WriteLine("Felaktigt menyval. Försök igen.");
                     break;
             }
 
@@ -92,9 +92,10 @@ namespace Exercise2
             Console.WriteLine("\u001b[4mBiljettpriser\u001b[0m");
             Console.WriteLine("Vuxen: \t\t\t120kr");
             Console.WriteLine("Ungdom(under 20 år):\t80kr");
-            Console.WriteLine("Pensionär(över 64år):\t90kr");
+            Console.WriteLine("Pensionär(över 64år):\t90kr\n");
             Console.Write("Ange er ålder: ");
-            ExecuteTicketTransaction(Console.ReadLine(), 0);
+            int age = int.TryParse(Console.ReadLine(), out int result) ? result : -1;
+            ExecuteTicketTransaction(age, 0);
         }
         internal static void PrintMenuSamlingsbiljett()
         {
@@ -104,35 +105,44 @@ namespace Exercise2
             Console.WriteLine("\u001b[4mBiljettpriser\u001b[0m");
             Console.WriteLine("Vuxen: \t\t\t120kr");
             Console.WriteLine("Ungdom(under 20 år):\t80kr");
-            Console.WriteLine("Pensionär(över 64år):\t90kr");
+            Console.WriteLine("Pensionär(över 64år):\t90kr\n");
             Console.Write("Ange antal: ");
-            ExecuteTicketTransaction(Console.ReadLine(), 1);
+            int age = int.TryParse(Console.ReadLine(), out int result) ? result : -1;
+            ExecuteTicketTransaction(age, 1);
         }
         /// <summary>
         /// Funktioner för Biobiljetter
         /// </summary>
         /// <param name="input"></param>
         /// <param name="type"></param>
-        internal static void ExecuteTicketTransaction(string? input, int type)
+        internal static void ExecuteTicketTransaction(int age, int type)
         {
+            //int age = int.TryParse(input, out int result) ? result : -1;
             switch (type)
             {
                 case 0:
-                    if(BuyTicket(input).Youth > 0)
+                    if(age >= 0)
                     {
-                        Console.WriteLine("Ungdomsbiljett köpt för 80kr.");
+                        if (BuyTicket(age).Youth > 0)
+                        {
+                            Console.WriteLine("Ungdomsbiljett köpt för 80kr.");
+                        }
+                        else if (BuyTicket(age).Adult > 0)
+                        {
+                            Console.WriteLine("Vuxenbiljett köpt för 120kr.");
+                        }
+                        else if (BuyTicket(age).Senior > 0)
+                        {
+                            Console.WriteLine("Pensionärsbiljett köpt för 90kr.");
+                        }
                     }
-                    else if(BuyTicket(input).Adult > 0)
+                    else
                     {
-                        Console.WriteLine("Vuxenbiljett köpt för 120kr.");
-                    }
-                    else if(BuyTicket(input).Senior > 0)
-                    {
-                        Console.WriteLine("Pensionärsbiljett köpt för 90kr.");
+                        Console.WriteLine("Felaktigt angiven ålder. Ingen biljett köpt.");
                     }
                     break;
                 case 1:
-                    PresentTotal(BuyCompanyTicket(input));
+                    PresentTotal(BuyCompanyTicket(age));
                     break;
                 default:
                     break;
@@ -172,10 +182,10 @@ namespace Exercise2
                 return TicketType.Adult;
             }
         }
-        protected static Tickets BuyTicket(string? input)
+        protected static Tickets BuyTicket(int age)
         {
             Tickets ticket = new Tickets();
-            if (int.TryParse(input, out int age))
+            if (age!=0)
             {
                 switch (ChooseTicketType(age))
                 {
@@ -198,18 +208,18 @@ namespace Exercise2
             }
             return ticket;
         }
-        private static Tickets BuyCompanyTicket(string? input)
+        private static Tickets BuyCompanyTicket(int antal)
         {
-            int antal = int.TryParse(input, out int result) ? result : 0;
             Tickets companyTickets = new Tickets();
 
             for (int i = 0; i < antal; i++)
             {
                 Console.Write("Ange ålder för biljett " + (i + 1) + ": ");
                 string? ageInput = Console.ReadLine();
-                if (ageInput != null)
+                int age = int.TryParse(ageInput, out int parsedAge) ? parsedAge : -1;
+                if (ageInput != null && age > 0)
                 {
-                    switch (ChooseTicketType(int.Parse(ageInput)))
+                    switch (ChooseTicketType(age))
                     {
                         case TicketType.Adult:
                             companyTickets.Adult++;
@@ -226,6 +236,9 @@ namespace Exercise2
             Console.WriteLine("\n\nSammanställning:\n");
             return companyTickets;
         }
+        /// <summary>
+        /// Meny och funktion för att skriva ut en mening 10 gånger, där meningen matas in av användaren.
+        /// </summary>
         private static void PrintLoopTenMenu()
         {
             Console.Clear();
@@ -241,6 +254,9 @@ namespace Exercise2
             Console.ReadLine();
             PrintProgramChoiceMenu();
         }
+        /// <summary>
+        /// Meny och funktion för att skriva ut det 3:e ordet i en mening, om det finns 3 eller fler ord i meningen.
+        /// </summary>
         private static void PrintThirdWordMenu()
         {
             Console.Clear();
