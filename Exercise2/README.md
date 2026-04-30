@@ -37,9 +37,8 @@ Vi anger då först hur många vi är som ska gå på bio. Frågar sedan efter �
 och skriver sedan ut en sammanfattning i konsolen som ska innehålla följande:<br>
 <br>
 ● Antal personer<br>
-● Samt totalkostnad för hela sällskapet
-<br>
-<br>
+● Samt totalkostnad för hela sällskapet<br>
+
 ### Menyval 2: Upprepa tio gånger<br>
 För att använda en annan typ av iteration skall ni här implementera en for-loop. Detta ska
 ni skapa för att upprepa något en användare skriver in tio gånger. Det ska alltså inte
