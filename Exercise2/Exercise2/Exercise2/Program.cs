@@ -2,10 +2,10 @@
 
 namespace Exercise2
 {
-    internal class Program
+    public class Program
     {
         const int COUNT_TO_TEN = 10;
-        enum TicketType
+        public enum TicketType
         {
             Adult,
             Youth,
@@ -167,7 +167,7 @@ namespace Exercise2
             }
             Console.WriteLine("Total summa: {0}kr", tickets.Adult * 120 + tickets.Youth * 80 + tickets.Senior * 90);
         }
-        private static TicketType ChooseTicketType(int age)
+        public static TicketType ChooseTicketType(int age)
         {
             if (age < 20)
             {
