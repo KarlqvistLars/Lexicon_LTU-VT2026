@@ -1,0 +1,20 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": ["Exercise2.csproj"]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": ["api/**.yml", "api/index.md"]
+      }
+    ],
+    "dest": "_site"
+  }
+}
