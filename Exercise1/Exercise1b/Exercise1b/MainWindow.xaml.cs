@@ -1,17 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Exercise1b
 {
@@ -20,9 +10,27 @@ namespace Exercise1b
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Employee> employees = new List<Employee>();
+        string installationPath = Environment.GetCommandLineArgs()[0].Replace("Exercise1b.exe", "dbfile.txt");
+        
         public MainWindow()
         {
             InitializeComponent();
+            if (File.Exists(installationPath))
+            {
+                employees = FileHandler.LoadPeople(installationPath);            
+            }
+        }
+
+        private void OK_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Employee newPerson = new Employee(TextBoxNamn.Text, TextBoxFData.Text, TextBoxHourlyRate.Text);
+            FileHandler.AddPerson(employees, newPerson);
+        }
+
+        private void Cancel_Button_Click(object sender, RoutedEventArgs e)
+        {
+            FileHandler.ShowPeople(employees);
         }
     }
 }

@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Personalregister" Height="280" Width="600">
     <Grid>
-        <Button x:Name="OK_Button" Content="OK" Width="80" Height="30" HorizontalAlignment="Left" Margin="25,0,0,25" VerticalAlignment="Bottom"/>
-        <Button x:Name="Cancel_Button" Content="Cancel" Width="80" Height="30" HorizontalAlignment="Left" Margin="125,0,0,25" VerticalAlignment="Bottom"/>
+        <Button x:Name="OK_Button" Content="OK" Width="80" Height="30" HorizontalAlignment="Left" Margin="25,0,0,25" VerticalAlignment="Bottom" Click="OK_Button_Click"/>
+        <Button x:Name="Cancel_Button" Content="Cancel" Width="80" Height="30" HorizontalAlignment="Left" Margin="125,0,0,25" VerticalAlignment="Bottom" Click="Cancel_Button_Click"/>
         <Label x:Name="LabelNamn" Content="Namn" HorizontalAlignment="Left" Margin="25,25,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TextBoxNamn" HorizontalAlignment="Left" Margin="25,45,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="200" Height="20"/>
         <Label x:Name="LabelFData" Content="Födelseår" HorizontalAlignment="Left" Margin="25,65,0,0" VerticalAlignment="Top"/>
