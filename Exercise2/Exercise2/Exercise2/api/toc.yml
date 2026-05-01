@@ -7,9 +7,6 @@ items:
   - uid: Exercise2.Program
     name: Program
     type: Class
-  - uid: Exercise2.Program.GroupType
-    name: Program.GroupType
-    type: Enum
   - uid: Exercise2.Program.TicketType
     name: Program.TicketType
     type: Enum

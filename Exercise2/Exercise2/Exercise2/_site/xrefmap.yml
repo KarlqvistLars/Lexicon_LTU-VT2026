@@ -13,22 +13,6 @@ references:
   commentId: T:Exercise2.Program
   fullName: Exercise2.Program
   nameWithType: Program
-- uid: Exercise2.Program.BuyCompanyTicket(System.Int32)
-  name: BuyCompanyTicket(int)
-  href: api/Exercise2.Program.html#Exercise2_Program_BuyCompanyTicket_System_Int32_
-  commentId: M:Exercise2.Program.BuyCompanyTicket(System.Int32)
-  name.vb: BuyCompanyTicket(Integer)
-  fullName: Exercise2.Program.BuyCompanyTicket(int)
-  fullName.vb: Exercise2.Program.BuyCompanyTicket(Integer)
-  nameWithType: Program.BuyCompanyTicket(int)
-  nameWithType.vb: Program.BuyCompanyTicket(Integer)
-- uid: Exercise2.Program.BuyCompanyTicket*
-  name: BuyCompanyTicket
-  href: api/Exercise2.Program.html#Exercise2_Program_BuyCompanyTicket_
-  commentId: Overload:Exercise2.Program.BuyCompanyTicket
-  isSpec: "True"
-  fullName: Exercise2.Program.BuyCompanyTicket
-  nameWithType: Program.BuyCompanyTicket
 - uid: Exercise2.Program.BuyTicket(System.Int32)
   name: BuyTicket(int)
   href: api/Exercise2.Program.html#Exercise2_Program_BuyTicket_System_Int32_
@@ -61,22 +45,6 @@ references:
   isSpec: "True"
   fullName: Exercise2.Program.ChooseTicketType
   nameWithType: Program.ChooseTicketType
-- uid: Exercise2.Program.ExecuteTicketTransaction(System.Int32,Exercise2.Program.GroupType)
-  name: ExecuteTicketTransaction(int, GroupType)
-  href: api/Exercise2.Program.html#Exercise2_Program_ExecuteTicketTransaction_System_Int32_Exercise2_Program_GroupType_
-  commentId: M:Exercise2.Program.ExecuteTicketTransaction(System.Int32,Exercise2.Program.GroupType)
-  name.vb: ExecuteTicketTransaction(Integer, GroupType)
-  fullName: Exercise2.Program.ExecuteTicketTransaction(int, Exercise2.Program.GroupType)
-  fullName.vb: Exercise2.Program.ExecuteTicketTransaction(Integer, Exercise2.Program.GroupType)
-  nameWithType: Program.ExecuteTicketTransaction(int, Program.GroupType)
-  nameWithType.vb: Program.ExecuteTicketTransaction(Integer, Program.GroupType)
-- uid: Exercise2.Program.ExecuteTicketTransaction*
-  name: ExecuteTicketTransaction
-  href: api/Exercise2.Program.html#Exercise2_Program_ExecuteTicketTransaction_
-  commentId: Overload:Exercise2.Program.ExecuteTicketTransaction
-  isSpec: "True"
-  fullName: Exercise2.Program.ExecuteTicketTransaction
-  nameWithType: Program.ExecuteTicketTransaction
 - uid: Exercise2.Program.GroupType
   name: Program.GroupType
   href: api/Exercise2.Program.GroupType.html
@@ -95,97 +63,6 @@ references:
   commentId: F:Exercise2.Program.GroupType.Private
   fullName: Exercise2.Program.GroupType.Private
   nameWithType: Program.GroupType.Private
-- uid: Exercise2.Program.PresentTotal(Exercise2.Program.Tickets)
-  name: PresentTotal(Tickets)
-  href: api/Exercise2.Program.html#Exercise2_Program_PresentTotal_Exercise2_Program_Tickets_
-  commentId: M:Exercise2.Program.PresentTotal(Exercise2.Program.Tickets)
-  fullName: Exercise2.Program.PresentTotal(Exercise2.Program.Tickets)
-  nameWithType: Program.PresentTotal(Program.Tickets)
-- uid: Exercise2.Program.PresentTotal*
-  name: PresentTotal
-  href: api/Exercise2.Program.html#Exercise2_Program_PresentTotal_
-  commentId: Overload:Exercise2.Program.PresentTotal
-  isSpec: "True"
-  fullName: Exercise2.Program.PresentTotal
-  nameWithType: Program.PresentTotal
-- uid: Exercise2.Program.PrintBioMenu
-  name: PrintBioMenu()
-  href: api/Exercise2.Program.html#Exercise2_Program_PrintBioMenu
-  commentId: M:Exercise2.Program.PrintBioMenu
-  fullName: Exercise2.Program.PrintBioMenu()
-  nameWithType: Program.PrintBioMenu()
-- uid: Exercise2.Program.PrintBioMenu*
-  name: PrintBioMenu
-  href: api/Exercise2.Program.html#Exercise2_Program_PrintBioMenu_
-  commentId: Overload:Exercise2.Program.PrintBioMenu
-  isSpec: "True"
-  fullName: Exercise2.Program.PrintBioMenu
-  nameWithType: Program.PrintBioMenu
-- uid: Exercise2.Program.PrintLoopTenMenu
-  name: PrintLoopTenMenu()
-  href: api/Exercise2.Program.html#Exercise2_Program_PrintLoopTenMenu
-  commentId: M:Exercise2.Program.PrintLoopTenMenu
-  fullName: Exercise2.Program.PrintLoopTenMenu()
-  nameWithType: Program.PrintLoopTenMenu()
-- uid: Exercise2.Program.PrintLoopTenMenu*
-  name: PrintLoopTenMenu
-  href: api/Exercise2.Program.html#Exercise2_Program_PrintLoopTenMenu_
-  commentId: Overload:Exercise2.Program.PrintLoopTenMenu
-  isSpec: "True"
-  fullName: Exercise2.Program.PrintLoopTenMenu
-  nameWithType: Program.PrintLoopTenMenu
-- uid: Exercise2.Program.PrintMenuEnkelbiljett
-  name: PrintMenuEnkelbiljett()
-  href: api/Exercise2.Program.html#Exercise2_Program_PrintMenuEnkelbiljett
-  commentId: M:Exercise2.Program.PrintMenuEnkelbiljett
-  fullName: Exercise2.Program.PrintMenuEnkelbiljett()
-  nameWithType: Program.PrintMenuEnkelbiljett()
-- uid: Exercise2.Program.PrintMenuEnkelbiljett*
-  name: PrintMenuEnkelbiljett
-  href: api/Exercise2.Program.html#Exercise2_Program_PrintMenuEnkelbiljett_
-  commentId: Overload:Exercise2.Program.PrintMenuEnkelbiljett
-  isSpec: "True"
-  fullName: Exercise2.Program.PrintMenuEnkelbiljett
-  nameWithType: Program.PrintMenuEnkelbiljett
-- uid: Exercise2.Program.PrintMenuSamlingsbiljett
-  name: PrintMenuSamlingsbiljett()
-  href: api/Exercise2.Program.html#Exercise2_Program_PrintMenuSamlingsbiljett
-  commentId: M:Exercise2.Program.PrintMenuSamlingsbiljett
-  fullName: Exercise2.Program.PrintMenuSamlingsbiljett()
-  nameWithType: Program.PrintMenuSamlingsbiljett()
-- uid: Exercise2.Program.PrintMenuSamlingsbiljett*
-  name: PrintMenuSamlingsbiljett
-  href: api/Exercise2.Program.html#Exercise2_Program_PrintMenuSamlingsbiljett_
-  commentId: Overload:Exercise2.Program.PrintMenuSamlingsbiljett
-  isSpec: "True"
-  fullName: Exercise2.Program.PrintMenuSamlingsbiljett
-  nameWithType: Program.PrintMenuSamlingsbiljett
-- uid: Exercise2.Program.PrintProgramChoiceMenu
-  name: PrintProgramChoiceMenu()
-  href: api/Exercise2.Program.html#Exercise2_Program_PrintProgramChoiceMenu
-  commentId: M:Exercise2.Program.PrintProgramChoiceMenu
-  fullName: Exercise2.Program.PrintProgramChoiceMenu()
-  nameWithType: Program.PrintProgramChoiceMenu()
-- uid: Exercise2.Program.PrintProgramChoiceMenu*
-  name: PrintProgramChoiceMenu
-  href: api/Exercise2.Program.html#Exercise2_Program_PrintProgramChoiceMenu_
-  commentId: Overload:Exercise2.Program.PrintProgramChoiceMenu
-  isSpec: "True"
-  fullName: Exercise2.Program.PrintProgramChoiceMenu
-  nameWithType: Program.PrintProgramChoiceMenu
-- uid: Exercise2.Program.PrintThirdWordMenu
-  name: PrintThirdWordMenu()
-  href: api/Exercise2.Program.html#Exercise2_Program_PrintThirdWordMenu
-  commentId: M:Exercise2.Program.PrintThirdWordMenu
-  fullName: Exercise2.Program.PrintThirdWordMenu()
-  nameWithType: Program.PrintThirdWordMenu()
-- uid: Exercise2.Program.PrintThirdWordMenu*
-  name: PrintThirdWordMenu
-  href: api/Exercise2.Program.html#Exercise2_Program_PrintThirdWordMenu_
-  commentId: Overload:Exercise2.Program.PrintThirdWordMenu
-  isSpec: "True"
-  fullName: Exercise2.Program.PrintThirdWordMenu
-  nameWithType: Program.PrintThirdWordMenu
 - uid: Exercise2.Program.TicketType
   name: Program.TicketType
   href: api/Exercise2.Program.TicketType.html
