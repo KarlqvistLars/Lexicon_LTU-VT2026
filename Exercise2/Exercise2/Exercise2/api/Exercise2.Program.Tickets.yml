@@ -33,8 +33,8 @@ items:
     (Adult, Youth, Senior, Free) håller reda på antalet biljetter av den specifika typen som har köpts.
   example: []
   syntax:
-    content: protected struct Program.Tickets
-    content.vb: Protected Structure Program.Tickets
+    content: public struct Program.Tickets
+    content.vb: Public Structure Program.Tickets
   inheritedMembers:
   - System.ValueType.Equals(System.Object)
   - System.ValueType.GetHashCode

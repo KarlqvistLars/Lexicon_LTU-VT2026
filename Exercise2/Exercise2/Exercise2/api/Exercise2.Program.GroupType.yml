@@ -28,8 +28,8 @@ items:
   summary: Enumartion för val av presentation, där varje typ representerar en kategori av biljettköp baserat på om det är en privatperson eller ett sällskap som köper biljetter.
   example: []
   syntax:
-    content: public enum Program.GroupType
-    content.vb: Public Enum Program.GroupType
+    content: internal enum Program.GroupType
+    content.vb: Friend Enum Program.GroupType
 - uid: Exercise2.Program.GroupType.Private
   commentId: F:Exercise2.Program.GroupType.Private
   id: Private
