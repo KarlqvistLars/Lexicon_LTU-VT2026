@@ -38,6 +38,11 @@ jobs:
         with:
           path: docs/_site
 
+      - name: Debug paths
+        run: |
+          pwd
+          ls -R
+
   deploy:
     runs-on: ubuntu-latest
     needs: build
