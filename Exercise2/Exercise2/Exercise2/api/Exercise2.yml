@@ -5,7 +5,6 @@ items:
   id: Exercise2
   children:
   - Exercise2.Program
-  - Exercise2.Program.GroupType
   - Exercise2.Program.TicketType
   - Exercise2.Program.Tickets
   langs:
@@ -47,29 +46,6 @@ references:
   - uid: Exercise2.Program.TicketType
     name: TicketType
     href: Exercise2.Program.TicketType.html
-- uid: Exercise2.Program.GroupType
-  commentId: T:Exercise2.Program.GroupType
-  parent: Exercise2
-  href: Exercise2.Program.html
-  name: Program.GroupType
-  nameWithType: Program.GroupType
-  fullName: Exercise2.Program.GroupType
-  spec.csharp:
-  - uid: Exercise2.Program
-    name: Program
-    href: Exercise2.Program.html
-  - name: .
-  - uid: Exercise2.Program.GroupType
-    name: GroupType
-    href: Exercise2.Program.GroupType.html
-  spec.vb:
-  - uid: Exercise2.Program
-    name: Program
-    href: Exercise2.Program.html
-  - name: .
-  - uid: Exercise2.Program.GroupType
-    name: GroupType
-    href: Exercise2.Program.GroupType.html
 - uid: Exercise2.Program.Tickets
   commentId: T:Exercise2.Program.Tickets
   parent: Exercise2

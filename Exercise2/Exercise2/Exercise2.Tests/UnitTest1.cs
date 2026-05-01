@@ -1,3 +1,5 @@
+using static Exercise2.Program;
+
 namespace Exercise2
 {
     public class UnitTest1
@@ -93,6 +95,28 @@ namespace Exercise2
             Assert.Equal(Exercise2.Program.TicketType.Senior, ticket3);
             Assert.Equal(Exercise2.Program.TicketType.Adult, ticket4);
 
+        }
+
+        [Fact]
+        public void TestBuyTicket() 
+        {
+            // Arrange
+            int p1 = 101;  // Free ticket
+            int p2 = 65;  // Senior ticket
+            int p3 = 99;  // Senior ticket
+            int p4 = 20;  // Adult ticket
+
+            // Act
+            Tickets ticket1 = Program.BuyTicket(p1);
+            Tickets ticket2 = Program.BuyTicket(p2);
+            Tickets ticket3 = Program.BuyTicket(p3);
+            Tickets ticket4 = Program.BuyTicket(p4);
+
+            // Assert
+            Assert.Equal(new Tickets { Free = 1 }, ticket1);
+            Assert.Equal(new Tickets { Senior = 1 }, ticket2);
+            Assert.Equal(new Tickets { Senior = 1 }, ticket3);
+            Assert.Equal(new Tickets { Adult = 1 }, ticket4);
         }
     }
 }

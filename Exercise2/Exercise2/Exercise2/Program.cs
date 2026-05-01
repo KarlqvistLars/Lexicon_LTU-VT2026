@@ -1,5 +1,5 @@
 ﻿using System;
-using static System.Net.Mime.MediaTypeNames;
+using System.Collections.Generic;
 
 namespace Exercise2
 {
@@ -28,14 +28,14 @@ namespace Exercise2
         /// Representerar antalet biljetter av varje typ som köpts, där varje egenskap 
         /// (Adult, Youth, Senior, Free) håller reda på antalet biljetter av den specifika typen som har köpts.
         /// </summary>
-        protected struct Tickets
+        public struct Tickets
         {
             public int Adult { get; set; }
             public int Youth { get; set; }
             public int Senior { get; set; }
             public int Free { get; set; }
         }
-        protected static Tickets tickets = new Tickets();
+        public static Tickets tickets = new Tickets();
         /// <summary>
         /// Programmets startpunkt, där huvudmenyn skrivs ut och användaren kan välja mellan att köpa biobiljetter, 
         /// skriva ut en mening 10 gånger, eller skriva ut det 3:e ordet i en mening.
@@ -245,7 +245,7 @@ namespace Exercise2
         /// </summary>
         /// <param name="age">Åldern på personen som ska köpa biljett</param>
         /// <returns>En Tickets-struktur som innehåller antalet biljetter av varje typ som köpts</returns>
-        protected static Tickets BuyTicket(int age)
+        public static Tickets BuyTicket(int age)
         {
             Tickets ticket = new Tickets();
             if (age!=0)
