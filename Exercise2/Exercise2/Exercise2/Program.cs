@@ -224,7 +224,7 @@ namespace Exercise2
             {
                 return TicketType.Youth;
             }
-            else if (age > 64 && age < 100)
+            else if (age > 64 && age <= 100)
             {
                 return TicketType.Senior;
             }
