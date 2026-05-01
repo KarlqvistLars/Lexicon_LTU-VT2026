@@ -45,6 +45,9 @@ namespace Exercise2
             public int Free { get; set; }
             public int Err { get; set; }
         }
+        /// <summary>
+        /// En instans av Tickets-strukturen som används för att hålla reda på antalet biljetter av varje typ som köpts under programkörningen.
+        /// </summary>
         public static Tickets tickets = new Tickets();
         /// <summary>
         /// Programmets startpunkt, där huvudmenyn skrivs ut och användaren kan välja mellan att köpa biobiljetter, 
