@@ -3,6 +3,89 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Exercise2.Program.GroupType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Exercise2.Program.GroupType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Exercise2.Program.GroupType",
+      "Summary": "<p sourcefile=\"api/Exercise2.Program.GroupType.yml\" sourcestartlinenumber=\"1\">Enumartion för val av presentation, där varje typ representerar en kategori av biljettköp baserat på om det är en privatperson eller ett sällskap som köper biljetter.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Exercise2.Program.TicketType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Exercise2.Program.TicketType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Exercise2.Program.TicketType",
+      "Summary": "<p sourcefile=\"api/Exercise2.Program.TicketType.yml\" sourcestartlinenumber=\"1\">Enumeration för biljetttyper, där varje typ representerar en kategori av biobiljetter baserat på ålder: Vuxen, Ungdom, Pensionär och Fribiljett.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Exercise2.Program.Tickets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Exercise2.Program.Tickets.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Exercise2.Program.Tickets",
+      "Summary": "<p sourcefile=\"api/Exercise2.Program.Tickets.yml\" sourcestartlinenumber=\"1\">Representerar antalet biljetter av varje typ som köpts, där varje egenskap\n(Adult, Youth, Senior, Free) håller reda på antalet biljetter av den specifika typen som har köpts.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Exercise2.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Exercise2.Program.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Exercise2.Program",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Exercise2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Exercise2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Exercise2",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {

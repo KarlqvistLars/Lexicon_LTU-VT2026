@@ -1,0 +1,114 @@
+### YamlMime:ManagedReference
+items:
+- uid: Exercise2.Program.GroupType
+  commentId: T:Exercise2.Program.GroupType
+  id: Program.GroupType
+  parent: Exercise2
+  children:
+  - Exercise2.Program.GroupType.Company
+  - Exercise2.Program.GroupType.Private
+  langs:
+  - csharp
+  - vb
+  name: Program.GroupType
+  nameWithType: Program.GroupType
+  fullName: Exercise2.Program.GroupType
+  type: Enum
+  source:
+    remote:
+      path: Exercise2/Exercise2/Exercise2/Program.cs
+      branch: main
+      repo: https://github.com/KarlqvistLars/Lexicon_LTU-VT2026.git
+    id: GroupType
+    path: ../Exercise2/Program.cs
+    startLine: 21
+  assemblies:
+  - Exercise2
+  namespace: Exercise2
+  summary: Enumartion för val av presentation, där varje typ representerar en kategori av biljettköp baserat på om det är en privatperson eller ett sällskap som köper biljetter.
+  example: []
+  syntax:
+    content: internal enum Program.GroupType
+    content.vb: Friend Enum Program.GroupType
+- uid: Exercise2.Program.GroupType.Private
+  commentId: F:Exercise2.Program.GroupType.Private
+  id: Private
+  parent: Exercise2.Program.GroupType
+  langs:
+  - csharp
+  - vb
+  name: Private
+  nameWithType: Program.GroupType.Private
+  fullName: Exercise2.Program.GroupType.Private
+  type: Field
+  source:
+    remote:
+      path: Exercise2/Exercise2/Exercise2/Program.cs
+      branch: main
+      repo: https://github.com/KarlqvistLars/Lexicon_LTU-VT2026.git
+    id: Private
+    path: ../Exercise2/Program.cs
+    startLine: 23
+  assemblies:
+  - Exercise2
+  namespace: Exercise2
+  syntax:
+    content: Private = 0
+    return:
+      type: Exercise2.Program.GroupType
+- uid: Exercise2.Program.GroupType.Company
+  commentId: F:Exercise2.Program.GroupType.Company
+  id: Company
+  parent: Exercise2.Program.GroupType
+  langs:
+  - csharp
+  - vb
+  name: Company
+  nameWithType: Program.GroupType.Company
+  fullName: Exercise2.Program.GroupType.Company
+  type: Field
+  source:
+    remote:
+      path: Exercise2/Exercise2/Exercise2/Program.cs
+      branch: main
+      repo: https://github.com/KarlqvistLars/Lexicon_LTU-VT2026.git
+    id: Company
+    path: ../Exercise2/Program.cs
+    startLine: 24
+  assemblies:
+  - Exercise2
+  namespace: Exercise2
+  syntax:
+    content: Company = 1
+    return:
+      type: Exercise2.Program.GroupType
+references:
+- uid: Exercise2
+  commentId: N:Exercise2
+  href: Exercise2.html
+  name: Exercise2
+  nameWithType: Exercise2
+  fullName: Exercise2
+- uid: Exercise2.Program.GroupType
+  commentId: T:Exercise2.Program.GroupType
+  parent: Exercise2
+  href: Exercise2.Program.html
+  name: Program.GroupType
+  nameWithType: Program.GroupType
+  fullName: Exercise2.Program.GroupType
+  spec.csharp:
+  - uid: Exercise2.Program
+    name: Program
+    href: Exercise2.Program.html
+  - name: .
+  - uid: Exercise2.Program.GroupType
+    name: GroupType
+    href: Exercise2.Program.GroupType.html
+  spec.vb:
+  - uid: Exercise2.Program
+    name: Program
+    href: Exercise2.Program.html
+  - name: .
+  - uid: Exercise2.Program.GroupType
+    name: GroupType
+    href: Exercise2.Program.GroupType.html
