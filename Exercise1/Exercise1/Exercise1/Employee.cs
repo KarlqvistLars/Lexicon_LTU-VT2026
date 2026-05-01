@@ -15,8 +15,8 @@ namespace Exercise1
         /// it will catch the exception and print an error message to the console.
         /// </summary>
         public int Born { get; set; }
-        public string Name { get; set; }
-        public string HourlyRate { get; set; }
+        public string? Name { get; set; }
+        public string? HourlyRate { get; set; }
 
         public Employee(string name, string born, string hourlyRate)
         {

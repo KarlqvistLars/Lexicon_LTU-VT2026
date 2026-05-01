@@ -38,8 +38,7 @@
               "RelativeToolTip": "Exercise1\\FileHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T11:07:08.369Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-28T11:07:08.369Z"
             },
             {
               "$type": "Document",
@@ -49,7 +48,7 @@
               "RelativeDocumentMoniker": "Exercise1\\Employee.cs",
               "ToolTip": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_LTU_VT-2026\\Lexicon_LTU-VT2026\\Exercise1\\Exercise1\\Exercise1\\Employee.cs",
               "RelativeToolTip": "Exercise1\\Employee.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAswBIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-28T10:28:43.533Z",
               "EditorCaption": ""
@@ -64,12 +63,7 @@
               "RelativeToolTip": "Exercise1\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T10:16:17.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "WhenOpened": "2026-04-28T10:16:17.97Z"
             }
           ]
         }
