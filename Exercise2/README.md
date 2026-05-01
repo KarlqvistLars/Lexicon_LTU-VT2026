@@ -67,7 +67,9 @@ Händelseförloppet förklaras nedan:
 - [ ] 4. Programmet skriver ut den tredje strängen(ordet)
 Dokumentera
 Glöm inte att kommentera er kod noga så att ni eller andra enkelt kan förstå den i
-framtiden.
+framtiden.<br><br>
+[Övningens Dokumentation](https://karlqvistlars.github.io/Lexicon_LTU-VT2026/)
+<br><br>
 Extra uppgifter för de som har tid över:
 - [ ] 1. Validera alla inputs från användaren. Se till att programmet inte kraschar vid
 felaktig input.<br>
