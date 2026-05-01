@@ -6,13 +6,19 @@
           "files": ["../Exercise2/Exercise2.csproj"]
         }
       ],
-      "dest": "api"
+      "dest": "api",
+      "includePrivateMembers": true
     }
   ],
   "build": {
     "content": [
       {
-        "files": ["api/**.yml", "api/index.md"]
+        "files": [
+          "index.md",
+          "toc.yml",
+          "api/**.yml",
+          "api/index.md"
+        ]
       }
     ],
     "dest": "_site"
