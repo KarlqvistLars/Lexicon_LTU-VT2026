@@ -23,13 +23,13 @@ framgå i texten som förklarar menyn.
 För att göra detta skall ni använda er av en nästlad if-sats. Det skall ske enligt följande
 förlopp:<br>
 
-- [x] 1. Användaren anger en ålder i siffror
-- [x] 2. Programmet konverterar detta från en sträng till en int
-- [x] 3. Programmet ser om personen är ungdom (under 20 år)
-- [x] 4. Om det ovanstående är sant skall programmet skriva ut: Ungdomspris: 80kr
-- [x] 5. Annars kollar programmet om personen är en pensionär (över 64 år)
-- [x] 6. Om ovanstående är sant skall programmet skruva ut: Pensionärspris: 90kr
-- [x] 7. Annars skall programmet skriva ut: Standardpris: 120kr
+✔️ 1. Användaren anger en ålder i siffror<br>
+✔️ 2. Programmet konverterar detta från en sträng till en int<br>
+✔️ 3. Programmet ser om personen är ungdom (under 20 år)<br>
+✔️ 4. Om det ovanstående är sant skall programmet skriva ut: Ungdomspris: 80kr<br>
+✔️ 5. Annars kollar programmet om personen är en pensionär (över 64 år)<br>
+✔️ 6. Om ovanstående är sant skall programmet skruva ut: Pensionärspris: 90kr<br>
+✔️ 7. Annars skall programmet skriva ut: Standardpris: 120kr<br>
 <br>
 Vi vill även få möjlighet att kunna räkna ut priset för ett helt sällskap. Lägg till det
 alternativet i huvudmenyn (ett case “2”). Det är även ok att ha alternativet i en undermeny.
@@ -47,11 +47,11 @@ gånger. För att komma till den här funktionen skall ni lägga till ett case f
 huvudmeny samt text som förklarar detta.
 <br>
 <br>
-**Händelseförloppet visas nedan:**
-- [ ] 1. Användaren anger en godtycklig text
-- [ ] 2. Programmet sparar texten som en variabel
-- [ ] 3. Programmet skriver, via en for-loop ut denna text tio gånger på rad, alltså UTAN
-radbrott. Exempel på output: 1. Input, 2. Input, 3. Input osv.
+**Händelseförloppet visas nedan:**<br>
+✔️ 1. Användaren anger en godtycklig text<br>
+✔️ 2. Programmet sparar texten som en variabel<br>
+✔️ 3. Programmet skriver, via en for-loop ut denna text tio gånger på rad, alltså UTAN
+radbrott. Exempel på output: 1. Input, 2. Input, 3. Input osv.<br>
 
 ### Menyval 3: Det tredje ordet
 Ni har tidigare lärt er hur vi omvandlar strängar till integers (tex int.Parse, int.TryParse)men
@@ -59,17 +59,16 @@ nu ska vi dela upp en sträng. Användaren skall ange en mening, som programmet 
 i ord via strängens .Split(char)-metod. Ni skall dela strängen på varje mellanslag. För att
 enkelt lagra detta bör input sparas som en var, då ni kommer få tillbaka mer än en sträng.
 För att testa det här skall ni skapa case ”4” i er huvudmeny samt skriva en förklaring i
-texten.
-Händelseförloppet förklaras nedan:
-- [ ] 1. Användaren anger en mening med minst 3 ord
-- [ ] 2. Programmet delar upp strängen med split-metoden på varje mellanslag
-- [ ] 3. Programmet plockar ut den tredje strängen (ordet) ur input
-- [ ] 4. Programmet skriver ut den tredje strängen(ordet)
-Dokumentera
+texten.<br>
+Händelseförloppet förklaras nedan:<br>
+✔️ 1. Användaren anger en mening med minst 3 ord<br>
+✔️ 2. Programmet delar upp strängen med split-metoden på varje mellanslag<br>
+✔️ 3. Programmet plockar ut den tredje strängen (ordet) ur input<br>
+✔️ 4. Programmet skriver ut den tredje strängen(ordet)<br><br>
+**Dokumentera**<br>
 Glöm inte att kommentera er kod noga så att ni eller andra enkelt kan förstå den i
-framtiden.<br><br>
-[Övningens Dokumentation](https://karlqvistlars.github.io/Lexicon_LTU-VT2026/)
-<br><br>
+framtiden.
+### [Övningens Dokumentation](https://karlqvistlars.github.io/Lexicon_LTU-VT2026/)
 Extra uppgifter för de som har tid över:
 - [ ] 1. Validera alla inputs från användaren. Se till att programmet inte kraschar vid
 felaktig input.<br>

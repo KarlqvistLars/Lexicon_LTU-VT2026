@@ -155,7 +155,7 @@ namespace Exercise2
         /// <summary>
         /// Funktioner för Biobiljetter
         /// </summary>
-        /// <param name="input"></param>
+        /// <param name="age"></param>
         /// <param name="type"></param>
         internal static void ExecuteTicketTransaction(int age, GroupType type)
         {
