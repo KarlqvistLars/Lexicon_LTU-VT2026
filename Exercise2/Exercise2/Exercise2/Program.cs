@@ -5,6 +5,9 @@ namespace Exercise2
 {
     public class Program
     {
+        /// <summary>
+        /// En konstant som representerar antalet gånger en mening ska skrivas ut i funktionen PrintLoopTenMenu, där värdet är satt till 10.
+        /// </summary>
         const int COUNT_TO_TEN = 10;
         /// <summary>
         /// Enumeration för biljetttyper, där varje typ representerar en kategori av biobiljetter baserat på ålder: Vuxen, Ungdom, Pensionär och Fribiljett.
