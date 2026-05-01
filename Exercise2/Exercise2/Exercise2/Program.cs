@@ -14,7 +14,8 @@ namespace Exercise2
             Adult,
             Youth,
             Senior,
-            Free
+            Free,
+            Err
         }
         /// <summary>
         /// Enumartion för val av presentation, där varje typ representerar en kategori av biljettköp baserat på om det är en privatperson eller ett sällskap som köper biljetter.
@@ -26,7 +27,12 @@ namespace Exercise2
         }
         /// <summary>
         /// Representerar antalet biljetter av varje typ som köpts, där varje egenskap 
-        /// (Adult, Youth, Senior, Free) håller reda på antalet biljetter av den specifika typen som har köpts.
+        /// (Adult, Youth, Senior, Free, Err) håller reda på antalet biljetter av den specifika typen som har köpts.
+        /// Adult = 20-64år
+        /// Youth = 5-19år
+        /// Senior = 65-100år
+        /// Free = 1-4år samt äver 100år Gratis. 
+        /// Err är en felindikeringsflagga som håller reda på antalet ogiltiga åldersangivelser som har gjorts under biljettköpsprocessen.
         /// </summary>
         public struct Tickets
         {
@@ -34,6 +40,7 @@ namespace Exercise2
             public int Youth { get; set; }
             public int Senior { get; set; }
             public int Free { get; set; }
+            public int Err { get; set; }
         }
         public static Tickets tickets = new Tickets();
         /// <summary>
@@ -248,7 +255,7 @@ namespace Exercise2
         public static Tickets BuyTicket(int age)
         {
             Tickets ticket = new Tickets();
-            if (age!=0)
+            if (age > 0)
             {
                 switch (ChooseTicketType(age))
                 {
@@ -271,6 +278,7 @@ namespace Exercise2
             else
             {
                 Console.WriteLine("Ogiltig ålder. Försök igen.");
+                ticket.Err++;
             }
             return ticket;
         }

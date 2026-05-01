@@ -10,7 +10,7 @@ namespace Exercise2
             // Arrange - Free ticket limit for children under 5 years old and free ticket for ages 100 and above
             int p1 = 4; // Free ticket
             int p2 = 5; // Youth ticket
-            int p3 = 0; // Free ticket
+            int p3 = -1; // Free ticket
             int p4 = 101; // Free ticket
             int p5 = 100; // Senior ticket
 
@@ -105,18 +105,21 @@ namespace Exercise2
             int p2 = 65;  // Senior ticket
             int p3 = 99;  // Senior ticket
             int p4 = 20;  // Adult ticket
+            int p5 = 0;  // Free ticket
 
             // Act
             Tickets ticket1 = Program.BuyTicket(p1);
             Tickets ticket2 = Program.BuyTicket(p2);
             Tickets ticket3 = Program.BuyTicket(p3);
             Tickets ticket4 = Program.BuyTicket(p4);
+            Tickets ticket5 = Program.BuyTicket(p5);
 
             // Assert
-            Assert.Equal(new Tickets { Free = 1 }, ticket1);
-            Assert.Equal(new Tickets { Senior = 1 }, ticket2);
-            Assert.Equal(new Tickets { Senior = 1 }, ticket3);
-            Assert.Equal(new Tickets { Adult = 1 }, ticket4);
+            Assert.Equal(new Tickets { Err = 0, Free = 1, Youth = 0, Adult = 0, Senior = 0 }, ticket1);
+            Assert.Equal(new Tickets { Err = 0, Free = 0, Youth = 0, Adult = 0, Senior = 1 }, ticket2);
+            Assert.Equal(new Tickets { Err = 0, Free = 0, Youth = 0, Adult = 0, Senior = 1 }, ticket3);
+            Assert.Equal(new Tickets { Err = 0, Free = 0, Youth = 0, Adult = 1, Senior = 0 }, ticket4);
+            Assert.Equal(new Tickets { Err = 1, Free = 0, Youth = 0, Adult = 0, Senior = 0 }, ticket5);
         }
     }
 }
