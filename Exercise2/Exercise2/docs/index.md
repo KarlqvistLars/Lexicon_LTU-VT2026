@@ -2,4 +2,4 @@
 
 Välkommen till dokumentationen.
 
-- [API Documentation](api/)
+- [API Documentation](api/Exercise2.html)
