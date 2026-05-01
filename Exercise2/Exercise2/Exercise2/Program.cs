@@ -3,13 +3,13 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Exercise2
 {
-    internal class Program
+    public class Program
     {
         const int COUNT_TO_TEN = 10;
         /// <summary>
         /// Enumeration för biljetttyper, där varje typ representerar en kategori av biobiljetter baserat på ålder: Vuxen, Ungdom, Pensionär och Fribiljett.
         /// </summary>
-        enum TicketType
+        public enum TicketType
         {
             Adult,
             Youth,
@@ -218,13 +218,13 @@ namespace Exercise2
         /// </summary>
         /// <param name="age">Åldern på personen som ska köpa biljett</param>
         /// <returns>Biljetttypen som motsvarar åldern</returns>
-        private static TicketType ChooseTicketType(int age)
+        public static TicketType ChooseTicketType(int age)
         {
             if (age < 20 && age > 4)
             {
                 return TicketType.Youth;
             }
-            else if (age > 64 && age < 100)
+            else if (age > 64 && age <= 100)
             {
                 return TicketType.Senior;
             }
