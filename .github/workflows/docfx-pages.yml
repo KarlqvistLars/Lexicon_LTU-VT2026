@@ -30,13 +30,24 @@ jobs:
       - name: Install DocFX
         run: dotnet tool install -g docfx
 
-      - name: Build DocFX site
+      - name: Build Exercise1 docs
+        run: docfx Exercise1/Exercise1/docs/docfx.json
+
+      - name: Build Exercise2 docs
         run: docfx Exercise2/Exercise2/docs/docfx.json
+
+      - name: Prepare combined site
+        run: |
+          mkdir -p combined_site/Exercise1
+          mkdir -p combined_site/Exercise2
+
+          cp -r Exercise1/Exercise1/docs/_site/* combined_site/Exercise1/
+          cp -r Exercise2/Exercise2/docs/_site/* combined_site/Exercise2/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: Exercise2/Exercise2/docs/_site
+          path: combined_site
 
       - name: Debug paths
         run: |

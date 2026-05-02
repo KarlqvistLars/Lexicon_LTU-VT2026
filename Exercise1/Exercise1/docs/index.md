@@ -2,4 +2,4 @@
 
 Välkommen till dokumentationen.
 
-- [Exercise 2 Documentation](ex2/Exercise2.html)
+- [Exercise 1 Documentation](ex1/Exercise1.html)
