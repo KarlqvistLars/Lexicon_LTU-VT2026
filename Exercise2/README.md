@@ -73,7 +73,7 @@ Extra uppgifter för de som har tid över:
 - [ ] 1. Validera alla inputs från användaren. Se till att programmet inte kraschar vid
 felaktig input.<br>
 ✔️ 2. Barn under fem och pensionärer över 100 går gratis.
-- [ ] 3. Hantera flera mellanslag i rad i del 3.
+✔️ 3. Hantera flera mellanslag i rad i del 3.
 - [ ] 4. Vad du tycker verkar vara intressant att få med eller vill träna på!
 
 ### [Tillbaka](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/tree/main)
