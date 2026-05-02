@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 namespace Exercise2
 {
+    /// <summary>
+    /// Detta program är en konsolapplikation som erbjuder användaren tre olika funktioner: att köpa biobiljetter, 
+    /// att skriva ut en mening 10 gånger, och att skriva ut det 3:e ordet i en mening.
+    /// </summary>
     public class Program
     {
         /// <summary>

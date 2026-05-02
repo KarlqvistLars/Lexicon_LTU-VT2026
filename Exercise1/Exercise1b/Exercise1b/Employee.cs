@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercise1b
 {
-    internal class Employee
+    public class Employee
     {
         /// <summary>
         /// The Employee class represents an employee with a name, birth year and hourly rate. 
@@ -16,7 +16,9 @@ namespace Exercise1b
         /// </summary>
         public int Born { get; set; }
         public string Name { get; set; }
-        public string HourlyRate { get; set; }
+        public double HourlyRate { get; set; }
+
+        public Employee() { }
 
         public Employee(string name, string born, string hourlyRate)
         {
@@ -24,7 +26,7 @@ namespace Exercise1b
             {
                 Born = int.Parse(born);
                 Name = name;
-                HourlyRate = hourlyRate;
+                HourlyRate = double.Parse(hourlyRate);
             }
             catch (Exception)
             {

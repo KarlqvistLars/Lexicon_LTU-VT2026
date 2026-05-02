@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Documents;
 
 namespace Exercise1b
 {
@@ -11,9 +13,7 @@ namespace Exercise1b
     /// </summary>
     public partial class MainWindow : Window
     {
-#pragma warning disable IDE0044 // Add readonly modifier
-        private List<Employee> employees = new List<Employee>();
-#pragma warning restore IDE0044 // Add readonly modifier
+        public ObservableCollection<Employee> Employees { get; set; } = new ObservableCollection<Employee>();
         readonly string installationPath = Environment.GetCommandLineArgs()[0].Replace("Exercise1b.exe", "dbfile.txt");
         
         public MainWindow()
@@ -22,16 +22,16 @@ namespace Exercise1b
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             if (File.Exists(installationPath))
             {
-                employees = FileHandler.LoadPeople(installationPath);            
+                Employees = FileHandler.LoadPeople(installationPath);            
             }
-            FileHandler.ShowPeople(employees, EmployeeListBox);
+            DataContext = this;
         }
 
         private void Add_Button_Click(object sender, RoutedEventArgs e)
         {
-            if (FileHandler.AddPerson(employees, EmployeeListBox, TextBoxNamn, TextBoxFData, TextBoxHourlyRate))
+            if (FileHandler.AddPerson(Employees, EmployeeListView, TextBoxNamn, TextBoxFData, TextBoxHourlyRate))
             {
-                FileHandler.ShowPeople(employees, EmployeeListBox);
+                FileHandler.SavePeople(Employees, installationPath);
             }
             else
             {
@@ -39,24 +39,27 @@ namespace Exercise1b
             }
         }
 
-        private void Show_Button_Click(object sender, RoutedEventArgs e)
-        {
-            FileHandler.ShowPeople(employees, EmployeeListBox);
-        }
-
         private void Exit_Button_Click(object sender, RoutedEventArgs e)
         {
+            FileHandler.SavePeople(Employees, installationPath);
             this.Close();
         }
 
         private void Remove_Button_Click(object sender, RoutedEventArgs e)
         {
-            FileHandler.RemovePerson(employees, EmployeeListBox);
+            FileHandler.RemovePerson(Employees, EmployeeListView, TextBoxNamn, TextBoxFData, TextBoxHourlyRate);
         }
 
-        private void EmployeeListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void EmployeeListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            FileHandler.SelectPerson(EmployeeListBox, TextBoxNamn, TextBoxFData, TextBoxHourlyRate);
+            FileHandler.SelectPerson(EmployeeListView, TextBoxNamn, TextBoxFData, TextBoxHourlyRate);
+        }
+
+        private void Clear_Button_Click(object sender, RoutedEventArgs e)
+        {
+            TextBoxNamn.Clear();
+            TextBoxFData.Clear();
+            TextBoxHourlyRate.Clear();
         }
     }
 }
