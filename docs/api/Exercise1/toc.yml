@@ -7,4 +7,10 @@ items:
   - uid: Exercise1.Employee
     name: Employee
     type: Class
+  - uid: Exercise1.FileHandler
+    name: FileHandler
+    type: Class
+  - uid: Exercise1.Program
+    name: Program
+    type: Class
 memberLayout: SamePage

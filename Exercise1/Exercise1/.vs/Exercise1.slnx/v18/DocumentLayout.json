@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{6E6DA4CD-1D8E-F7F4-FE28-6D5D755692EE}|Exercise1\\Exercise1.csproj|solutionrelative:exercise1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E6DA4CD-1D8E-F7F4-FE28-6D5D755692EE}|Exercise1\\Exercise1.csproj|c:\\projekt\\2026\\26014_dotnetutb\\code\\lexicon_ltu_vt-2026\\lexicon_ltu-vt2026\\exercise1\\exercise1\\exercise1\\filehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E6DA4CD-1D8E-F7F4-FE28-6D5D755692EE}|Exercise1\\Exercise1.csproj|solutionrelative:exercise1\\filehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6E6DA4CD-1D8E-F7F4-FE28-6D5D755692EE}|Exercise1\\Exercise1.csproj|c:\\projekt\\2026\\26014_dotnetutb\\code\\lexicon_ltu_vt-2026\\lexicon_ltu-vt2026\\exercise1\\exercise1\\exercise1\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E6DA4CD-1D8E-F7F4-FE28-6D5D755692EE}|Exercise1\\Exercise1.csproj|solutionrelative:exercise1\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E6DA4CD-1D8E-F7F4-FE28-6D5D755692EE}|Exercise1\\Exercise1.csproj|c:\\projekt\\2026\\26014_dotnetutb\\code\\lexicon_ltu_vt-2026\\lexicon_ltu-vt2026\\exercise1\\exercise1\\exercise1\\filehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E6DA4CD-1D8E-F7F4-FE28-6D5D755692EE}|Exercise1\\Exercise1.csproj|solutionrelative:exercise1\\filehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,26 +30,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FileHandler.cs",
               "DocumentMoniker": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_LTU_VT-2026\\Lexicon_LTU-VT2026\\Exercise1\\Exercise1\\Exercise1\\FileHandler.cs",
               "RelativeDocumentMoniker": "Exercise1\\FileHandler.cs",
               "ToolTip": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_LTU_VT-2026\\Lexicon_LTU-VT2026\\Exercise1\\Exercise1\\Exercise1\\FileHandler.cs",
               "RelativeToolTip": "Exercise1\\FileHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADoAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-28T11:07:08.369Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_LTU_VT-2026\\Lexicon_LTU-VT2026\\Exercise1\\Exercise1\\Exercise1\\Employee.cs",
               "RelativeDocumentMoniker": "Exercise1\\Employee.cs",
               "ToolTip": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_LTU_VT-2026\\Lexicon_LTU-VT2026\\Exercise1\\Exercise1\\Exercise1\\Employee.cs",
               "RelativeToolTip": "Exercise1\\Employee.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAswBIAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-28T10:28:43.533Z",
               "EditorCaption": ""
@@ -62,7 +62,7 @@
               "RelativeDocumentMoniker": "Exercise1\\Program.cs",
               "ToolTip": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_LTU_VT-2026\\Lexicon_LTU-VT2026\\Exercise1\\Exercise1\\Exercise1\\Program.cs",
               "RelativeToolTip": "Exercise1\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAgwDkAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-28T10:16:17.97Z",
               "EditorCaption": ""

@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Exercise1
 {
-    internal static class FileHandler
+    public static class FileHandler
     {
         /// <summary>
         /// Method to add a person to the list, it will ask the user for the name, birth year and hourly rate of the person and then create a new Employee object and add it to the list.
         /// </summary>
         /// <param name="list">The list of employees to which the new person will be added.</param>
         /// <returns>Returns true if the person was successfully added, otherwise false.</returns>
-        internal static bool AddPerson(List<Employee> list)
+        public static bool AddPerson(List<Employee> list)
         {
             try
             {
@@ -43,7 +43,7 @@ namespace Exercise1
         /// Method to list people in the list, it will iterate through the list of employees and print their name, birth year and hourly rate to the console.
         /// </summary>
         /// <param name="list">The list of employees to be displayed.</param>
-        internal static void ShowPeople(List<Employee> list)
+        public static void ShowPeople(List<Employee> list)
         {
             foreach (var person in list)
             {
@@ -56,7 +56,7 @@ namespace Exercise1
         /// </summary>
         /// <param name="list">The list of employees to be saved.</param>
         /// <param name="filePath">The file path where the employees will be saved.</param>
-        internal static void SavePeople(List<Employee> list, string filePath)
+        public static void SavePeople(List<Employee> list, string filePath)
         {
             if(!File.Exists(filePath))
             {

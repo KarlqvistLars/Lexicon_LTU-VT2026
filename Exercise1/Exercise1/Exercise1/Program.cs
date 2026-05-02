@@ -4,7 +4,7 @@ using System.IO;
 
 namespace Exercise1
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -55,7 +55,7 @@ namespace Exercise1
         /// It includes options to add a person, show people, save people, and exit the program.
         /// </summary>
         /// <returns></returns>
-        internal static String GetMenu()
+        public static String GetMenu()
         {
             return "1. Add person\n2. Show people\n3. Save people\n4. Exit\n";
         }

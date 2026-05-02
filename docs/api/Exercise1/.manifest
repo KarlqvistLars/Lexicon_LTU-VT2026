@@ -4,5 +4,8 @@
   "Exercise1.Employee.#ctor(System.String,System.String,System.String)": "Exercise1.Employee.yml",
   "Exercise1.Employee.Born": "Exercise1.Employee.yml",
   "Exercise1.Employee.HourlyRate": "Exercise1.Employee.yml",
-  "Exercise1.Employee.Name": "Exercise1.Employee.yml"
+  "Exercise1.Employee.Name": "Exercise1.Employee.yml",
+  "Exercise1.FileHandler": "Exercise1.FileHandler.yml",
+  "Exercise1.FileHandler.LoadPeople(System.String)": "Exercise1.FileHandler.yml",
+  "Exercise1.Program": "Exercise1.Program.yml"
 }

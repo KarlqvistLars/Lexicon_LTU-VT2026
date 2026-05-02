@@ -26,6 +26,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Exercise1/Exercise1.FileHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Exercise1/Exercise1.FileHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Exercise1.FileHandler",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Exercise1/Exercise1.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Exercise1/Exercise1.Program.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Exercise1.Program",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Exercise1/Exercise1.yml",
       "output": {
         ".html": {

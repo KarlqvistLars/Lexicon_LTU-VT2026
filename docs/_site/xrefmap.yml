@@ -71,6 +71,34 @@ references:
   isSpec: "True"
   fullName: Exercise1.Employee.Name
   nameWithType: Employee.Name
+- uid: Exercise1.FileHandler
+  name: FileHandler
+  href: api/Exercise1/Exercise1.FileHandler.html
+  commentId: T:Exercise1.FileHandler
+  fullName: Exercise1.FileHandler
+  nameWithType: FileHandler
+- uid: Exercise1.FileHandler.LoadPeople(System.String)
+  name: LoadPeople(string)
+  href: api/Exercise1/Exercise1.FileHandler.html#Exercise1_FileHandler_LoadPeople_System_String_
+  commentId: M:Exercise1.FileHandler.LoadPeople(System.String)
+  name.vb: LoadPeople(String)
+  fullName: Exercise1.FileHandler.LoadPeople(string)
+  fullName.vb: Exercise1.FileHandler.LoadPeople(String)
+  nameWithType: FileHandler.LoadPeople(string)
+  nameWithType.vb: FileHandler.LoadPeople(String)
+- uid: Exercise1.FileHandler.LoadPeople*
+  name: LoadPeople
+  href: api/Exercise1/Exercise1.FileHandler.html#Exercise1_FileHandler_LoadPeople_
+  commentId: Overload:Exercise1.FileHandler.LoadPeople
+  isSpec: "True"
+  fullName: Exercise1.FileHandler.LoadPeople
+  nameWithType: FileHandler.LoadPeople
+- uid: Exercise1.Program
+  name: Program
+  href: api/Exercise1/Exercise1.Program.html
+  commentId: T:Exercise1.Program
+  fullName: Exercise1.Program
+  nameWithType: Program
 - uid: Exercise2
   name: Exercise2
   href: api/Exercise2/Exercise2.html

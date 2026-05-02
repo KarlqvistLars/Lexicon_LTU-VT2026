@@ -10,8 +10,7 @@
       "dest": "api/Exercise1",
           "properties": {
             "IncludePrivateMembers": "true",
-            "IncludeInternalMembers": "true",
-            "IncludeProtectedMembers": "true"
+            "IncludeInternalMembers": "true"
       }
     },
     {
@@ -23,9 +22,8 @@
       ],
       "dest": "api/Exercise2",
         "properties": {
-          "IncludePrivateMembers": "true",
-          "IncludeInternalMembers": "true",
-          "IncludeProtectedMembers": "true"
+            "IncludePrivateMembers": "true",
+            "IncludeInternalMembers": "true"
         }
       }
   ],
@@ -45,10 +43,14 @@
     ],
     "dest": "_site",
     "globalMetadata": {
-      "_appName": "Min DocFX Dokumentation",
-      "_appTitle": "Min DocFX Dokumentation",
+      "_appName": "Dokumentation",
+      "_appTitle": "Dokumentation",
       "_enableSearch": true
     },
-    "template": [ "default", "modern" ]
+    "template": [
+        "default",
+        "modern",
+        "templates/material"
+    ]
   }
 }

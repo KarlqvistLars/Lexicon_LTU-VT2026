@@ -2,21 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class Program | Dokumentation </title>
+      <title>Class FileHandler | Dokumentation </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class Program | Dokumentation ">
+      <meta name="title" content="Class FileHandler | Dokumentation ">
       
       
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
       <meta name="docfx:navrel" content="../../toc.html">
-      <meta name="docfx:tocrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
       
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/new/main/apiSpec/new?filename=Exercise2_Program.md&amp;value=---%0Auid%3A%20Exercise2.Program%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/new/main/apiSpec/new?filename=Exercise1_FileHandler.md&amp;value=---%0Auid%3A%20Exercise1.FileHandler%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -63,31 +63,45 @@
     </header>
 
     <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
 
       <div class="content">
         <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
 
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Exercise2.Program">
+        <article data-uid="Exercise1.FileHandler">
 
 
 
-  <h1 id="Exercise2_Program" data-uid="Exercise2.Program" class="text-break">
-Class Program  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise2/Exercise2/Exercise2/Program.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Exercise1_FileHandler" data-uid="Exercise1.FileHandler" class="text-break">
+Class FileHandler  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise1/Exercise1/Exercise1/FileHandler.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Exercise2.html">Exercise2</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>Exercise2.dll</dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Exercise1.html">Exercise1</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Exercise1.dll</dd></dl>
   </div>
 
   <div class="markdown summary"></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Program</code></pre>
+    <pre><code class="lang-csharp hljs">public static class FileHandler</code></pre>
   </div>
 
 
@@ -97,7 +111,7 @@ Class Program  <a class="header-action link-secondary" title="View source" href=
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">Program</span></div>
+      <div><span class="xref">FileHandler</span></div>
     </dd>
   </dl>
 
@@ -134,112 +148,36 @@ Class Program  <a class="header-action link-secondary" title="View source" href=
 
 
 
-  <h2 class="section" id="fields">Fields
-</h2>
-
-
-
-  <h3 id="Exercise2_Program_tickets" data-uid="Exercise2.Program.tickets">
-  tickets
-  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise2/Exercise2/Exercise2/Program.cs/#L51"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>En instans av Tickets-strukturen som används för att hålla reda på antalet biljetter av varje typ som köpts under programkörningen.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Program.Tickets tickets</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Exercise2.Program.html">Program</a>.<a class="xref" href="Exercise2.Program.Tickets.html">Tickets</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
   <h2 class="section" id="methods">Methods
 </h2>
 
 
-  <a id="Exercise2_Program_BuyTicket_" data-uid="Exercise2.Program.BuyTicket*"></a>
+  <a id="Exercise1_FileHandler_LoadPeople_" data-uid="Exercise1.FileHandler.LoadPeople*"></a>
 
-  <h3 id="Exercise2_Program_BuyTicket_System_Int32_" data-uid="Exercise2.Program.BuyTicket(System.Int32)">
-  BuyTicket(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise2/Exercise2/Exercise2/Program.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Exercise1_FileHandler_LoadPeople_System_String_" data-uid="Exercise1.FileHandler.LoadPeople(System.String)">
+  LoadPeople(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise1/Exercise1/Exercise1/FileHandler.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Skapa en biljett baserat på ålder, där biljettypen bestäms av ChooseTicketType-metoden.
-Om åldern är ogiltig (0 eller negativ) så skrivs ett felmeddelande ut och ingen biljett skapas.
-Metoden returnerar en Tickets-struktur som innehåller antalet biljetter av varje typ som köpts (i det här fallet antingen 1 av en typ eller 0 av alla typer).</p>
+  <div class="markdown level1 summary"><p>Method to load people from a file, it will read the file line by line and split the line into parts to extract the name, birth year and hourly rate of each employee and then create a new Employee object and add it to a list which is returned at the end.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Program.Tickets BuyTicket(int age)</code></pre>
+    <pre><code class="lang-csharp hljs">public static List&lt;Employee&gt; LoadPeople(string filePath)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>age</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Åldern på personen som ska köpa biljett</p>
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file path from which the employees will be loaded.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Exercise2.Program.html">Program</a>.<a class="xref" href="Exercise2.Program.Tickets.html">Tickets</a></dt>
-    <dd><p>En Tickets-struktur som innehåller antalet biljetter av varje typ som köpts</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Exercise2_Program_ChooseTicketType_" data-uid="Exercise2.Program.ChooseTicketType*"></a>
-
-  <h3 id="Exercise2_Program_ChooseTicketType_System_Int32_" data-uid="Exercise2.Program.ChooseTicketType(System.Int32)">
-  ChooseTicketType(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise2/Exercise2/Exercise2/Program.cs/#L234"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Metod att välja biljetttyp baserat på ålder, där åldersgränserna är: Ungdom under 20 år, Pensionär över 64 år, Fribiljett under 5 år och över 100 år, samt Vuxen i övriga fall.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Program.TicketType ChooseTicketType(int age)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>age</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Åldern på personen som ska köpa biljett</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Exercise2.Program.html">Program</a>.<a class="xref" href="Exercise2.Program.TicketType.html">TicketType</a></dt>
-    <dd><p>Biljetttypen som motsvarar åldern</p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Exercise1.Employee.html">Employee</a>&gt;</dt>
+    <dd><p>A list of employees loaded from the file.</p>
 </dd>
   </dl>
 
@@ -257,7 +195,7 @@ Metoden returnerar en Tickets-struktur som innehåller antalet biljetter av varj
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise2/Exercise2/Exercise2/Program.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise1/Exercise1/Exercise1/FileHandler.cs/#L10" class="edit-link">Edit this page</a>
         </div>
 
 

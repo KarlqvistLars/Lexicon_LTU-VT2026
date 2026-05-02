@@ -5,6 +5,8 @@ items:
   id: Exercise1
   children:
   - Exercise1.Employee
+  - Exercise1.FileHandler
+  - Exercise1.Program
   langs:
   - csharp
   - vb
@@ -21,3 +23,15 @@ references:
   name: Employee
   nameWithType: Employee
   fullName: Exercise1.Employee
+- uid: Exercise1.FileHandler
+  commentId: T:Exercise1.FileHandler
+  href: Exercise1.FileHandler.html
+  name: FileHandler
+  nameWithType: FileHandler
+  fullName: Exercise1.FileHandler
+- uid: Exercise1.Program
+  commentId: T:Exercise1.Program
+  href: Exercise1.Program.html
+  name: Program
+  nameWithType: Program
+  fullName: Exercise1.Program

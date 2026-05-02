@@ -1,5 +1,0 @@
-# Dokumentation
-
-Välkommen till dokumentationen.
-
-- [Exercise 2 Documentation](ex2/Exercise2.html)
