@@ -33,6 +33,24 @@ jobs:
       - name: Build DocFX site
         run: docfx docs/docfx.json
 
+      - name: Restore Exercise 1
+        run: dotnet restore Exercise1/Exercise1.csproj
+
+      - name: Build Exercise 1 and create XML docs
+        run: dotnet build Exercise1/Exercise1.csproj --configuration Release --no-restore
+
+      - name: Restore Exercise 2
+        run: dotnet restore Exercise2/Exercise2.csproj
+
+      - name: Build Exercise 2 and create XML docs
+        run: dotnet build Exercise2/Exercise2.csproj --configuration Release --no-restore
+
+      - name: Install DocFX
+        run: dotnet tool install -g docfx
+
+      - name: Build DocFX site
+        run: docfx docs/docfx.json
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
