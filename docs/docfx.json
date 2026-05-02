@@ -28,7 +28,6 @@
           "IncludeProtectedMembers": "true"
         }
       }
-    }
   ],
   "build": {
     "content": [
