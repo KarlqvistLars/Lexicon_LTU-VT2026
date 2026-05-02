@@ -68,7 +68,7 @@ Händelseförloppet förklaras nedan:<br>
 **Dokumentera**<br>
 Glöm inte att kommentera er kod noga så att ni eller andra enkelt kan förstå den i
 framtiden.
-### [Övningens Dokumentation](https://karlqvistlars.github.io/Lexicon_LTU-VT2026/api/Exercise2/Exercise2.html)
+### [Övningens Dokumentation](https://karlqvistlars.github.io/Lexicon_LTU-VT2026/api/Exercise2/Exercise2.Program.html)
 Extra uppgifter för de som har tid över:
 - [ ] 1. Validera alla inputs från användaren. Se till att programmet inte kraschar vid
 felaktig input.<br>
