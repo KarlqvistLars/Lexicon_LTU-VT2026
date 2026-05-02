@@ -38,11 +38,6 @@ jobs:
         with:
           path: Exercise2/Exercise2/docs/_site
 
-        - name: Debug paths
-          run: |
-            pwd
-            ls -R
-
       - name: Debug paths
         run: |
           pwd
