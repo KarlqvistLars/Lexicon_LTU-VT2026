@@ -94,7 +94,6 @@ namespace Exercise2
             Assert.Equal(Exercise2.Program.TicketType.Senior, ticket2);
             Assert.Equal(Exercise2.Program.TicketType.Senior, ticket3);
             Assert.Equal(Exercise2.Program.TicketType.Adult, ticket4);
-
         }
 
         [Fact]

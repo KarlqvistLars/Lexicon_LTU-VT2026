@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Text;
 using System.Windows;
@@ -14,7 +15,7 @@ namespace Exercise1b
         /// </summary>
         /// <param name="list">The list of employees to which the new person will be added.</param>
         /// <returns>Returns true if the person was successfully added, otherwise false.</returns>
-        internal static bool AddPerson(List<Employee> employees, ListBox listBox, TextBox TextBoxNamn, TextBox TextBoxFData, TextBox TextBoxHourlyRate)
+        internal static bool AddPerson(ObservableCollection<Employee> employees, ListView listBox, TextBox TextBoxNamn, TextBox TextBoxFData, TextBox TextBoxHourlyRate)
         {
             try
             {
@@ -29,7 +30,7 @@ namespace Exercise1b
                     TextBoxNamn.Text = "";
                     TextBoxFData.Text = "";
                     TextBoxHourlyRate.Text = "";
-                    FileHandler.ShowPeople(employees, listBox);
+                    //FileHandler.ShowPeople(employees, listBox);
                 }
                 else
                 {
@@ -44,37 +45,15 @@ namespace Exercise1b
             return true;
         }
 
-        internal static void RemovePerson(List<Employee> employees, ListBox listBox)
+        internal static void RemovePerson(ObservableCollection<Employee> employees, ListView employeeListBox, TextBox TextBoxNamn, TextBox TextBoxFData, TextBox TextBoxHourlyRate)
         {
-            if (listBox.SelectedItem != null)
+            if (employeeListBox.SelectedItem != null)
             {
-                var selectedEmployee = listBox.SelectedItem.ToString()?.Split(null as char[], StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
-                var name = selectedEmployee[0];
-                var born = selectedEmployee[1];
-                var hourlyRate = selectedEmployee[2];
-                Employee personToRemove = new Employee(name, born, hourlyRate);
-                // Tar även bort ev. dubbletter
-                employees.RemoveAll(e => e.Name == personToRemove.Name && e.Born == personToRemove.Born && e.HourlyRate == personToRemove.HourlyRate);
-                FileHandler.ShowPeople(employees, listBox);
-            }
-        }
-        /// <summary>
-        /// Method to list people in the list, it will iterate through the list of employees and print their name, birth year and hourly rate to the console.
-        /// </summary>
-        /// <param name="list">The list of employees to be displayed.</param>
-        /// <param name="employeeListBox">The ListBox control where the employees will be displayed.</param>
-        internal static void ShowPeople(List<Employee> list, ListBox employeeListBox)
-        {
-            foreach (var person in list)
-            {
-                Console.WriteLine($" Name: {person.Name},\n Born: {person.Born},\n Hourly Rate: {person.HourlyRate}\n");
-
-            }
-
-            employeeListBox.Items.Clear();
-            foreach (Employee person in list)
-            {
-                employeeListBox.Items.Add($"{person.Name}\t{person.Born}\t{person.HourlyRate}");
+                var selectedEmployee = employeeListBox.SelectedItem as Employee;
+                employees.Remove(selectedEmployee);
+                TextBoxNamn.Text = "";
+                TextBoxFData.Text ="";
+                TextBoxHourlyRate.Text = "";
             }
         }
         /// <summary>
@@ -82,7 +61,7 @@ namespace Exercise1b
         /// </summary>
         /// <param name="list">The list of employees to be saved.</param>
         /// <param name="filePath">The file path where the employees will be saved.</param>
-        internal static void SavePeople(List<Employee> list, string filePath)
+        internal static void SavePeople(ObservableCollection<Employee> list, string filePath)
         {
             if(!File.Exists(filePath))
             {
@@ -100,9 +79,9 @@ namespace Exercise1b
         /// </summary>
         /// <param name="filePath">The file path from which the employees will be loaded.</param>
         /// <returns>A list of employees loaded from the file.</returns>
-        public static List<Employee> LoadPeople( string filePath)
+        public static ObservableCollection<Employee> LoadPeople( string filePath)
         {
-            List<Employee> liststring = new List<Employee>();
+            ObservableCollection<Employee> Employees = new ObservableCollection<Employee>();
 
             if (!File.Exists(filePath))
             {
@@ -110,7 +89,7 @@ namespace Exercise1b
             }
 
             var lines = File.ReadAllLines(filePath);
-            liststring.Clear();
+            Employees.Clear();
 
             foreach (var line in lines)
             {
@@ -119,20 +98,20 @@ namespace Exercise1b
                 var born = parts[1].Split(':')[1];
                 var hourlyRate = parts[2].Split(':')[1];
                 Employee person = new Employee(name, born, hourlyRate);
-                liststring.Add(person);
+                Employees.Add(person);
             }
             
-        return liststring;
+        return Employees;
         }
 
-        internal static void SelectPerson(ListBox employeeListBox, TextBox TextBoxNamn, TextBox TextBoxFData, TextBox TextBoxHourlyRate)
+        internal static void SelectPerson(ListView employeeListBox, TextBox TextBoxNamn, TextBox TextBoxFData, TextBox TextBoxHourlyRate)
         {
             if (employeeListBox.SelectedItem != null)
             {
-                var selectedEmployee = employeeListBox.SelectedItem.ToString()?.Split(null as char[], StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
-                TextBoxNamn.Text = selectedEmployee[0];
-                TextBoxFData.Text = selectedEmployee[1];
-                TextBoxHourlyRate.Text = selectedEmployee[2];
+                var selectedEmployee = employeeListBox.SelectedItem as Employee;
+                TextBoxNamn.Text = selectedEmployee.Name;
+                TextBoxFData.Text = selectedEmployee.Born.ToString();
+                TextBoxHourlyRate.Text = selectedEmployee.HourlyRate.ToString();
             }
         }
     }
