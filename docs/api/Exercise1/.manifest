@@ -1,0 +1,8 @@
+{
+  "Exercise1": "Exercise1.yml",
+  "Exercise1.Employee": "Exercise1.Employee.yml",
+  "Exercise1.Employee.#ctor(System.String,System.String,System.String)": "Exercise1.Employee.yml",
+  "Exercise1.Employee.Born": "Exercise1.Employee.yml",
+  "Exercise1.Employee.HourlyRate": "Exercise1.Employee.yml",
+  "Exercise1.Employee.Name": "Exercise1.Employee.yml"
+}

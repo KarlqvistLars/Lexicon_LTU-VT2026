@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercise1
 {
-    internal class Employee
+    public class Employee
     {
         /// <summary>
         /// The Employee class represents an employee with a name, birth year and hourly rate. 

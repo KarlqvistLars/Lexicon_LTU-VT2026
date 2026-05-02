@@ -4,5 +4,5 @@ Detta är startsidan för dokumentationen.
 
 ## Lexicon Exercises
 
-- [Exercise 1 API](api/Exercise1/)
-- [Exercise 2 API](api/Exercise2/)
+- [Exercise1 API](api/Exercise1/toc.yml)
+- [Exercise2 API](api/Exercise2/toc.yml)

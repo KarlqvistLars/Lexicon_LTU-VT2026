@@ -3,18 +3,26 @@
     {
       "src": [
         {
-          "files": [ "../Exercise1/Exercise1.csproj" ]
+          "src": "..",
+          "files": [ "Exercise1/Exercise1/Exercise1/Exercise1.csproj" ]
         }
       ],
-      "dest": "api/Exercise1"
+      "dest": "api/Exercise1",
+            "properties": {
+        "IncludePrivateMembers": "true"
+      }
     },
     {
       "src": [
         {
-          "files": [ "../Exercise2/Exercise2.csproj" ]
+          "src": "..",
+          "files": [ "Exercise2/Exercise2/Exercise2/Exercise2.csproj" ]
         }
       ],
-      "dest": "api/Exercise2"
+      "dest": "api/Exercise2",
+            "properties": {
+        "IncludePrivateMembers": "true"
+      }
     }
   ],
   "build": {

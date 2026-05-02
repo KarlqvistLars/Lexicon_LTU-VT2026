@@ -1,0 +1,464 @@
+### YamlMime:ManagedReference
+items:
+- uid: Exercise2.Program
+  commentId: T:Exercise2.Program
+  id: Program
+  parent: Exercise2
+  children:
+  - Exercise2.Program.BuyTicket(System.Int32)
+  - Exercise2.Program.ChooseTicketType(System.Int32)
+  - Exercise2.Program.tickets
+  langs:
+  - csharp
+  - vb
+  name: Program
+  nameWithType: Program
+  fullName: Exercise2.Program
+  type: Class
+  source:
+    remote:
+      path: Exercise2/Exercise2/Exercise2/Program.cs
+      branch: main
+      repo: https://github.com/KarlqvistLars/Lexicon_LTU-VT2026.git
+    id: Program
+    path: ../Exercise2/Exercise2/Exercise2/Program.cs
+    startLine: 5
+  assemblies:
+  - Exercise2
+  namespace: Exercise2
+  syntax:
+    content: public class Program
+    content.vb: Public Class Program
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Exercise2.Program.tickets
+  commentId: F:Exercise2.Program.tickets
+  id: tickets
+  parent: Exercise2.Program
+  langs:
+  - csharp
+  - vb
+  name: tickets
+  nameWithType: Program.tickets
+  fullName: Exercise2.Program.tickets
+  type: Field
+  source:
+    remote:
+      path: Exercise2/Exercise2/Exercise2/Program.cs
+      branch: main
+      repo: https://github.com/KarlqvistLars/Lexicon_LTU-VT2026.git
+    id: tickets
+    path: ../Exercise2/Exercise2/Exercise2/Program.cs
+    startLine: 50
+  assemblies:
+  - Exercise2
+  namespace: Exercise2
+  summary: En instans av Tickets-strukturen som används för att hålla reda på antalet biljetter av varje typ som köpts under programkörningen.
+  example: []
+  syntax:
+    content: public static Program.Tickets tickets
+    return:
+      type: Exercise2.Program.Tickets
+    content.vb: Public Shared tickets As Program.Tickets
+- uid: Exercise2.Program.ChooseTicketType(System.Int32)
+  commentId: M:Exercise2.Program.ChooseTicketType(System.Int32)
+  id: ChooseTicketType(System.Int32)
+  parent: Exercise2.Program
+  langs:
+  - csharp
+  - vb
+  name: ChooseTicketType(int)
+  nameWithType: Program.ChooseTicketType(int)
+  fullName: Exercise2.Program.ChooseTicketType(int)
+  type: Method
+  source:
+    remote:
+      path: Exercise2/Exercise2/Exercise2/Program.cs
+      branch: main
+      repo: https://github.com/KarlqvistLars/Lexicon_LTU-VT2026.git
+    id: ChooseTicketType
+    path: ../Exercise2/Exercise2/Exercise2/Program.cs
+    startLine: 233
+  assemblies:
+  - Exercise2
+  namespace: Exercise2
+  summary: 'Metod att välja biljetttyp baserat på ålder, där åldersgränserna är: Ungdom under 20 år, Pensionär över 64 år, Fribiljett under 5 år och över 100 år, samt Vuxen i övriga fall.'
+  example: []
+  syntax:
+    content: public static Program.TicketType ChooseTicketType(int age)
+    parameters:
+    - id: age
+      type: System.Int32
+      description: Åldern på personen som ska köpa biljett
+    return:
+      type: Exercise2.Program.TicketType
+      description: Biljetttypen som motsvarar åldern
+    content.vb: Public Shared Function ChooseTicketType(age As Integer) As Program.TicketType
+  overload: Exercise2.Program.ChooseTicketType*
+  nameWithType.vb: Program.ChooseTicketType(Integer)
+  fullName.vb: Exercise2.Program.ChooseTicketType(Integer)
+  name.vb: ChooseTicketType(Integer)
+- uid: Exercise2.Program.BuyTicket(System.Int32)
+  commentId: M:Exercise2.Program.BuyTicket(System.Int32)
+  id: BuyTicket(System.Int32)
+  parent: Exercise2.Program
+  langs:
+  - csharp
+  - vb
+  name: BuyTicket(int)
+  nameWithType: Program.BuyTicket(int)
+  fullName: Exercise2.Program.BuyTicket(int)
+  type: Method
+  source:
+    remote:
+      path: Exercise2/Exercise2/Exercise2/Program.cs
+      branch: main
+      repo: https://github.com/KarlqvistLars/Lexicon_LTU-VT2026.git
+    id: BuyTicket
+    path: ../Exercise2/Exercise2/Exercise2/Program.cs
+    startLine: 260
+  assemblies:
+  - Exercise2
+  namespace: Exercise2
+  summary: >-
+    Skapa en biljett baserat på ålder, där biljettypen bestäms av ChooseTicketType-metoden. 
+
+    Om åldern är ogiltig (0 eller negativ) så skrivs ett felmeddelande ut och ingen biljett skapas. 
+
+    Metoden returnerar en Tickets-struktur som innehåller antalet biljetter av varje typ som köpts (i det här fallet antingen 1 av en typ eller 0 av alla typer).
+  example: []
+  syntax:
+    content: public static Program.Tickets BuyTicket(int age)
+    parameters:
+    - id: age
+      type: System.Int32
+      description: Åldern på personen som ska köpa biljett
+    return:
+      type: Exercise2.Program.Tickets
+      description: En Tickets-struktur som innehåller antalet biljetter av varje typ som köpts
+    content.vb: Public Shared Function BuyTicket(age As Integer) As Program.Tickets
+  overload: Exercise2.Program.BuyTicket*
+  nameWithType.vb: Program.BuyTicket(Integer)
+  fullName.vb: Exercise2.Program.BuyTicket(Integer)
+  name.vb: BuyTicket(Integer)
+references:
+- uid: Exercise2
+  commentId: N:Exercise2
+  href: Exercise2.html
+  name: Exercise2
+  nameWithType: Exercise2
+  fullName: Exercise2
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Exercise2.Program.Tickets
+  commentId: T:Exercise2.Program.Tickets
+  parent: Exercise2
+  href: Exercise2.Program.html
+  name: Program.Tickets
+  nameWithType: Program.Tickets
+  fullName: Exercise2.Program.Tickets
+  spec.csharp:
+  - uid: Exercise2.Program
+    name: Program
+    href: Exercise2.Program.html
+  - name: .
+  - uid: Exercise2.Program.Tickets
+    name: Tickets
+    href: Exercise2.Program.Tickets.html
+  spec.vb:
+  - uid: Exercise2.Program
+    name: Program
+    href: Exercise2.Program.html
+  - name: .
+  - uid: Exercise2.Program.Tickets
+    name: Tickets
+    href: Exercise2.Program.Tickets.html
+- uid: Exercise2.Program.ChooseTicketType*
+  commentId: Overload:Exercise2.Program.ChooseTicketType
+  href: Exercise2.Program.html#Exercise2_Program_ChooseTicketType_System_Int32_
+  name: ChooseTicketType
+  nameWithType: Program.ChooseTicketType
+  fullName: Exercise2.Program.ChooseTicketType
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Exercise2.Program.TicketType
+  commentId: T:Exercise2.Program.TicketType
+  parent: Exercise2
+  href: Exercise2.Program.html
+  name: Program.TicketType
+  nameWithType: Program.TicketType
+  fullName: Exercise2.Program.TicketType
+  spec.csharp:
+  - uid: Exercise2.Program
+    name: Program
+    href: Exercise2.Program.html
+  - name: .
+  - uid: Exercise2.Program.TicketType
+    name: TicketType
+    href: Exercise2.Program.TicketType.html
+  spec.vb:
+  - uid: Exercise2.Program
+    name: Program
+    href: Exercise2.Program.html
+  - name: .
+  - uid: Exercise2.Program.TicketType
+    name: TicketType
+    href: Exercise2.Program.TicketType.html
+- uid: Exercise2.Program.BuyTicket*
+  commentId: Overload:Exercise2.Program.BuyTicket
+  href: Exercise2.Program.html#Exercise2_Program_BuyTicket_System_Int32_
+  name: BuyTicket
+  nameWithType: Program.BuyTicket
+  fullName: Exercise2.Program.BuyTicket

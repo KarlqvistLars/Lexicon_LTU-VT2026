@@ -1,0 +1,37 @@
+{
+  "api/Exercise1/Exercise1.Employee.html": {
+    "href": "api/Exercise1/Exercise1.Employee.html",
+    "title": "Class Employee | Min DocFX Dokumentation",
+    "summary": "Class Employee Namespace Exercise1 Assembly Exercise1.dll public class Employee Inheritance object Employee Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors Employee(string, string, string) public Employee(string name, string born, string hourlyRate) Parameters name string born string hourlyRate string Properties Born The Employee class represents an employee with a name, birth year and hourly rate. It has a constructor that takes in the name, birth year and hourly rate as parameters and assigns them to the corresponding properties. The birth year is parsed from a string to an integer, and if there is an error during parsing, it will catch the exception and print an error message to the console. public int Born { get; set; } Property Value int HourlyRate public string? HourlyRate { get; set; } Property Value string Name public string? Name { get; set; } Property Value string"
+  },
+  "api/Exercise1/Exercise1.html": {
+    "href": "api/Exercise1/Exercise1.html",
+    "title": "Namespace Exercise1 | Min DocFX Dokumentation",
+    "summary": "Namespace Exercise1 Classes Employee"
+  },
+  "api/Exercise2/Exercise2.Program.TicketType.html": {
+    "href": "api/Exercise2/Exercise2.Program.TicketType.html",
+    "title": "Enum Program.TicketType | Min DocFX Dokumentation",
+    "summary": "Enum Program.TicketType Namespace Exercise2 Assembly Exercise2.dll Enumeration för biljetttyper, där varje typ representerar en kategori av biobiljetter baserat på ålder: Vuxen, Ungdom, Pensionär och Fribiljett. public enum Program.TicketType Fields Adult = 0 Err = 4 Free = 3 Senior = 2 Youth = 1"
+  },
+  "api/Exercise2/Exercise2.Program.Tickets.html": {
+    "href": "api/Exercise2/Exercise2.Program.Tickets.html",
+    "title": "Struct Program.Tickets | Min DocFX Dokumentation",
+    "summary": "Struct Program.Tickets Namespace Exercise2 Assembly Exercise2.dll Representerar antalet biljetter av varje typ som köpts, där varje egenskap (Adult, Youth, Senior, Free, Err) håller reda på antalet biljetter av den specifika typen som har köpts. Adult = 20-64år Youth = 5-19år Senior = 65-100år Free = 1-4år samt äver 100år Gratis. Err är en felindikeringsflagga som håller reda på antalet ogiltiga åldersangivelser som har gjorts under biljettköpsprocessen. public struct Program.Tickets Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Properties Adult public int Adult { readonly get; set; } Property Value int Err public int Err { readonly get; set; } Property Value int Free public int Free { readonly get; set; } Property Value int Senior public int Senior { readonly get; set; } Property Value int Youth public int Youth { readonly get; set; } Property Value int"
+  },
+  "api/Exercise2/Exercise2.Program.html": {
+    "href": "api/Exercise2/Exercise2.Program.html",
+    "title": "Class Program | Min DocFX Dokumentation",
+    "summary": "Class Program Namespace Exercise2 Assembly Exercise2.dll public class Program Inheritance object Program Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields tickets En instans av Tickets-strukturen som används för att hålla reda på antalet biljetter av varje typ som köpts under programkörningen. public static Program.Tickets tickets Field Value Program.Tickets Methods BuyTicket(int) Skapa en biljett baserat på ålder, där biljettypen bestäms av ChooseTicketType-metoden. Om åldern är ogiltig (0 eller negativ) så skrivs ett felmeddelande ut och ingen biljett skapas. Metoden returnerar en Tickets-struktur som innehåller antalet biljetter av varje typ som köpts (i det här fallet antingen 1 av en typ eller 0 av alla typer). public static Program.Tickets BuyTicket(int age) Parameters age int Åldern på personen som ska köpa biljett Returns Program.Tickets En Tickets-struktur som innehåller antalet biljetter av varje typ som köpts ChooseTicketType(int) Metod att välja biljetttyp baserat på ålder, där åldersgränserna är: Ungdom under 20 år, Pensionär över 64 år, Fribiljett under 5 år och över 100 år, samt Vuxen i övriga fall. public static Program.TicketType ChooseTicketType(int age) Parameters age int Åldern på personen som ska köpa biljett Returns Program.TicketType Biljetttypen som motsvarar åldern"
+  },
+  "api/Exercise2/Exercise2.html": {
+    "href": "api/Exercise2/Exercise2.html",
+    "title": "Namespace Exercise2 | Min DocFX Dokumentation",
+    "summary": "Namespace Exercise2 Classes Program Structs Program.Tickets Representerar antalet biljetter av varje typ som köpts, där varje egenskap (Adult, Youth, Senior, Free, Err) håller reda på antalet biljetter av den specifika typen som har köpts. Adult = 20-64år Youth = 5-19år Senior = 65-100år Free = 1-4år samt äver 100år Gratis. Err är en felindikeringsflagga som håller reda på antalet ogiltiga åldersangivelser som har gjorts under biljettköpsprocessen. Enums Program.TicketType Enumeration för biljetttyper, där varje typ representerar en kategori av biobiljetter baserat på ålder: Vuxen, Ungdom, Pensionär och Fribiljett."
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "Min dokumentation | Min DocFX Dokumentation",
+    "summary": "Min dokumentation Detta är startsidan för dokumentationen. Lexicon Exercises Exercise1 API Exercise2 API"
+  }
+}

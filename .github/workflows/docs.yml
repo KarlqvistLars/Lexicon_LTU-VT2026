@@ -54,8 +54,8 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/_site
 
+          path: docs/_site
   deploy:
     environment:
       name: github-pages

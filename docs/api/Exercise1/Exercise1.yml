@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Exercise1
+  commentId: N:Exercise1
+  id: Exercise1
+  children:
+  - Exercise1.Employee
+  langs:
+  - csharp
+  - vb
+  name: Exercise1
+  nameWithType: Exercise1
+  fullName: Exercise1
+  type: Namespace
+  assemblies:
+  - Exercise1
+references:
+- uid: Exercise1.Employee
+  commentId: T:Exercise1.Employee
+  href: Exercise1.Employee.html
+  name: Employee
+  nameWithType: Employee
+  fullName: Exercise1.Employee

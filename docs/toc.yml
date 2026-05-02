@@ -1,8 +1,9 @@
 - name: Start
   href: index.md
 
-- name: Exercise 1 API
-  href: api/Exercise1/
+- name: Exercise1 API
+  href: api/Exercise1/toc.yml
 
-- name: Exercise 2 API
-  href: api/Exercise2/
+- name: Exercise2 API
+  href: api/Exercise2/toc.yml
+  

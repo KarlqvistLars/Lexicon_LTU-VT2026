@@ -1,0 +1,19 @@
+{
+  "Exercise2": "Exercise2.yml",
+  "Exercise2.Program": "Exercise2.Program.yml",
+  "Exercise2.Program.BuyTicket(System.Int32)": "Exercise2.Program.yml",
+  "Exercise2.Program.ChooseTicketType(System.Int32)": "Exercise2.Program.yml",
+  "Exercise2.Program.TicketType": "Exercise2.Program.TicketType.yml",
+  "Exercise2.Program.TicketType.Adult": "Exercise2.Program.TicketType.yml",
+  "Exercise2.Program.TicketType.Err": "Exercise2.Program.TicketType.yml",
+  "Exercise2.Program.TicketType.Free": "Exercise2.Program.TicketType.yml",
+  "Exercise2.Program.TicketType.Senior": "Exercise2.Program.TicketType.yml",
+  "Exercise2.Program.TicketType.Youth": "Exercise2.Program.TicketType.yml",
+  "Exercise2.Program.Tickets": "Exercise2.Program.Tickets.yml",
+  "Exercise2.Program.Tickets.Adult": "Exercise2.Program.Tickets.yml",
+  "Exercise2.Program.Tickets.Err": "Exercise2.Program.Tickets.yml",
+  "Exercise2.Program.Tickets.Free": "Exercise2.Program.Tickets.yml",
+  "Exercise2.Program.Tickets.Senior": "Exercise2.Program.Tickets.yml",
+  "Exercise2.Program.Tickets.Youth": "Exercise2.Program.Tickets.yml",
+  "Exercise2.Program.tickets": "Exercise2.Program.yml"
+}

@@ -1,0 +1,10 @@
+### YamlMime:TableOfContent
+items:
+- uid: Exercise1
+  name: Exercise1
+  type: Namespace
+  items:
+  - uid: Exercise1.Employee
+    name: Employee
+    type: Class
+memberLayout: SamePage
