@@ -1,5 +1,5 @@
-# Exercise2 Dokumentation
+# Dokumentation
 
 Välkommen till dokumentationen.
 
-- [API Documentation](api/Exercise2.html)
+- [Exercise 2 Documentation](api/Exercise2.html)
