@@ -23,8 +23,9 @@ personalregister. De har endast två krav:<br><br>
  i konsolen, inget krav på persistent lagring)<br>
  <br>
 * Programmet skall kunna skriva ut registret i en konsol.<br><br>
-[Övningens dokumentation](https://karlqvistlars.github.io/Lexicon_LTU-VT2026/api/Exercise1/Exercise1.html)
-<br>
+
+### [Övningens dokumentation](https://karlqvistlars.github.io/Lexicon_LTU-VT2026/api/Exercise1/Exercise1.html)
+
 ### Uppgift 1<br>
 Vilka klasser bör ingå i programmet?<br>
 #### SVAR: 
