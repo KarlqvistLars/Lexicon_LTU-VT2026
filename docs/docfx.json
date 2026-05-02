@@ -1,0 +1,42 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [ "../Exercise1/Exercise1.csproj" ]
+        }
+      ],
+      "dest": "api/Exercise1"
+    },
+    {
+      "src": [
+        {
+          "files": [ "../Exercise2/Exercise2.csproj" ]
+        }
+      ],
+      "dest": "api/Exercise2"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [ "index.md", "toc.yml" ]
+      },
+      {
+        "files": [ "api/**.yml", "api/index.md" ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [ "images/**" ]
+      }
+    ],
+    "dest": "_site",
+    "globalMetadata": {
+      "_appName": "Min DocFX Dokumentation",
+      "_appTitle": "Min DocFX Dokumentation",
+      "_enableSearch": true
+    },
+    "template": [ "default", "modern" ]
+  }
+}

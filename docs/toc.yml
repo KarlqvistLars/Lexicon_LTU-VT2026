@@ -1,0 +1,8 @@
+- name: Start
+  href: index.md
+
+- name: Exercise 1 API
+  href: api/Exercise1/
+
+- name: Exercise 2 API
+  href: api/Exercise2/
