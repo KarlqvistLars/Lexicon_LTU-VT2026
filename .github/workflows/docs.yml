@@ -38,6 +38,12 @@ jobs:
 
       - name: Build Exercise 1 and create XML docs
         run: dotnet build Exercise1/Exercise1/Exercise1/Exercise1.csproj --configuration Release --no-restore
+      
+      - name: Restore Exercise 1b
+        run: dotnet restore Exercise1/Exercise1b/Exercise1b/Exercise1b.csproj
+
+      - name: Build Exercise 1b and create XML docs
+        run: dotnet build Exercise1/Exercise1b/Exercise1b/Exercise1b.csproj --configuration Release --no-restore
 
       - name: Restore Exercise 2
         run: dotnet restore Exercise2/Exercise2/Exercise2/Exercise2.csproj

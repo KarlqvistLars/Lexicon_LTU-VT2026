@@ -9,7 +9,7 @@ using System.Windows.Documents;
 namespace Exercise1b
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Utökning av Exercise1. Tillagt ett UI för att hantera anställda. Användaren kan lägga till, ta bort och spara anställda i en fil. Anställda visas i en ListView och detaljerna visas i TextBoxar när en anställd väljs. Data sparas automatiskt när programmet stängs.
     /// </summary>
     public partial class MainWindow : Window
     {
