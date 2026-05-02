@@ -23,7 +23,7 @@ namespace Exercise2
         /// <summary>
         /// Enumartion för val av presentation, där varje typ representerar en kategori av biljettköp baserat på om det är en privatperson eller ett sällskap som köper biljetter.
         /// </summary>
-        internal enum GroupType
+        public enum GroupType
         {
             Private,
             Company
@@ -87,7 +87,7 @@ namespace Exercise2
         /// Användaren navigerar menyvalen genom att använda siffran och Enter för önskat val. 
         /// Menyn fortsätter att visas tills användaren väljer att avsluta programmet genom att ange "0".
         /// </summary>
-        internal static void PrintProgramChoiceMenu()
+        public static void PrintProgramChoiceMenu()
         {
             Console.Clear();
             Console.WriteLine("\u001b[4mVälkommen till programvalmenyn!\u001b[0m");
@@ -99,7 +99,7 @@ namespace Exercise2
         /// Menyer för biobiljetter
         /// </summary>
         /// <returns></returns>
-        internal static void PrintBioMenu()
+        public static void PrintBioMenu()
         {
             Console.Clear();
             Console.WriteLine("\u001b[4mVälkommen på Bio!\u001b[0m");
@@ -129,7 +129,7 @@ namespace Exercise2
         /// <summary>
         /// Skriver menyn för att köpa en enkelbiljett, där användaren anger sin ålder och biljetttypen bestäms av åldern enligt de angivna reglerna.
         /// </summary>
-        internal static void PrintMenuEnkelbiljett()
+        public static void PrintMenuEnkelbiljett()
         {
             Console.Clear();
             Console.WriteLine("\u001b[4mVälkommen på Bio!\u001b[0m");
@@ -145,7 +145,7 @@ namespace Exercise2
         /// <summary>
         /// Skriver menyn för att köpa biljetter till ett sällskap, där användaren först anger antalet personer i sällskapet och sedan åldern för varje person.
         /// </summary>
-        internal static void PrintMenuSamlingsbiljett()
+        public static void PrintMenuSamlingsbiljett()
         {
             Console.Clear();
             Console.WriteLine("\u001b[4mVälkommen på Bio!\u001b[0m");
@@ -163,7 +163,7 @@ namespace Exercise2
         /// </summary>
         /// <param name="age"></param>
         /// <param name="type"></param>
-        internal static void ExecuteTicketTransaction(int age, GroupType type)
+        public static void ExecuteTicketTransaction(int age, GroupType type)
         {
             switch (type)
             {
@@ -206,7 +206,7 @@ namespace Exercise2
         /// Totalpris och antal biljetter presenterade i en sammanställning efter köp av samlingsbiljett.
         /// </summary>
         /// <param name="tickets"></param>
-        private static void PresentTotal(Tickets tickets)
+        public static void PresentTotal(Tickets tickets)
         {
             if (tickets.Adult>0)
             {
@@ -293,7 +293,7 @@ namespace Exercise2
         /// </summary>
         /// <param name="antal">Antalet personer i sällskapet</param>
         /// <returns>En Tickets-struktur som innehåller antalet biljetter av varje typ som köpts för sällskapet</returns>
-        private static Tickets BuyCompanyTicket(int antal)
+        public static Tickets BuyCompanyTicket(int antal)
         {
             Tickets companyTickets = new Tickets();
 
@@ -327,7 +327,7 @@ namespace Exercise2
         /// <summary>
         /// Meny och funktion för att skriva ut en mening 10 gånger, där meningen matas in av användaren.
         /// </summary>
-        private static void PrintLoopTenMenu()
+        public static void PrintLoopTenMenu()
         {
             Console.Clear();
             Console.Write("\u001b[4mVälkommen till PRINT-TEN!\u001b[0m");
@@ -345,7 +345,7 @@ namespace Exercise2
         /// <summary>
         /// Meny och funktion för att skriva ut det 3:e ordet i en mening, om det finns 3 eller fler ord i meningen.
         /// </summary>
-        private static void PrintThirdWordMenu()
+        public static void PrintThirdWordMenu()
         {
             Console.Clear();
             Console.Write("\u001b[4mVälkommen till Det 3:e Ordet!\u001b[0m");
