@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Windows.Controls;
 
 namespace Exercise1b
 {
@@ -33,7 +34,8 @@ namespace Exercise1b
         /// Method to list people in the list, it will iterate through the list of employees and print their name, birth year and hourly rate to the console.
         /// </summary>
         /// <param name="list">The list of employees to be displayed.</param>
-        internal static void ShowPeople(List<Employee> list)
+        /// <param name="employeeListBox">The ListBox control where the employees will be displayed.</param>
+        internal static void ShowPeople(List<Employee> list, ListBox employeeListBox)
         {
             foreach (var person in list)
             {
@@ -41,6 +43,11 @@ namespace Exercise1b
 
             }
 
+            employeeListBox.Items.Clear();
+            foreach (Employee person in list)
+            {
+                employeeListBox.Items.Add($"{person.Name}\t{person.Born}\t{person.HourlyRate}");
+            }
         }
         /// <summary>
         /// Method to save people to a file, it will create a new file if it doesn't exist and then write the name, birth year and hourly rate of each employee in the list to the file in a specific format.

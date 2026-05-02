@@ -5,16 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Exercise1b"
         mc:Ignorable="d"
-        Title="Personalregister" Height="280" Width="600">
+        Title="Personalregister" MinHeight="300" MinWidth="600" MaxHeight="300" MaxWidth="600">
     <Grid>
-        <Button x:Name="OK_Button" Content="OK" Width="80" Height="30" HorizontalAlignment="Left" Margin="25,0,0,25" VerticalAlignment="Bottom" Click="OK_Button_Click"/>
-        <Button x:Name="Cancel_Button" Content="Cancel" Width="80" Height="30" HorizontalAlignment="Left" Margin="125,0,0,25" VerticalAlignment="Bottom" Click="Cancel_Button_Click"/>
-        <Label x:Name="LabelNamn" Content="Namn" HorizontalAlignment="Left" Margin="25,25,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextBoxNamn" HorizontalAlignment="Left" Margin="25,45,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="200" Height="20"/>
-        <Label x:Name="LabelFData" Content="Födelseår" HorizontalAlignment="Left" Margin="25,65,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextBoxFData" HorizontalAlignment="Left" Margin="25,85,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="200" Height="20"/>
-        <Label x:Name="LabelHourlyRate" Content="Timlön" HorizontalAlignment="Left" Margin="25,105,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextBoxHourlyRate" HorizontalAlignment="Left" Margin="25,125,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="200" Height="20"/>
-        <ListBox HorizontalAlignment="Stretch" Margin="260,25,25,25" VerticalAlignment="Stretch" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Button x:Name="Show_Button" Content="Show" Width="80" Height="30" HorizontalAlignment="Left" Margin="25,0,0,25" VerticalAlignment="Bottom" Click="Show_Button_Click"/>
+        <Button x:Name="Exit_Button" Content="Exit" Width="80" Height="30" HorizontalAlignment="Left" Margin="125,0,0,25" VerticalAlignment="Bottom" Click="Exit_Button_Click"/>
+        <Button x:Name="Add_Button" Content="Add" Width="80" Height="30" HorizontalAlignment="Left" Margin="25,0,0,65" VerticalAlignment="Bottom" Click="Add_Button_Click"/>
+        <Button x:Name="Remove_Button" Content="Remove" Width="80" Height="30" HorizontalAlignment="Left" Margin="125,0,0,65" VerticalAlignment="Bottom" Click="Remove_Button_Click"/>
+        <Label x:Name="LabelNamn" FontSize="10" Content="Namn" HorizontalAlignment="Left" Margin="25,25,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBoxNamn" HorizontalAlignment="Left" Margin="25,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="20"/>
+        <Label x:Name="LabelFData" FontSize="10" Content="Födelseår" HorizontalAlignment="Left" Margin="25,65,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBoxFData" HorizontalAlignment="Left" Margin="25,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="20"/>
+        <Label x:Name="LabelHourlyRate" FontSize="10" Content="Timlön" HorizontalAlignment="Left" Margin="25,105,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBoxHourlyRate" HorizontalAlignment="Left" Margin="25,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="20"/>
+        <ListBox x:Name="EmployeeListBox" HorizontalAlignment="Stretch" Margin="260,25,25,25" VerticalAlignment="Stretch" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="EmployeeListBox_SelectionChanged"/>
     </Grid>
 </Window>
