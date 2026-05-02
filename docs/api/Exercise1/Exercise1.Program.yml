@@ -4,7 +4,8 @@ items:
   commentId: T:Exercise1.Program
   id: Program
   parent: Exercise1
-  children: []
+  children:
+  - Exercise1.Program.GetMenu
   langs:
   - csharp
   - vb
@@ -15,7 +16,7 @@ items:
   source:
     remote:
       path: Exercise1/Exercise1/Exercise1/Program.cs
-      branch: main
+      branch: dev/exercise2/comment
       repo: https://github.com/KarlqvistLars/Lexicon_LTU-VT2026.git
     id: Program
     path: ../Exercise1/Exercise1/Exercise1/Program.cs
@@ -36,6 +37,40 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: Exercise1.Program.GetMenu
+  commentId: M:Exercise1.Program.GetMenu
+  id: GetMenu
+  parent: Exercise1.Program
+  langs:
+  - csharp
+  - vb
+  name: GetMenu()
+  nameWithType: Program.GetMenu()
+  fullName: Exercise1.Program.GetMenu()
+  type: Method
+  source:
+    remote:
+      path: Exercise1/Exercise1/Exercise1/Program.cs
+      branch: dev/exercise2/comment
+      repo: https://github.com/KarlqvistLars/Lexicon_LTU-VT2026.git
+    id: GetMenu
+    path: ../Exercise1/Exercise1/Exercise1/Program.cs
+    startLine: 57
+  assemblies:
+  - Exercise1
+  namespace: Exercise1
+  summary: >-
+    The GetMenu method returns a string that represents the menu options for the user. 
+
+    It includes options to add a person, show people, save people, and exit the program.
+  example: []
+  syntax:
+    content: public static string GetMenu()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function GetMenu() As String
+  overload: Exercise1.Program.GetMenu*
 references:
 - uid: Exercise1
   commentId: N:Exercise1
@@ -280,3 +315,20 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Exercise1.Program.GetMenu*
+  commentId: Overload:Exercise1.Program.GetMenu
+  href: Exercise1.Program.html#Exercise1_Program_GetMenu
+  name: GetMenu
+  nameWithType: Program.GetMenu
+  fullName: Exercise1.Program.GetMenu
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

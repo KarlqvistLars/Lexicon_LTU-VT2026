@@ -20,11 +20,11 @@ items:
   source:
     remote:
       path: Exercise2/Exercise2/Exercise2/Program.cs
-      branch: main
+      branch: dev/exercise2/comment
       repo: https://github.com/KarlqvistLars/Lexicon_LTU-VT2026.git
     id: TicketType
     path: ../Exercise2/Exercise2/Exercise2/Program.cs
-    startLine: 14
+    startLine: 18
   assemblies:
   - Exercise2
   namespace: Exercise2
@@ -47,11 +47,11 @@ items:
   source:
     remote:
       path: Exercise2/Exercise2/Exercise2/Program.cs
-      branch: main
+      branch: dev/exercise2/comment
       repo: https://github.com/KarlqvistLars/Lexicon_LTU-VT2026.git
     id: Adult
     path: ../Exercise2/Exercise2/Exercise2/Program.cs
-    startLine: 16
+    startLine: 20
   assemblies:
   - Exercise2
   namespace: Exercise2
@@ -73,11 +73,11 @@ items:
   source:
     remote:
       path: Exercise2/Exercise2/Exercise2/Program.cs
-      branch: main
+      branch: dev/exercise2/comment
       repo: https://github.com/KarlqvistLars/Lexicon_LTU-VT2026.git
     id: Youth
     path: ../Exercise2/Exercise2/Exercise2/Program.cs
-    startLine: 17
+    startLine: 21
   assemblies:
   - Exercise2
   namespace: Exercise2
@@ -99,11 +99,11 @@ items:
   source:
     remote:
       path: Exercise2/Exercise2/Exercise2/Program.cs
-      branch: main
+      branch: dev/exercise2/comment
       repo: https://github.com/KarlqvistLars/Lexicon_LTU-VT2026.git
     id: Senior
     path: ../Exercise2/Exercise2/Exercise2/Program.cs
-    startLine: 18
+    startLine: 22
   assemblies:
   - Exercise2
   namespace: Exercise2
@@ -125,11 +125,11 @@ items:
   source:
     remote:
       path: Exercise2/Exercise2/Exercise2/Program.cs
-      branch: main
+      branch: dev/exercise2/comment
       repo: https://github.com/KarlqvistLars/Lexicon_LTU-VT2026.git
     id: Free
     path: ../Exercise2/Exercise2/Exercise2/Program.cs
-    startLine: 19
+    startLine: 23
   assemblies:
   - Exercise2
   namespace: Exercise2
@@ -151,11 +151,11 @@ items:
   source:
     remote:
       path: Exercise2/Exercise2/Exercise2/Program.cs
-      branch: main
+      branch: dev/exercise2/comment
       repo: https://github.com/KarlqvistLars/Lexicon_LTU-VT2026.git
     id: Err
     path: ../Exercise2/Exercise2/Exercise2/Program.cs
-    startLine: 20
+    startLine: 24
   assemblies:
   - Exercise2
   namespace: Exercise2

@@ -6,17 +6,17 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Program | Dokumentation ">
       
-      
+      <meta name="description" content="Detta program &#228;r en konsolapplikation som erbjuder anv&#228;ndaren tre olika funktioner: att k&#246;pa biobiljetter, att skriva ut en mening 10 g&#229;nger, och att skriva ut det 3:e ordet i en mening.">
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
       <meta name="docfx:navrel" content="../../toc.html">
-      <meta name="docfx:tocrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
       
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/new/main/apiSpec/new?filename=Exercise2_Program.md&amp;value=---%0Auid%3A%20Exercise2.Program%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/new/dev/exercise2/comment/apiSpec/new?filename=Exercise2_Program.md&amp;value=---%0Auid%3A%20Exercise2.Program%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -63,9 +63,23 @@
     </header>
 
     <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
 
       <div class="content">
         <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
 
           <nav id="breadcrumb"></nav>
         </div>
@@ -75,7 +89,7 @@
 
 
   <h1 id="Exercise2_Program" data-uid="Exercise2.Program" class="text-break">
-Class Program  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise2/Exercise2/Exercise2/Program.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class Program  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/dev/exercise2/comment/Exercise2/Exercise2/Exercise2/Program.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -83,7 +97,9 @@ Class Program  <a class="header-action link-secondary" title="View source" href=
   <dl><dt>Assembly</dt><dd>Exercise2.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Detta program är en konsolapplikation som erbjuder användaren tre olika funktioner: att köpa biobiljetter,
+att skriva ut en mening 10 gånger, och att skriva ut det 3:e ordet i en mening.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -141,7 +157,7 @@ Class Program  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Exercise2_Program_tickets" data-uid="Exercise2.Program.tickets">
   tickets
-  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise2/Exercise2/Exercise2/Program.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/dev/exercise2/comment/Exercise2/Exercise2/Exercise2/Program.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>En instans av Tickets-strukturen som används för att hålla reda på antalet biljetter av varje typ som köpts under programkörningen.</p>
@@ -173,11 +189,50 @@ Class Program  <a class="header-action link-secondary" title="View source" href=
 </h2>
 
 
+  <a id="Exercise2_Program_BuyCompanyTicket_" data-uid="Exercise2.Program.BuyCompanyTicket*"></a>
+
+  <h3 id="Exercise2_Program_BuyCompanyTicket_System_Int32_" data-uid="Exercise2.Program.BuyCompanyTicket(System.Int32)">
+  BuyCompanyTicket(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/dev/exercise2/comment/Exercise2/Exercise2/Exercise2/Program.cs/#L300"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Metod att köpa biljetter för ett sällskap, där användaren först anger antalet personer i sällskapet och sedan åldern för varje person.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Program.Tickets BuyCompanyTicket(int antal)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>antal</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Antalet personer i sällskapet</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Exercise2.Program.html">Program</a>.<a class="xref" href="Exercise2.Program.Tickets.html">Tickets</a></dt>
+    <dd><p>En Tickets-struktur som innehåller antalet biljetter av varje typ som köpts för sällskapet</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Exercise2_Program_BuyTicket_" data-uid="Exercise2.Program.BuyTicket*"></a>
 
   <h3 id="Exercise2_Program_BuyTicket_System_Int32_" data-uid="Exercise2.Program.BuyTicket(System.Int32)">
   BuyTicket(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise2/Exercise2/Exercise2/Program.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/dev/exercise2/comment/Exercise2/Exercise2/Exercise2/Program.cs/#L265"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Skapa en biljett baserat på ålder, där biljettypen bestäms av ChooseTicketType-metoden.
@@ -218,7 +273,7 @@ Metoden returnerar en Tickets-struktur som innehåller antalet biljetter av varj
 
   <h3 id="Exercise2_Program_ChooseTicketType_System_Int32_" data-uid="Exercise2.Program.ChooseTicketType(System.Int32)">
   ChooseTicketType(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise2/Exercise2/Exercise2/Program.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/dev/exercise2/comment/Exercise2/Exercise2/Exercise2/Program.cs/#L238"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Metod att välja biljetttyp baserat på ålder, där åldersgränserna är: Ungdom under 20 år, Pensionär över 64 år, Fribiljett under 5 år och över 100 år, samt Vuxen i övriga fall.</p>
@@ -253,11 +308,242 @@ Metoden returnerar en Tickets-struktur som innehåller antalet biljetter av varj
 
 
 
+  <a id="Exercise2_Program_ExecuteTicketTransaction_" data-uid="Exercise2.Program.ExecuteTicketTransaction*"></a>
+
+  <h3 id="Exercise2_Program_ExecuteTicketTransaction_System_Int32_Exercise2_Program_GroupType_" data-uid="Exercise2.Program.ExecuteTicketTransaction(System.Int32,Exercise2.Program.GroupType)">
+  ExecuteTicketTransaction(int, GroupType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/dev/exercise2/comment/Exercise2/Exercise2/Exercise2/Program.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Funktioner för Biobiljetter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ExecuteTicketTransaction(int age, Program.GroupType type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>age</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>type</code> <a class="xref" href="Exercise2.Program.html">Program</a>.<a class="xref" href="Exercise2.Program.GroupType.html">GroupType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Exercise2_Program_PresentTotal_" data-uid="Exercise2.Program.PresentTotal*"></a>
+
+  <h3 id="Exercise2_Program_PresentTotal_Exercise2_Program_Tickets_" data-uid="Exercise2.Program.PresentTotal(Exercise2.Program.Tickets)">
+  PresentTotal(Tickets)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/dev/exercise2/comment/Exercise2/Exercise2/Exercise2/Program.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Totalpris och antal biljetter presenterade i en sammanställning efter köp av samlingsbiljett.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PresentTotal(Program.Tickets tickets)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tickets</code> <a class="xref" href="Exercise2.Program.html">Program</a>.<a class="xref" href="Exercise2.Program.Tickets.html">Tickets</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Exercise2_Program_PrintBioMenu_" data-uid="Exercise2.Program.PrintBioMenu*"></a>
+
+  <h3 id="Exercise2_Program_PrintBioMenu" data-uid="Exercise2.Program.PrintBioMenu">
+  PrintBioMenu()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/dev/exercise2/comment/Exercise2/Exercise2/Exercise2/Program.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Menyer för biobiljetter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PrintBioMenu()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Exercise2_Program_PrintLoopTenMenu_" data-uid="Exercise2.Program.PrintLoopTenMenu*"></a>
+
+  <h3 id="Exercise2_Program_PrintLoopTenMenu" data-uid="Exercise2.Program.PrintLoopTenMenu">
+  PrintLoopTenMenu()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/dev/exercise2/comment/Exercise2/Exercise2/Exercise2/Program.cs/#L334"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Meny och funktion för att skriva ut en mening 10 gånger, där meningen matas in av användaren.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PrintLoopTenMenu()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Exercise2_Program_PrintMenuEnkelbiljett_" data-uid="Exercise2.Program.PrintMenuEnkelbiljett*"></a>
+
+  <h3 id="Exercise2_Program_PrintMenuEnkelbiljett" data-uid="Exercise2.Program.PrintMenuEnkelbiljett">
+  PrintMenuEnkelbiljett()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/dev/exercise2/comment/Exercise2/Exercise2/Exercise2/Program.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Skriver menyn för att köpa en enkelbiljett, där användaren anger sin ålder och biljetttypen bestäms av åldern enligt de angivna reglerna.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PrintMenuEnkelbiljett()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Exercise2_Program_PrintMenuSamlingsbiljett_" data-uid="Exercise2.Program.PrintMenuSamlingsbiljett*"></a>
+
+  <h3 id="Exercise2_Program_PrintMenuSamlingsbiljett" data-uid="Exercise2.Program.PrintMenuSamlingsbiljett">
+  PrintMenuSamlingsbiljett()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/dev/exercise2/comment/Exercise2/Exercise2/Exercise2/Program.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Skriver menyn för att köpa biljetter till ett sällskap, där användaren först anger antalet personer i sällskapet och sedan åldern för varje person.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PrintMenuSamlingsbiljett()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Exercise2_Program_PrintProgramChoiceMenu_" data-uid="Exercise2.Program.PrintProgramChoiceMenu*"></a>
+
+  <h3 id="Exercise2_Program_PrintProgramChoiceMenu" data-uid="Exercise2.Program.PrintProgramChoiceMenu">
+  PrintProgramChoiceMenu()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/dev/exercise2/comment/Exercise2/Exercise2/Exercise2/Program.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Skriver ut huvudmenyn för programmet, där användaren kan välja mellan att köpa biobiljetter,
+skriva ut en mening 10 gånger, eller skriva ut det 3:e ordet i en mening.
+Användaren navigerar menyvalen genom att använda siffran och Enter för önskat val.
+Menyn fortsätter att visas tills användaren väljer att avsluta programmet genom att ange &quot;0&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PrintProgramChoiceMenu()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Exercise2_Program_PrintThirdWordMenu_" data-uid="Exercise2.Program.PrintThirdWordMenu*"></a>
+
+  <h3 id="Exercise2_Program_PrintThirdWordMenu" data-uid="Exercise2.Program.PrintThirdWordMenu">
+  PrintThirdWordMenu()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/dev/exercise2/comment/Exercise2/Exercise2/Exercise2/Program.cs/#L352"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Meny och funktion för att skriva ut det 3:e ordet i en mening, om det finns 3 eller fler ord i meningen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PrintThirdWordMenu()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise2/Exercise2/Exercise2/Program.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/dev/exercise2/comment/Exercise2/Exercise2/Exercise2/Program.cs/#L10" class="edit-link">Edit this page</a>
         </div>
 
 
