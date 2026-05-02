@@ -17,6 +17,19 @@
       "src": [
         {
           "src": "..",
+          "files": [ "Exercise1/Exercise1b/Exercise1b/Exercise1b.csproj" ]
+        }
+      ],
+      "dest": "api/Exercise1b",
+          "properties": {
+            "IncludePrivateMembers": "true",
+            "IncludeInternalMembers": "true"
+      }
+    },
+    {
+      "src": [
+        {
+          "src": "..",
           "files": [ "Exercise2/Exercise2/Exercise2/Exercise2.csproj" ]
         }
       ],
