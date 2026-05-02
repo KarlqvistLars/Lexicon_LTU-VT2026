@@ -22,7 +22,7 @@ personalregister. De har endast två krav:<br><br>
 * Registret skall kunna ta emot och lagra anställda med namn och lön. (via inmatning
  i konsolen, inget krav på persistent lagring)<br>
  <br>
-* Programmet skall kunna skriva ut registret i en konsol.<br><br>
+* Programmet skall kunna skriva ut registret i en konsol.<br>
 
 ### [Övningens dokumentation](https://karlqvistlars.github.io/Lexicon_LTU-VT2026/api/Exercise1/Exercise1.html)
 
