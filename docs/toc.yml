@@ -2,11 +2,7 @@
   href: index.md
 
 - name: Exercise1
-  href: api/Exercise1/Exercise1.html
-
-- name: Exercise1b
-  href: api/Exercise1b/Exercise1b.html
+  href: api/Exercise1/
 
 - name: Exercise2 
-  href: api/Exercise2/Exercise2.html
-  
+  href: api/Exercise2/

@@ -5,7 +5,10 @@ items:
   id: FileHandler
   parent: Exercise1
   children:
+  - Exercise1.FileHandler.AddPerson(System.Collections.Generic.List{Exercise1.Employee})
   - Exercise1.FileHandler.LoadPeople(System.String)
+  - Exercise1.FileHandler.SavePeople(System.Collections.Generic.List{Exercise1.Employee},System.String)
+  - Exercise1.FileHandler.ShowPeople(System.Collections.Generic.List{Exercise1.Employee})
   langs:
   - csharp
   - vb
@@ -16,7 +19,7 @@ items:
   source:
     remote:
       path: Exercise1/Exercise1/Exercise1/FileHandler.cs
-      branch: main
+      branch: dev/exercise2/comment
       repo: https://github.com/KarlqvistLars/Lexicon_LTU-VT2026.git
     id: FileHandler
     path: ../Exercise1/Exercise1/Exercise1/FileHandler.cs
@@ -37,6 +40,117 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: Exercise1.FileHandler.AddPerson(System.Collections.Generic.List{Exercise1.Employee})
+  commentId: M:Exercise1.FileHandler.AddPerson(System.Collections.Generic.List{Exercise1.Employee})
+  id: AddPerson(System.Collections.Generic.List{Exercise1.Employee})
+  parent: Exercise1.FileHandler
+  langs:
+  - csharp
+  - vb
+  name: AddPerson(List<Employee>)
+  nameWithType: FileHandler.AddPerson(List<Employee>)
+  fullName: Exercise1.FileHandler.AddPerson(System.Collections.Generic.List<Exercise1.Employee>)
+  type: Method
+  source:
+    remote:
+      path: Exercise1/Exercise1/Exercise1/FileHandler.cs
+      branch: dev/exercise2/comment
+      repo: https://github.com/KarlqvistLars/Lexicon_LTU-VT2026.git
+    id: AddPerson
+    path: ../Exercise1/Exercise1/Exercise1/FileHandler.cs
+    startLine: 16
+  assemblies:
+  - Exercise1
+  namespace: Exercise1
+  summary: Method to add a person to the list, it will ask the user for the name, birth year and hourly rate of the person and then create a new Employee object and add it to the list.
+  example: []
+  syntax:
+    content: public static bool AddPerson(List<Employee> list)
+    parameters:
+    - id: list
+      type: System.Collections.Generic.List{Exercise1.Employee}
+      description: The list of employees to which the new person will be added.
+    return:
+      type: System.Boolean
+      description: Returns true if the person was successfully added, otherwise false.
+    content.vb: Public Shared Function AddPerson(list As List(Of Employee)) As Boolean
+  overload: Exercise1.FileHandler.AddPerson*
+  nameWithType.vb: FileHandler.AddPerson(List(Of Employee))
+  fullName.vb: Exercise1.FileHandler.AddPerson(System.Collections.Generic.List(Of Exercise1.Employee))
+  name.vb: AddPerson(List(Of Employee))
+- uid: Exercise1.FileHandler.ShowPeople(System.Collections.Generic.List{Exercise1.Employee})
+  commentId: M:Exercise1.FileHandler.ShowPeople(System.Collections.Generic.List{Exercise1.Employee})
+  id: ShowPeople(System.Collections.Generic.List{Exercise1.Employee})
+  parent: Exercise1.FileHandler
+  langs:
+  - csharp
+  - vb
+  name: ShowPeople(List<Employee>)
+  nameWithType: FileHandler.ShowPeople(List<Employee>)
+  fullName: Exercise1.FileHandler.ShowPeople(System.Collections.Generic.List<Exercise1.Employee>)
+  type: Method
+  source:
+    remote:
+      path: Exercise1/Exercise1/Exercise1/FileHandler.cs
+      branch: dev/exercise2/comment
+      repo: https://github.com/KarlqvistLars/Lexicon_LTU-VT2026.git
+    id: ShowPeople
+    path: ../Exercise1/Exercise1/Exercise1/FileHandler.cs
+    startLine: 45
+  assemblies:
+  - Exercise1
+  namespace: Exercise1
+  summary: Method to list people in the list, it will iterate through the list of employees and print their name, birth year and hourly rate to the console.
+  example: []
+  syntax:
+    content: public static void ShowPeople(List<Employee> list)
+    parameters:
+    - id: list
+      type: System.Collections.Generic.List{Exercise1.Employee}
+      description: The list of employees to be displayed.
+    content.vb: Public Shared Sub ShowPeople(list As List(Of Employee))
+  overload: Exercise1.FileHandler.ShowPeople*
+  nameWithType.vb: FileHandler.ShowPeople(List(Of Employee))
+  fullName.vb: Exercise1.FileHandler.ShowPeople(System.Collections.Generic.List(Of Exercise1.Employee))
+  name.vb: ShowPeople(List(Of Employee))
+- uid: Exercise1.FileHandler.SavePeople(System.Collections.Generic.List{Exercise1.Employee},System.String)
+  commentId: M:Exercise1.FileHandler.SavePeople(System.Collections.Generic.List{Exercise1.Employee},System.String)
+  id: SavePeople(System.Collections.Generic.List{Exercise1.Employee},System.String)
+  parent: Exercise1.FileHandler
+  langs:
+  - csharp
+  - vb
+  name: SavePeople(List<Employee>, string)
+  nameWithType: FileHandler.SavePeople(List<Employee>, string)
+  fullName: Exercise1.FileHandler.SavePeople(System.Collections.Generic.List<Exercise1.Employee>, string)
+  type: Method
+  source:
+    remote:
+      path: Exercise1/Exercise1/Exercise1/FileHandler.cs
+      branch: dev/exercise2/comment
+      repo: https://github.com/KarlqvistLars/Lexicon_LTU-VT2026.git
+    id: SavePeople
+    path: ../Exercise1/Exercise1/Exercise1/FileHandler.cs
+    startLine: 58
+  assemblies:
+  - Exercise1
+  namespace: Exercise1
+  summary: Method to save people to a file, it will create a new file if it doesn't exist and then write the name, birth year and hourly rate of each employee in the list to the file in a specific format.
+  example: []
+  syntax:
+    content: public static void SavePeople(List<Employee> list, string filePath)
+    parameters:
+    - id: list
+      type: System.Collections.Generic.List{Exercise1.Employee}
+      description: The list of employees to be saved.
+    - id: filePath
+      type: System.String
+      description: The file path where the employees will be saved.
+    content.vb: Public Shared Sub SavePeople(list As List(Of Employee), filePath As String)
+  overload: Exercise1.FileHandler.SavePeople*
+  nameWithType.vb: FileHandler.SavePeople(List(Of Employee), String)
+  fullName.vb: Exercise1.FileHandler.SavePeople(System.Collections.Generic.List(Of Exercise1.Employee), String)
+  name.vb: SavePeople(List(Of Employee), String)
 - uid: Exercise1.FileHandler.LoadPeople(System.String)
   commentId: M:Exercise1.FileHandler.LoadPeople(System.String)
   id: LoadPeople(System.String)
@@ -51,7 +165,7 @@ items:
   source:
     remote:
       path: Exercise1/Exercise1/Exercise1/FileHandler.cs
-      branch: main
+      branch: dev/exercise2/comment
       repo: https://github.com/KarlqvistLars/Lexicon_LTU-VT2026.git
     id: LoadPeople
     path: ../Exercise1/Exercise1/Exercise1/FileHandler.cs
@@ -319,23 +433,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Exercise1.FileHandler.LoadPeople*
-  commentId: Overload:Exercise1.FileHandler.LoadPeople
-  href: Exercise1.FileHandler.html#Exercise1_FileHandler_LoadPeople_System_String_
-  name: LoadPeople
-  nameWithType: FileHandler.LoadPeople
-  fullName: Exercise1.FileHandler.LoadPeople
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+- uid: Exercise1.FileHandler.AddPerson*
+  commentId: Overload:Exercise1.FileHandler.AddPerson
+  href: Exercise1.FileHandler.html#Exercise1_FileHandler_AddPerson_System_Collections_Generic_List_Exercise1_Employee__
+  name: AddPerson
+  nameWithType: FileHandler.AddPerson
+  fullName: Exercise1.FileHandler.AddPerson
 - uid: System.Collections.Generic.List{Exercise1.Employee}
   commentId: T:System.Collections.Generic.List{Exercise1.Employee}
   parent: System.Collections.Generic
@@ -369,6 +472,17 @@ references:
     name: Employee
     href: Exercise1.Employee.html
   - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: System.Collections.Generic.List`1
   commentId: T:System.Collections.Generic.List`1
   isExternal: true
@@ -434,3 +548,32 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Exercise1.FileHandler.ShowPeople*
+  commentId: Overload:Exercise1.FileHandler.ShowPeople
+  href: Exercise1.FileHandler.html#Exercise1_FileHandler_ShowPeople_System_Collections_Generic_List_Exercise1_Employee__
+  name: ShowPeople
+  nameWithType: FileHandler.ShowPeople
+  fullName: Exercise1.FileHandler.ShowPeople
+- uid: Exercise1.FileHandler.SavePeople*
+  commentId: Overload:Exercise1.FileHandler.SavePeople
+  href: Exercise1.FileHandler.html#Exercise1_FileHandler_SavePeople_System_Collections_Generic_List_Exercise1_Employee__System_String_
+  name: SavePeople
+  nameWithType: FileHandler.SavePeople
+  fullName: Exercise1.FileHandler.SavePeople
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Exercise1.FileHandler.LoadPeople*
+  commentId: Overload:Exercise1.FileHandler.LoadPeople
+  href: Exercise1.FileHandler.html#Exercise1_FileHandler_LoadPeople_System_String_
+  name: LoadPeople
+  nameWithType: FileHandler.LoadPeople
+  fullName: Exercise1.FileHandler.LoadPeople

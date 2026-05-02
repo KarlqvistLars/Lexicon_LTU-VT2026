@@ -6,6 +6,10 @@
   "Exercise1.Employee.HourlyRate": "Exercise1.Employee.yml",
   "Exercise1.Employee.Name": "Exercise1.Employee.yml",
   "Exercise1.FileHandler": "Exercise1.FileHandler.yml",
+  "Exercise1.FileHandler.AddPerson(System.Collections.Generic.List{Exercise1.Employee})": "Exercise1.FileHandler.yml",
   "Exercise1.FileHandler.LoadPeople(System.String)": "Exercise1.FileHandler.yml",
-  "Exercise1.Program": "Exercise1.Program.yml"
+  "Exercise1.FileHandler.SavePeople(System.Collections.Generic.List{Exercise1.Employee},System.String)": "Exercise1.FileHandler.yml",
+  "Exercise1.FileHandler.ShowPeople(System.Collections.Generic.List{Exercise1.Employee})": "Exercise1.FileHandler.yml",
+  "Exercise1.Program": "Exercise1.Program.yml",
+  "Exercise1.Program.GetMenu": "Exercise1.Program.yml"
 }
