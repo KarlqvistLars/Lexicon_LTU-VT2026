@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Exercise1b
@@ -13,22 +14,49 @@ namespace Exercise1b
         /// </summary>
         /// <param name="list">The list of employees to which the new person will be added.</param>
         /// <returns>Returns true if the person was successfully added, otherwise false.</returns>
-        internal static bool AddPerson(List<Employee> list,Employee newPerson)
+        internal static bool AddPerson(List<Employee> employees, ListBox listBox, TextBox TextBoxNamn, TextBox TextBoxFData, TextBox TextBoxHourlyRate)
         {
             try
             {
-                Employee person = new Employee(newPerson.Name, newPerson.Born.ToString(), newPerson.HourlyRate);
-                if (person == null)
+                Employee newPerson = new Employee(TextBoxNamn.Text, TextBoxFData.Text, TextBoxHourlyRate.Text);
+                if (TextBoxNamn.Text != "" && TextBoxFData.Text != "" && TextBoxHourlyRate.Text != "")
+                {
+                    if (newPerson == null)
+                    {
+                        return false;
+                    }
+                    employees.Add(newPerson);
+                    TextBoxNamn.Text = "";
+                    TextBoxFData.Text = "";
+                    TextBoxHourlyRate.Text = "";
+                    FileHandler.ShowPeople(employees, listBox);
+                }
+                else
                 {
                     return false;
                 }
-                list.Add(person);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Somthing went wrong, try again!\n" + ex);
+                return false;
             }
             return true;
+        }
+
+        internal static void RemovePerson(List<Employee> employees, ListBox listBox)
+        {
+            if (listBox.SelectedItem != null)
+            {
+                var selectedEmployee = listBox.SelectedItem.ToString()?.Split(null as char[], StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
+                var name = selectedEmployee[0];
+                var born = selectedEmployee[1];
+                var hourlyRate = selectedEmployee[2];
+                Employee personToRemove = new Employee(name, born, hourlyRate);
+                // Tar även bort ev. dubbletter
+                employees.RemoveAll(e => e.Name == personToRemove.Name && e.Born == personToRemove.Born && e.HourlyRate == personToRemove.HourlyRate);
+                FileHandler.ShowPeople(employees, listBox);
+            }
         }
         /// <summary>
         /// Method to list people in the list, it will iterate through the list of employees and print their name, birth year and hourly rate to the console.
@@ -95,6 +123,17 @@ namespace Exercise1b
             }
             
         return liststring;
+        }
+
+        internal static void SelectPerson(ListBox employeeListBox, TextBox TextBoxNamn, TextBox TextBoxFData, TextBox TextBoxHourlyRate)
+        {
+            if (employeeListBox.SelectedItem != null)
+            {
+                var selectedEmployee = employeeListBox.SelectedItem.ToString()?.Split(null as char[], StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
+                TextBoxNamn.Text = selectedEmployee[0];
+                TextBoxFData.Text = selectedEmployee[1];
+                TextBoxHourlyRate.Text = selectedEmployee[2];
+            }
         }
     }
 }

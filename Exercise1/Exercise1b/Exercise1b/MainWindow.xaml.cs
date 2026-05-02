@@ -24,17 +24,13 @@ namespace Exercise1b
             {
                 employees = FileHandler.LoadPeople(installationPath);            
             }
+            FileHandler.ShowPeople(employees, EmployeeListBox);
         }
 
         private void Add_Button_Click(object sender, RoutedEventArgs e)
         {
-            Employee newPerson = new Employee(TextBoxNamn.Text, TextBoxFData.Text, TextBoxHourlyRate.Text);
-            if (TextBoxNamn.Text != "" && TextBoxFData.Text != "" && TextBoxHourlyRate.Text != "")
+            if (FileHandler.AddPerson(employees, EmployeeListBox, TextBoxNamn, TextBoxFData, TextBoxHourlyRate))
             {
-                FileHandler.AddPerson(employees, newPerson);
-                TextBoxNamn.Text = "";
-                TextBoxFData.Text = "";
-                TextBoxHourlyRate.Text = "";
                 FileHandler.ShowPeople(employees, EmployeeListBox);
             }
             else
@@ -55,18 +51,12 @@ namespace Exercise1b
 
         private void Remove_Button_Click(object sender, RoutedEventArgs e)
         {
-            FileHandler.ShowPeople(employees, EmployeeListBox);
+            FileHandler.RemovePerson(employees, EmployeeListBox);
         }
 
         private void EmployeeListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (EmployeeListBox.SelectedItem != null)
-            {
-                var selectedEmployee = EmployeeListBox.SelectedItem.ToString()?.Split(null as char[], StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
-                TextBoxNamn.Text = selectedEmployee[0];
-                TextBoxFData.Text = selectedEmployee[1];
-                TextBoxHourlyRate.Text = selectedEmployee[2];
-            }
+            FileHandler.SelectPerson(EmployeeListBox, TextBoxNamn, TextBoxFData, TextBoxHourlyRate);
         }
     }
 }
