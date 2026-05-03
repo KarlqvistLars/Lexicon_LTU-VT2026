@@ -40,9 +40,15 @@ Vilka attribut och metoder bör ingå i dessa klasser?<br>
 ### Uppgift 3<br>
 Skriv programmet<br>
 
-### ===============================================================================================
+### =====================================================
 <br>
-![Exercise1b](docs/bilder/Exercise1b.jpg)<br>
-Gjorde även en variant Exercise1b men Grafiskt användargänssnitt.<br>
+
+![Exercise1b](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/docs/bilder/Exercise1b.jpg)
+
+<br>
+
+Gjorde även en variant Exercise1b men Grafiskt användargänssnitt. Hittas [här.](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/tree/main/Exercise1/Exercise1/Exercise1b)<br><br>
+
+### =====================================================
 
 ### [Tillbaka](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/tree/main)
