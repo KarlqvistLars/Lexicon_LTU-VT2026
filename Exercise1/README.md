@@ -40,7 +40,7 @@ Vilka attribut och metoder bör ingå i dessa klasser?<br>
 ### Uppgift 3<br>
 Skriv programmet<br>
 
-### ===============================================================================================
+### =====================================================
 <br>
 
 ![Exercise1b](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/docs/bilder/Exercise1b.jpg)
