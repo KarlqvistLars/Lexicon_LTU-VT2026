@@ -1,0 +1,13 @@
+### YamlMime:TableOfContent
+items:
+- uid: Exercise1b.Core
+  name: Exercise1b.Core
+  type: Namespace
+  items:
+  - uid: Exercise1b.Core.Employee
+    name: Employee
+    type: Class
+  - uid: Exercise1b.Core.FileHandler
+    name: FileHandler
+    type: Class
+memberLayout: SamePage

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercise1b
+namespace Exercise1b.Core
 {
     public class Employee
     {

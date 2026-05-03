@@ -1,21 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.IO;
 using System.Text;
-using System.Windows;
 using System.Windows.Controls;
 
-namespace Exercise1b
+namespace Exercise1b.Core
 {
-    internal static class FileHandler
+    public static class FileHandler
     {
         /// <summary>
         /// Method to add a person to the list, it will ask the user for the name, birth year and hourly rate of the person and then create a new Employee object and add it to the list.
         /// </summary>
         /// <param name="list">The list of employees to which the new person will be added.</param>
         /// <returns>Returns true if the person was successfully added, otherwise false.</returns>
-        internal static bool AddPerson(ObservableCollection<Employee> employees, ListView listBox, TextBox TextBoxNamn, TextBox TextBoxFData, TextBox TextBoxHourlyRate)
+        public static bool AddPerson(ObservableCollection<Employee> employees, TextBox TextBoxNamn, TextBox TextBoxFData, TextBox TextBoxHourlyRate)
         {
             try
             {
@@ -30,7 +27,6 @@ namespace Exercise1b
                     TextBoxNamn.Text = "";
                     TextBoxFData.Text = "";
                     TextBoxHourlyRate.Text = "";
-                    //FileHandler.ShowPeople(employees, listBox);
                 }
                 else
                 {
@@ -45,7 +41,7 @@ namespace Exercise1b
             return true;
         }
 
-        internal static void RemovePerson(ObservableCollection<Employee> employees, ListView employeeListBox, TextBox TextBoxNamn, TextBox TextBoxFData, TextBox TextBoxHourlyRate)
+        public static void RemovePerson(ObservableCollection<Employee> employees, ListView employeeListBox, TextBox TextBoxNamn, TextBox TextBoxFData, TextBox TextBoxHourlyRate)
         {
             if (employeeListBox.SelectedItem != null)
             {
@@ -61,7 +57,7 @@ namespace Exercise1b
         /// </summary>
         /// <param name="list">The list of employees to be saved.</param>
         /// <param name="filePath">The file path where the employees will be saved.</param>
-        internal static void SavePeople(ObservableCollection<Employee> list, string filePath)
+        public static void SavePeople(ObservableCollection<Employee> list, string filePath)
         {
             if(!File.Exists(filePath))
             {
@@ -79,39 +75,33 @@ namespace Exercise1b
         /// </summary>
         /// <param name="filePath">The file path from which the employees will be loaded.</param>
         /// <returns>A list of employees loaded from the file.</returns>
-        public static ObservableCollection<Employee> LoadPeople( string filePath)
+        public static ObservableCollection<Employee> LoadPeople(string filePath)
         {
-            ObservableCollection<Employee> Employees = new ObservableCollection<Employee>();
-
-            if (!File.Exists(filePath))
-            {
-                File.Create(filePath).Close();
-            }
-
+            ObservableCollection<Employee> employees = new();
+            if (!File.Exists(filePath)) { return employees; }
             var lines = File.ReadAllLines(filePath);
-            Employees.Clear();
-
             foreach (var line in lines)
             {
+                if (string.IsNullOrWhiteSpace(line)) { continue; }
                 var parts = line.Split(',');
-                var name = parts[0].Split(':')[1];
-                var born = parts[1].Split(':')[1];
-                var hourlyRate = parts[2].Split(':')[1];
+                if (parts.Length < 3) { continue; }
+                var name = parts[0].Split(':')[1].Trim();
+                var born = parts[1].Split(':')[1].Trim();
+                var hourlyRate = parts[2].Split(':')[1].Trim();
                 Employee person = new Employee(name, born, hourlyRate);
-                Employees.Add(person);
+                employees.Add(person);
             }
-            
-        return Employees;
+            return employees;
         }
 
-        internal static void SelectPerson(ListView employeeListBox, TextBox TextBoxNamn, TextBox TextBoxFData, TextBox TextBoxHourlyRate)
+        public static void SelectPerson(ListView employeeListBox, TextBox TextBoxNamn, TextBox TextBoxFData, TextBox TextBoxHourlyRate)
         {
             if (employeeListBox.SelectedItem != null)
             {
                 var selectedEmployee = employeeListBox.SelectedItem as Employee;
-                TextBoxNamn.Text = selectedEmployee.Name;
-                TextBoxFData.Text = selectedEmployee.Born.ToString();
-                TextBoxHourlyRate.Text = selectedEmployee.HourlyRate.ToString();
+                TextBoxNamn.Text = selectedEmployee?.Name;
+                TextBoxFData.Text = selectedEmployee?.Born.ToString();
+                TextBoxHourlyRate.Text = selectedEmployee?.HourlyRate.ToString();
             }
         }
     }

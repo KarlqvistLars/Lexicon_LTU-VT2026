@@ -3,14 +3,27 @@
     {
       "src": [
         {
-          "src": "..",
+          "src": "../",
           "files": [ "Exercise1/Exercise1/Exercise1/Exercise1.csproj" ]
         }
       ],
-      "dest": "api/Exercise1",
-          "properties": {
-            "IncludePrivateMembers": "true",
-            "IncludeInternalMembers": "true"
+      "dest": "api/Exercise1/",
+      "properties": {
+        "IncludePrivateMembers": "true",
+        "IncludeInternalMembers": "true"
+      }
+    },
+    {
+      "src": [
+        {
+          "src": "..",
+          "files": [ "Exercise1/Exercise1/Exercise1b/Exercise1b.Core/Exercise1b.Core.csproj" ]
+        }
+      ],
+      "dest": "api/Exercise1b.Core/",
+      "properties": {
+        "IncludePrivateMembers": "true",
+        "IncludeInternalMembers": "true"
       }
     },
     {
@@ -20,12 +33,12 @@
           "files": [ "Exercise2/Exercise2/Exercise2/Exercise2.csproj" ]
         }
       ],
-      "dest": "api/Exercise2",
-        "properties": {
-            "IncludePrivateMembers": "true",
-            "IncludeInternalMembers": "true"
-        }
+      "dest": "api/Exercise2/",
+      "properties": {
+        "IncludePrivateMembers": "true",
+        "IncludeInternalMembers": "true"
       }
+    }
   ],
   "build": {
     "content": [
@@ -36,21 +49,12 @@
         "files": [ "api/**.yml", "api/index.md" ]
       }
     ],
-    "resource": [
-      {
-        "files": [ "images/**" ]
-      }
-    ],
     "dest": "_site",
     "globalMetadata": {
       "_appName": "Dokumentation",
       "_appTitle": "Dokumentation",
       "_enableSearch": true
     },
-    "template": [
-        "default",
-        "modern",
-        "templates/material"
-    ]
+    "template": [ "default", "modern", "templates/material" ]
   }
 }

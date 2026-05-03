@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Exercise1b.Core;
+using System;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
+//using Employee = Exercise1b.Core.Employee;
 
 namespace Exercise1b
 {
@@ -14,22 +14,24 @@ namespace Exercise1b
     public partial class MainWindow : Window
     {
         public ObservableCollection<Employee> Employees { get; set; } = new ObservableCollection<Employee>();
-        readonly string installationPath = Environment.GetCommandLineArgs()[0].Replace("Exercise1b.exe", "dbfile.txt");
-        
+        readonly string installationPath = Environment.GetCommandLineArgs()[0].Replace("Exercise1b.dll", "dbfile.txt");
         public MainWindow()
         {
             InitializeComponent();
+
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            Console.WriteLine("Employees loading...");
             if (File.Exists(installationPath))
             {
-                Employees = FileHandler.LoadPeople(installationPath);            
+                Employees = FileHandler.LoadPeople(installationPath);  
+                Console.WriteLine("Employees loaded successfully.");
             }
             DataContext = this;
         }
 
         private void Add_Button_Click(object sender, RoutedEventArgs e)
         {
-            if (FileHandler.AddPerson(Employees, EmployeeListView, TextBoxNamn, TextBoxFData, TextBoxHourlyRate))
+            if (FileHandler.AddPerson(Employees, TextBoxNamn, TextBoxFData, TextBoxHourlyRate))
             {
                 FileHandler.SavePeople(Employees, installationPath);
             }
@@ -45,7 +47,7 @@ namespace Exercise1b
             this.Close();
         }
 
-        private void Remove_Button_Click(object sender, RoutedEventArgs e)
+        public void Remove_Button_Click(object sender, RoutedEventArgs e)
         {
             FileHandler.RemovePerson(Employees, EmployeeListView, TextBoxNamn, TextBoxFData, TextBoxHourlyRate);
         }

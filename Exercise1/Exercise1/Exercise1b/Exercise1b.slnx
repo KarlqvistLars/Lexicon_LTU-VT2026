@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Exercise1b.Core/Exercise1b.Core.csproj" Id="13cf171e-93ee-48cb-b228-dc79aa5cc230" />
+  <Project Path="Exercise1b/Exercise1b.csproj" />
+</Solution>

@@ -160,6 +160,168 @@ references:
   isSpec: "True"
   fullName: Exercise1.Program.GetMenu
   nameWithType: Program.GetMenu
+- uid: Exercise1b.Core
+  name: Exercise1b.Core
+  href: api/Exercise1b.Core/Exercise1b.Core.html
+  commentId: N:Exercise1b.Core
+  fullName: Exercise1b.Core
+  nameWithType: Exercise1b.Core
+- uid: Exercise1b.Core.Employee
+  name: Employee
+  href: api/Exercise1b.Core/Exercise1b.Core.Employee.html
+  commentId: T:Exercise1b.Core.Employee
+  fullName: Exercise1b.Core.Employee
+  nameWithType: Employee
+- uid: Exercise1b.Core.Employee.#ctor
+  name: Employee()
+  href: api/Exercise1b.Core/Exercise1b.Core.Employee.html#Exercise1b_Core_Employee__ctor
+  commentId: M:Exercise1b.Core.Employee.#ctor
+  name.vb: New()
+  fullName: Exercise1b.Core.Employee.Employee()
+  fullName.vb: Exercise1b.Core.Employee.New()
+  nameWithType: Employee.Employee()
+  nameWithType.vb: Employee.New()
+- uid: Exercise1b.Core.Employee.#ctor(System.String,System.String,System.String)
+  name: Employee(string, string, string)
+  href: api/Exercise1b.Core/Exercise1b.Core.Employee.html#Exercise1b_Core_Employee__ctor_System_String_System_String_System_String_
+  commentId: M:Exercise1b.Core.Employee.#ctor(System.String,System.String,System.String)
+  name.vb: New(String, String, String)
+  fullName: Exercise1b.Core.Employee.Employee(string, string, string)
+  fullName.vb: Exercise1b.Core.Employee.New(String, String, String)
+  nameWithType: Employee.Employee(string, string, string)
+  nameWithType.vb: Employee.New(String, String, String)
+- uid: Exercise1b.Core.Employee.#ctor*
+  name: Employee
+  href: api/Exercise1b.Core/Exercise1b.Core.Employee.html#Exercise1b_Core_Employee__ctor_
+  commentId: Overload:Exercise1b.Core.Employee.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Exercise1b.Core.Employee.Employee
+  fullName.vb: Exercise1b.Core.Employee.New
+  nameWithType: Employee.Employee
+  nameWithType.vb: Employee.New
+- uid: Exercise1b.Core.Employee.Born
+  name: Born
+  href: api/Exercise1b.Core/Exercise1b.Core.Employee.html#Exercise1b_Core_Employee_Born
+  commentId: P:Exercise1b.Core.Employee.Born
+  fullName: Exercise1b.Core.Employee.Born
+  nameWithType: Employee.Born
+- uid: Exercise1b.Core.Employee.Born*
+  name: Born
+  href: api/Exercise1b.Core/Exercise1b.Core.Employee.html#Exercise1b_Core_Employee_Born_
+  commentId: Overload:Exercise1b.Core.Employee.Born
+  isSpec: "True"
+  fullName: Exercise1b.Core.Employee.Born
+  nameWithType: Employee.Born
+- uid: Exercise1b.Core.Employee.HourlyRate
+  name: HourlyRate
+  href: api/Exercise1b.Core/Exercise1b.Core.Employee.html#Exercise1b_Core_Employee_HourlyRate
+  commentId: P:Exercise1b.Core.Employee.HourlyRate
+  fullName: Exercise1b.Core.Employee.HourlyRate
+  nameWithType: Employee.HourlyRate
+- uid: Exercise1b.Core.Employee.HourlyRate*
+  name: HourlyRate
+  href: api/Exercise1b.Core/Exercise1b.Core.Employee.html#Exercise1b_Core_Employee_HourlyRate_
+  commentId: Overload:Exercise1b.Core.Employee.HourlyRate
+  isSpec: "True"
+  fullName: Exercise1b.Core.Employee.HourlyRate
+  nameWithType: Employee.HourlyRate
+- uid: Exercise1b.Core.Employee.Name
+  name: Name
+  href: api/Exercise1b.Core/Exercise1b.Core.Employee.html#Exercise1b_Core_Employee_Name
+  commentId: P:Exercise1b.Core.Employee.Name
+  fullName: Exercise1b.Core.Employee.Name
+  nameWithType: Employee.Name
+- uid: Exercise1b.Core.Employee.Name*
+  name: Name
+  href: api/Exercise1b.Core/Exercise1b.Core.Employee.html#Exercise1b_Core_Employee_Name_
+  commentId: Overload:Exercise1b.Core.Employee.Name
+  isSpec: "True"
+  fullName: Exercise1b.Core.Employee.Name
+  nameWithType: Employee.Name
+- uid: Exercise1b.Core.FileHandler
+  name: FileHandler
+  href: api/Exercise1b.Core/Exercise1b.Core.FileHandler.html
+  commentId: T:Exercise1b.Core.FileHandler
+  fullName: Exercise1b.Core.FileHandler
+  nameWithType: FileHandler
+- uid: Exercise1b.Core.FileHandler.AddPerson(System.Collections.ObjectModel.ObservableCollection{Exercise1b.Core.Employee},System.Windows.Controls.TextBox,System.Windows.Controls.TextBox,System.Windows.Controls.TextBox)
+  name: AddPerson(ObservableCollection<Employee>, TextBox, TextBox, TextBox)
+  href: api/Exercise1b.Core/Exercise1b.Core.FileHandler.html#Exercise1b_Core_FileHandler_AddPerson_System_Collections_ObjectModel_ObservableCollection_Exercise1b_Core_Employee__System_Windows_Controls_TextBox_System_Windows_Controls_TextBox_System_Windows_Controls_TextBox_
+  commentId: M:Exercise1b.Core.FileHandler.AddPerson(System.Collections.ObjectModel.ObservableCollection{Exercise1b.Core.Employee},System.Windows.Controls.TextBox,System.Windows.Controls.TextBox,System.Windows.Controls.TextBox)
+  name.vb: AddPerson(ObservableCollection(Of Employee), TextBox, TextBox, TextBox)
+  fullName: Exercise1b.Core.FileHandler.AddPerson(System.Collections.ObjectModel.ObservableCollection<Exercise1b.Core.Employee>, System.Windows.Controls.TextBox, System.Windows.Controls.TextBox, System.Windows.Controls.TextBox)
+  fullName.vb: Exercise1b.Core.FileHandler.AddPerson(System.Collections.ObjectModel.ObservableCollection(Of Exercise1b.Core.Employee), System.Windows.Controls.TextBox, System.Windows.Controls.TextBox, System.Windows.Controls.TextBox)
+  nameWithType: FileHandler.AddPerson(ObservableCollection<Employee>, TextBox, TextBox, TextBox)
+  nameWithType.vb: FileHandler.AddPerson(ObservableCollection(Of Employee), TextBox, TextBox, TextBox)
+- uid: Exercise1b.Core.FileHandler.AddPerson*
+  name: AddPerson
+  href: api/Exercise1b.Core/Exercise1b.Core.FileHandler.html#Exercise1b_Core_FileHandler_AddPerson_
+  commentId: Overload:Exercise1b.Core.FileHandler.AddPerson
+  isSpec: "True"
+  fullName: Exercise1b.Core.FileHandler.AddPerson
+  nameWithType: FileHandler.AddPerson
+- uid: Exercise1b.Core.FileHandler.LoadPeople(System.String)
+  name: LoadPeople(string)
+  href: api/Exercise1b.Core/Exercise1b.Core.FileHandler.html#Exercise1b_Core_FileHandler_LoadPeople_System_String_
+  commentId: M:Exercise1b.Core.FileHandler.LoadPeople(System.String)
+  name.vb: LoadPeople(String)
+  fullName: Exercise1b.Core.FileHandler.LoadPeople(string)
+  fullName.vb: Exercise1b.Core.FileHandler.LoadPeople(String)
+  nameWithType: FileHandler.LoadPeople(string)
+  nameWithType.vb: FileHandler.LoadPeople(String)
+- uid: Exercise1b.Core.FileHandler.LoadPeople*
+  name: LoadPeople
+  href: api/Exercise1b.Core/Exercise1b.Core.FileHandler.html#Exercise1b_Core_FileHandler_LoadPeople_
+  commentId: Overload:Exercise1b.Core.FileHandler.LoadPeople
+  isSpec: "True"
+  fullName: Exercise1b.Core.FileHandler.LoadPeople
+  nameWithType: FileHandler.LoadPeople
+- uid: Exercise1b.Core.FileHandler.RemovePerson(System.Collections.ObjectModel.ObservableCollection{Exercise1b.Core.Employee},System.Windows.Controls.ListView,System.Windows.Controls.TextBox,System.Windows.Controls.TextBox,System.Windows.Controls.TextBox)
+  name: RemovePerson(ObservableCollection<Employee>, ListView, TextBox, TextBox, TextBox)
+  href: api/Exercise1b.Core/Exercise1b.Core.FileHandler.html#Exercise1b_Core_FileHandler_RemovePerson_System_Collections_ObjectModel_ObservableCollection_Exercise1b_Core_Employee__System_Windows_Controls_ListView_System_Windows_Controls_TextBox_System_Windows_Controls_TextBox_System_Windows_Controls_TextBox_
+  commentId: M:Exercise1b.Core.FileHandler.RemovePerson(System.Collections.ObjectModel.ObservableCollection{Exercise1b.Core.Employee},System.Windows.Controls.ListView,System.Windows.Controls.TextBox,System.Windows.Controls.TextBox,System.Windows.Controls.TextBox)
+  name.vb: RemovePerson(ObservableCollection(Of Employee), ListView, TextBox, TextBox, TextBox)
+  fullName: Exercise1b.Core.FileHandler.RemovePerson(System.Collections.ObjectModel.ObservableCollection<Exercise1b.Core.Employee>, System.Windows.Controls.ListView, System.Windows.Controls.TextBox, System.Windows.Controls.TextBox, System.Windows.Controls.TextBox)
+  fullName.vb: Exercise1b.Core.FileHandler.RemovePerson(System.Collections.ObjectModel.ObservableCollection(Of Exercise1b.Core.Employee), System.Windows.Controls.ListView, System.Windows.Controls.TextBox, System.Windows.Controls.TextBox, System.Windows.Controls.TextBox)
+  nameWithType: FileHandler.RemovePerson(ObservableCollection<Employee>, ListView, TextBox, TextBox, TextBox)
+  nameWithType.vb: FileHandler.RemovePerson(ObservableCollection(Of Employee), ListView, TextBox, TextBox, TextBox)
+- uid: Exercise1b.Core.FileHandler.RemovePerson*
+  name: RemovePerson
+  href: api/Exercise1b.Core/Exercise1b.Core.FileHandler.html#Exercise1b_Core_FileHandler_RemovePerson_
+  commentId: Overload:Exercise1b.Core.FileHandler.RemovePerson
+  isSpec: "True"
+  fullName: Exercise1b.Core.FileHandler.RemovePerson
+  nameWithType: FileHandler.RemovePerson
+- uid: Exercise1b.Core.FileHandler.SavePeople(System.Collections.ObjectModel.ObservableCollection{Exercise1b.Core.Employee},System.String)
+  name: SavePeople(ObservableCollection<Employee>, string)
+  href: api/Exercise1b.Core/Exercise1b.Core.FileHandler.html#Exercise1b_Core_FileHandler_SavePeople_System_Collections_ObjectModel_ObservableCollection_Exercise1b_Core_Employee__System_String_
+  commentId: M:Exercise1b.Core.FileHandler.SavePeople(System.Collections.ObjectModel.ObservableCollection{Exercise1b.Core.Employee},System.String)
+  name.vb: SavePeople(ObservableCollection(Of Employee), String)
+  fullName: Exercise1b.Core.FileHandler.SavePeople(System.Collections.ObjectModel.ObservableCollection<Exercise1b.Core.Employee>, string)
+  fullName.vb: Exercise1b.Core.FileHandler.SavePeople(System.Collections.ObjectModel.ObservableCollection(Of Exercise1b.Core.Employee), String)
+  nameWithType: FileHandler.SavePeople(ObservableCollection<Employee>, string)
+  nameWithType.vb: FileHandler.SavePeople(ObservableCollection(Of Employee), String)
+- uid: Exercise1b.Core.FileHandler.SavePeople*
+  name: SavePeople
+  href: api/Exercise1b.Core/Exercise1b.Core.FileHandler.html#Exercise1b_Core_FileHandler_SavePeople_
+  commentId: Overload:Exercise1b.Core.FileHandler.SavePeople
+  isSpec: "True"
+  fullName: Exercise1b.Core.FileHandler.SavePeople
+  nameWithType: FileHandler.SavePeople
+- uid: Exercise1b.Core.FileHandler.SelectPerson(System.Windows.Controls.ListView,System.Windows.Controls.TextBox,System.Windows.Controls.TextBox,System.Windows.Controls.TextBox)
+  name: SelectPerson(ListView, TextBox, TextBox, TextBox)
+  href: api/Exercise1b.Core/Exercise1b.Core.FileHandler.html#Exercise1b_Core_FileHandler_SelectPerson_System_Windows_Controls_ListView_System_Windows_Controls_TextBox_System_Windows_Controls_TextBox_System_Windows_Controls_TextBox_
+  commentId: M:Exercise1b.Core.FileHandler.SelectPerson(System.Windows.Controls.ListView,System.Windows.Controls.TextBox,System.Windows.Controls.TextBox,System.Windows.Controls.TextBox)
+  fullName: Exercise1b.Core.FileHandler.SelectPerson(System.Windows.Controls.ListView, System.Windows.Controls.TextBox, System.Windows.Controls.TextBox, System.Windows.Controls.TextBox)
+  nameWithType: FileHandler.SelectPerson(ListView, TextBox, TextBox, TextBox)
+- uid: Exercise1b.Core.FileHandler.SelectPerson*
+  name: SelectPerson
+  href: api/Exercise1b.Core/Exercise1b.Core.FileHandler.html#Exercise1b_Core_FileHandler_SelectPerson_
+  commentId: Overload:Exercise1b.Core.FileHandler.SelectPerson
+  isSpec: "True"
+  fullName: Exercise1b.Core.FileHandler.SelectPerson
+  nameWithType: FileHandler.SelectPerson
 - uid: Exercise2
   name: Exercise2
   href: api/Exercise2/Exercise2.html

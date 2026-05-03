@@ -81,6 +81,61 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Exercise1b.Core/Exercise1b.Core.Employee.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Exercise1b.Core/Exercise1b.Core.Employee.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Exercise1b.Core.Employee",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Exercise1b.Core/Exercise1b.Core.FileHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Exercise1b.Core/Exercise1b.Core.FileHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Exercise1b.Core.FileHandler",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Exercise1b.Core/Exercise1b.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Exercise1b.Core/Exercise1b.Core.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Exercise1b.Core",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/Exercise1b.Core/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Exercise1b.Core/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/Exercise1b.Core/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Exercise2/Exercise2.Program.GroupType.yml",
       "output": {
         ".html": {
