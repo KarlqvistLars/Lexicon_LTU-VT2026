@@ -9,17 +9,18 @@ namespace Exercise1
         static void Main(string[] args)
         {
             /// <summary>
-            /// The main entry point of the program. It initializes the list of employees,
-            /// loads existing employees from a file if available, and provides a menu
-            /// for the user to add, show, save, or exit the program.
+            /// Detta är startpunkten för konsolapplikationen. Den initierar listan över anställda,
+            /// laddar befintliga anställda från en fil om den finns, och tillhandahåller en meny
+            /// för användaren att lägga till, visa, spara eller avsluta programmet.
             /// </summary>
             List<Employee> list = new List<Employee>();
+            // Bestäm installationsvägen för filen "dbfile.txt" baserat på var programmet körs
             string installationPath = Environment.GetCommandLineArgs()[0].Replace("Exercise1.dll", "")+"dbfile.txt";
-
-            if(File.Exists(installationPath)&& new FileInfo(installationPath).Length > 0) {
+            // Om filen finns och inte är tom, ladda anställda från filen
+            if (File.Exists(installationPath)&& new FileInfo(installationPath).Length > 0) {
                 list = FileHandler.LoadPeople(installationPath);
             }
-            
+            // Huvudmeny loop
             do
             {
                 Console.WriteLine(GetMenu());
@@ -49,7 +50,6 @@ namespace Exercise1
 
             Console.ReadLine();
         }
-
         /// <summary>
         /// The GetMenu method returns a string that represents the menu options for the user. 
         /// It includes options to add a person, show people, save people, and exit the program.

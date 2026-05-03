@@ -1,28 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercise1
 {
     public static class FileHandler
     {
         /// <summary>
-        /// Method to add a person to the list, it will ask the user for the name, birth year and hourly rate of the person and then create a new Employee object and add it to the list.
+        /// Metod för att lägga till en person i listan, den kommer att fråga användaren om namn, 
+        /// födelseår och timlön för personen och sedan skapa ett nytt Employee-objekt och lägga till det i listan.
         /// </summary>
-        /// <param name="list">The list of employees to which the new person will be added.</param>
-        /// <returns>Returns true if the person was successfully added, otherwise false.</returns>
+        /// <param name="list">Listan över anställda till vilken den nya personen kommer att läggas till.</param>
+        /// <returns>Returnerar true om personen lades till framgångsrikt, annars false.</returns>
         public static bool AddPerson(List<Employee> list)
         {
             try
             {
-                Console.WriteLine("Enter name:");
+                Console.Write("Enter name: ");
                 var name = Console.ReadLine();
-                Console.WriteLine("Enter birth year:");
+                Console.Write("Enter birth year: ");
                 var born = Console.ReadLine();
-                Console.WriteLine("Enter hourly rate:");
+                Console.Write("Enter hourly rate: ");
                 var hourlyRate = Console.ReadLine();
 
                 Employee person = new Employee(name, born, hourlyRate);
@@ -40,9 +39,9 @@ namespace Exercise1
             return true;
         }
         /// <summary>
-        /// Method to list people in the list, it will iterate through the list of employees and print their name, birth year and hourly rate to the console.
+        /// Metod för att lista personer i listan, den kommer att iterera genom listan över anställda och skriva ut deras namn, födelseår och timlön till konsolen.
         /// </summary>
-        /// <param name="list">The list of employees to be displayed.</param>
+        /// <param name="list">Listan över anställda som ska visas.</param>
         public static void ShowPeople(List<Employee> list)
         {
             foreach (var person in list)
@@ -52,10 +51,11 @@ namespace Exercise1
 
         }
         /// <summary>
-        /// Method to save people to a file, it will create a new file if it doesn't exist and then write the name, birth year and hourly rate of each employee in the list to the file in a specific format.
+        /// Metod för att spara personer till en fil, den kommer att skapa en ny fil om den inte finns och sedan skriva namn, 
+        /// födelseår och timlön för varje anställd i listan till filen i ett specifikt format.
         /// </summary>
-        /// <param name="list">The list of employees to be saved.</param>
-        /// <param name="filePath">The file path where the employees will be saved.</param>
+        /// <param name="list">Listan över anställda som ska sparas.</param>
+        /// <param name="filePath">Sökvägen till filen där de anställda ska sparas.</param>
         public static void SavePeople(List<Employee> list, string filePath)
         {
             if(!File.Exists(filePath))
@@ -70,10 +70,11 @@ namespace Exercise1
             File.WriteAllText(filePath, sb.ToString());
         }
         /// <summary>
-        /// Method to load people from a file, it will read the file line by line and split the line into parts to extract the name, birth year and hourly rate of each employee and then create a new Employee object and add it to a list which is returned at the end.
+        /// Metod för att ladda personer från en fil, den kommer att läsa filen rad för rad och dela upp raden i delar för att extrahera namn, 
+        /// födelseår och timlön för varje anställd och sedan skapa ett nytt Employee-objekt och lägga till det i en lista som returneras i slutet.
         /// </summary>
-        /// <param name="filePath">The file path from which the employees will be loaded.</param>
-        /// <returns>A list of employees loaded from the file.</returns>
+        /// <param name="filePath">Sökvägen till filen från vilken de anställda kommer att laddas.</param>
+        /// <returns>En lista över anställda som laddats från filen.</returns>
         public static List<Employee> LoadPeople( string filePath)
         {
             List<Employee> liststring = new List<Employee>();
