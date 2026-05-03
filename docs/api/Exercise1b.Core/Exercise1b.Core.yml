@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Exercise1b.Core
+  commentId: N:Exercise1b.Core
+  id: Exercise1b.Core
+  children:
+  - Exercise1b.Core.Employee
+  - Exercise1b.Core.FileHandler
+  langs:
+  - csharp
+  - vb
+  name: Exercise1b.Core
+  nameWithType: Exercise1b.Core
+  fullName: Exercise1b.Core
+  type: Namespace
+  assemblies:
+  - Exercise1b.Core
+references:
+- uid: Exercise1b.Core.Employee
+  commentId: T:Exercise1b.Core.Employee
+  href: Exercise1b.Core.Employee.html
+  name: Employee
+  nameWithType: Employee
+  fullName: Exercise1b.Core.Employee
+- uid: Exercise1b.Core.FileHandler
+  commentId: T:Exercise1b.Core.FileHandler
+  href: Exercise1b.Core.FileHandler.html
+  name: FileHandler
+  nameWithType: FileHandler
+  fullName: Exercise1b.Core.FileHandler

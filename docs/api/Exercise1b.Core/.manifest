@@ -1,0 +1,15 @@
+{
+  "Exercise1b.Core": "Exercise1b.Core.yml",
+  "Exercise1b.Core.Employee": "Exercise1b.Core.Employee.yml",
+  "Exercise1b.Core.Employee.#ctor": "Exercise1b.Core.Employee.yml",
+  "Exercise1b.Core.Employee.#ctor(System.String,System.String,System.String)": "Exercise1b.Core.Employee.yml",
+  "Exercise1b.Core.Employee.Born": "Exercise1b.Core.Employee.yml",
+  "Exercise1b.Core.Employee.HourlyRate": "Exercise1b.Core.Employee.yml",
+  "Exercise1b.Core.Employee.Name": "Exercise1b.Core.Employee.yml",
+  "Exercise1b.Core.FileHandler": "Exercise1b.Core.FileHandler.yml",
+  "Exercise1b.Core.FileHandler.AddPerson(System.Collections.ObjectModel.ObservableCollection{Exercise1b.Core.Employee},System.Windows.Controls.TextBox,System.Windows.Controls.TextBox,System.Windows.Controls.TextBox)": "Exercise1b.Core.FileHandler.yml",
+  "Exercise1b.Core.FileHandler.LoadPeople(System.String)": "Exercise1b.Core.FileHandler.yml",
+  "Exercise1b.Core.FileHandler.RemovePerson(System.Collections.ObjectModel.ObservableCollection{Exercise1b.Core.Employee},System.Windows.Controls.ListView,System.Windows.Controls.TextBox,System.Windows.Controls.TextBox,System.Windows.Controls.TextBox)": "Exercise1b.Core.FileHandler.yml",
+  "Exercise1b.Core.FileHandler.SavePeople(System.Collections.ObjectModel.ObservableCollection{Exercise1b.Core.Employee},System.String)": "Exercise1b.Core.FileHandler.yml",
+  "Exercise1b.Core.FileHandler.SelectPerson(System.Windows.Controls.ListView,System.Windows.Controls.TextBox,System.Windows.Controls.TextBox,System.Windows.Controls.TextBox)": "Exercise1b.Core.FileHandler.yml"
+}

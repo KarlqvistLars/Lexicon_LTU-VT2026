@@ -19,6 +19,21 @@
     "title": "Namespace Exercise1 | Dokumentation",
     "summary": "Namespace Exercise1 Classes Employee FileHandler Program"
   },
+  "api/Exercise1b.Core/Exercise1b.Core.Employee.html": {
+    "href": "api/Exercise1b.Core/Exercise1b.Core.Employee.html",
+    "title": "Class Employee | Dokumentation",
+    "summary": "Class Employee Namespace Exercise1b.Core Assembly Exercise1b.Core.dll public class Employee Inheritance object Employee Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors Employee() public Employee() Employee(string, string, string) public Employee(string name, string born, string hourlyRate) Parameters name string born string hourlyRate string Properties Born The Employee class represents an employee with a name, birth year and hourly rate. It has a constructor that takes in the name, birth year and hourly rate as parameters and assigns them to the corresponding properties. The birth year is parsed from a string to an integer, and if there is an error during parsing, it will catch the exception and print an error message to the console. public int Born { get; set; } Property Value int HourlyRate public double HourlyRate { get; set; } Property Value double Name public string Name { get; set; } Property Value string"
+  },
+  "api/Exercise1b.Core/Exercise1b.Core.FileHandler.html": {
+    "href": "api/Exercise1b.Core/Exercise1b.Core.FileHandler.html",
+    "title": "Class FileHandler | Dokumentation",
+    "summary": "Class FileHandler Namespace Exercise1b.Core Assembly Exercise1b.Core.dll public static class FileHandler Inheritance object FileHandler Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods AddPerson(ObservableCollection<Employee>, TextBox, TextBox, TextBox) Method to add a person to the list, it will ask the user for the name, birth year and hourly rate of the person and then create a new Employee object and add it to the list. public static bool AddPerson(ObservableCollection<Employee> employees, TextBox TextBoxNamn, TextBox TextBoxFData, TextBox TextBoxHourlyRate) Parameters employees ObservableCollection<Employee> TextBoxNamn TextBox TextBoxFData TextBox TextBoxHourlyRate TextBox Returns bool Returns true if the person was successfully added, otherwise false. LoadPeople(string) Method to load people from a file, it will read the file line by line and split the line into parts to extract the name, birth year and hourly rate of each employee and then create a new Employee object and add it to a list which is returned at the end. public static ObservableCollection<Employee> LoadPeople(string filePath) Parameters filePath string The file path from which the employees will be loaded. Returns ObservableCollection<Employee> A list of employees loaded from the file. RemovePerson(ObservableCollection<Employee>, ListView, TextBox, TextBox, TextBox) public static void RemovePerson(ObservableCollection<Employee> employees, ListView employeeListBox, TextBox TextBoxNamn, TextBox TextBoxFData, TextBox TextBoxHourlyRate) Parameters employees ObservableCollection<Employee> employeeListBox ListView TextBoxNamn TextBox TextBoxFData TextBox TextBoxHourlyRate TextBox SavePeople(ObservableCollection<Employee>, string) Method to save people to a file, it will create a new file if it doesn't exist and then write the name, birth year and hourly rate of each employee in the list to the file in a specific format. public static void SavePeople(ObservableCollection<Employee> list, string filePath) Parameters list ObservableCollection<Employee> The list of employees to be saved. filePath string The file path where the employees will be saved. SelectPerson(ListView, TextBox, TextBox, TextBox) public static void SelectPerson(ListView employeeListBox, TextBox TextBoxNamn, TextBox TextBoxFData, TextBox TextBoxHourlyRate) Parameters employeeListBox ListView TextBoxNamn TextBox TextBoxFData TextBox TextBoxHourlyRate TextBox"
+  },
+  "api/Exercise1b.Core/Exercise1b.Core.html": {
+    "href": "api/Exercise1b.Core/Exercise1b.Core.html",
+    "title": "Namespace Exercise1b.Core | Dokumentation",
+    "summary": "Namespace Exercise1b.Core Classes Employee FileHandler"
+  },
   "api/Exercise2/Exercise2.Program.GroupType.html": {
     "href": "api/Exercise2/Exercise2.Program.GroupType.html",
     "title": "Enum Program.GroupType | Dokumentation",
@@ -47,6 +62,6 @@
   "index.html": {
     "href": "index.html",
     "title": "Min dokumentation | Dokumentation",
-    "summary": "Min dokumentation Detta är startsidan för dokumentationen. Lexicon Exercises Exercise1 API Exercise2 API"
+    "summary": "Min dokumentation Detta är startsidan för dokumentationen. Lexicon Exercises Exercise1 Exercise1b.Core Exercise2"
   }
 }
