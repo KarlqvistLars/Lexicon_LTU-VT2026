@@ -47,6 +47,8 @@ Skriv programmet<br>
 
 <br>
 
-Gjorde även en variant Exercise1b men Grafiskt användargänssnitt.<br>
+Gjorde även en variant Exercise1b men Grafiskt användargänssnitt. Hittas [här.](Exercise1/Exercise1/Exercise1b)<br><br>
+
+### =====================================================
 
 ### [Tillbaka](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/tree/main)
