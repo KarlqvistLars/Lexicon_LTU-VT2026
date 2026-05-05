@@ -121,32 +121,44 @@
     <value>Ditt val: </value>
     <comment>menu val</comment>
   </data>
-  <data name="Rad1" xml:space="preserve">
+  <data name="MenuRad1" xml:space="preserve">
     <value>Skriv en siffra för att välja funktion.</value>
     <comment>rad1</comment>
   </data>
-  <data name="Rad2" xml:space="preserve">
+  <data name="MenuRad2" xml:space="preserve">
     <value>0 = Avsluta</value>
     <comment>rad2</comment>
   </data>
-  <data name="Rad3" xml:space="preserve">
+  <data name="MenuRad3" xml:space="preserve">
     <value>1 = Ungdom eller pensionär</value>
     <comment>rad3</comment>
   </data>
-  <data name="Rad4" xml:space="preserve">
+  <data name="MenuRad4" xml:space="preserve">
     <value>2 = Pris för sällskap</value>
     <comment>rad4</comment>
   </data>
-  <data name="Rad5" xml:space="preserve">
+  <data name="MenuRad5" xml:space="preserve">
     <value>3 = Upprepa tio gånger</value>
     <comment>rad5</comment>
   </data>
-  <data name="Rad6" xml:space="preserve">
+  <data name="MenuRad6" xml:space="preserve">
     <value>4 = Det tredje ordet</value>
     <comment>rad6</comment>
   </data>
-  <data name="Rubrik" xml:space="preserve">
+  <data name="MenuRubrik" xml:space="preserve">
     <value>Välkommen till huvud menyn!</value>
     <comment>Rad0</comment>
+  </data>
+  <data name="Mening3ord" xml:space="preserve">
+    <value>Skriv en mening med minst 3 ord: </value>
+  </data>
+  <data name="DuMasteSkriva" xml:space="preserve">
+    <value>Du måste skriva en mening.</value>
+  </data>
+  <data name="MeningMasteInnehalla3ord" xml:space="preserve">
+    <value>Mening måste innehålla minst 3 ord.</value>
+  </data>
+  <data name="DetTredjeOrdet" xml:space="preserve">
+    <value>Det tredje ordet är: </value>
   </data>
 </root>

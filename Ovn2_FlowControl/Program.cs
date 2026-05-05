@@ -10,13 +10,13 @@ namespace Ovn2_FlowControl
 
             while (running)
             {
-                Console.WriteLine(Menu.Rubrik);
-                Console.WriteLine(Menu.Rad1);
-                Console.WriteLine(Menu.Rad2);
-                Console.WriteLine(Menu.Rad3);
-                Console.WriteLine(Menu.Rad4);
-                Console.WriteLine(Menu.Rad5);
-                Console.WriteLine(Menu.Rad6);
+                Console.WriteLine(Menu.MenuRubrik);
+                Console.WriteLine(Menu.MenuRad1);
+                Console.WriteLine(Menu.MenuRad2);
+                Console.WriteLine(Menu.MenuRad3);
+                Console.WriteLine(Menu.MenuRad4);
+                Console.WriteLine(Menu.MenuRad5);
+                Console.WriteLine(Menu.MenuRad6);
                 Console.Write(Menu.MenuVal);
 
                 string? input = Console.ReadLine();
