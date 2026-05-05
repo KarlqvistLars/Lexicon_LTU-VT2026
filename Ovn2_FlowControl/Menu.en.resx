@@ -160,7 +160,7 @@
     <value>Incorrect input, select 0-4.</value>
   </data>
   <data name="AngeAlder" xml:space="preserve">
-    <value>Enter age:</value>
+    <value>Enter age: </value>
   </data>
   <data name="OgiltigAlder" xml:space="preserve">
     <value>Invalid age.</value>
@@ -187,15 +187,30 @@
     <value>Free</value>
   </data>
   <data name="AntalPersoner" xml:space="preserve">
-    <value>Number of people:</value>
+    <value>Number of people: </value>
   </data>
   <data name="Totalkostnad" xml:space="preserve">
-    <value>Total cost:</value>
+    <value>Total cost: </value>
   </data>
   <data name="SkrivEnText" xml:space="preserve">
     <value>Write a text: </value>
   </data>
   <data name="SkrivEnMeningMedMinst3Ord" xml:space="preserve">
     <value>Write a sentence with at least 3 words: </value>
+  </data>
+  <data name="MenuRad7" xml:space="preserve">
+    <value>5 = Language</value>
+  </data>
+  <data name="ValgSprak" xml:space="preserve">
+    <value>Choose language: </value>
+  </data>
+  <data name="Engelska" xml:space="preserve">
+    <value>0 = English</value>
+  </data>
+  <data name="Svenska" xml:space="preserve">
+    <value>1 = Swedish</value>
+  </data>
+  <data name="TryckForAttFortsatta" xml:space="preserve">
+    <value>Press Enter to continue...</value>
   </data>
 </root>

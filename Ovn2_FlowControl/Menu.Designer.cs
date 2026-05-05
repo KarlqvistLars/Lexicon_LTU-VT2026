@@ -106,6 +106,15 @@ namespace Ovn2_FlowControl {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 0 = Engelska.
+        /// </summary>
+        internal static string Engelska {
+            get {
+                return ResourceManager.GetString("Engelska", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Felaktig input, välj 0-4..
         /// </summary>
         internal static string FelaktigInput {
@@ -205,6 +214,15 @@ namespace Ovn2_FlowControl {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 5 = Språk.
+        /// </summary>
+        internal static string MenuRad7 {
+            get {
+                return ResourceManager.GetString("MenuRad7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Välkommen till huvud menyn!.
         /// </summary>
         internal static string MenuRubrik {
@@ -286,6 +304,15 @@ namespace Ovn2_FlowControl {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 1 = Svenska.
+        /// </summary>
+        internal static string Svenska {
+            get {
+                return ResourceManager.GetString("Svenska", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Totalkostnad: .
         /// </summary>
         internal static string Totalkostnad {
@@ -295,11 +322,29 @@ namespace Ovn2_FlowControl {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tryck Enter för att fortsatta....
+        /// </summary>
+        internal static string TryckForAttFortsatta {
+            get {
+                return ResourceManager.GetString("TryckForAttFortsatta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ungdomspris: 80kr.
         /// </summary>
         internal static string Ungdomspris {
             get {
                 return ResourceManager.GetString("Ungdomspris", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Välj Språk: .
+        /// </summary>
+        internal static string ValgSprak {
+            get {
+                return ResourceManager.GetString("ValgSprak", resourceCulture);
             }
         }
     }

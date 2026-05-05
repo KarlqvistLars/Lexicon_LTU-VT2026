@@ -206,4 +206,19 @@
   <data name="SkrivEnMeningMedMinst3Ord" xml:space="preserve">
     <value>Skriv en mening med minst 3 ord: </value>
   </data>
+  <data name="MenuRad7" xml:space="preserve">
+    <value>5 = Språk</value>
+  </data>
+  <data name="ValgSprak" xml:space="preserve">
+    <value>Välj Språk: </value>
+  </data>
+  <data name="Engelska" xml:space="preserve">
+    <value>0 = Engelska</value>
+  </data>
+  <data name="Svenska" xml:space="preserve">
+    <value>1 = Svenska</value>
+  </data>
+  <data name="TryckForAttFortsatta" xml:space="preserve">
+    <value>Tryck Enter för att fortsatta...</value>
+  </data>
 </root>
