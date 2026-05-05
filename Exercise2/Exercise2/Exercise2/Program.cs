@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Exercise2
 {
@@ -93,7 +94,7 @@ namespace Exercise2
         /// </summary>
         public static void PrintProgramChoiceMenu()
         {
-            Console.Clear();
+            SafeClear();
             Console.WriteLine("\u001b[4mVälkommen till programvalmenyn!\u001b[0m");
             Console.WriteLine("Detta är huvudmenyn för programmet.\nNi navigerar menyvalen genom att använda siffran och Enter för önskat val.\n");
             Console.WriteLine("1. Köp biobiljett.\n2. Upprepa 10ggr.\n3. Det 3:e ordet.\n0. Avsluta\n");
@@ -103,15 +104,18 @@ namespace Exercise2
         /// Menyer för biobiljetter
         /// </summary>
         /// <returns></returns>
-        public static void PrintBioMenu()
+        public static void PrintBioMenu(string input = null)
         {
-            Console.Clear();
+            SafeClear();
             Console.WriteLine("\u001b[4mVälkommen på Bio!\u001b[0m");
             Console.WriteLine("Detta är huvudmenyn för biljettkassan.\nNi navigerar menyvalen genom att använda siffran och Enter för önskat val.\n");
             Console.WriteLine("1. Köp enkelbiljett.\n2. Köp biljett till sällskap.\n0. Tillbaka\n");
             Console.Write("Ange menyval: ");
 
-            var input = Console.ReadLine();
+            if (input == null)
+            {   
+                input = Console.ReadLine();
+            }
 
             switch (input)
             {
@@ -135,7 +139,7 @@ namespace Exercise2
         /// </summary>
         public static void PrintMenuEnkelbiljett()
         {
-            Console.Clear();
+            SafeClear();
             Console.WriteLine("\u001b[4mVälkommen på Bio!\u001b[0m");
             Console.WriteLine("\nEnkelbiljett");
             Console.WriteLine("\u001b[4mBiljettpriser\u001b[0m");
@@ -151,7 +155,7 @@ namespace Exercise2
         /// </summary>
         public static void PrintMenuSamlingsbiljett()
         {
-            Console.Clear();
+            SafeClear();
             Console.WriteLine("\u001b[4mVälkommen på Bio!\u001b[0m");
             Console.WriteLine("\nSamlingsbiljett");
             Console.WriteLine("\u001b[4mBiljettpriser\u001b[0m");
@@ -172,7 +176,7 @@ namespace Exercise2
             switch (type)
             {
                 case GroupType.Private:
-                    if(age >= 0)
+                    if (age >= 0)
                     {
                         if (BuyTicket(age).Youth > 0)
                         {
@@ -190,10 +194,20 @@ namespace Exercise2
                         {
                             Console.WriteLine("Fribiljett. Barn under 5 år samt pensionärer över 100 år.");
                         }
+                        else
+                        {
+                            Console.WriteLine("Felaktigt angiven ålder. Ingen biljett köpt.");
+                            Console.WriteLine("Ange 0 för att avbryta eller tryck return för att fortsätta...");
+                            if (Console.ReadLine() == "0") { PrintBioMenu(); }
+                            PrintMenuEnkelbiljett();
+                        }
                     }
                     else
                     {
                         Console.WriteLine("Felaktigt angiven ålder. Ingen biljett köpt.");
+                        Console.WriteLine("Ange 0 för att avbryta eller tryck return för att fortsätta...");
+                        if(Console.ReadLine() == "0") { PrintBioMenu(); }
+                        PrintMenuEnkelbiljett();
                     }
                     break;
                 case GroupType.Company:
@@ -287,7 +301,7 @@ namespace Exercise2
             }
             else
             {
-                Console.WriteLine("Ogiltig ålder. Försök igen.");
+                //Console.WriteLine("Ogiltig ålder. Försök igen.");
                 ticket.Err++;
             }
             return ticket;
@@ -333,7 +347,7 @@ namespace Exercise2
         /// </summary>
         public static void PrintLoopTenMenu()
         {
-            Console.Clear();
+            SafeClear();
             Console.Write("\u001b[4mVälkommen till PRINT-TEN!\u001b[0m");
             Console.Write("\nSkriv en \"oneliner\" mening: ");
             string? sentence = Console.ReadLine();
@@ -351,7 +365,7 @@ namespace Exercise2
         /// </summary>
         public static void PrintThirdWordMenu()
         {
-            Console.Clear();
+            SafeClear();
             Console.Write("\u001b[4mVälkommen till Det 3:e Ordet!\u001b[0m");
             Console.Write("\nSkriv en mening innehållande mer än 3st ord: ");
             string? sentence = Console.ReadLine();
@@ -368,6 +382,19 @@ namespace Exercise2
             Console.WriteLine("\nTryck på Enter för att återgå till menyn...");
             Console.ReadLine();
             PrintProgramChoiceMenu();
+        }
+        // Helper -metod för att rensa konsolen på ett säkert sätt, där eventuella IOExceptions som
+        // kan uppstå i testmiljöer utan riktig konsol hanteras genom att ignorera undantaget.
+        private static void SafeClear()
+        {
+            try
+            {
+                Console.Clear();
+            }
+            catch (IOException)
+            {
+                // Ignorera i testmiljö där riktig konsol saknas
+            }
         }
     }
  }
