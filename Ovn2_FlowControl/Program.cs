@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Globalization;
+using System.Threading;
 
 namespace Ovn2_FlowControl
 {
@@ -6,10 +8,12 @@ namespace Ovn2_FlowControl
     {
         public static void Main(string[] args)
         {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("sv-SE");
             bool running = true;
 
             while (running)
             {
+                Console.Clear();
                 Console.WriteLine(Menu.MenuRubrik);
                 Console.WriteLine(Menu.MenuRad1);
                 Console.WriteLine(Menu.MenuRad2);
@@ -17,6 +21,7 @@ namespace Ovn2_FlowControl
                 Console.WriteLine(Menu.MenuRad4);
                 Console.WriteLine(Menu.MenuRad5);
                 Console.WriteLine(Menu.MenuRad6);
+                Console.WriteLine(Menu.MenuRad7);
                 Console.Write(Menu.MenuVal);
 
                 string? input = Console.ReadLine();
@@ -44,6 +49,10 @@ namespace Ovn2_FlowControl
                         Ord.DetTredjeOrdet();
                         break;
 
+                    case "5":
+                        Ord.MenuSprak();
+                        break;
+
                     default:
                         Console.WriteLine(Menu.FelaktigInput);
                         break;
@@ -51,6 +60,12 @@ namespace Ovn2_FlowControl
 
                 Console.WriteLine();
             }
+
+        }
+        public static void Paus()
+        {
+            Console.WriteLine($"\n{Menu.TryckForAttFortsatta}");
+            Console.ReadKey();
         }
     }
 }

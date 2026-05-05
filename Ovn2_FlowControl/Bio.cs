@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Ovn2_FlowControl
 {
@@ -14,6 +12,7 @@ namespace Ovn2_FlowControl
             if (!int.TryParse(input, out int alder))    // Jämför med int.Parse(input) --> "hej" --> Exception
             {
                 Console.WriteLine(Menu.OgiltigAlder);
+                Program.Paus();
                 return;
             }
 
@@ -29,6 +28,7 @@ namespace Ovn2_FlowControl
             {
                 Console.WriteLine(Menu.Standardpris);
             }
+            Program.Paus();
         }
 
         public static void PrisForSallskap()
@@ -39,6 +39,7 @@ namespace Ovn2_FlowControl
             if (!int.TryParse(antalInput, out int antal) || antal <= 0)
             {
                 Console.WriteLine(Menu.OgiltigtAntalPersoner);
+                Program.Paus();
                 return;
             }
 
@@ -73,8 +74,10 @@ namespace Ovn2_FlowControl
                 }
             }
 
-            Console.WriteLine($"{Menu.AntalPersoner}: {antal}");
-            Console.WriteLine($"{Menu.Totalkostnad}: {total} kr");
+            Console.WriteLine($"{Menu.AntalPersoner}{antal}");
+            Console.WriteLine($"{Menu.Totalkostnad}{total} kr");
+            Console.WriteLine($"\n{Menu.TryckForAttFortsatta}");
+            Console.ReadKey();
         }
     }
 }
