@@ -42,9 +42,10 @@ Skriv programmet<br>
 
 ### =====================================================
 <br>
+
 ## Exercise 1b - Personalregister med GUI
 <br>
-<br>
+
 ![Exercise1b](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/docs/bilder/Exercise1b.jpg)
 
 <br>
