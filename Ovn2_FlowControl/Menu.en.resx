@@ -142,7 +142,7 @@
     <value>Welcome to the main menu!</value>
   </data>
   <data name="Mening3ord" xml:space="preserve">
-    <value>Write a sentense with at least three words:</value>
+    <value>Write a sentense with at least three words: </value>
   </data>
   <data name="DuMasteSkriva" xml:space="preserve">
     <value>You have to write a sentance.</value>
@@ -165,13 +165,13 @@
   <data name="OgiltigAlder" xml:space="preserve">
     <value>Invalid age.</value>
   </data>
-  <data name="UngdomsPris" xml:space="preserve">
+  <data name="Ungdomspris" xml:space="preserve">
     <value>Youth price: 80kr</value>
   </data>
-  <data name="PensionarsPris" xml:space="preserve">
+  <data name="Pensionarspris" xml:space="preserve">
     <value>Senior price: 90kr</value>
   </data>
-  <data name="StandardPris" xml:space="preserve">
+  <data name="Standardpris" xml:space="preserve">
     <value>Standard price: 120kr</value>
   </data>
   <data name="HurManga" xml:space="preserve">
@@ -189,7 +189,13 @@
   <data name="AntalPersoner" xml:space="preserve">
     <value>Number of people:</value>
   </data>
-  <data name="TotalKostnad" xml:space="preserve">
+  <data name="Totalkostnad" xml:space="preserve">
     <value>Total cost:</value>
+  </data>
+  <data name="SkrivEnText" xml:space="preserve">
+    <value>Write a text: </value>
+  </data>
+  <data name="SkrivEnMeningMedMinst3Ord" xml:space="preserve">
+    <value>Write a sentence with at least 3 words: </value>
   </data>
 </root>

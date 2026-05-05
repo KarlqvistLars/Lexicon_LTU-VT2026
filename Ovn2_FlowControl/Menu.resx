@@ -200,4 +200,10 @@
   <data name="Totalkostnad" xml:space="preserve">
     <value>Totalkostnad: </value>
   </data>
+  <data name="SkrivEnText" xml:space="preserve">
+    <value>Skriv en text: </value>
+  </data>
+  <data name="SkrivEnMeningMedMinst3Ord" xml:space="preserve">
+    <value>Skriv en mening med minst 3 ord: </value>
+  </data>
 </root>
