@@ -10,7 +10,7 @@ namespace Ovn2_FlowControl
 
             while (running)
             {
-                Console.WriteLine("Välkommen till huvudmenyn.");
+                Console.WriteLine(Menu.Rubrik);
                 Console.WriteLine("Skriv en siffra för att välja funktion.");
                 Console.WriteLine("0 = Avsluta");
                 Console.WriteLine("1 = Ungdom eller pensionär");
