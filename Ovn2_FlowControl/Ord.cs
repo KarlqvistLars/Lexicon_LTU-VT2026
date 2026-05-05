@@ -22,7 +22,7 @@ namespace Ovn2_FlowControl
 
         public static void DetTredjeOrdet()
         {
-            Console.Write(Menu.SkrivEnMeningMedMinst3Ord);
+            Console.Write(Menu.Mening3ord);
             string? mening = Console.ReadLine();
 
             if (string.IsNullOrWhiteSpace(mening))

@@ -277,15 +277,6 @@ namespace Ovn2_FlowControl {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Skriv en mening med minst 3 ord: .
-        /// </summary>
-        internal static string SkrivEnMeningMedMinst3Ord {
-            get {
-                return ResourceManager.GetString("SkrivEnMeningMedMinst3Ord", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Skriv en text: .
         /// </summary>
         internal static string SkrivEnText {

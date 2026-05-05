@@ -58,7 +58,7 @@ namespace Ovn2_FlowControl
 
                 if (alder < 5 || alder > 100)
                 {
-                    Console.WriteLine($"Person {i}: Gratis");
+                    Console.WriteLine($"Person {i}: {Menu.Gratis}");
                 }
                 else if (alder < 20)
                 {
@@ -76,8 +76,7 @@ namespace Ovn2_FlowControl
 
             Console.WriteLine($"{Menu.AntalPersoner}{antal}");
             Console.WriteLine($"{Menu.Totalkostnad}{total} kr");
-            Console.WriteLine($"\n{Menu.TryckForAttFortsatta}");
-            Console.ReadKey();
+            Program.Paus();
         }
     }
 }

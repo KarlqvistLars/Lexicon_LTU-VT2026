@@ -195,9 +195,6 @@
   <data name="SkrivEnText" xml:space="preserve">
     <value>Write a text: </value>
   </data>
-  <data name="SkrivEnMeningMedMinst3Ord" xml:space="preserve">
-    <value>Write a sentence with at least 3 words: </value>
-  </data>
   <data name="MenuRad7" xml:space="preserve">
     <value>5 = Language</value>
   </data>
