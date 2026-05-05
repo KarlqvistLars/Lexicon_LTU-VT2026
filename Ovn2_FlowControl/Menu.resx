@@ -161,4 +161,43 @@
   <data name="DetTredjeOrdet" xml:space="preserve">
     <value>Det tredje ordet är: </value>
   </data>
+  <data name="ProgrammetAvslutas" xml:space="preserve">
+    <value>Programmet avslutas.</value>
+  </data>
+  <data name="FelaktigInput" xml:space="preserve">
+    <value>Felaktig input, välj 0-4.</value>
+  </data>
+  <data name="AngeAlder" xml:space="preserve">
+    <value>Ange ålder: </value>
+  </data>
+  <data name="OgiltigAlder" xml:space="preserve">
+    <value>Ogiltig ålder.</value>
+  </data>
+  <data name="Ungdomspris" xml:space="preserve">
+    <value>Ungdomspris: 80kr</value>
+  </data>
+  <data name="Pensionarspris" xml:space="preserve">
+    <value>Pensionärspris: 90kr</value>
+  </data>
+  <data name="Standardpris" xml:space="preserve">
+    <value>Standardpris: 120kr</value>
+  </data>
+  <data name="HurManga" xml:space="preserve">
+    <value>Hur många personer är ni? </value>
+  </data>
+  <data name="OgiltigtAntalPersoner" xml:space="preserve">
+    <value>Ogiltigt antal personer.</value>
+  </data>
+  <data name="AngeAlderForPerson" xml:space="preserve">
+    <value>Ange ålder för person </value>
+  </data>
+  <data name="Gratis" xml:space="preserve">
+    <value>Gratis</value>
+  </data>
+  <data name="AntalPersoner" xml:space="preserve">
+    <value>Antal personer: </value>
+  </data>
+  <data name="Totalkostnad" xml:space="preserve">
+    <value>Totalkostnad: </value>
+  </data>
 </root>

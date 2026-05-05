@@ -61,6 +61,33 @@ namespace Ovn2_FlowControl {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ange ålder: .
+        /// </summary>
+        internal static string AngeAlder {
+            get {
+                return ResourceManager.GetString("AngeAlder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ange ålder för person .
+        /// </summary>
+        internal static string AngeAlderForPerson {
+            get {
+                return ResourceManager.GetString("AngeAlderForPerson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Antal personer: .
+        /// </summary>
+        internal static string AntalPersoner {
+            get {
+                return ResourceManager.GetString("AntalPersoner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Det tredje ordet är: .
         /// </summary>
         internal static string DetTredjeOrdet {
@@ -75,6 +102,33 @@ namespace Ovn2_FlowControl {
         internal static string DuMasteSkriva {
             get {
                 return ResourceManager.GetString("DuMasteSkriva", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Felaktig input, välj 0-4..
+        /// </summary>
+        internal static string FelaktigInput {
+            get {
+                return ResourceManager.GetString("FelaktigInput", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gratis.
+        /// </summary>
+        internal static string Gratis {
+            get {
+                return ResourceManager.GetString("Gratis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hur många personer är ni? .
+        /// </summary>
+        internal static string HurManga {
+            get {
+                return ResourceManager.GetString("HurManga", resourceCulture);
             }
         }
         
@@ -165,6 +219,69 @@ namespace Ovn2_FlowControl {
         internal static string MenuVal {
             get {
                 return ResourceManager.GetString("MenuVal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ogiltig ålder..
+        /// </summary>
+        internal static string OgiltigAlder {
+            get {
+                return ResourceManager.GetString("OgiltigAlder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ogiltigt antal personer..
+        /// </summary>
+        internal static string OgiltigtAntalPersoner {
+            get {
+                return ResourceManager.GetString("OgiltigtAntalPersoner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pensionärspris: 90kr.
+        /// </summary>
+        internal static string Pensionarspris {
+            get {
+                return ResourceManager.GetString("Pensionarspris", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Programmet avslutas..
+        /// </summary>
+        internal static string ProgrammetAvslutas {
+            get {
+                return ResourceManager.GetString("ProgrammetAvslutas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Standardpris: 120kr.
+        /// </summary>
+        internal static string Standardpris {
+            get {
+                return ResourceManager.GetString("Standardpris", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Totalkostnad: .
+        /// </summary>
+        internal static string Totalkostnad {
+            get {
+                return ResourceManager.GetString("Totalkostnad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ungdomspris: 80kr.
+        /// </summary>
+        internal static string Ungdomspris {
+            get {
+                return ResourceManager.GetString("Ungdomspris", resourceCulture);
             }
         }
     }

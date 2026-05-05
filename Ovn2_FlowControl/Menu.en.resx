@@ -153,4 +153,43 @@
   <data name="DetTredjeOrdet" xml:space="preserve">
     <value>The third word is: </value>
   </data>
+  <data name="ProgrammetAvslutas" xml:space="preserve">
+    <value>The program ends.</value>
+  </data>
+  <data name="FelaktigInput" xml:space="preserve">
+    <value>Incorrect input, select 0-4.</value>
+  </data>
+  <data name="AngeAlder" xml:space="preserve">
+    <value>Enter age:</value>
+  </data>
+  <data name="OgiltigAlder" xml:space="preserve">
+    <value>Invalid age.</value>
+  </data>
+  <data name="UngdomsPris" xml:space="preserve">
+    <value>Youth price: 80kr</value>
+  </data>
+  <data name="PensionarsPris" xml:space="preserve">
+    <value>Senior price: 90kr</value>
+  </data>
+  <data name="StandardPris" xml:space="preserve">
+    <value>Standard price: 120kr</value>
+  </data>
+  <data name="HurManga" xml:space="preserve">
+    <value>How many people are you? </value>
+  </data>
+  <data name="OgiltigtAntalPersoner" xml:space="preserve">
+    <value>Invalid number of people.</value>
+  </data>
+  <data name="AngeAlderForPerson" xml:space="preserve">
+    <value>Enter age of person </value>
+  </data>
+  <data name="Gratis" xml:space="preserve">
+    <value>Free</value>
+  </data>
+  <data name="AntalPersoner" xml:space="preserve">
+    <value>Number of people:</value>
+  </data>
+  <data name="TotalKostnad" xml:space="preserve">
+    <value>Total cost:</value>
+  </data>
 </root>
