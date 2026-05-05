@@ -61,6 +61,69 @@ namespace Ovn2_FlowControl {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ditt val: .
+        /// </summary>
+        internal static string MenuVal {
+            get {
+                return ResourceManager.GetString("MenuVal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Skriv en siffra för att välja funktion..
+        /// </summary>
+        internal static string Rad1 {
+            get {
+                return ResourceManager.GetString("Rad1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0 = Avsluta.
+        /// </summary>
+        internal static string Rad2 {
+            get {
+                return ResourceManager.GetString("Rad2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1 = Ungdom eller pensionär.
+        /// </summary>
+        internal static string Rad3 {
+            get {
+                return ResourceManager.GetString("Rad3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2 = Pris för sällskap.
+        /// </summary>
+        internal static string Rad4 {
+            get {
+                return ResourceManager.GetString("Rad4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3 = Upprepa tio gånger.
+        /// </summary>
+        internal static string Rad5 {
+            get {
+                return ResourceManager.GetString("Rad5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4 = Det tredje ordet.
+        /// </summary>
+        internal static string Rad6 {
+            get {
+                return ResourceManager.GetString("Rad6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Välkommen till huvud menyn!.
         /// </summary>
         internal static string Rubrik {

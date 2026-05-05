@@ -11,13 +11,13 @@ namespace Ovn2_FlowControl
             while (running)
             {
                 Console.WriteLine(Menu.Rubrik);
-                Console.WriteLine("Skriv en siffra för att välja funktion.");
-                Console.WriteLine("0 = Avsluta");
-                Console.WriteLine("1 = Ungdom eller pensionär");
-                Console.WriteLine("2 = Pris för sällskap");
-                Console.WriteLine("3 = Upprepa tio gånger");
-                Console.WriteLine("4 = Det tredje ordet");
-                Console.Write("Ditt val: ");
+                Console.WriteLine(Menu.Rad1);
+                Console.WriteLine(Menu.Rad2);
+                Console.WriteLine(Menu.Rad3);
+                Console.WriteLine(Menu.Rad4);
+                Console.WriteLine(Menu.Rad5);
+                Console.WriteLine(Menu.Rad6);
+                Console.Write(Menu.MenuVal);
 
                 string? input = Console.ReadLine();
 
