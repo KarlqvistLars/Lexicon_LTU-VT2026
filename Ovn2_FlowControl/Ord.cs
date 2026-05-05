@@ -6,7 +6,7 @@ namespace Ovn2_FlowControl
     {
         public static void UpprepaTioGanger()
         {
-            Console.Write("Skriv en text: ");
+            Console.Write(Menu.SkrivEnText);
             string? text = Console.ReadLine();
 
             for (int i = 1; i <= 10; i++)
@@ -19,12 +19,12 @@ namespace Ovn2_FlowControl
 
         public static void DetTredjeOrdet()
         {
-            Console.Write("Skriv en mening med minst 3 ord: ");
+            Console.Write(Menu.SkrivEnMeningMedMinst3Ord);
             string? mening = Console.ReadLine();
 
             if (string.IsNullOrWhiteSpace(mening))
             {
-                Console.WriteLine("Du måste skriva en mening.");
+                Console.WriteLine(Menu.DuMasteSkriva);
                 return;
             }
 
@@ -32,11 +32,11 @@ namespace Ovn2_FlowControl
 
             if (ord.Length < 3)
             {
-                Console.WriteLine("Mening måste innehålla minst 3 ord.");
+                Console.WriteLine(Menu.MeningMasteInnehallaMinst3Ord);
                 return;
             }
 
-            Console.WriteLine($"Det tredje ordet är: {ord[2]}");
+            Console.WriteLine($"{Menu.DetTredjeOrdet}{ord[2]}");
         }
     }
 }

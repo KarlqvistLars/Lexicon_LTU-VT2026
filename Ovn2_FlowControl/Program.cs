@@ -25,7 +25,7 @@ namespace Ovn2_FlowControl
                 {
                     case "0":
                         running = false;
-                        Console.WriteLine("Programmet avslutas.");
+                        Console.WriteLine(Menu.ProgrammetAvslutas);
                         break;
 
                     case "1":
@@ -45,7 +45,7 @@ namespace Ovn2_FlowControl
                         break;
 
                     default:
-                        Console.WriteLine("Felaktig input, välj 0-4.");
+                        Console.WriteLine(Menu.FelaktigInput);
                         break;
                 }
 
