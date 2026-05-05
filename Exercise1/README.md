@@ -42,6 +42,7 @@ Skriv programmet<br>
 
 ### =====================================================
 <br>
+
 ## Exercise 1b - Personalregister med GUI
 <br>
 
