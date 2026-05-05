@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="Exercise1b.Core.xUnitTest/Exercise1b.Core.xUnitTest.csproj" Id="cf6dd107-fcd9-4342-aef8-4005877cc6d6" />
   <Project Path="Exercise1b.Core/Exercise1b.Core.csproj" Id="13cf171e-93ee-48cb-b228-dc79aa5cc230" />
   <Project Path="Exercise1b/Exercise1b.csproj" />
 </Solution>
