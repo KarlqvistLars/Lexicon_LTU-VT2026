@@ -51,7 +51,7 @@ Skriv programmet<br>
 <br>
 
 Gjorde även en variant Exercise1b men Grafiskt användargänssnitt. Hittas [här.](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/tree/main/Exercise1/Exercise1/Exercise1b)<br><br>
-Exercise1b har samma funktionalitet som Exercise men ett grafiskt användargränssnitt.<br><br>
+Exercise1b har samma funktionalitet som Exercise1 men ett grafiskt användargränssnitt.<br><br>
 Exercise1b.Core innhåller klasserna som hanteras för att de skulle gå att skapa med GitHub Actions och automatiskt generera dkumentation från kommentarena var det nödvändit att bryta ut dem ur MainWindow då DocFx inte funkade så bra med WPS.
 ### =====================================================
 
