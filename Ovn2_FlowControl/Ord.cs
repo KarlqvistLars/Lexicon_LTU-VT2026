@@ -32,7 +32,7 @@ namespace Ovn2_FlowControl
 
             if (ord.Length < 3)
             {
-                Console.WriteLine(Menu.MeningMasteInnehallaMinst3Ord);
+                Console.WriteLine(Menu.MeningMasteInnehalla3ord);
                 return;
             }
 

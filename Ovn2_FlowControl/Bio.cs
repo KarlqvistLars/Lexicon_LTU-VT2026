@@ -8,37 +8,37 @@ namespace Ovn2_FlowControl
     {
         public static void UngdomEllerPensionar()
         {
-            Console.Write("Ange ålder: ");
+            Console.Write(Menu.AngeAlder);
             string? input = Console.ReadLine();
 
             if (!int.TryParse(input, out int alder))    // Jämför med int.Parse(input) --> "hej" --> Exception
             {
-                Console.WriteLine("Ogiltig ålder.");
+                Console.WriteLine(Menu.OgiltigAlder);
                 return;
             }
 
             if (alder < 20)
             {
-                Console.WriteLine("Ungdomspris: 80kr");
+                Console.WriteLine(Menu.Ungdomspris);
             }
             else if (alder > 64)
             {
-                Console.WriteLine("Pensionärspris: 90kr");
+                Console.WriteLine(Menu.Pensionarspris);
             }
             else
             {
-                Console.WriteLine("Standardpris: 120kr");
+                Console.WriteLine(Menu.Standardpris);
             }
         }
 
         public static void PrisForSallskap()
         {
-            Console.Write("Hur många personer är ni? ");
+            Console.Write(Menu.HurManga);
             string? antalInput = Console.ReadLine();
 
             if (!int.TryParse(antalInput, out int antal) || antal <= 0)
             {
-                Console.WriteLine("Ogiltigt antal personer.");
+                Console.WriteLine(Menu.OgiltigtAntalPersoner);
                 return;
             }
 
@@ -46,12 +46,12 @@ namespace Ovn2_FlowControl
 
             for (int i = 1; i <= antal; i++)
             {
-                Console.Write($"Ange ålder för person {i}: ");
+                Console.Write($"{Menu.AngeAlderForPerson} {i}: ");
                 string? alderInput = Console.ReadLine();
 
                 if (!int.TryParse(alderInput, out int alder) || alder < 0)
                 {
-                    Console.WriteLine("Ogiltig ålder.");
+                    Console.WriteLine(Menu.OgiltigAlder);
                     return;
                 }
 
@@ -73,8 +73,8 @@ namespace Ovn2_FlowControl
                 }
             }
 
-            Console.WriteLine($"Antal personer: {antal}");
-            Console.WriteLine($"Totalkostnad: {total} kr");
+            Console.WriteLine($"{Menu.AntalPersoner}: {antal}");
+            Console.WriteLine($"{Menu.Totalkostnad}: {total} kr");
         }
     }
 }
