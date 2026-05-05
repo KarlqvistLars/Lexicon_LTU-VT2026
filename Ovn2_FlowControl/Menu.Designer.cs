@@ -61,74 +61,110 @@ namespace Ovn2_FlowControl {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ditt val: .
+        ///   Looks up a localized string similar to Det tredje ordet är: .
         /// </summary>
-        internal static string MenuVal {
+        internal static string DetTredjeOrdet {
             get {
-                return ResourceManager.GetString("MenuVal", resourceCulture);
+                return ResourceManager.GetString("DetTredjeOrdet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Du måste skriva en mening..
+        /// </summary>
+        internal static string DuMasteSkriva {
+            get {
+                return ResourceManager.GetString("DuMasteSkriva", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Skriv en mening med minst 3 ord: .
+        /// </summary>
+        internal static string Mening3ord {
+            get {
+                return ResourceManager.GetString("Mening3ord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mening måste innehålla minst 3 ord..
+        /// </summary>
+        internal static string MeningMasteInnehalla3ord {
+            get {
+                return ResourceManager.GetString("MeningMasteInnehalla3ord", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Skriv en siffra för att välja funktion..
         /// </summary>
-        internal static string Rad1 {
+        internal static string MenuRad1 {
             get {
-                return ResourceManager.GetString("Rad1", resourceCulture);
+                return ResourceManager.GetString("MenuRad1", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to 0 = Avsluta.
         /// </summary>
-        internal static string Rad2 {
+        internal static string MenuRad2 {
             get {
-                return ResourceManager.GetString("Rad2", resourceCulture);
+                return ResourceManager.GetString("MenuRad2", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to 1 = Ungdom eller pensionär.
         /// </summary>
-        internal static string Rad3 {
+        internal static string MenuRad3 {
             get {
-                return ResourceManager.GetString("Rad3", resourceCulture);
+                return ResourceManager.GetString("MenuRad3", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to 2 = Pris för sällskap.
         /// </summary>
-        internal static string Rad4 {
+        internal static string MenuRad4 {
             get {
-                return ResourceManager.GetString("Rad4", resourceCulture);
+                return ResourceManager.GetString("MenuRad4", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to 3 = Upprepa tio gånger.
         /// </summary>
-        internal static string Rad5 {
+        internal static string MenuRad5 {
             get {
-                return ResourceManager.GetString("Rad5", resourceCulture);
+                return ResourceManager.GetString("MenuRad5", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to 4 = Det tredje ordet.
         /// </summary>
-        internal static string Rad6 {
+        internal static string MenuRad6 {
             get {
-                return ResourceManager.GetString("Rad6", resourceCulture);
+                return ResourceManager.GetString("MenuRad6", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Välkommen till huvud menyn!.
         /// </summary>
-        internal static string Rubrik {
+        internal static string MenuRubrik {
             get {
-                return ResourceManager.GetString("Rubrik", resourceCulture);
+                return ResourceManager.GetString("MenuRubrik", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ditt val: .
+        /// </summary>
+        internal static string MenuVal {
+            get {
+                return ResourceManager.GetString("MenuVal", resourceCulture);
             }
         }
     }

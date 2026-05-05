@@ -120,25 +120,37 @@
   <data name="MenuVal" xml:space="preserve">
     <value>Your choice: </value>
   </data>
-  <data name="Rad1" xml:space="preserve">
+  <data name="MenuRad1" xml:space="preserve">
     <value>Write a number to chose function.</value>
   </data>
-  <data name="Rad2" xml:space="preserve">
+  <data name="MenuRad2" xml:space="preserve">
     <value>0 = Exit</value>
   </data>
-  <data name="Rad3" xml:space="preserve">
+  <data name="MenuRad3" xml:space="preserve">
     <value>1 = Youth or senior</value>
   </data>
-  <data name="Rad4" xml:space="preserve">
+  <data name="MenuRad4" xml:space="preserve">
     <value>2 = Price for company</value>
   </data>
-  <data name="Rad5" xml:space="preserve">
+  <data name="MenuRad5" xml:space="preserve">
     <value>3 = Repeat ten times</value>
   </data>
-  <data name="Rad6" xml:space="preserve">
+  <data name="MenuRad6" xml:space="preserve">
     <value>4 = The third word</value>
   </data>
-  <data name="Rubrik" xml:space="preserve">
+  <data name="MenuRubrik" xml:space="preserve">
     <value>Welcome to the main menu!</value>
+  </data>
+  <data name="Mening3ord" xml:space="preserve">
+    <value>Write a sentense with at least three words:</value>
+  </data>
+  <data name="DuMasteSkriva" xml:space="preserve">
+    <value>You have to write a sentance.</value>
+  </data>
+  <data name="MeningMasteInnehalla3ord" xml:space="preserve">
+    <value>Sentence must contain at least 3 words.</value>
+  </data>
+  <data name="DetTredjeOrdet" xml:space="preserve">
+    <value>The third word is: </value>
   </data>
 </root>
