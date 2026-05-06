@@ -48,7 +48,7 @@ namespace Ovn2_FlowControl
 
         public static void MenuSprak()
         {
-            List<string> sprak = new List<string> { Menu.Engelska, Menu.Svenska, Menu.Franska };
+            List<string> sprak = new List<string> { Menu.Engelska, Menu.Svenska, Menu.Franska, Menu.Tyska };
             for(int i = 0; i < sprak.Count; i++)
             {
                 Console.WriteLine($"{i} = {sprak[i]}");

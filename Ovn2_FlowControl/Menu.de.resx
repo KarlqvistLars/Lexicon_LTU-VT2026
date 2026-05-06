@@ -118,102 +118,102 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="MenuVal" xml:space="preserve">
-    <value>Your choice: </value>
+    <value>Sie haben die Wahl:</value>
   </data>
   <data name="MenuRad1" xml:space="preserve">
-    <value>Write a number to chose function.</value>
+    <value>Gib eine Zahl ein, um die Funktion auszuwählen.</value>
   </data>
   <data name="MenuRad2" xml:space="preserve">
-    <value>0 = Exit</value>
+    <value>0 = Ausgang</value>
   </data>
   <data name="MenuRad3" xml:space="preserve">
-    <value>1 = Youth or senior</value>
+    <value>1 = Jugendlicher oder Senior</value>
   </data>
   <data name="MenuRad4" xml:space="preserve">
-    <value>2 = Price for company</value>
+    <value>2 = Preis für das Unternehmen</value>
   </data>
   <data name="MenuRad5" xml:space="preserve">
-    <value>3 = Repeat ten times</value>
+    <value>3 = Zehnmal wiederholen</value>
   </data>
   <data name="MenuRad6" xml:space="preserve">
-    <value>4 = The third word</value>
+    <value>4 = Das dritte Wort</value>
   </data>
   <data name="MenuRubrik" xml:space="preserve">
-    <value>Welcome to the main menu!</value>
+    <value>Willkommen im Hauptmenü!</value>
   </data>
   <data name="Mening3ord" xml:space="preserve">
-    <value>Write a sentense with at least three words: </value>
+    <value>Schreiben Sie einen Satz mit mindestens drei Wörtern:</value>
   </data>
   <data name="DuMasteSkriva" xml:space="preserve">
-    <value>You have to write a sentance.</value>
+    <value>Du musst einen Satz schreiben.</value>
   </data>
   <data name="MeningMasteInnehalla3ord" xml:space="preserve">
-    <value>Sentence must contain at least 3 words.</value>
+    <value>Der Satz muss mindestens 3 Wörter enthalten.</value>
   </data>
   <data name="DetTredjeOrdet" xml:space="preserve">
-    <value>The third word is: </value>
+    <value>Das dritte Wort lautet:</value>
   </data>
   <data name="ProgrammetAvslutas" xml:space="preserve">
-    <value>The program ends.</value>
+    <value>Das Programm ist beendet.</value>
   </data>
   <data name="FelaktigInput" xml:space="preserve">
-    <value>Incorrect input, select 0-4.</value>
+    <value>Falsche Eingabe, bitte wählen Sie 0-4.</value>
   </data>
   <data name="AngeAlder" xml:space="preserve">
-    <value>Enter age: </value>
+    <value>Alter eingeben:</value>
   </data>
   <data name="OgiltigAlder" xml:space="preserve">
-    <value>Invalid age.</value>
+    <value>Ungültiges Alter.</value>
   </data>
   <data name="Ungdomspris" xml:space="preserve">
-    <value>Youth price: 80kr</value>
+    <value>Jugendpreis: 80 kr</value>
   </data>
   <data name="Pensionarspris" xml:space="preserve">
-    <value>Senior price: 90kr</value>
+    <value>Seniorenpreis: 90 kr</value>
   </data>
   <data name="Standardpris" xml:space="preserve">
-    <value>Standard price: 120kr</value>
+    <value>Standardpreis: 120 kr</value>
   </data>
   <data name="HurManga" xml:space="preserve">
-    <value>How many people are you? </value>
+    <value>Wie viele Personen seid ihr?</value>
   </data>
   <data name="OgiltigtAntalPersoner" xml:space="preserve">
-    <value>Invalid number of people.</value>
+    <value>Ungültige Personenzahl.</value>
   </data>
   <data name="AngeAlderForPerson" xml:space="preserve">
-    <value>Enter age of person </value>
+    <value>Alter der Person eingeben</value>
   </data>
   <data name="Gratis" xml:space="preserve">
-    <value>Free</value>
+    <value>Frei</value>
   </data>
   <data name="AntalPersoner" xml:space="preserve">
-    <value>Number of people: </value>
+    <value>Anzahl der Personen:</value>
   </data>
   <data name="Totalkostnad" xml:space="preserve">
-    <value>Total cost: </value>
+    <value>Gesamtkosten: </value>
   </data>
   <data name="SkrivEnText" xml:space="preserve">
-    <value>Write a text: </value>
+    <value>Schreibe einen Text: </value>
   </data>
   <data name="MenuRad7" xml:space="preserve">
-    <value>5 = Language</value>
+    <value>5 = Sprache</value>
   </data>
   <data name="ValgSprak" xml:space="preserve">
-    <value>Choose language: </value>
+    <value>Sprache auswählen: </value>
   </data>
   <data name="Engelska" xml:space="preserve">
-    <value>English</value>
+    <value>Englisch</value>
   </data>
   <data name="Svenska" xml:space="preserve">
-    <value>Swedish</value>
+    <value>Schwedisch</value>
   </data>
   <data name="TryckForAttFortsatta" xml:space="preserve">
-    <value>Press Enter to continue...</value>
+    <value>Drücken Sie die Eingabetaste, um fortzufahren...</value>
   </data>
   <data name="Franska" xml:space="preserve">
-    <value>French</value>
+    <value>Französisch</value>
   </data>
   <data name="Tyska" xml:space="preserve">
-    <value>German</value>
+    <value>Deutsch</value>
   </data>
 </root>
