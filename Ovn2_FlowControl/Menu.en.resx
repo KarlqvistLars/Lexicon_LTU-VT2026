@@ -202,12 +202,15 @@
     <value>Choose language: </value>
   </data>
   <data name="Engelska" xml:space="preserve">
-    <value>0 = English</value>
+    <value>English</value>
   </data>
   <data name="Svenska" xml:space="preserve">
-    <value>1 = Swedish</value>
+    <value>Swedish</value>
   </data>
   <data name="TryckForAttFortsatta" xml:space="preserve">
     <value>Press Enter to continue...</value>
+  </data>
+  <data name="Franska" xml:space="preserve">
+    <value>French</value>
   </data>
 </root>

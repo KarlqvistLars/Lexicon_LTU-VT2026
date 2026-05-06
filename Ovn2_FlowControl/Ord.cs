@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Threading;
 
@@ -47,8 +48,11 @@ namespace Ovn2_FlowControl
 
         public static void MenuSprak()
         {
-            Console.WriteLine(Menu.Engelska);
-            Console.WriteLine(Menu.Svenska);
+            List<string> sprak = new List<string> { Menu.Engelska, Menu.Svenska, Menu.Franska };
+            for(int i = 0; i < sprak.Count; i++)
+            {
+                Console.WriteLine($"{i} = {sprak[i]}");
+            }
             Console.WriteLine(Menu.ValgSprak);
 
             string? input = Console.ReadLine();
@@ -58,11 +62,15 @@ namespace Ovn2_FlowControl
                 case "0":
                     Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
                     break;
-
                 case "1":
                     Thread.CurrentThread.CurrentUICulture = new CultureInfo("sv-SE");
                     break;
-
+                case "2":
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("fr-FR");
+                    break;
+                case "3":
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("de-DE");
+                    break;
                 default:
                     break;
             }
