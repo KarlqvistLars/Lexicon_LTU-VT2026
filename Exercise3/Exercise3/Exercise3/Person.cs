@@ -18,7 +18,7 @@ namespace Exercise3
             this._age = age;
         }
 
-        public string FirstName
+        internal string FirstName
         {
             get { return _firstName; }
         }
@@ -28,7 +28,7 @@ namespace Exercise3
             get { return _lastName; }
         }
 
-        public int Age
+        internal int Age
         {
             get { return _age; }
         }
