@@ -331,6 +331,15 @@ namespace Ovn2_FlowControl {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tyska.
+        /// </summary>
+        internal static string Tyska {
+            get {
+                return ResourceManager.GetString("Tyska", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ungdomspris: 80kr.
         /// </summary>
         internal static string Ungdomspris {

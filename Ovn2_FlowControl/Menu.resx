@@ -243,6 +243,9 @@
   </data>
   <data name="Franska" xml:space="preserve">
     <value>Franska</value>
-    <comment>franska</comment>
+  </data>
+  <data name="Tyska" xml:space="preserve">
+    <value>Tyska</value>
+    <comment>tyska</comment>
   </data>
 </root>

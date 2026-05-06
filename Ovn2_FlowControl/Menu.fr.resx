@@ -213,4 +213,7 @@
   <data name="Franska" xml:space="preserve">
     <value>Français</value>
   </data>
+  <data name="Tyska" xml:space="preserve">
+    <value>Allemande</value>
+  </data>
 </root>
