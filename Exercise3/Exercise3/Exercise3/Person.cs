@@ -7,8 +7,8 @@ namespace Exercise3
 {
     public class Person
     {
-        private string _firstName;
-        private string _lastName;
+        private string? _firstName;
+        private string? _lastName;
         private int _age;
         private decimal _salary;
         private bool _err;
@@ -34,12 +34,12 @@ namespace Exercise3
         }
 
 
-        internal string FirstName
+        internal string? FirstName
         {
             get { return _firstName; }
             set
             {
-                if(value.Length<3){
+                if(value == null || value.Length < 3){
                     Console.WriteLine("First name cannot be less than 3 symbols");
                     ErrFlag = true;
                 }else{
@@ -48,12 +48,13 @@ namespace Exercise3
             }
         }
 
-        internal string LastName
+        internal string? LastName
         {
             get { return _lastName; }
             set
             {
-                if (value.Length < 3)
+                if (value == null || value
+                    .Length < 3)
                 {
                     Console.WriteLine("Last name cannot be less than 3 symbols");
                     ErrFlag = true;
