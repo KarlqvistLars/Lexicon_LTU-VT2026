@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Threading;
 
 namespace Ovn2_FlowControl
 {
-    public class BioV2
+    public class BioOld
     {
         public static void UngdomEllerPensionar()
         {
@@ -80,39 +77,6 @@ namespace Ovn2_FlowControl
             Console.WriteLine($"{Menu.AntalPersoner}{antal}");
             Console.WriteLine($"{Menu.Totalkostnad}{total} kr");
             Program.Paus();
-        }
-
-        public static void MenuBio() 
-        {
-            bool runningBio = true;
-
-            while (runningBio)
-            {
-                Console.Clear();
-                Console.WriteLine(Menu.MenuBio);
-                Console.WriteLine(Menu.MenuRad1);
-                List<string> menuOptions = new List<string> { Menu.MenuRad2, Menu.MenuRad3, Menu.MenuRad4 };
-                for (int i = 0; i < menuOptions.Count; i++)
-                {
-                    Console.WriteLine($"{i} = {menuOptions[i]}");
-                }
-                Console.Write(Menu.MenuVal);
-                string? input = Console.ReadLine();
-
-                switch (input)
-                {
-                    case "0":
-                        return;
-                    case "1":
-                        UngdomEllerPensionar();
-                        break;
-                    case "2":
-                        PrisForSallskap();
-                        break;
-                    default:
-                        break;
-                }
-            }
         }
     }
 }

@@ -34,7 +34,7 @@ namespace Ovn2_FlowControl
                         break;
 
                     case "1":
-                        BioV2.MenuBio();
+                        Bio.MenuBio();
                         break;
 
                     case "2":
