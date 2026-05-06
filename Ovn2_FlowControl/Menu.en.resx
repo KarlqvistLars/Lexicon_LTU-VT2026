@@ -124,19 +124,19 @@
     <value>Write a number to chose function.</value>
   </data>
   <data name="MenuRad2" xml:space="preserve">
-    <value>0 = Exit</value>
+    <value>Exit</value>
   </data>
   <data name="MenuRad3" xml:space="preserve">
-    <value>1 = Youth or senior</value>
+    <value>Youth or senior</value>
   </data>
   <data name="MenuRad4" xml:space="preserve">
-    <value>2 = Price for company</value>
+    <value>Price for company</value>
   </data>
   <data name="MenuRad5" xml:space="preserve">
-    <value>3 = Repeat ten times</value>
+    <value>Repeat ten times</value>
   </data>
   <data name="MenuRad6" xml:space="preserve">
-    <value>4 = The third word</value>
+    <value>The third word</value>
   </data>
   <data name="MenuRubrik" xml:space="preserve">
     <value>Welcome to the main menu!</value>
@@ -196,7 +196,7 @@
     <value>Write a text: </value>
   </data>
   <data name="MenuRad7" xml:space="preserve">
-    <value>5 = Language</value>
+    <value>Language</value>
   </data>
   <data name="ValgSprak" xml:space="preserve">
     <value>Choose language: </value>
@@ -215,5 +215,11 @@
   </data>
   <data name="Tyska" xml:space="preserve">
     <value>German</value>
+  </data>
+  <data name="MenuBio" xml:space="preserve">
+    <value>Welcome to the Biomeny!</value>
+  </data>
+  <data name="MenuRad8" xml:space="preserve">
+    <value>Cinema menu</value>
   </data>
 </root>

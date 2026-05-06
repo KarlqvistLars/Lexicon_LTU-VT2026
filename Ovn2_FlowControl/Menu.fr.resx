@@ -124,19 +124,19 @@
     <value>Saisissez un numéro pour sélectionner une fonction.</value>
   </data>
   <data name="MenuRad2" xml:space="preserve">
-    <value>0 = Sortie</value>
+    <value>Sortie</value>
   </data>
   <data name="MenuRad3" xml:space="preserve">
-    <value>1 = Jeune ou retraité</value>
+    <value>Jeune ou retraité</value>
   </data>
   <data name="MenuRad4" xml:space="preserve">
-    <value>2 = Prix pour l'entreprise</value>
+    <value>Prix pour l'entreprise</value>
   </data>
   <data name="MenuRad5" xml:space="preserve">
-    <value>3 = Répéter dix fois</value>
+    <value>Répéter dix fois</value>
   </data>
   <data name="MenuRad6" xml:space="preserve">
-    <value>4 = Le troisième mot</value>
+    <value>Le troisième mot</value>
   </data>
   <data name="MenuRubrik" xml:space="preserve">
     <value>Bienvenue dans le menu principal!</value>
@@ -160,19 +160,19 @@
     <value>Saisie incorrecte, sélectionnez 0-4.</value>
   </data>
   <data name="AngeAlder" xml:space="preserve">
-    <value>Entrez votre âge : </value>
+    <value>Entrez votre âge: </value>
   </data>
   <data name="OgiltigAlder" xml:space="preserve">
     <value>Âge invalide.</value>
   </data>
   <data name="Ungdomspris" xml:space="preserve">
-    <value>Prix ​​jeune : 80 kr</value>
+    <value>Prix ​​jeune: 80 kr</value>
   </data>
   <data name="Pensionarspris" xml:space="preserve">
     <value>Prix ​​pour les retraités : 90 kr</value>
   </data>
   <data name="Standardpris" xml:space="preserve">
-    <value>Prix ​​standard : 120 kr</value>
+    <value>Prix ​​standard: 120 kr</value>
   </data>
   <data name="HurManga" xml:space="preserve">
     <value>Combien êtes-vous? </value>
@@ -190,16 +190,16 @@
     <value>Nombre de personnes: </value>
   </data>
   <data name="Totalkostnad" xml:space="preserve">
-    <value>Coût total :</value>
+    <value>Coût total: </value>
   </data>
   <data name="SkrivEnText" xml:space="preserve">
-    <value>Rédigez un texte:</value>
+    <value>Rédigez un texte: </value>
   </data>
   <data name="MenuRad7" xml:space="preserve">
-    <value>5 = Langue</value>
+    <value>Langue</value>
   </data>
   <data name="ValgSprak" xml:space="preserve">
-    <value>Sélectionnez la langue :</value>
+    <value>Sélectionnez la langue: </value>
   </data>
   <data name="Engelska" xml:space="preserve">
     <value>Anglais</value>
@@ -215,5 +215,11 @@
   </data>
   <data name="Tyska" xml:space="preserve">
     <value>Allemande</value>
+  </data>
+  <data name="MenuBio" xml:space="preserve">
+    <value>Bienvenue dans la Biomeny !</value>
+  </data>
+  <data name="MenuRad8" xml:space="preserve">
+    <value>Menu du cinéma</value>
   </data>
 </root>

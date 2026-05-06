@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Threading;
 
@@ -16,12 +17,11 @@ namespace Ovn2_FlowControl
                 Console.Clear();
                 Console.WriteLine(Menu.MenuRubrik);
                 Console.WriteLine(Menu.MenuRad1);
-                Console.WriteLine(Menu.MenuRad2);
-                Console.WriteLine(Menu.MenuRad3);
-                Console.WriteLine(Menu.MenuRad4);
-                Console.WriteLine(Menu.MenuRad5);
-                Console.WriteLine(Menu.MenuRad6);
-                Console.WriteLine(Menu.MenuRad7);
+                List<string> headMenuOptions = new List<string> { Menu.MenuRad2,Menu.MenuRad8, Menu.MenuRad5, Menu.MenuRad6, Menu.MenuRad7 };
+                for (int i = 0; i < headMenuOptions.Count; i++)
+                {
+                    Console.WriteLine($"{i} = {headMenuOptions[i]}");
+                }
                 Console.Write(Menu.MenuVal);
 
                 string? input = Console.ReadLine();
@@ -34,22 +34,18 @@ namespace Ovn2_FlowControl
                         break;
 
                     case "1":
-                        Bio.UngdomEllerPensionar();
+                        Bio.MenuBio();
                         break;
 
                     case "2":
-                        Bio.PrisForSallskap();
-                        break;
-
-                    case "3":
                         Ord.UpprepaTioGanger();
                         break;
 
-                    case "4":
+                    case "3":
                         Ord.DetTredjeOrdet();
                         break;
 
-                    case "5":
+                    case "4":
                         Ord.MenuSprak();
                         break;
 

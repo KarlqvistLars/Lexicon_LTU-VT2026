@@ -169,6 +169,15 @@ namespace Ovn2_FlowControl {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Välkommen till Biomenyn!.
+        /// </summary>
+        internal static string MenuBio {
+            get {
+                return ResourceManager.GetString("MenuBio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Skriv en siffra för att välja funktion..
         /// </summary>
         internal static string MenuRad1 {
@@ -178,7 +187,7 @@ namespace Ovn2_FlowControl {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 0 = Avsluta.
+        ///   Looks up a localized string similar to Avsluta.
         /// </summary>
         internal static string MenuRad2 {
             get {
@@ -187,7 +196,7 @@ namespace Ovn2_FlowControl {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1 = Ungdom eller pensionär.
+        ///   Looks up a localized string similar to Ungdom eller pensionär.
         /// </summary>
         internal static string MenuRad3 {
             get {
@@ -196,7 +205,7 @@ namespace Ovn2_FlowControl {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2 = Pris för sällskap.
+        ///   Looks up a localized string similar to Pris för sällskap.
         /// </summary>
         internal static string MenuRad4 {
             get {
@@ -205,7 +214,7 @@ namespace Ovn2_FlowControl {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 3 = Upprepa tio gånger.
+        ///   Looks up a localized string similar to Upprepa tio gånger.
         /// </summary>
         internal static string MenuRad5 {
             get {
@@ -214,7 +223,7 @@ namespace Ovn2_FlowControl {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 4 = Det tredje ordet.
+        ///   Looks up a localized string similar to Det tredje ordet.
         /// </summary>
         internal static string MenuRad6 {
             get {
@@ -223,11 +232,20 @@ namespace Ovn2_FlowControl {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 5 = Språk.
+        ///   Looks up a localized string similar to Språk.
         /// </summary>
         internal static string MenuRad7 {
             get {
                 return ResourceManager.GetString("MenuRad7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Biomeny.
+        /// </summary>
+        internal static string MenuRad8 {
+            get {
+                return ResourceManager.GetString("MenuRad8", resourceCulture);
             }
         }
         
