@@ -118,131 +118,99 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="MenuVal" xml:space="preserve">
-    <value>Ditt val: </value>
-    <comment>menu val</comment>
+    <value>Votre choix: </value>
   </data>
   <data name="MenuRad1" xml:space="preserve">
-    <value>Skriv en siffra för att välja funktion.</value>
-    <comment>menyrad1</comment>
+    <value>Saisissez un numéro pour sélectionner une fonction.</value>
   </data>
   <data name="MenuRad2" xml:space="preserve">
-    <value>0 = Avsluta</value>
-    <comment>menyrad2</comment>
+    <value>0 = Sortie</value>
   </data>
   <data name="MenuRad3" xml:space="preserve">
-    <value>1 = Ungdom eller pensionär</value>
-    <comment>menyrad3</comment>
+    <value>1 = Jeune ou retraité</value>
   </data>
   <data name="MenuRad4" xml:space="preserve">
-    <value>2 = Pris för sällskap</value>
-    <comment>menyrad4</comment>
+    <value>2 = Prix pour l'entreprise</value>
   </data>
   <data name="MenuRad5" xml:space="preserve">
-    <value>3 = Upprepa tio gånger</value>
-    <comment>menyrad5</comment>
+    <value>3 = Répéter dix fois</value>
   </data>
   <data name="MenuRad6" xml:space="preserve">
-    <value>4 = Det tredje ordet</value>
-    <comment>menyrad6</comment>
+    <value>4 = Le troisième mot</value>
   </data>
   <data name="MenuRubrik" xml:space="preserve">
-    <value>Välkommen till huvud menyn!</value>
-    <comment>menyrad0</comment>
+    <value>Bienvenue dans le menu principal!</value>
   </data>
   <data name="Mening3ord" xml:space="preserve">
-    <value>Skriv en mening med minst 3 ord: </value>
-    <comment>skriv en mening</comment>
+    <value>Écrivez une phrase d'au moins 3 mots: </value>
   </data>
   <data name="DuMasteSkriva" xml:space="preserve">
-    <value>Du måste skriva en mening.</value>
-    <comment>du måste skriva en mening</comment>
+    <value>Vous devez écrire une phrase.</value>
   </data>
   <data name="MeningMasteInnehalla3ord" xml:space="preserve">
-    <value>Mening måste innehålla minst 3 ord.</value>
-    <comment>måste innehålla tre ord</comment>
+    <value>La phrase doit contenir au moins 3 mots. </value>
   </data>
   <data name="DetTredjeOrdet" xml:space="preserve">
-    <value>Det tredje ordet är: </value>
-    <comment>det tredje ordet är</comment>
+    <value>Le troisième mot est: </value>
   </data>
   <data name="ProgrammetAvslutas" xml:space="preserve">
-    <value>Programmet avslutas.</value>
-    <comment>programmet avslutas</comment>
+    <value>Le programme est terminé.</value>
   </data>
   <data name="FelaktigInput" xml:space="preserve">
-    <value>Felaktig input, välj 0-4.</value>
-    <comment>felaktigt input</comment>
+    <value>Saisie incorrecte, sélectionnez 0-4.</value>
   </data>
   <data name="AngeAlder" xml:space="preserve">
-    <value>Ange ålder: </value>
-    <comment>ange ålder</comment>
+    <value>Entrez votre âge : </value>
   </data>
   <data name="OgiltigAlder" xml:space="preserve">
-    <value>Ogiltig ålder.</value>
-    <comment>ogiltig ålder</comment>
+    <value>Âge invalide.</value>
   </data>
   <data name="Ungdomspris" xml:space="preserve">
-    <value>Ungdomspris: 80kr</value>
-    <comment>ungdomspris</comment>
+    <value>Prix ​​jeune : 80 kr</value>
   </data>
   <data name="Pensionarspris" xml:space="preserve">
-    <value>Pensionärspris: 90kr</value>
-    <comment>pensionärspris</comment>
+    <value>Prix ​​pour les retraités : 90 kr</value>
   </data>
   <data name="Standardpris" xml:space="preserve">
-    <value>Standardpris: 120kr</value>
-    <comment>standardpris</comment>
+    <value>Prix ​​standard : 120 kr</value>
   </data>
   <data name="HurManga" xml:space="preserve">
-    <value>Hur många personer är ni? </value>
-    <comment>hur många personer</comment>
+    <value>Combien êtes-vous? </value>
   </data>
   <data name="OgiltigtAntalPersoner" xml:space="preserve">
-    <value>Ogiltigt antal personer.</value>
-    <comment>ogiltigt antal personer</comment>
+    <value>Nombre de personnes invalide</value>
   </data>
   <data name="AngeAlderForPerson" xml:space="preserve">
-    <value>Ange ålder för person </value>
-    <comment>ange ålder för personen</comment>
+    <value>Entrez l'âge de la personne </value>
   </data>
   <data name="Gratis" xml:space="preserve">
-    <value>Gratis</value>
-    <comment>gratis</comment>
+    <value>Gratuit</value>
   </data>
   <data name="AntalPersoner" xml:space="preserve">
-    <value>Antal personer: </value>
-    <comment>antal personer</comment>
+    <value>Nombre de personnes: </value>
   </data>
   <data name="Totalkostnad" xml:space="preserve">
-    <value>Totalkostnad: </value>
-    <comment>totalkostnad</comment>
+    <value>Coût total :</value>
   </data>
   <data name="SkrivEnText" xml:space="preserve">
-    <value>Skriv en text: </value>
-    <comment>skriv en text</comment>
+    <value>Rédigez un texte:</value>
   </data>
   <data name="MenuRad7" xml:space="preserve">
-    <value>5 = Språk</value>
-    <comment>menyrad7</comment>
+    <value>5 = Langue</value>
   </data>
   <data name="ValgSprak" xml:space="preserve">
-    <value>Välj Språk: </value>
-    <comment>välj språk</comment>
+    <value>Sélectionnez la langue :</value>
   </data>
   <data name="Engelska" xml:space="preserve">
-    <value>Engelska</value>
-    <comment>engelska</comment>
+    <value>Anglais</value>
   </data>
   <data name="Svenska" xml:space="preserve">
-    <value>Svenska</value>
-    <comment>svenska</comment>
+    <value>Suédois</value>
   </data>
   <data name="TryckForAttFortsatta" xml:space="preserve">
-    <value>Tryck Enter för att fortsatta...</value>
-    <comment>tryck enter för att fortsätta</comment>
+    <value>Appuyez sur Entrée pour continuer...</value>
   </data>
   <data name="Franska" xml:space="preserve">
-    <value>Franska</value>
-    <comment>franska</comment>
+    <value>Français</value>
   </data>
 </root>

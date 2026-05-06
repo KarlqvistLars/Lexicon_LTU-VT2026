@@ -106,7 +106,7 @@ namespace Ovn2_FlowControl {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 0 = Engelska.
+        ///   Looks up a localized string similar to Engelska.
         /// </summary>
         internal static string Engelska {
             get {
@@ -120,6 +120,15 @@ namespace Ovn2_FlowControl {
         internal static string FelaktigInput {
             get {
                 return ResourceManager.GetString("FelaktigInput", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Franska.
+        /// </summary>
+        internal static string Franska {
+            get {
+                return ResourceManager.GetString("Franska", resourceCulture);
             }
         }
         
@@ -295,7 +304,7 @@ namespace Ovn2_FlowControl {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1 = Svenska.
+        ///   Looks up a localized string similar to Svenska.
         /// </summary>
         internal static string Svenska {
             get {
