@@ -118,31 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="MenuVal" xml:space="preserve">
-    <value>Sie haben die Wahl:</value>
+    <value>Sie haben die Wahl: </value>
   </data>
   <data name="MenuRad1" xml:space="preserve">
     <value>Gib eine Zahl ein, um die Funktion auszuwählen.</value>
   </data>
   <data name="MenuRad2" xml:space="preserve">
-    <value>0 = Ausgang</value>
+    <value>Ausgang</value>
   </data>
   <data name="MenuRad3" xml:space="preserve">
-    <value>1 = Jugendlicher oder Senior</value>
+    <value>Jugendlicher oder Senior</value>
   </data>
   <data name="MenuRad4" xml:space="preserve">
-    <value>2 = Preis für das Unternehmen</value>
+    <value>Preis für das Unternehmen</value>
   </data>
   <data name="MenuRad5" xml:space="preserve">
-    <value>3 = Zehnmal wiederholen</value>
+    <value>Zehnmal wiederholen</value>
   </data>
   <data name="MenuRad6" xml:space="preserve">
-    <value>4 = Das dritte Wort</value>
+    <value>Das dritte Wort</value>
   </data>
   <data name="MenuRubrik" xml:space="preserve">
     <value>Willkommen im Hauptmenü!</value>
   </data>
   <data name="Mening3ord" xml:space="preserve">
-    <value>Schreiben Sie einen Satz mit mindestens drei Wörtern:</value>
+    <value>Schreiben Sie einen Satz mit mindestens drei Wörtern: </value>
   </data>
   <data name="DuMasteSkriva" xml:space="preserve">
     <value>Du musst einen Satz schreiben.</value>
@@ -151,7 +151,7 @@
     <value>Der Satz muss mindestens 3 Wörter enthalten.</value>
   </data>
   <data name="DetTredjeOrdet" xml:space="preserve">
-    <value>Das dritte Wort lautet:</value>
+    <value>Das dritte Wort lautet: </value>
   </data>
   <data name="ProgrammetAvslutas" xml:space="preserve">
     <value>Das Programm ist beendet.</value>
@@ -160,7 +160,7 @@
     <value>Falsche Eingabe, bitte wählen Sie 0-4.</value>
   </data>
   <data name="AngeAlder" xml:space="preserve">
-    <value>Alter eingeben:</value>
+    <value>Alter eingeben: </value>
   </data>
   <data name="OgiltigAlder" xml:space="preserve">
     <value>Ungültiges Alter.</value>
@@ -187,7 +187,7 @@
     <value>Frei</value>
   </data>
   <data name="AntalPersoner" xml:space="preserve">
-    <value>Anzahl der Personen:</value>
+    <value>Anzahl der Personen: </value>
   </data>
   <data name="Totalkostnad" xml:space="preserve">
     <value>Gesamtkosten: </value>
@@ -196,7 +196,7 @@
     <value>Schreibe einen Text: </value>
   </data>
   <data name="MenuRad7" xml:space="preserve">
-    <value>5 = Sprache</value>
+    <value>Sprache</value>
   </data>
   <data name="ValgSprak" xml:space="preserve">
     <value>Sprache auswählen: </value>
@@ -215,5 +215,11 @@
   </data>
   <data name="Tyska" xml:space="preserve">
     <value>Deutsch</value>
+  </data>
+  <data name="MenuBio" xml:space="preserve">
+    <value>Willkommen in der Biomeny!</value>
+  </data>
+  <data name="MenuRad8" xml:space="preserve">
+    <value>Kinomenü</value>
   </data>
 </root>

@@ -53,7 +53,7 @@ namespace Ovn2_FlowControl
             {
                 Console.WriteLine($"{i} = {sprak[i]}");
             }
-            Console.WriteLine(Menu.ValgSprak);
+            Console.Write(Menu.ValgSprak);
 
             string? input = Console.ReadLine();
 
