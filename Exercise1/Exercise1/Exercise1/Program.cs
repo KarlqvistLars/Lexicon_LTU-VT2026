@@ -20,6 +20,7 @@ namespace Exercise1
             if (File.Exists(installationPath)&& new FileInfo(installationPath).Length > 0) {
                 list = FileHandler.LoadPeople(installationPath);
             }
+            MenuHandler.ShowMenuMain();
             // Huvudmeny loop
             do
             {
