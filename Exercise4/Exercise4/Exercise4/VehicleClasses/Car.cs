@@ -10,7 +10,7 @@ namespace Exercise4
         int numberOfDoors;
 
         public Car(int uuid, string color, int wheels, int whight, int length, int numberOfDoors)
-            : base(uuid, color, wheels, whight, length)
+            : base(uuid, color, wheels, whight, length, "Car")
         {
             this.numberOfDoors = numberOfDoors;
         }
@@ -23,7 +23,7 @@ namespace Exercise4
 
         public override string ToString()
         {
-            return $"Car [Uuid={Uuid}, Color={Color}, Wheels={Wheels}, Whight={Whight}, Length={Length}, NumberOfDoors={numberOfDoors}]";
+            return $"Car no: {Uuid}\n  Color={Color}\n  Wheels={Wheels}\n  Whight={Whight}\n  Length={Length}\n  NumberOfDoors={numberOfDoors}\n====================";
         }
     }
 }

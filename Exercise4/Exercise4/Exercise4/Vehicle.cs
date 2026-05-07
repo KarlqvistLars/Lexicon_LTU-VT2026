@@ -12,14 +12,16 @@ namespace Exercise4
         private int _wheels;
         private int _whight;
         private int _length;
+        private string _type;
        
-        public Vehicle(int uuid, string color, int wheels, int whight, int length)
+        public Vehicle(int uuid, string color, int wheels, int whight, int length, string type="")
         {
             this._uuid = uuid;
             this._color = color;
             this._wheels = wheels;
             this._whight = whight;
-            this._length = length   ;
+            this._length = length;
+            this._type = type;
         }
 
         public int Uuid
@@ -52,9 +54,14 @@ namespace Exercise4
             set => _length = value;
         }
 
+        public string Type
+        {
+            get => _type;
+        }
+
         public override string ToString()
         {
-            return $"Vehicle [Uuid={_uuid}, Color={_color}, Wheels={_wheels}, Whight={_whight}, Length={_length}]";
+            return $"Vehicle no: {Uuid}\n  Color={Color}\n  Wheels={Wheels}\n  Whight={Whight}\n  Length={Length}\n====================";
         }
 
     }

@@ -13,7 +13,7 @@ namespace Exercise4
         decimal deplacement;
 
         public Boat(int uuid, string color, int wheels, int whight, int length, decimal maxWaterDepth, decimal boatLength, decimal maxSpeed, decimal deplacement)
-            : base(uuid, color, wheels, whight, length)
+            : base(uuid, color, wheels, whight, length,"Boat")
         {
             this.maxWaterDepth = maxWaterDepth;
             this.length = length;
@@ -47,7 +47,7 @@ namespace Exercise4
 
         public override string ToString()
         {
-            return $"Boat [Uuid={Uuid}, Color={Color}, Wheels={Wheels}, Whight={Whight}, Length={Length}, MaxWaterDepth={maxWaterDepth}, BoatLength={length}, MaxSpeed={maxSpeed}, Deplacement={deplacement}]";
+            return $"Boat no: {Uuid}\n  Color={Color}\n  Wheels={Wheels}\n  Whight={Whight}\n  Length={Length}\n  MaxWaterDepth={maxWaterDepth}\n  BoatLength={length}\n  MaxSpeed={maxSpeed}\n  Deplacement={deplacement}\n====================";
         }
     }
 }

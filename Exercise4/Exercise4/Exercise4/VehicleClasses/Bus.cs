@@ -8,9 +8,9 @@ namespace Exercise4
     public class Bus : Vehicle
     {
         private int _numberOfSeats;
-        
+
         public Bus(int uuid, string color, int wheels, int whight, int length, int numberOfSeats)
-            : base(uuid, color, wheels, whight, length)
+            : base(uuid, color, wheels, whight, length, "Bus")
         {
             this._numberOfSeats = numberOfSeats;
         }
@@ -23,7 +23,7 @@ namespace Exercise4
 
         public override string ToString()
         {
-            return $"Bus [Uuid={Uuid}, Color={Color}, Wheels={Wheels}, Whight={Whight}, Length={Length}, NumberOfSeats={NumberOfSeats}]";
+            return $"Bus no: {Uuid}\n  Color={Color}\n  Wheels={Wheels}\n  Whight={Whight}\n  Length={Length}\n  NumberOfSeats={_numberOfSeats}\n====================";
         }
     }
 }
