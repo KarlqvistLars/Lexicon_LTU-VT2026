@@ -15,16 +15,16 @@ namespace Exercise3
 
         public Person(string firstName, string lastName, int age)
         {
-            ErrFlag = false;
-            FirstName = firstName;
-            LastName = lastName;
-            Age = age;
+            this.ErrFlag = false;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Age = age;
         }
 
-        public Person(string firstName, string lastName, int age, decimal salary)
-            : this(firstName, lastName, age)
+        public Person(string firstName, string lastName, int age, decimal salary)  : this(firstName, lastName, age)
         {
-            Salary = salary;
+            this.ErrFlag = false;
+            this.Salary = salary;
         }
 
         internal bool ErrFlag
@@ -83,9 +83,9 @@ namespace Exercise3
             }
         }
 
-        internal decimal Salary
+        private decimal Salary
         {
-            get { return _salary; }
+            get { return this._salary; }
             set
             {
                 if (value < 460)
@@ -95,7 +95,7 @@ namespace Exercise3
                 }
                 else
                 {
-                    _salary = value;
+                    this._salary = value;
                 }
             }
         }
@@ -113,7 +113,7 @@ namespace Exercise3
         
         public void IncreaseSalary(decimal percentage)
         {
-            if (this.Age>30)
+            if (this.Age>=30)
             {
                 _salary += _salary * percentage / 100;
             }
