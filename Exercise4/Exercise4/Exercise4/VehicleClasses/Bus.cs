@@ -5,19 +5,25 @@ using System.Text;
 
 namespace Exercise4
 {
-    public class Bus
+    public class Bus : Vehicle
     {
-        int numberOfSeats;
+        private int _numberOfSeats;
         
-        public Bus(int numberOfSeats)
+        public Bus(int uuid, string color, int wheels, int whight, int length, int numberOfSeats)
+            : base(uuid, color, wheels, whight, length)
         {
-            this.numberOfSeats = numberOfSeats;
+            this._numberOfSeats = numberOfSeats;
         }
         
         public int NumberOfSeats
         {
-            get => numberOfSeats;
-            set => numberOfSeats = value;
+            get => _numberOfSeats;
+            set => _numberOfSeats = value;
+        }
+
+        public override string ToString()
+        {
+            return $"Bus [Uuid={Uuid}, Color={Color}, Wheels={Wheels}, Whight={Whight}, Length={Length}, NumberOfSeats={NumberOfSeats}]";
         }
     }
 }
