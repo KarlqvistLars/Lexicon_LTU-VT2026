@@ -1,11 +1,12 @@
-﻿namespace Exercise4
+﻿using Exercise4.UtilitesClasses;
+
+namespace Exercise4
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Välkommen till Garage Management System 1.0!");
-            bool running = true;
             Console.Write("Ange antal platser i Garage: ");
             int size = int.TryParse(Console.ReadLine(), out int result) ? result : 0;
             if (size<=0)

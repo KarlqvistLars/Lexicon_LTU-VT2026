@@ -11,7 +11,7 @@ namespace Exercise4
         decimal maxSpeed;
         decimal deplacement;
 
-        public Boat(int uuid, string color, int whight, int length, decimal maxWaterDepth, decimal maxSpeed, decimal deplacement)
+        public Boat(string uuid, string color, int whight, int length, decimal maxWaterDepth, decimal maxSpeed, decimal deplacement)
             : base(uuid, color, whight, length,"Boat")
         {
             this.maxWaterDepth = maxWaterDepth;

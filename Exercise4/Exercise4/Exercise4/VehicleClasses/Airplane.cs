@@ -10,7 +10,7 @@ namespace Exercise4
         int liftCapacity;
         decimal wingSpan;
         private int passengers;
-        public Airplane(int uuid, string color, int whight, int length, int liftCapacity, decimal wingSpan, int passengers)
+        public Airplane(string uuid, string color, int whight, int length, int liftCapacity, decimal wingSpan, int passengers)
             : base(uuid, color, whight, length, "Airplane")
         {
             this.liftCapacity = liftCapacity;

@@ -21,6 +21,10 @@ namespace Exercise4
             get => _vehicles;
         }
 
+        public int Capacity
+        {
+            get => _capacity;
+        }
         public void AddVehicle(Vehicle vehicle)
         {
             for (int i = 0; i < _capacity; i++)
@@ -34,13 +38,13 @@ namespace Exercise4
             Console.WriteLine("Garage is full, cannot add "+ vehicle.Type +" with UUID: " + vehicle.Uuid);
         }
     
-        public void RemoveVehicle(int uuid)
+        public void RemoveVehicle(string uuid)
         {
             for (int i = 0; i < _capacity; i++)
             {
                 if (_vehicles[i] != null && _vehicles[i].Uuid == uuid)
                 {
-                    _vehicles[i] = null;
+                    _vehicles[i] = new Vehicle();
                     Console.WriteLine(this.ToString());
                     return;
                 }
@@ -53,12 +57,19 @@ namespace Exercise4
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"Garage [Capacity={_capacity}]");
             sb.AppendLine("==============================");
-            foreach (var vehicle in _vehicles)
+            if (_vehicles.Length > 0 && _vehicles.Any(v => v != null))
             {
-                if (vehicle != null)
+                foreach (var vehicle in _vehicles)
                 {
-                    sb.AppendLine(vehicle.ToString());
+                    if (vehicle != null)
+                    {
+                        sb.AppendLine(vehicle.ToString());
+                    }
                 }
+            }
+            else
+            {
+                sb.AppendLine("Garaget är tomt.");
             }
             return sb.ToString();
         }

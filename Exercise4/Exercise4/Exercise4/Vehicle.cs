@@ -7,13 +7,18 @@ namespace Exercise4
 {
     public class Vehicle
     {
-        private int _uuid;
-        private string _color;
+        private string? _uuid;
+        private string? _color;
         private int _whight;
         private int _length;
-        private string _type;
-       
-        public Vehicle(int uuid, string color, int whight, int length, string type="")
+        private string? _type;
+        public Vehicle()
+        {
+            _color = string.Empty;
+            _type = string.Empty;
+        }
+
+        public Vehicle(string uuid, string color, int whight, int length, string type="")
         {
             this._uuid = uuid;
             this._color = color;
@@ -22,7 +27,7 @@ namespace Exercise4
             this._type = type;
         }
 
-        public int Uuid
+        public string? Uuid
         {
             get => _uuid;
             set => _uuid = value;
@@ -51,10 +56,10 @@ namespace Exercise4
             get => _type;
         }
 
-        public override string ToString()
-        {
-            return $"{Type} nr: {Uuid}\n  Färg: {Color}\n  Vikt: {Whight} Kg\n  Längd: {Length} m\n==============================";
-        }
+        //public override string ToString()
+        //{
+        //    return $"{Type} nr: {Uuid}\n  Färg: {Color}\n  Vikt: {Whight} Kg\n  Längd: {Length} m\n==============================";
+        //}
 
     }
 }

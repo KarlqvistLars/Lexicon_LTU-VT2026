@@ -10,7 +10,7 @@ namespace Exercise4
         private int _numberOfSeats;
         private int _wheels;
 
-        public Bus(int uuid, string color, int whight, int length, int numberOfSeats, int wheels)
+        public Bus(string uuid, string color, int whight, int length, int numberOfSeats, int wheels)
             : base(uuid, color, whight, length, "Bus")
         {
             this._numberOfSeats = numberOfSeats;
