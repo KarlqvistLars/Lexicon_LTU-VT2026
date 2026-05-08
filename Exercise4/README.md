@@ -25,12 +25,12 @@ sker all interaktion med användaren.<br>
 
 ### Kravspecifikation
 Fordonen ska implementeras som klassen Vehicle och subklasser till den.<br>
-**● Vehicle innehåller samtliga egenskaper som ska finnas i samtliga fordonstyper.
-T.ex. registreringsnummer, färg, antal hjul och andra egenskaper ni kan komma på.**
+● Vehicle innehåller samtliga egenskaper som ska finnas i samtliga fordonstyper.
+T.ex. registreringsnummer, färg, antal hjul och andra egenskaper ni kan komma på.
 <br>
-**● Registreringsnumret är unikt.**
+● Registreringsnumret är unikt.
 <br>
-**● Det måste minst finnas följande subklasser:**
+<u>● Det måste minst finnas följande subklasser:</u>
 <br>
 ○ Airplane<br>
 ○ Motorcycle<br>
