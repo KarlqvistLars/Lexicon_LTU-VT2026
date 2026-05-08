@@ -27,8 +27,8 @@ sker all interaktion med användaren.<br>
 Fordonen ska implementeras som klassen Vehicle och subklasser till den.<br>
 ● Vehicle innehåller samtliga egenskaper som ska finnas i samtliga fordonstyper.
 T.ex. registreringsnummer, färg, antal hjul och andra egenskaper ni kan komma på.<br>
-● Registreringsnumret är unikt
-#### ● Det måste minst finnas följande subklasser:<br>
+● Registreringsnumret är unikt<br>
+● Det måste minst finnas följande subklasser:<br>
 ○ Airplane<br>
 ○ Motorcycle<br>
 ○ Car<br>
