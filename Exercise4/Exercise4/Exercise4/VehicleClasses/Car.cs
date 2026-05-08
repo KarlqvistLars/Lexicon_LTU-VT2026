@@ -8,11 +8,13 @@ namespace Exercise4
     public class Car : Vehicle
     {
         int numberOfDoors;
+        int wheels;
 
-        public Car(int uuid, string color, int wheels, int whight, int length, int numberOfDoors)
-            : base(uuid, color, wheels, whight, length)
+        public Car(int uuid, string color, int whight, int length, int numberOfDoors, int wheels)
+            : base(uuid, color, whight, length, "Car")
         {
             this.numberOfDoors = numberOfDoors;
+            this.wheels = wheels;
         }
 
         public int NumberOfDoors
@@ -21,9 +23,15 @@ namespace Exercise4
             set => numberOfDoors = value;
         }
 
+        public int Wheels
+        {
+            get => wheels;
+            set => wheels = value;
+        }
+
         public override string ToString()
         {
-            return $"Car [Uuid={Uuid}, Color={Color}, Wheels={Wheels}, Whight={Whight}, Length={Length}, NumberOfDoors={numberOfDoors}]";
+            return $"Bil nr: {Uuid}\n  Färg: {Color}\n  Vikt: {Whight} Kg\n  Längd: {Length} m\n  Hjul: {Wheels} st\n  Dörrar: {NumberOfDoors} st\n";
         }
     }
 }

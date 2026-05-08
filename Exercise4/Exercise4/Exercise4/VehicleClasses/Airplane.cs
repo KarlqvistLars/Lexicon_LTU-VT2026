@@ -9,12 +9,14 @@ namespace Exercise4
     {
         int liftCapacity;
         decimal wingSpan;
+        private int wheels;
 
-        public Airplane(int uuid, string color, int wheels, int whight, int length, int liftCapacity, decimal wingSpan)
-            : base(uuid, color, wheels, whight, length)
+        public Airplane(int uuid, string color, int whight, int length, int liftCapacity, decimal wingSpan, int wheels)
+            : base(uuid, color, whight, length, "Airplane")
         {
             this.liftCapacity = liftCapacity;
             this.wingSpan = wingSpan;
+            this.wheels = wheels;
         }
 
         public int LiftCapacity
@@ -28,9 +30,15 @@ namespace Exercise4
             get => wingSpan;
             set => wingSpan = value;
         }
+        public int Wheels
+        {
+            get => wheels;
+            set => wheels = value;
+        }
+
         public override string ToString()
         {
-            return $"Airplane [Uuid={Uuid}, Color={Color}, Wheels={Wheels}, Whight={Whight}, Length={Length}, LiftCapacity={LiftCapacity}, WingSpan={WingSpan}]";
+            return $"Flygplan nr: {Uuid}\n  Färg: {Color}\n  Hjul: {Wheels} st\n  Vikt: {Whight} Kg\n  Längd: {Length} m\n  Lyftkapacitet: {LiftCapacity} kg\n  Vingspann: {WingSpan} m\n";
         }
     }
 }

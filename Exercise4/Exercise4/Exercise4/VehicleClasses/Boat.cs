@@ -8,15 +8,13 @@ namespace Exercise4
     public class Boat : Vehicle
     {
         decimal maxWaterDepth;
-        decimal length;
         decimal maxSpeed;
         decimal deplacement;
 
-        public Boat(int uuid, string color, int wheels, int whight, int length, decimal maxWaterDepth, decimal boatLength, decimal maxSpeed, decimal deplacement)
-            : base(uuid, color, wheels, whight, length)
+        public Boat(int uuid, string color, int whight, int length, decimal maxWaterDepth, decimal maxSpeed, decimal deplacement)
+            : base(uuid, color, whight, length,"Boat")
         {
             this.maxWaterDepth = maxWaterDepth;
-            this.length = length;
             this.maxSpeed = maxSpeed;
             this.deplacement = deplacement;
         }
@@ -25,12 +23,6 @@ namespace Exercise4
         {
             get => maxWaterDepth;
             set => maxWaterDepth = value;
-        }
-
-        public decimal Length
-        {
-            get => length;
-            set => length = value;
         }
 
         public decimal MaxSpeed
@@ -47,7 +39,7 @@ namespace Exercise4
 
         public override string ToString()
         {
-            return $"Boat [Uuid={Uuid}, Color={Color}, Wheels={Wheels}, Whight={Whight}, Length={Length}, MaxWaterDepth={maxWaterDepth}, BoatLength={length}, MaxSpeed={maxSpeed}, Deplacement={deplacement}]";
+            return $"Båt nr: {Uuid}\n  Färg: {Color}\n  Vikt: {Whight} Kg\n  Längd: {Length} m\n  Maxdjup: {MaxWaterDepth} m\n  Maxhastighet: {MaxSpeed} kn\n  Deplacement: {Deplacement} ton\n";
         }
     }
 }
