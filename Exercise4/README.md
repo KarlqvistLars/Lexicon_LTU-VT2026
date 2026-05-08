@@ -30,7 +30,9 @@ T.ex. registreringsnummer, färg, antal hjul och andra egenskaper ni kan komma p
 <br>
 ● Registreringsnumret är unikt.
 <br>
-<u>● Det måste minst finnas följande subklasser:</u>
+<u>
+● Det måste minst finnas följande subklasser:
+</u>
 <br>
 ○ Airplane<br>
 ○ Motorcycle<br>
