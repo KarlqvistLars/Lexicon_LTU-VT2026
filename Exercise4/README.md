@@ -35,11 +35,11 @@ T.ex. registreringsnummer, färg, antal hjul och andra egenskaper ni kan komma p
 ○ Bus<br>
 ○ Boat<br>
 ### Dessa skall implementera minst en egen egenskap var, t.ex:<br>
-○ Number of Engines
-○ Cylinder volume
-○ Fueltype (Gasoline/Diesel)
-○ Number of seats
-○ Length
+○ Number of Engines<br>
+○ Cylinder volume<br>
+○ Fueltype (Gasoline/Diesel)<br>
+○ Number of seats<br>
+○ Length<br><br>
 Klassen behöver inte ärva från någon annan klass eller implementera något annat interface.
 Samlingen av fordon ska internt i klassen hanteras som en array. Den interna arrayen ska
 var privat. Vid instansieringen av ett nytt garage måste kapaciteten anges som argument till
