@@ -31,7 +31,7 @@ namespace Exercise4
 
         public override string ToString()
         {
-            return $"Buss nr: {Uuid}\n  Färg: {Color}\n  Hjul: {Wheels} st\n  Vikt: {Whight} Kg\n  Längd: {Length} m\n  Antal sittplatser: {NumberOfSeats} st\n";
+            return $"Buss nr: {Uuid}\n   Färg: {Color}\n   Hjul: {Wheels} st\n   Vikt: {Whight} Kg\n   Längd: {Length} m\n   Antal sittplatser: {NumberOfSeats} st\n";
         }
     }
 }
