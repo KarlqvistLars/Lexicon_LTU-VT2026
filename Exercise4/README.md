@@ -29,11 +29,11 @@ Fordonen ska implementeras som klassen Vehicle och subklasser till den.<br>
 T.ex. registreringsnummer, färg, antal hjul och andra egenskaper ni kan komma på.<br>
 - [ ] Registreringsnumret är unikt
 #### - [ ] Det måste minst finnas följande subklasser:<br>
-- [ ] ○ Motorcycle<br>
-- [ ] ○ Airplane<br>
-- [ ] ○ Car<br>
-- [ ] ○ Bus<br>
-- [ ] ○ Boat<br>
+- [x] ○ Motorcycle<br>
+- [x] ○ Airplane<br>
+- [x] ○ Car<br>
+- [x] ○ Bus<br>
+- [x] ○ Boat<br>
 ### Dessa skall implementera minst en egen egenskap var, t.ex:<br>
 - [ ] ○ Number of Engines
 - [ ] ○ Cylinder volume
@@ -43,15 +43,15 @@ T.ex. registreringsnummer, färg, antal hjul och andra egenskaper ni kan komma p
 Klassen behöver inte ärva från någon annan klass eller implementera något annat interface.
 Samlingen av fordon ska internt i klassen hanteras som en array. Den interna arrayen ska
 var privat. Vid instansieringen av ett nytt garage måste kapaciteten anges som argument till
-konstruktorn.
-Vi ska EJ använda oss av en List<Vehicle> internt i Garage klassen!!!!
-Funktionalitet
-### Det ska gå att:
-- [ ] Lista samtliga parkerade fordon<br>
-- [ ] Lista fordonstyper och hur många av varje som står i garaget<br>
-- [ ] Lägga till och ta bort fordon ur garaget<br>
-- [ ] Sätta en kapacitet (antal parkeringsplatser) vid instansieringen av ett nytt garage<br>
-- [ ] Möjlighet att populera (sätta in bilar) i garaget med ett antal fordon från start.
+konstruktorn.<br>
+
+**[X] Vi ska EJ använda oss av en List<'Vehicle> internt i Garage klassen!!!!**<br>
+### Funktionalitet - Det ska gå att:
+- [x] Lista samtliga parkerade fordon<br>
+- [x] Lista fordonstyper och hur många av varje som står i garaget<br>
+- [x] Lägga till och ta bort fordon ur garaget<br>
+- [x] Sätta en kapacitet (antal parkeringsplatser) vid instansieringen av ett nytt garage<br>
+- [x] Möjlighet att populera (sätta in bilar) i garaget med ett antal fordon från start.
 - [ ] Hitta ett specifikt fordon via registreringsnumret. Det ska fungera med både ABC123
 samt Abc123 eller AbC123.<br>
 - [ ] Söka efter fordon utifrån en egenskap eller flera (alla möjliga kombinationer från
@@ -67,8 +67,8 @@ vill användaren få veta varför.
 Programmet ska vara en konsolapplikation med ett textbaserat användargränssnitt.<br>
 ### Från gränssnittet skall det gå att:<br>
 - [ ] Navigera till samtlig funktionalitet från garage via gränssnittet<br>
-- [ ] Skapa ett garage med en användar-specificerad storlek<br>
-- [ ] Det skall gå att stänga av applikationen från gränssnittet<br>
+- [x] Skapa ett garage med en användar-specificerad storlek<br>
+- [x] Det skall gå att stänga av applikationen från gränssnittet<br>
 Applikationen skall fel hantera indata på ett robust sätt, så att den inte kraschar vid felaktig inmatning eller användning.
 
 ## Lösning

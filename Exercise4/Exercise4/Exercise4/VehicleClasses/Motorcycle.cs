@@ -10,7 +10,7 @@ namespace Exercise4
     {
         private int _cubicInch;
         private int _wheels = 2;
-        public Motorcycle(int uuid, string color, int whight, int length, int cubicInch, int wheels)
+        public Motorcycle(string uuid, string color, int whight, int length, int cubicInch, int wheels)
             : base(uuid, color, whight, length, "Motorcycle")
         {
             this._cubicInch = cubicInch;

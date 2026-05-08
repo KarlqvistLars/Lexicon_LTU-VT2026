@@ -10,7 +10,7 @@ namespace Exercise4
         int numberOfDoors;
         int wheels;
 
-        public Car(int uuid, string color, int whight, int length, int numberOfDoors, int wheels)
+        public Car(string uuid, string color, int whight, int length, int numberOfDoors, int wheels)
             : base(uuid, color, whight, length, "Car")
         {
             this.numberOfDoors = numberOfDoors;
