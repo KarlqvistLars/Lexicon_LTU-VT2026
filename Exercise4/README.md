@@ -51,7 +51,7 @@ Funktionalitet
 ● Lista fordonstyper och hur många av varje som står i garaget<br>
 ● Lägga till och ta bort fordon ur garaget<br>
 ● Sätta en kapacitet (antal parkeringsplatser) vid instansieringen av ett nytt garage<br>
-● Möjlighet att populera (sätta in bilar) i garaget med ett antal fordon från start.
+● Möjlighet att populera (sätta in bilar) i garaget med ett antal fordon från start.<br>
 ● Hitta ett specifikt fordon via registreringsnumret. Det ska fungera med både ABC123
 samt Abc123 eller AbC123.<br>
 ● Söka efter fordon utifrån en egenskap eller flera (alla möjliga kombinationer från
