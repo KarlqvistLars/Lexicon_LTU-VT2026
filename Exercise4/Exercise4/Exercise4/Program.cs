@@ -16,10 +16,6 @@
             if(MenuHandler.StartGarage(size)){ 
                 return;
             }
-            else
-            {
-                MenuHandler.ShowMenu(0);
-            }
         }
     }
 }

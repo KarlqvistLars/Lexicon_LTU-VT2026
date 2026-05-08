@@ -9,20 +9,27 @@ namespace Exercise4
     public class Motorcycle : Vehicle
     {
         private int _cubicInch;
+        private int _wheels = 2;
         public Motorcycle(int uuid, string color, int wheels, int whight, int length, int cubicInch)
-            : base(uuid, color, wheels, whight, length, "Motorcycle")
+            : base(uuid, color, whight, length, "Motorcycle")
         {
             this._cubicInch = cubicInch;
+            this._wheels = wheels;
         }
         public int CubicInch
         {
             get => _cubicInch;
             set => _cubicInch = value;
+        }        
+        public int Wheels
+        {
+            get => _wheels;
+            set => _wheels = value;
         }
 
         public override string ToString()
         {
-            return $"Motorcycle no: {Uuid}\n  Color={Color}\n  Wheels={Wheels}\n  Whight={Whight}\n  Length={Length}\n  CubicInch={_cubicInch}\n====================";
+            return $"Motorcykel nr: {Uuid}\n  Färg: {Color}\n  Hjul: {Wheels} st\n  Vikt: {Whight} Kg\n  Längd: {Length} m\n  Kubik: {CubicInch} cc\n";
         }
     }
 }

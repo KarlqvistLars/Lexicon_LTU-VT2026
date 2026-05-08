@@ -51,7 +51,7 @@ namespace Exercise4
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"Garage [Capacity={_capacity}]");
-            sb.AppendLine("====================");
+            sb.AppendLine("==============================");
             foreach (var vehicle in _vehicles)
             {
                 if (vehicle != null)

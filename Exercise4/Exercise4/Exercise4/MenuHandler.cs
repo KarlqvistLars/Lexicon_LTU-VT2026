@@ -14,12 +14,12 @@ namespace Exercise4
         static int choice = 0;
         public static bool StartGarage(int garageSize)
         {
+            ShowMenu(0);
             Garage garage = new Garage(garageSize);
             do
             {
                 choice = int.TryParse(Console.ReadLine(), out int menuval) ? menuval : 0;
                 switch (choice)
-
                 {
                     case 1:
                         Vehicle vehicleToAdd = ShowMenu(1);
@@ -40,7 +40,7 @@ namespace Exercise4
                         ShowMenu(0);
                         break;
                     case 4:
-                        Console.WriteLine("Tack för att du använde Garage 1.0! Programmet avslutas.");
+                        Console.WriteLine("Programmet avslutas...\n\n");
                         running = false;
                         break;
                     default:
@@ -113,15 +113,7 @@ namespace Exercise4
                     Console.WriteLine(line30);
                     Console.WriteLine("   Lägg till fordon           ");
                     Console.WriteLine("   ** Bil **                  ");
-                    Console.Write("   Registreringsnummer: ");
-                    int reg = int.TryParse(Console.ReadLine(), out int num) ? num : 0;
-                    Console.Write("   Färg: ");
-                    string color = Console.ReadLine();
-                    Console.Write("   Vikt: ");
-                    int weight = int.TryParse(Console.ReadLine(), out int w) ? w : 0;
-                    Console.Write("   Antal dörrar: ");
-                    int doors = int.TryParse(Console.ReadLine(), out int d) ? d : 0;
-                    vehicle = new Car(reg, color, 4, weight, 4, doors);
+                    vehicle = AddCar();
                     break;
                 case 2:
                     Console.WriteLine(" * Garage 1.0 *               ");
@@ -168,8 +160,8 @@ namespace Exercise4
                     decimal depl = decimal.TryParse(Console.ReadLine(), out decimal dec) ? dec : 0;
                     decimal maxWaterDepth = 1.0m;
                     decimal maxSpeed = 10.0m;
-                    decimal boatLength = 10.0m;
-                    vehicle = new Boat(reg, color, 4, weight, 4, maxWaterDepth, boatLength, maxSpeed, depl);
+                    int boatLength = 10;
+                    vehicle = new Boat(reg, color, weight, boatLength, maxWaterDepth, maxSpeed, depl);
                     break;
                 case 5:
                     Console.WriteLine(" * Garage 1.0 *               ");
@@ -184,22 +176,58 @@ namespace Exercise4
                     weight = int.TryParse(Console.ReadLine(), out w) ? w : 0;
                     Console.Write("   Lyftkapacitet: ");
                     int liftCapacity = int.TryParse(Console.ReadLine(), out int lc) ? lc : 0;
+                    Console.Write("   Längd: ");
+                    int length = int.TryParse(Console.ReadLine(), out int l) ? l : 0;
                     Console.Write("   Spännvidd: ");
                     decimal wingSpan = decimal.TryParse(Console.ReadLine(), out decimal ws) ? ws : 0;
-                    vehicle = new Airplane(reg, color, 4, weight, 4, liftCapacity, wingSpan);
+                    vehicle = new Airplane(reg, color, weight, length, liftCapacity, wingSpan,3);
                     break;
             }
 
             return vehicle;
         }
+
+        private static Vehicle AddCar()
+        {
+
+            Console.Write("   Registreringsnummer: ");
+            int reg = int.TryParse(Console.ReadLine(), out int num) ? num : 0;
+            Console.Write("   Färg: ");
+            string color = Console.ReadLine();
+            Console.Write("   Vikt: ");
+            int weight = int.TryParse(Console.ReadLine(), out int w) ? w : 0;
+            Console.Write("   Längd: ");
+            int length = int.TryParse(Console.ReadLine(), out int l) ? l : 0;
+            Console.Write("   Antal dörrar: ");
+            int doors = int.TryParse(Console.ReadLine(), out int d) ? d : 0;
+            Vehicle vehicle = new Car(reg, color, length, weight, 4, doors);
+            return vehicle;
+        }
+
+        private static Vehicle AddBus()
+        {
+
+            Console.Write("   Registreringsnummer: ");
+            int reg = int.TryParse(Console.ReadLine(), out int num) ? num : 0;
+            Console.Write("   Färg: ");
+            string color = Console.ReadLine();
+            Console.Write("   Vikt: ");
+            int weight = int.TryParse(Console.ReadLine(), out int w) ? w : 0;
+            Console.Write("   Längd: ");
+            int length = int.TryParse(Console.ReadLine(), out int l) ? l : 0;
+            Console.Write("   Antal dörrar: ");
+            int doors = int.TryParse(Console.ReadLine(), out int d) ? d : 0;
+            Vehicle vehicle = new Car(reg, color, length, weight, 4, doors);
+            return vehicle;
+        }
+
         public static void ShowAddedVehicle(Vehicle vehicle)
         {
-            Console.WriteLine(" * Garage 1.0 *               ");
             Console.WriteLine("==============================");
-            Console.WriteLine("Följande fordon har lagts till:");
+            Console.WriteLine("Följande fordon har lagts till");
             Console.WriteLine("==============================");
             Console.WriteLine(vehicle.ToString());
-            Console.WriteLine(e30);
+            Console.WriteLine(line30);
             Console.WriteLine("Tryck på valfri tangent för att återgå till huvudmenyn...");
 
         }
