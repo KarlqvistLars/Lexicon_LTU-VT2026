@@ -29,10 +29,9 @@ Fordonen ska implementeras som klassen Vehicle och subklasser till den.<br>
 T.ex. registreringsnummer, färg, antal hjul och andra egenskaper ni kan komma på.
 <br>
 ● Registreringsnumret är unikt.
-<br>
-<span style="text-decoration: underline;">Understruken</span>
+<ins>
 ● Det måste minst finnas följande subklasser:
-</u>
+</ins>
 <br>
 ○ Airplane<br>
 ○ Motorcycle<br>
