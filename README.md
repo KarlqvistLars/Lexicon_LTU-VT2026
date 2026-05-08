@@ -4,3 +4,5 @@
 ### [Övning 1b](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise1/README.md#exercise-1b---personalregister-med-gui)
 ### [Övning 2](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/tree/main/Exercise2)
 ### [Övning 2b](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/tree/main/Ovn2_FlowControl)
+### [Övning 3](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/tree/main/Exercise3)
+### [Övning 4](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/tree/main/Exercise4)

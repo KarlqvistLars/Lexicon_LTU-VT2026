@@ -72,9 +72,9 @@ Programmet ska vara en konsolapplikation med ett textbaserat användargränssnit
 Applikationen skall fel hantera indata på ett robust sätt, så att den inte kraschar vid felaktig inmatning eller användning.
 
 ## Lösning
-Första skiss på klasserna.
+Skiss på klasserna.
 <br>
-![UML]()
+![UML](Exercise4/Exercise4/Bilder/UnifiedModelingLanguageDigram20260508.jpg)
 
 
 ### [Tillbaka](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/tree/main)
