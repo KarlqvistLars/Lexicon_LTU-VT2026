@@ -9,7 +9,6 @@ namespace Exercise4
     {
         private int _uuid;
         private string _color;
-
         private int _whight;
         private int _length;
         private string _type;

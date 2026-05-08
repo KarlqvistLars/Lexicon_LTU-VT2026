@@ -41,6 +41,7 @@ namespace Exercise4
                 if (_vehicles[i] != null && _vehicles[i].Uuid == uuid)
                 {
                     _vehicles[i] = null;
+                    Console.WriteLine(this.ToString());
                     return;
                 }
             }

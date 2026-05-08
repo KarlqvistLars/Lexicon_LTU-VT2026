@@ -17,33 +17,29 @@ också finnas subklasser till fordon, alltså att varje fordonstyp är en egen s
 Utöver detta krävs det funktionalitet som hanterar att fordon ställs in i garaget, att fordon kan
 tas ut ur garaget, samt att vi kan få en presentation av vad som finns i garaget och söka i det. <br>
 ### I mer programmerings-vänliga termer skall vi alltså som minimum ha:<br>
-● En kollektion av fordon; klassen Garage.<br>
-● En fordonsklass, klassen Vehicle.<br>
-● Ett antal subklasser till fordon.<br>
-● Ett användargränssnitt som låter oss använda funktionaliteten hos ett garage. Här
+- [ ] En kollektion av fordon; klassen Garage.  <br>
+- [x] En fordonsklass, klassen Vehicle.<br>
+- [x] Ett antal subklasser till fordon.<br>
+- [ ] Ett användargränssnitt som låter oss använda funktionaliteten hos ett garage. Här
 sker all interaktion med användaren.<br>
 
 ### Kravspecifikation
 Fordonen ska implementeras som klassen Vehicle och subklasser till den.<br>
-● Vehicle innehåller samtliga egenskaper som ska finnas i samtliga fordonstyper.
-T.ex. registreringsnummer, färg, antal hjul och andra egenskaper ni kan komma på.
-<br>
-● Registreringsnumret är unikt.<br>
-<ins>
-● Det måste minst finnas följande subklasser:
-</ins>
-<br>
-○ Airplane<br>
-○ Motorcycle<br>
-○ Car<br>
-○ Bus<br>
-○ Boat<br>
+- [x] Vehicle innehåller samtliga egenskaper som ska finnas i samtliga fordonstyper.
+T.ex. registreringsnummer, färg, antal hjul och andra egenskaper ni kan komma på.<br>
+- [ ] Registreringsnumret är unikt
+#### - [ ] Det måste minst finnas följande subklasser:<br>
+- [ ] ○ Motorcycle<br>
+- [ ] ○ Airplane<br>
+- [ ] ○ Car<br>
+- [ ] ○ Bus<br>
+- [ ] ○ Boat<br>
 ### Dessa skall implementera minst en egen egenskap var, t.ex:<br>
-○ Number of Engines<br>
-○ Cylinder volume<br>
-○ Fueltype (Gasoline/Diesel)<br>
-○ Number of seats<br>
-○ Length<br><br>
+- [ ] ○ Number of Engines
+- [ ] ○ Cylinder volume
+- [ ] ○ Fueltype (Gasoline/Diesel)
+- [ ] ○ Number of seats
+- [ ] ○ Length
 Klassen behöver inte ärva från någon annan klass eller implementera något annat interface.
 Samlingen av fordon ska internt i klassen hanteras som en array. Den interna arrayen ska
 var privat. Vid instansieringen av ett nytt garage måste kapaciteten anges som argument till
@@ -51,33 +47,34 @@ konstruktorn.
 Vi ska EJ använda oss av en List<Vehicle> internt i Garage klassen!!!!
 Funktionalitet
 ### Det ska gå att:
-● Lista samtliga parkerade fordon<br>
-● Lista fordonstyper och hur många av varje som står i garaget<br>
-● Lägga till och ta bort fordon ur garaget<br>
-● Sätta en kapacitet (antal parkeringsplatser) vid instansieringen av ett nytt garage<br>
-● Möjlighet att populera (sätta in bilar) i garaget med ett antal fordon från start.<br>
-● Hitta ett specifikt fordon via registreringsnumret. Det ska fungera med både ABC123
+- [ ] Lista samtliga parkerade fordon<br>
+- [ ] Lista fordonstyper och hur många av varje som står i garaget<br>
+- [ ] Lägga till och ta bort fordon ur garaget<br>
+- [ ] Sätta en kapacitet (antal parkeringsplatser) vid instansieringen av ett nytt garage<br>
+- [ ] Möjlighet att populera (sätta in bilar) i garaget med ett antal fordon från start.
+- [ ] Hitta ett specifikt fordon via registreringsnumret. Det ska fungera med både ABC123
 samt Abc123 eller AbC123.<br>
-● Söka efter fordon utifrån en egenskap eller flera (alla möjliga kombinationer från
+- [ ] Söka efter fordon utifrån en egenskap eller flera (alla möjliga kombinationer från
 basklassen Vehicle). <br>
 #### Exempelvis:<br>
-○ Alla svarta fordon med fyra hjul.<br>
-○ Alla motorcyklar som är rosa och har 3 hjul.<br>
-○ Alla lastbilar<br>
-○ Alla röda fordon<br><br>
-● Användaren ska få feedback på att saker gått bra eller dåligt. Till exempel när vi
+- [ ] ○ Alla svarta fordon med fyra hjul.<br>
+- [ ] ○ Alla motorcyklar som är rosa och har 3 hjul.<br>
+- [ ] ○ Alla lastbilar<br>
+- [ ] ○ Alla röda fordon<br><br>
+- [ ] Användaren ska få feedback på att saker gått bra eller dåligt. Till exempel när vi
 parkerat ett fordon vill vi få en bekräftelse på att fordonet är parkerat. Om det inte går
 vill användaren få veta varför.
 Programmet ska vara en konsolapplikation med ett textbaserat användargränssnitt.<br>
 ### Från gränssnittet skall det gå att:<br>
-● Navigera till samtlig funktionalitet från garage via gränssnittet<br>
-● Skapa ett garage med en användar-specificerad storlek<br>
-● Det skall gå att stänga av applikationen från gränssnittet<br>
+- [ ] Navigera till samtlig funktionalitet från garage via gränssnittet<br>
+- [ ] Skapa ett garage med en användar-specificerad storlek<br>
+- [ ] Det skall gå att stänga av applikationen från gränssnittet<br>
 Applikationen skall fel hantera indata på ett robust sätt, så att den inte kraschar vid felaktig inmatning eller användning.
 
 ## Lösning
 Skiss på klasserna.
 <br>
-![UML](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise4/Exercise4/Bilder/UnifiedModelingLanguageDigram20260508.jpg)
+![UML](Exercise4/Exercise4/Bilder/UnifiedModelingLanguageDigram20260508.jpg)
+
 
 ### [Tillbaka](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/tree/main)
