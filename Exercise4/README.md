@@ -30,7 +30,7 @@ T.ex. registreringsnummer, färg, antal hjul och andra egenskaper ni kan komma p
 <br>
 ● Registreringsnumret är unikt.
 <br>
-<u>
+<span style="text-decoration: underline;">Understruken</span>
 ● Det måste minst finnas följande subklasser:
 </u>
 <br>
