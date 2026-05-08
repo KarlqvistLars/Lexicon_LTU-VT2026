@@ -120,30 +120,14 @@ namespace Exercise4
                     Console.WriteLine(line30);
                     Console.WriteLine("   Lägg till fordon           ");
                     Console.WriteLine("   ** Buss **                 ");
-                    Console.Write("   Registreringsnummer: ");
-                    reg = int.TryParse(Console.ReadLine(), out num) ? num : 0;
-                    Console.Write("   Färg: ");
-                    color = Console.ReadLine();
-                    Console.Write("   Vikt: ");
-                    weight = int.TryParse(Console.ReadLine(), out w) ? w : 0;
-                    Console.Write("   Antal hjul: ");
-                    int seats = int.TryParse(Console.ReadLine(), out d) ? d : 0;
-                    vehicle = new Bus(reg, color, 4, weight, 4, seats);
+                    vehicle = AddBus();
                     break;
                 case 3:
                     Console.WriteLine(" * Garage 1.0 *               ");
                     Console.WriteLine(line30);
                     Console.WriteLine("   Lägg till fordon           ");
                     Console.WriteLine("   ** Motorcykel **           ");
-                    Console.Write("   Registreringsnummer: ");
-                    reg = int.TryParse(Console.ReadLine(), out num) ? num : 0;
-                    Console.Write("   Färg: ");
-                    color = Console.ReadLine();
-                    Console.Write("   Vikt: ");
-                    weight = int.TryParse(Console.ReadLine(), out w) ? w : 0;
-                    Console.Write("   Antal hjul: ");
-                    int cubic = int.TryParse(Console.ReadLine(), out d) ? d : 0;
-                    vehicle = new Motorcycle(reg, color, 4, weight, 4, cubic);
+                    vehicle = AddMC();
                     break;
                 case 4:
                     Console.WriteLine(" * Garage 1.0 *               ");
@@ -151,42 +135,19 @@ namespace Exercise4
                     Console.WriteLine("   Lägg till fordon           ");
                     Console.WriteLine("   ** Båt **                  ");
                     Console.Write("   Registreringsnummer: ");
-                    reg = int.TryParse(Console.ReadLine(), out num) ? num : 0;
-                    Console.Write("   Färg: ");
-                    color = Console.ReadLine();
-                    Console.Write("   Vikt: ");
-                    weight = int.TryParse(Console.ReadLine(), out w) ? w : 0;
-                    Console.Write("   Deplacement: ");
-                    decimal depl = decimal.TryParse(Console.ReadLine(), out decimal dec) ? dec : 0;
-                    decimal maxWaterDepth = 1.0m;
-                    decimal maxSpeed = 10.0m;
-                    int boatLength = 10;
-                    vehicle = new Boat(reg, color, weight, boatLength, maxWaterDepth, maxSpeed, depl);
+                    vehicle = AddBoat();
                     break;
                 case 5:
                     Console.WriteLine(" * Garage 1.0 *               ");
                     Console.WriteLine(line30);
                     Console.WriteLine("   Lägg till fordon           ");
                     Console.WriteLine("   ** Flygplan **             ");
-                    Console.Write("   Registreringsnummer: ");
-                    reg = int.TryParse(Console.ReadLine(), out num) ? num : 0;
-                    Console.Write("   Färg: ");
-                    color = Console.ReadLine();
-                    Console.Write("   Vikt: ");
-                    weight = int.TryParse(Console.ReadLine(), out w) ? w : 0;
-                    Console.Write("   Lyftkapacitet: ");
-                    int liftCapacity = int.TryParse(Console.ReadLine(), out int lc) ? lc : 0;
-                    Console.Write("   Längd: ");
-                    int length = int.TryParse(Console.ReadLine(), out int l) ? l : 0;
-                    Console.Write("   Spännvidd: ");
-                    decimal wingSpan = decimal.TryParse(Console.ReadLine(), out decimal ws) ? ws : 0;
-                    vehicle = new Airplane(reg, color, weight, length, liftCapacity, wingSpan,3);
+                    vehicle = AddAirplane();
                     break;
             }
 
             return vehicle;
         }
-
         private static Vehicle AddCar()
         {
 
@@ -200,10 +161,9 @@ namespace Exercise4
             int length = int.TryParse(Console.ReadLine(), out int l) ? l : 0;
             Console.Write("   Antal dörrar: ");
             int doors = int.TryParse(Console.ReadLine(), out int d) ? d : 0;
-            Vehicle vehicle = new Car(reg, color, length, weight, 4, doors);
+            Vehicle vehicle = new Car(reg, color, weight, length, 4, doors);
             return vehicle;
         }
-
         private static Vehicle AddBus()
         {
 
@@ -215,9 +175,62 @@ namespace Exercise4
             int weight = int.TryParse(Console.ReadLine(), out int w) ? w : 0;
             Console.Write("   Längd: ");
             int length = int.TryParse(Console.ReadLine(), out int l) ? l : 0;
-            Console.Write("   Antal dörrar: ");
-            int doors = int.TryParse(Console.ReadLine(), out int d) ? d : 0;
-            Vehicle vehicle = new Car(reg, color, length, weight, 4, doors);
+            Console.Write("   Antal säten: ");
+            int seats = int.TryParse(Console.ReadLine(), out int s) ? s : 0;
+            Vehicle vehicle = new Bus(reg, color, weight, length, seats, 6);
+            return vehicle;
+        }
+        private static Vehicle AddMC()
+        {
+            Console.Write("   Registreringsnummer: ");
+            int reg = int.TryParse(Console.ReadLine(), out int num) ? num : 0;
+            Console.Write("   Färg: ");
+            string color = Console.ReadLine();
+            Console.Write("   Vikt: ");
+            int weight = int.TryParse(Console.ReadLine(), out int w) ? w : 0;
+            Console.Write("   Längd: ");
+            int length = int.TryParse(Console.ReadLine(), out int l) ? l : 0;
+            Console.Write("   Motorstorlek: ");
+            int engineSize = int.TryParse(Console.ReadLine(), out int e) ? e : 0;
+            Vehicle vehicle = new Motorcycle(reg, color, weight, length, engineSize, 2);
+            return vehicle;
+        }
+        private static Vehicle AddBoat()
+        {
+            Console.Write("   Registreringsnummer: ");
+            int reg = int.TryParse(Console.ReadLine(), out int num) ? num : 0;
+            Console.Write("   Färg: ");
+            string color = Console.ReadLine();
+            Console.Write("   Vikt: ");
+            int weight = int.TryParse(Console.ReadLine(), out int w) ? w : 0;
+            Console.Write("   Längd: ");
+            int length = int.TryParse(Console.ReadLine(), out int l) ? l : 0;
+            Console.Write("   Max vattendjup: ");
+            int maxDepth = int.TryParse(Console.ReadLine(), out int d) ? d : 0;
+            Console.Write("   Max hastighet: ");
+            int maxSpeed = int.TryParse(Console.ReadLine(), out int s) ? s : 0;
+            Console.Write("   Deplacement: ");
+            int deplacement = int.TryParse(Console.ReadLine(), out int depl) ? depl : 0;
+            Vehicle vehicle = new Boat(reg, color, weight, length, maxDepth, maxSpeed, deplacement);
+            return vehicle;
+        }
+        private static Vehicle AddAirplane()
+        {
+            Console.Write("   Registreringsnummer: ");
+            int reg = int.TryParse(Console.ReadLine(), out int num) ? num : 0;
+            Console.Write("   Färg: ");
+            string color = Console.ReadLine();
+            Console.Write("   Vikt: ");
+            int weight = int.TryParse(Console.ReadLine(), out int w) ? w : 0;
+            Console.Write("   Längd: ");
+            int length = int.TryParse(Console.ReadLine(), out int l) ? l : 0;
+            Console.Write("   Vingbredd: ");
+            int wSpan = int.TryParse(Console.ReadLine(), out int ws) ? ws : 0;
+            Console.Write("   Lyftkapacitet: ");
+            int liftCapacity = int.TryParse(Console.ReadLine(), out int lc) ? lc : 0;
+            Console.Write("   Antal passagerare: ");
+            int passengers = int.TryParse(Console.ReadLine(), out int p) ? p : 0;
+            Vehicle vehicle = new Airplane(reg, color, weight, length, liftCapacity, wSpan, passengers);
             return vehicle;
         }
 
