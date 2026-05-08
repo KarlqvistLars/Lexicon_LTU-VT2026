@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            string[] data = new string[30];
+            Console.WriteLine("Välkommen till Garage Management System 1.0!");
             bool running = true;
             Console.Write("Ange antal platser i Garage: ");
             int size = int.TryParse(Console.ReadLine(), out int result) ? result : 0;

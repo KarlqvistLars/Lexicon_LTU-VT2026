@@ -18,32 +18,46 @@ namespace Exercise4
             Garage garage = new Garage(garageSize);
             do
             {
-                choice = int.TryParse(Console.ReadLine(), out int menuval) ? menuval : 0;
+                choice = int.TryParse(Console.ReadLine(), out int menuval) ? menuval : 10;
                 switch (choice)
                 {
+                    case 0:
+                        Console.WriteLine("Programmet avslutas...\n\n");
+                        running = false;
+                        break;
                     case 1:
-                        Vehicle vehicleToAdd = ShowMenu(1);
+                        Vehicle vehicleToAdd = ShowMenu(1, garage);
                         if (vehicleToAdd != null)
                         {
                             garage.AddVehicle(vehicleToAdd);
                             ShowAddedVehicle(vehicleToAdd);
                             Console.ReadKey();
-                            ShowMenu(0);
                         }
+                        ShowMenu(0, garage);
                         break;
                     case 2:
-
+                        //Vehicle vehicleToRemove = 
+                            ShowMenu(2, garage);
+                        //if (vehicleToRemove != null)
+                        //{
+                        //    garage.RemoveVehicle(vehicleToRemove.Uuid);
+                        //    Console.ReadKey();
+                        //}
+                        //else
+                        //{
+                        //    Console.WriteLine("   INGET  FORDON hAR tagist bort");
+                        //    Console.ReadKey();
+                        //}
+                        ShowMenu(0);
                         break;
                     case 3:
                         ShowMenu(3, garage);
                         Console.ReadKey();
-                        ShowMenu(0);
+                        ShowMenu(0, garage);
                         break;
-                    case 4:
-                        Console.WriteLine("Programmet avslutas...\n\n");
-                        running = false;
-                        break;
-                    default:
+                    case 10:
+                        // Huvudmeny
+                        ShowMenu(0, garage);
                         break;
                 }
             } while (running);
@@ -61,7 +75,7 @@ namespace Exercise4
                     Console.WriteLine("1. Lägg till fordon");
                     Console.WriteLine("2. Ta bort fordon");
                     Console.WriteLine("3. Visa fordon");
-                    Console.WriteLine("4. Avsluta");
+                    Console.WriteLine("0. Avsluta");
                     Console.WriteLine(e30);
                     Console.WriteLine(e30);
                     Console.WriteLine(e30);
@@ -77,29 +91,44 @@ namespace Exercise4
                     Console.WriteLine("3. Motorcykel                 ");
                     Console.WriteLine("4. Båt                        ");
                     Console.WriteLine("5. Flygplan                   ");
-                    Console.WriteLine(e30);
+                    Console.WriteLine("6. Slumässigt");
+                    Console.WriteLine("0. Tillbaka                   ");
                     Console.WriteLine(e30);
                     Console.Write("Gör ert val: ");
-                    vehicle = ShowSubMenu2(int.TryParse(Console.ReadLine(), out int menuval) ? menuval : 0);
+                    vehicle = ShowSubMenu1(int.TryParse(Console.ReadLine(), out int menuval) ? menuval : 0, garage);
                     break;
                 case 2:
                     Console.WriteLine(" * Garage 1.0 *               ");
                     Console.WriteLine(line30);
                     Console.WriteLine("   Ta bort fordon             ");
-                    vehicle = ShowSubMenu2(int.TryParse(Console.ReadLine(), out menuval) ? menuval : 0);
+                    Console.WriteLine("1. Ta bort Reg nr?            ");
+                    Console.WriteLine("2. Ta bort  ???               ");
+                    Console.WriteLine("0. Tillbaka                   ");
+                    Console.WriteLine("                              ");
+                    Console.WriteLine("                              ");
+                    Console.WriteLine(e30);
+                    Console.WriteLine(e30);
+                    Console.Write("Gör ert val: ");
+                    ShowSubMenu2(int.TryParse(Console.ReadLine(), out menuval) ? menuval : 0, garage);
                     break;
                 case 3:
                     Console.WriteLine(" * Garage 1.0 *               ");
                     Console.WriteLine(line30);
                     Console.WriteLine("   Visa fordon                ");
-                    Console.WriteLine(garage.ToString());
+                    Console.WriteLine("1. Visa alla                  ");
+                    Console.WriteLine("2. Visa typ?                  ");
+                    Console.WriteLine("0. Tillbaka                   ");
+                    Console.WriteLine("                              ");
+                    Console.WriteLine("                              ");
                     Console.WriteLine(e30);
-                    Console.WriteLine("Tryck på valfri tangent för att återgå till huvudmenyn...");
+                    Console.WriteLine(e30);
+                    Console.Write("Gör ert val: ");
+                    vehicle = ShowSubMenu3(int.TryParse(Console.ReadLine(), out menuval) ? menuval : 0, garage);
                     break;
             }
             return vehicle;
         }
-        static public Vehicle ShowSubMenu2(int option)
+        static public Vehicle ShowSubMenu1(int option, Garage garage)
         {
             Vehicle vehicle = null;
             Console.Clear();
@@ -134,7 +163,6 @@ namespace Exercise4
                     Console.WriteLine(line30);
                     Console.WriteLine("   Lägg till fordon           ");
                     Console.WriteLine("   ** Båt **                  ");
-                    Console.Write("   Registreringsnummer: ");
                     vehicle = AddBoat();
                     break;
                 case 5:
@@ -144,9 +172,49 @@ namespace Exercise4
                     Console.WriteLine("   ** Flygplan **             ");
                     vehicle = AddAirplane();
                     break;
+                case 6:
+                    Console.WriteLine(" * Garage 1.0 *               ");
+                    Console.WriteLine(line30);
+                    Console.WriteLine("   Lägg n st slumpade fordon  ");
+                    Console.Write("   Hur många: ");
+                    int count = int.TryParse(Console.ReadLine(), out int n) ? n : 0;
+                    AddRandomVehicles(count, garage);
+                    break;
             }
 
             return vehicle;
+        }
+        private static void AddRandomVehicles(int count, Garage garage)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                Random random = new Random();
+                int number = random.Next(1, 6);
+
+                switch (number) 
+                { 
+                    case 1:
+                        garage.AddVehicle(new Car(i+100, "Röd", 1200, 4, 4, 4));
+                        break;
+                    case 2:
+                        garage.AddVehicle(new Bus(i + 100, "Blå", 12000, 12, 48, 6));
+                        break;
+                    case 3:
+                        garage.AddVehicle(new Motorcycle(i + 100, "Svart", 140, 2, 900, 2));
+                        break;
+                    case 4:
+                        garage.AddVehicle(new Boat(i + 100, "Vit", 1200, 4, 2m, 24.6m, 1200));
+                        break;
+                    case 5:
+                        garage.AddVehicle(new Airplane(i + 100, "Silver", 15000, 20, 7000, 20, 28));
+                        break;
+                    default:
+                        break;
+                } 
+            }
+            Console.WriteLine("   " + count + " slumpade fordon har lagts till i garaget.");
+            Console.WriteLine("Tryck på valfri tangent för att återgå till huvudmenyn...");
+            Console.ReadKey();
         }
         private static Vehicle AddCar()
         {
@@ -233,7 +301,6 @@ namespace Exercise4
             Vehicle vehicle = new Airplane(reg, color, weight, length, liftCapacity, wSpan, passengers);
             return vehicle;
         }
-
         public static void ShowAddedVehicle(Vehicle vehicle)
         {
             Console.WriteLine("==============================");
@@ -243,6 +310,50 @@ namespace Exercise4
             Console.WriteLine(line30);
             Console.WriteLine("Tryck på valfri tangent för att återgå till huvudmenyn...");
 
+        }
+        static public void ShowSubMenu2(int option, Garage garage)
+        {
+            Console.Clear();
+            Console.WriteLine(" * Garage 1.0 *               ");
+            Console.WriteLine(line30);
+            Console.WriteLine("   Ta bort fordon           ");
+            garage.Vehicles.ToList().ForEach(v => { if (v != null) Console.WriteLine(v.ToString()); });
+            Console.WriteLine(line30);
+            Console.Write("Val regnr att ta bort: "); 
+            garage.RemoveVehicle(int.TryParse(Console.ReadLine(), out int menuval) ? menuval : 0);
+            Console.ReadKey();
+        }
+        static public Vehicle ShowSubMenu3(int option, Garage garage)
+        {
+            Vehicle vehicle = null;
+            Console.Clear();
+            switch (option)
+            {
+                case 0:
+                    ShowMenu(0);
+                    break;
+                case 1:
+                    Console.WriteLine(" * Garage 1.0 *               ");
+                    Console.WriteLine(line30);
+                    Console.WriteLine("   Visa alla fordon           ");
+                    Console.WriteLine(line30);
+                    garage.Vehicles.ToList().ForEach(v => { if (v != null) Console.WriteLine(v.ToString()); });
+                    Console.WriteLine(line30);
+                    Console.WriteLine("   Tryck på valfri tangent för att återgå till huvudmenyn...");
+                    Console.ReadKey();
+                    ShowMenu(0);
+                    break;
+                case 2:
+                    Console.WriteLine(" * Garage 1.0 *               ");
+                    Console.WriteLine(line30);
+                    Console.WriteLine("   Lägg till fordon           ");
+                    Console.WriteLine("   ** Buss **                 ");
+                    vehicle = AddBus();
+                    break;
+                default:
+                    break;
+            }
+            return null;
         }
     }
 }
