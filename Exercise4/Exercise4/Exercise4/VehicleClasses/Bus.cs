@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Exercise4.UtilitesClasses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,7 @@ namespace Exercise4
 
         public override string ToString()
         {
-            return $"Buss nr: {Uuid}\n   Färg: {Color}\n   Hjul: {Wheels} st\n   Vikt: {Whight} Kg\n   Längd: {Length} m\n   Antal sittplatser: {NumberOfSeats} st\n";
+            return $"Buss nr: {Uuid}\n{MenuHandler.vTab}Färg: {Color}\n{MenuHandler.vTab}Vikt: {Whight} Kg\n{MenuHandler.vTab}Längd: {Length} m\n{MenuHandler.vTab}Antal sittplatser: {NumberOfSeats} st\n{MenuHandler.vTab}Hjul: {Wheels} st\n";
         }
     }
 }

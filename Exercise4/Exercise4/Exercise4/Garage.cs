@@ -9,18 +9,15 @@ namespace Exercise4
     {
         private int _capacity;
         private readonly Vehicle[] _vehicles;
-
         public Garage(int capacity)
         {
             this._capacity = capacity;
             _vehicles = new Vehicle[this._capacity];
         }
-
         public Vehicle[] Vehicles
         {
             get => _vehicles;
         }
-
         public int Capacity
         {
             get => _capacity;
@@ -29,7 +26,7 @@ namespace Exercise4
         {
             for (int i = 0; i < _capacity; i++)
             {
-                if (_vehicles[i] == null)
+                if (_vehicles[i] == null|| _vehicles[i].Uuid == "")
                 {
                     _vehicles[i] = vehicle;
                     return;
@@ -37,7 +34,6 @@ namespace Exercise4
             }
             Console.WriteLine("Garage is full, cannot add "+ vehicle.Type +" with UUID: " + vehicle.Uuid);
         }
-    
         public void RemoveVehicle(string uuid)
         {
             for (int i = 0; i < _capacity; i++)
@@ -51,7 +47,6 @@ namespace Exercise4
             }
             Console.WriteLine("Vehicle with UUID: " + uuid + " not found");
         }
-
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

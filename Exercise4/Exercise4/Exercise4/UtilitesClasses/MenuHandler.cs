@@ -5,14 +5,15 @@ namespace Exercise4.UtilitesClasses
 
     static public class MenuHandler
     {
-        const string line30 = "==============================";
-        const string e30 = "                              ";
-        const string vTab = "   ";
+        static public string line30 { get; } = "==============================";
+        static string e30 { get; } = "                              ";
+        static public string vTab { get; } = "   ";
         static bool running = true;
         static int choice = 0;
         public static bool StartGarage(int garageSize)
         {
             Garage garage = new Garage(garageSize);
+            
             ShowMenu(0, garage);
             do
             {
@@ -34,18 +35,9 @@ namespace Exercise4.UtilitesClasses
                         ShowMenu(0, garage);
                         break;
                     case 2:
-                        //Vehicle vehicleToRemove = 
+                        // Öppna Ta bort fordon
                         ShowMenu(2, garage);
-                        //if (vehicleToRemove != null)
-                        //{
-                        //    garage.RemoveVehicle(vehicleToRemove.Uuid);
-                        //    Console.ReadKey();
-                        //}
-                        //else
-                        //{
-                        //    Console.WriteLine("   INGET  FORDON hAR tagist bort");
-                        //    Console.ReadKey();
-                        //}
+                        // Tillbaka till huvudmeny
                         ShowMenu(0, garage);
                         break;
                     case 3:
@@ -140,35 +132,35 @@ namespace Exercise4.UtilitesClasses
                     Console.WriteLine(line30);
                     Console.WriteLine(vTab + "Lägg till fordon           ");
                     Console.WriteLine(vTab + "** Bil **                  ");
-                    vehicle = GarageManager.AddCar();
+                    vehicle = GarageManager.AddCar(garage);
                     break;
                 case 2:
                     Console.WriteLine(" * Garage 1.0 *               ");
                     Console.WriteLine(line30);
                     Console.WriteLine(vTab + "Lägg till fordon           ");
                     Console.WriteLine(vTab + "** Buss **                 ");
-                    vehicle = GarageManager.AddBus();
+                    vehicle = GarageManager.AddBus(garage);
                     break;
                 case 3:
                     Console.WriteLine(" * Garage 1.0 *               ");
                     Console.WriteLine(line30);
                     Console.WriteLine(vTab + "Lägg till fordon           ");
                     Console.WriteLine(vTab + "** Motorcykel **           ");
-                    vehicle = GarageManager.AddMC();
+                    vehicle = GarageManager.AddMC(garage);
                     break;
                 case 4:
                     Console.WriteLine(" * Garage 1.0 *               ");
                     Console.WriteLine(line30);
                     Console.WriteLine(vTab + "Lägg till fordon           ");
                     Console.WriteLine(vTab + "** Båt **                  ");
-                    vehicle = GarageManager.AddBoat();
+                    vehicle = GarageManager.AddBoat(garage);
                     break;
                 case 5:
                     Console.WriteLine(" * Garage 1.0 *               ");
                     Console.WriteLine(line30);
                     Console.WriteLine(vTab + "Lägg till fordon           ");
                     Console.WriteLine(vTab + "** Flygplan **             ");
-                    vehicle = GarageManager.AddAirplane();
+                    vehicle = GarageManager.AddAirplane(garage);
                     break;
                 case 6:
                     Console.WriteLine(" * Garage 1.0 *               ");
@@ -200,7 +192,7 @@ namespace Exercise4.UtilitesClasses
             garage.Vehicles.ToList().ForEach(v => { if (v != null) Console.WriteLine(v.ToString()); });
             Console.WriteLine(line30);
             Console.Write(vTab + "Val regnr att ta bort: ");
-            garage.RemoveVehicle(GarageManager.ReadRegnumInput());
+            garage.RemoveVehicle(GarageManager.ReadRegnumInput(garage, GarageManager.VType.None));
             Console.ReadKey();
         }
         static public void ShowSubMenu3(int option, Garage garage)
