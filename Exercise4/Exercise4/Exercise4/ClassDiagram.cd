@@ -10,28 +10,35 @@
   <Class Name="Exercise4.Vehicle">
     <Position X="7.25" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAIAIQQAAAAAABAAAAAAAQABQAAgAAAAAA=</HashCode>
+      <HashCode>AAABAAAAAAAIAIQUAAAAAABAAAAAAAQABQAAgAAAAAA=</HashCode>
       <FileName>Vehicle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Exercise4.Garage">
     <Position X="3.75" Y="8.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEAAAAAAAAgAAEAAAAAAQAAAIAAAAAAgAAAAAAAAA=</HashCode>
+      <HashCode>AAAEAAAAAAAAgAAEAAAAAAQCAAIAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Garage.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Exercise4.UtilitesClasses.MenuHandler">
     <Position X="5.5" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAAAAAAAAAAAAQAAAAIAAyAAAAAAAgAAABBAAA=</HashCode>
+      <HashCode>EABAAAAABAAAAAAAAAAAAAAIEAyAAAAACBAAAABAAAA=</HashCode>
       <FileName>UtilitesClasses\MenuHandler.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Exercise4.UtilitesClasses.GarageManager">
     <Position X="2" Y="8.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Exercise4.UtilitesClasses.GarageManager.VType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>UtilitesClasses\GarageManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAIAAAAAAAAAICCAAUAAQAEAAABAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAIAAQAAAAAAICCAAUAAAAEAAABAAAAACAAAAAAAAA=</HashCode>
       <FileName>UtilitesClasses\GarageManager.cs</FileName>
     </TypeIdentifier>
   </Class>

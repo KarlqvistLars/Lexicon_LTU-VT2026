@@ -24,18 +24,34 @@
         }
         public void Show()
         {
+            int menuHight = 8;
             while (true)
             {
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write(" * ");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write("Garage 1.0");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine(" * ");
+                Console.ResetColor();
                 Console.WriteLine("================================");
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($" {Title}");
+                Console.ResetColor();
                 Console.WriteLine("================================");
                 foreach (var item in Items)
                 {
                     Console.WriteLine($"{item.Key}. {item.Text}");
+                    menuHight--;
                 }
-                Console.WriteLine();
+                while (menuHight > 0)
+                {
+                    Console.WriteLine();
+                    menuHight--;
+                }
                 Console.Write("Välj: ");
+                menuHight = 8;
                 string? input = Console.ReadLine();
                 MenuItem? selected = Items.FirstOrDefault(i => i.Key == input);
                 if (selected != null)
@@ -49,7 +65,6 @@
                 }
             }
         }
-
         public static class ConsoleHelper
         {
             public static void WriteAt(int left, int top, string text)

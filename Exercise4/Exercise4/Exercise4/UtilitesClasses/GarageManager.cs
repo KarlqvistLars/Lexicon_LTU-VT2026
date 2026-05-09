@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using static RasterEdge.XDoc.PDF.ImportPageLayerArgs;
+﻿using System.Text.RegularExpressions;
 
 namespace Exercise4.UtilitesClasses
 {
@@ -46,89 +40,90 @@ namespace Exercise4.UtilitesClasses
                         break;
                 }
             }
-            Console.WriteLine(" " + count + "st slumpade fordon har lagts till i garaget.");
-            Console.WriteLine("Tryck på valfri tangent för att återgå till huvudmenyn...");
+            Console.WriteLine($"{MenuHandler.vTab}{count} st slumpade fordon har lagts till i garaget.");
+            Console.WriteLine($"{MenuHandler.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
             Console.ReadKey();
         }
         internal static Vehicle AddCar(Garage garage)
         {
-            Console.Write("   Registreringsnummer: ");
+            Console.Write($"{MenuHandler.vTab}Registreringsnummer: ");
             string reg = ReadRegnumInput(garage, VType.Car);
-            Console.Write("   Färg: ");
+            Console.Write($"{MenuHandler.vTab}Färg: ");
             string? color = Console.ReadLine();
-            Console.Write("   Vikt: ");
+            Console.Write($"{MenuHandler.vTab}Vikt: ");
             int weight = int.TryParse(Console.ReadLine(), out int w) ? w : 0;
-            Console.Write("   Längd: ");
+            Console.Write($"{MenuHandler.vTab}Längd: ");
             int length = int.TryParse(Console.ReadLine(), out int l) ? l : 0;
-            Console.Write("   Antal dörrar: ");
+            Console.Write($"{MenuHandler.vTab}Antal dörrar: ");
             int doors = int.TryParse(Console.ReadLine(), out int d) ? d : 0;
             Vehicle vehicle = new Car(reg.ToString(), color ?? string.Empty, weight, length, 4, doors);
+            garage.AddVehicle(vehicle);
             return vehicle;
         }
         internal static Vehicle AddBus(Garage garage)
         {
-            Console.Write("   Registreringsnummer: ");
+            Console.Write($"{MenuHandler.vTab}Registreringsnummer: ");
             string reg = ReadRegnumInput(garage, VType.Bus);
-            Console.Write("   Färg: ");
+            Console.Write($"{MenuHandler.vTab}Färg: ");
             string? color = Console.ReadLine();
-            Console.Write("   Vikt: ");
+            Console.Write($"{MenuHandler.vTab}Vikt: ");
             int weight = int.TryParse(Console.ReadLine(), out int w) ? w : 0;
-            Console.Write("   Längd: ");
+            Console.Write($"{MenuHandler.vTab}Längd: ");
             int length = int.TryParse(Console.ReadLine(), out int l) ? l : 0;
-            Console.Write("   Antal säten: ");
+            Console.Write($"{MenuHandler.vTab}Antal säten: ");
             int seats = int.TryParse(Console.ReadLine(), out int s) ? s : 0;
             Vehicle vehicle = new Bus(reg, color ?? string.Empty, weight, length, seats, 6);
             return vehicle;
         }
         internal static Vehicle AddMC(Garage garage)
         {
-            Console.Write("   Registreringsnummer: ");
+            Console.Write($"{MenuHandler.vTab}Registreringsnummer: ");
             string reg = ReadRegnumInput(garage, VType.Motorcycle);
-            Console.Write("   Färg: ");
+            Console.Write($"{MenuHandler.vTab}Färg: ");
             string? color = Console.ReadLine();
-            Console.Write("   Vikt: ");
+            Console.Write($"{MenuHandler.vTab}Vikt: ");
             int weight = int.TryParse(Console.ReadLine(), out int w) ? w : 0;
-            Console.Write("   Längd: ");
+            Console.Write($"{MenuHandler.vTab}Längd: ");
             int length = int.TryParse(Console.ReadLine(), out int l) ? l : 0;
-            Console.Write("   Motorstorlek: ");
+            Console.Write($"{MenuHandler.vTab}Motorstorlek: ");
             int engineSize = int.TryParse(Console.ReadLine(), out int e) ? e : 0;
             Vehicle vehicle = new Motorcycle(reg, color ?? string.Empty, weight, length, engineSize, 2);
             return vehicle;
         }
         internal static Vehicle AddBoat(Garage garage)
         {
-            Console.Write("   Registreringsnummer: ");
+            Console.Write($"{MenuHandler.vTab}Registreringsnummer: ");
             string reg = ReadRegnumInput(garage, VType.Boat);
-            Console.Write("   Färg: ");
+            Console.Write($"{MenuHandler.vTab}Färg: ");
             string? color = Console.ReadLine();
-            Console.Write("   Vikt: ");
+            Console.Write($"{MenuHandler.vTab}Vikt: ");
             int weight = int.TryParse(Console.ReadLine(), out int w) ? w : 0;
-            Console.Write("   Längd: ");
+            Console.Write($"{MenuHandler.vTab}Längd: ");
             int length = int.TryParse(Console.ReadLine(), out int l) ? l : 0;
-            Console.Write("   Max vattendjup: ");
+            Console.Write($"{MenuHandler.vTab}Max vattendjup: ");
             int maxDepth = int.TryParse(Console.ReadLine(), out int d) ? d : 0;
-            Console.Write("   Max hastighet: ");
+            Console.Write($"{MenuHandler.vTab}Max hastighet: ");
             int maxSpeed = int.TryParse(Console.ReadLine(), out int s) ? s : 0;
-            Console.Write("   Deplacement: ");
+            Console.Write($"{MenuHandler.vTab}Deplacement: ");
             int deplacement = int.TryParse(Console.ReadLine(), out int depl) ? depl : 0;
             Vehicle vehicle = new Boat(reg, color ?? string.Empty, weight, length, maxDepth, maxSpeed, deplacement);
             return vehicle;
         }
         internal static Vehicle AddAirplane(Garage garage)
         {
-            Console.Write("   Registreringsnummer: ");
+            Console.Write($"{MenuHandler.vTab}Registreringsnummer: ");
             string reg = ReadRegnumInput(garage, VType.Airplane);
-            Console.Write("   Färg: ");
+            Console.Write($"{MenuHandler.vTab}Färg: ");
             string? color = Console.ReadLine();
-            Console.Write("   Vikt: ");
+            Console.Write($"{MenuHandler.vTab}Vikt: ");
             int weight = int.TryParse(Console.ReadLine(), out int w) ? w : 0;
-            Console.Write("   Längd: ");
+            Console.Write($"{MenuHandler.vTab}Längd: ");
             int length = int.TryParse(Console.ReadLine(), out int l) ? l : 0;
-            Console.Write("   Vingbredd: ");
+            Console.Write($"{MenuHandler.vTab}Vingbredd: ");
             int wSpan = int.TryParse(Console.ReadLine(), out int ws) ? ws : 0;
-            Console.Write("   Lyftkapacitet: ");
+            Console.Write($"{MenuHandler.vTab}Lyftkapacitet: ");
             int liftCapacity = int.TryParse(Console.ReadLine(), out int lc) ? lc : 0;
-            Console.Write("   Antal passagerare: ");
+            Console.Write($"{MenuHandler.vTab}Antal passagerare: ");
             int passengers = int.TryParse(Console.ReadLine(), out int p) ? p : 0;
             Vehicle vehicle = new Airplane(reg, color ?? string.Empty, weight, length, liftCapacity, wSpan, passengers);
             return vehicle;
@@ -141,9 +136,9 @@ namespace Exercise4.UtilitesClasses
             {
                 regNumber = Console.ReadLine()?.ToUpper();
                 switch (type)
-                {       
+                {
                     case VType.Car:
-                        if(Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{3} [0-9]{3}$"))
+                        if (Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{3} [0-9]{3}$"))
                         {
                             isValid = true;
                         }
@@ -153,7 +148,7 @@ namespace Exercise4.UtilitesClasses
                         }
                         break;
                     case VType.Bus:
-                        if(Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{3} [0-9]{3}$"))
+                        if (Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{3} [0-9]{3}$"))
                         {
                             isValid = true;
                         }
@@ -163,7 +158,7 @@ namespace Exercise4.UtilitesClasses
                         }
                         break;
                     case VType.Motorcycle:
-                        if(Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{3} [0-9]{3}$"))
+                        if (Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{3} [0-9]{3}$"))
                         {
                             isValid = true;
                         }
@@ -173,7 +168,7 @@ namespace Exercise4.UtilitesClasses
                         }
                         break;
                     case VType.Boat:
-                        if(Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{2}[0-9]{5}$"))
+                        if (Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{2}[0-9]{5}$"))
                         {
                             isValid = true;
                         }
@@ -183,7 +178,7 @@ namespace Exercise4.UtilitesClasses
                         }
                         break;
                     case VType.Airplane:
-                        if(Regex.IsMatch(regNumber ?? string.Empty, @"SE-[A-Z]{3}$"))
+                        if (Regex.IsMatch(regNumber ?? string.Empty, @"SE-[A-Z]{3}$"))
                         {
                             isValid = true;
                         }
@@ -204,7 +199,7 @@ namespace Exercise4.UtilitesClasses
 
             return regNumber ?? string.Empty;
         }
-        static string GenerateRandom()
+        internal static string GenerateRandom()
         {
             Random random = new Random();
 
@@ -216,7 +211,6 @@ namespace Exercise4.UtilitesClasses
             {
                 letter += (((char)random.Next('A', 'Z' + 1)).ToString());
             }
-            Console.WriteLine(letter);
             return letter;
         }
         internal static void ListNumberOf(Garage garage, int val)
@@ -225,8 +219,9 @@ namespace Exercise4.UtilitesClasses
             int count = 0;
             for (int i = 0; i < garage.Vehicles.Length; i++)
             {
-                if (garage.Vehicles[i] != null) { 
-                    if(type.ToString() == garage.Vehicles[i].Type)
+                if (garage.Vehicles[i] != null)
+                {
+                    if (type.ToString() == garage.Vehicles[i].Type)
                     {
                         Console.WriteLine(garage.Vehicles[i].Type + " nr: " + garage.Vehicles[i].Uuid);
                         count++;
@@ -238,13 +233,108 @@ namespace Exercise4.UtilitesClasses
         internal static bool CheckUniqNumber(Garage garage, string? regNumber)
         {
             bool output = false;
-            for (int i = 0; i < garage.Vehicles.Length; i++) {
+            for (int i = 0; i < garage.Vehicles.Length; i++)
+            {
                 if (garage.Vehicles[i]?.Uuid?.ToString() == regNumber?.ToString()) // ?.ToString() added to avoid possible null reference exception
                 {
                     output = true;
                 }
             }
-        return output;
+            return output;
+        }
+        internal static void RemoveVehicle(Garage garage)
+        {
+
+            Console.Write($"{MenuHandler.vTab}Ange registreringsnummer på fordonet du vill ta bort: ");
+            string? regNumber = Console.ReadLine()?.ToUpper();
+            if (CheckUniqNumber(garage, regNumber))
+            {
+                garage.RemoveVehicle(regNumber ?? string.Empty);
+                Console.WriteLine($"{MenuHandler.vTab}Fordonet med registreringsnummer {regNumber} har tagits bort.");
+            }
+            else
+            {
+                Console.WriteLine($"{MenuHandler.vTab}Inget fordon med registreringsnummer {regNumber} hittades i garaget.");
+            }
+        }
+        internal static void RemoveVehicleById(Garage garage)
+        {
+            Console.Write($"{MenuHandler.vTab}Ange Id på fordonet du vill ta bort: ");
+            string? idInput = Console.ReadLine();
+            if (int.TryParse(idInput, out int id))
+            {
+                if (id >= 0 && id < garage.Vehicles.Length)
+                {
+                    if (garage.Vehicles[id] != null)
+                    {
+                        string? regNumber = garage.Vehicles[id]?.Uuid;
+                        garage.RemoveVehicle(regNumber ?? string.Empty);
+                        Console.WriteLine($"{MenuHandler.vTab}Fordonet med Id {id} har tagits bort.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{MenuHandler.vTab}Inget fordon med Id {id} hittades i garaget.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"{MenuHandler.vTab}Ogiltigt Id. Vänligen ange ett nummer mellan 0 och {garage.Vehicles.Length - 1}.");
+                }
+            }
+            else
+            {
+                Console.WriteLine($"{MenuHandler.vTab}Ogiltig inmatning. Vänligen ange ett giltigt nummer.");
+            }
+        }
+
+        internal static void ShowAllVehicles(Garage garage)
+        {
+            Console.Clear();
+            Console.WriteLine(" * Garage 1.0 *");
+            Console.WriteLine(MenuHandler.line30);
+            Console.WriteLine("Alla fordon i garaget:");
+            Console.WriteLine(MenuHandler.line30);
+            for (int i = 0; i < garage.Vehicles.Length; i++)
+            {
+                if (garage.Vehicles[i] != null)
+                {
+                    Console.WriteLine(garage.Vehicles[i].ToString2());
+                }
+            }
+            Console.WriteLine($"{MenuHandler.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
+            Console.ReadKey();
+        }
+
+        internal static void ShowVehicleById(Garage garage)
+        {
+            Console.Write($"{MenuHandler.vTab}Ange Id på fordonet du vill visa: ");
+            string? idInput = Console.ReadLine();
+            if (int.TryParse(idInput, out int id))
+            {
+                if (id >= 0 && id < garage.Vehicles.Length)
+                {
+                    if (garage.Vehicles[id] != null)
+                    {
+                        Console.WriteLine(garage.Vehicles[id].ToString2());
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{MenuHandler.vTab}Inget fordon med Id {id} hittades i garaget.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"{MenuHandler.vTab}Ogiltigt Id. Vänligen ange ett nummer mellan 0 och {garage.Vehicles.Length - 1}.");
+                }
+            }
+            else
+            {
+                Console.WriteLine($"{MenuHandler.vTab}Ogiltig inmatning. Vänligen ange ett giltigt nummer.");
+            }
+        }
+
+        internal static void SearchVehicle(Garage garage)
+        {
         }
     }
 }

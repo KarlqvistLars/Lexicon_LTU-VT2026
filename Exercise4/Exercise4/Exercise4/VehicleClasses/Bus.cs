@@ -1,8 +1,4 @@
 ﻿using Exercise4.UtilitesClasses;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Exercise4
 {
@@ -32,7 +28,12 @@ namespace Exercise4
 
         public override string ToString()
         {
-            return $"Buss nr: {Uuid}\n{MenuHandler.vTab}Färg: {Color}\n{MenuHandler.vTab}Vikt: {Whight} Kg\n{MenuHandler.vTab}Längd: {Length} m\n{MenuHandler.vTab}Antal sittplatser: {NumberOfSeats} st\n{MenuHandler.vTab}Hjul: {Wheels} st\n";
+            return $"{MenuHandler.vTab}Buss nr: {Uuid}\n{MenuHandler.vTab}Färg: {Color}\n{MenuHandler.vTab}Vikt: {Whight} Kg\n{MenuHandler.vTab}Längd: {Length} m\nAntal sittplatser: {NumberOfSeats} st\n{MenuHandler.vTab}Hjul: {Wheels} st";
         }
+
+        //public string ToString2()
+        //{
+        //    return $"{MenuHandler.line30}{MenuHandler.line30}\n{MenuHandler.vTab}Buss nr: {Uuid}\tFärg: {Color}\tVikt: {Whight} Kg\t{MenuHandler.vTab}Längd: {Length} m\tAntal sittplatser: {NumberOfSeats} st\t{MenuHandler.vTab}Hjul: {Wheels} st\n";
+        //}
     }
 }
