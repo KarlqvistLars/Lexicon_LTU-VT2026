@@ -10,12 +10,13 @@ namespace Exercise4
             Console.WriteLine(MenuHandler.line30);
             Console.Write("Ange antal platser i Garage: ");
             int size = int.TryParse(Console.ReadLine(), out int result) ? result : 0;
-            if (size<=0)
+            if (size <= 0)
             {
-                Console.WriteLine("Ogiltigt antal platser. Programmet avslutas.");
+                Console.WriteLine("Ogiltigt antal garageplatser. Programmet avslutas.");
                 return;
             }
-            if(MenuHandler.StartGarage(size)){ 
+            if (MenuHandler.StartGarage(size))
+            {
                 return;
             }
         }

@@ -1,6 +1,4 @@
-﻿using System.Text.RegularExpressions;
-
-namespace Exercise4.UtilitesClasses
+﻿namespace Exercise4.UtilitesClasses
 {
 
     static public class MenuHandler
@@ -13,7 +11,7 @@ namespace Exercise4.UtilitesClasses
         public static bool StartGarage(int garageSize)
         {
             Garage garage = new Garage(garageSize);
-            
+
             ShowMenu(0, garage);
             do
             {
@@ -25,14 +23,18 @@ namespace Exercise4.UtilitesClasses
                         running = false;
                         break;
                     case 1:
-                        Vehicle vehicleToAdd = ShowMenu(1, garage);
-                        if (vehicleToAdd != null && vehicleToAdd.Uuid != null)
-                        {
-                            garage.AddVehicle(vehicleToAdd);
-                            ShowAddedVehicle(vehicleToAdd);
-                            Console.ReadKey();
-                        }
-                        ShowMenu(0, garage);
+
+                        MenuMain.Show();
+
+
+                        //Vehicle vehicleToAdd = ShowMenu(1, garage);
+                        //if (vehicleToAdd != null && vehicleToAdd.Uuid != null)
+                        //{
+                        //    garage.AddVehicle(vehicleToAdd);
+                        //    ShowAddedVehicle(vehicleToAdd);
+                        //    Console.ReadKey();
+                        //}
+                        //ShowMenu(0, garage);
                         break;
                     case 2:
                         // Öppna Ta bort fordon
@@ -53,6 +55,50 @@ namespace Exercise4.UtilitesClasses
             } while (running);
             return true;
         }
+
+        static Menu MenuMain = new Menu("Huvudmeny", new MenuItem[]
+        {
+            new MenuItem("1", "Lägg till fordon",  GarageUtilities.AddVehicle),
+            new MenuItem("2", "Visa fordon", GarageUtilities.ShowVehicles),
+            new MenuItem("3", "Sök fordon", GarageUtilities.SearchVehicle),
+            new MenuItem("0", "Avsluta", ExitGarage)
+        });
+
+        static void ExitGarage()
+        {
+            Console.WriteLine("Programmet avslutas...");
+            // Här kan allt sparas eller städas upp innan programmet avslutas
+            running = false;
+            System.Environment.Exit(0);
+        }
+
+        public static Menu MenuAddVehicle = new Menu("Huvudmeny", new MenuItem[]
+         {
+            new MenuItem("1", "Lägg till fordon",  GarageUtilities.AddVehicle),
+            new MenuItem("0", "Avsluta", ExitGarage)
+         });
+
+        public static Menu MenuRemoveVehicle = new Menu("Huvudmeny", new MenuItem[]
+        {
+            new MenuItem("1", "Lägg till fordon",  GarageUtilities.AddVehicle),
+            new MenuItem("2", "Visa alla fordon", GarageUtilities.ShowVehicles),
+            new MenuItem("3", "Sök fordon", GarageUtilities.SearchVehicle),
+            new MenuItem("0", "Avsluta", ExitGarage)
+        });
+
+        public static Menu MenuShowVehicle = new Menu("Huvudmeny", new MenuItem[]
+        {
+            new MenuItem("1", "Visa alla",  GarageUtilities.AddVehicle),
+            new MenuItem("2", "Visa fordon", GarageUtilities.ShowVehicles),
+            new MenuItem("3", "Sök fordon", GarageUtilities.SearchVehicle),
+            new MenuItem("0", "Avsluta", ExitGarage)
+        });
+
+        static void ExitProgram()
+        {
+            Environment.Exit(0);
+        }
+
         public static Vehicle ShowMenu(int option, Garage garage)
         {
             Vehicle vehicle = new Vehicle();
