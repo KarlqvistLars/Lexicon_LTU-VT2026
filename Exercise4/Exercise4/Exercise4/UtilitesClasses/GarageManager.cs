@@ -127,82 +127,21 @@ namespace Exercise4.UtilitesClasses
             }
             return output;
         }
-
-        internal static void RemoveVehicleById(Garage garage)
-        {
-            Console.Write($"{MenuHandler.vTab}Ange Id på fordonet du vill ta bort: ");
-            string? idInput = Console.ReadLine();
-            if (int.TryParse(idInput, out int id))
-            {
-                if (id >= 0 && id < garage.Vehicles.Length)
-                {
-                    if (garage.Vehicles[id] != null)
-                    {
-                        string? regNumber = garage.Vehicles[id]?.Uuid;
-                        garage.RemoveVehicle(regNumber ?? string.Empty);
-                        Console.WriteLine($"{MenuHandler.vTab}Fordonet med Id {id} har tagits bort.");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"{MenuHandler.vTab}Inget fordon med Id {id} hittades i garaget.");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine($"{MenuHandler.vTab}Ogiltigt Id. Vänligen ange ett nummer mellan 0 och {garage.Vehicles.Length - 1}.");
-                }
-            }
-            else
-            {
-                Console.WriteLine($"{MenuHandler.vTab}Ogiltig inmatning. Vänligen ange ett giltigt nummer.");
-            }
-        }
-        internal static void ShowAllVehicles(Garage garage)
+        internal static void ShowHeader(string title)
         {
             Console.Clear();
-            Console.WriteLine(" * Garage 1.0 *");
-            Console.WriteLine(MenuHandler.line30);
-            Console.WriteLine("Alla fordon i garaget:");
-            Console.WriteLine(MenuHandler.line30);
-            for (int i = 0; i < garage.Vehicles.Length; i++)
-            {
-                if (garage.Vehicles[i] != null)
-                {
-                    Console.WriteLine(garage.Vehicles[i].ToString2());
-                }
-            }
-            Console.WriteLine($"{MenuHandler.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
-            Console.ReadKey();
-        }
-        internal static void ShowVehicleById(Garage garage)
-        {
-            Console.Write($"{MenuHandler.vTab}Ange Id på fordonet du vill visa: ");
-            string? idInput = Console.ReadLine();
-            if (int.TryParse(idInput, out int id))
-            {
-                if (id >= 0 && id < garage.Vehicles.Length)
-                {
-                    if (garage.Vehicles[id] != null)
-                    {
-                        Console.WriteLine(garage.Vehicles[id].ToString2());
-                    }
-                    else
-                    {
-                        Console.WriteLine($"{MenuHandler.vTab}Inget fordon med Id {id} hittades i garaget.");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine($"{MenuHandler.vTab}Ogiltigt Id. Vänligen ange ett nummer mellan 0 och {garage.Vehicles.Length - 1}.");
-                }
-            }
-            else
-            {
-                Console.WriteLine($"{MenuHandler.vTab}Ogiltig inmatning. Vänligen ange ett giltigt nummer.");
-            }
-        }
-        internal static void SearchVehicle(Garage garage)
-        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(" * ");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write("Garage 1.0");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(" * ");
+            Console.ResetColor();
+            Console.WriteLine("================================");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($" {title}");
+            Console.ResetColor();
+            Console.WriteLine("================================");
         }
     }
 }

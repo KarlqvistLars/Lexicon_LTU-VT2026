@@ -10,19 +10,7 @@ namespace Exercise4.UtilitesClasses
         internal static void AddCar(Garage G)
         {
             string Title = "Lägg till Bil...";
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(" * ");
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write("Garage 1.0");
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine(" * ");
-            Console.ResetColor();
-            Console.WriteLine("================================");
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($" {Title}");
-            Console.ResetColor();
-            Console.WriteLine("================================");
+            GarageManager.ShowHeader(Title);
             Console.Write($"{MenuHandler.vTab}Registreringsnummer: ");
             string reg = ReadRegnumInput(G, VType.Car);
             Console.Write($"{MenuHandler.vTab}Färg: ");
@@ -39,19 +27,7 @@ namespace Exercise4.UtilitesClasses
         internal static void AddBus(Garage G)
         {
             string Title = "Lägg till Buss";
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(" * ");
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write("Garage 1.0");
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine(" * ");
-            Console.ResetColor();
-            Console.WriteLine("================================");
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($" {Title}");
-            Console.ResetColor();
-            Console.WriteLine("================================");
+            GarageManager.ShowHeader(Title);
             Console.Write($"{MenuHandler.vTab}Registreringsnummer: ");
             string reg = ReadRegnumInput(G, VType.Bus);
             Console.Write($"{MenuHandler.vTab}Färg: ");
@@ -68,19 +44,7 @@ namespace Exercise4.UtilitesClasses
         internal static void AddMotorcycle(Garage G)
         {
             string Title = $" Lägg till MC";
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(" * ");
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write("Garage 1.0");
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine(" * ");
-            Console.ResetColor();
-            Console.WriteLine("================================");
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($" {Title}");
-            Console.ResetColor();
-            Console.WriteLine("================================");
+            GarageManager.ShowHeader(Title);
             Console.Write($"{MenuHandler.vTab}Registreringsnummer: ");
             string reg = ReadRegnumInput(G, VType.Motorcycle);
             Console.Write($"{MenuHandler.vTab}Färg: ");
@@ -97,19 +61,7 @@ namespace Exercise4.UtilitesClasses
         internal static void AddBoat(Garage G)
         {
             string Title = $"Lägg till Båt";
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(" * ");
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write("Garage 1.0");
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine(" * ");
-            Console.ResetColor();
-            Console.WriteLine("================================");
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($" {Title}");
-            Console.ResetColor();
-            Console.WriteLine("================================");
+            GarageManager.ShowHeader(Title);
             Console.Write($"{MenuHandler.vTab}Registreringsnummer: ");
             string reg = ReadRegnumInput(G, VType.Boat);
             Console.Write($"{MenuHandler.vTab}Färg: ");
@@ -130,19 +82,7 @@ namespace Exercise4.UtilitesClasses
         internal static void AddAirplane(Garage G)
         {
             string Title = $"Lägg till FLP";
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(" * ");
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write("Garage 1.0");
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine(" * ");
-            Console.ResetColor();
-            Console.WriteLine("================================");
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($" {Title}");
-            Console.ResetColor();
-            Console.WriteLine("================================");
+            GarageManager.ShowHeader(Title);
             Console.Write($"{MenuHandler.vTab}Registreringsnummer: ");
             string reg = ReadRegnumInput(G, VType.Airplane);
             Console.Write($"{MenuHandler.vTab}Färg: ");
@@ -163,19 +103,7 @@ namespace Exercise4.UtilitesClasses
         internal static void AddRandomVehicles(Garage G, int count = 0)
         {
             string Title = "Lägg till slumpade fordon";
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(" * ");
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write("Garage 1.0");
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine(" * ");
-            Console.ResetColor();
-            Console.WriteLine("================================");
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($" {Title}");
-            Console.ResetColor();
-            Console.WriteLine("================================");
+            GarageManager.ShowHeader(Title);
             if (count == 0)
             {
                 Console.Write("Hur många: ");
@@ -221,19 +149,7 @@ namespace Exercise4.UtilitesClasses
         internal static void RemoveVehicle(Garage G)
         {
             string Title = "Ta bort fordon.";
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(" * ");
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write("Garage 1.0");
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine(" * ");
-            Console.ResetColor();
-            Console.WriteLine("================================");
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($" {Title}");
-            Console.ResetColor();
-            Console.WriteLine("================================");
+            GarageManager.ShowHeader(Title);
             SearchVehicle(G);
             Console.WriteLine($"{MenuHandler.vTab}Välj fordons regnr. att ta bort: ");
             string? regNumber = Console.ReadLine()?.ToUpper();
@@ -251,9 +167,10 @@ namespace Exercise4.UtilitesClasses
         }
         internal static void RemoveVehicleById()
         {
-            Console.Clear();
-            Console.WriteLine("Ta bort fordon på Id...");
+            string Title = $"Ta bort fordon på Regnummer";
+            GarageManager.ShowHeader(Title);
             Console.ReadKey();
+            throw new NotImplementedException("RemoveVehicleById is not implemented yet.");
         }
         /// <summary>
         /// Alla menyer under "Visa fordon".
@@ -280,6 +197,22 @@ namespace Exercise4.UtilitesClasses
             Console.WriteLine($"{MenuHandler.line30}{MenuHandler.line30}");
             Console.WriteLine($"{MenuHandler.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
             Console.ReadKey();
+
+
+            Console.Clear();
+            Console.WriteLine(" * Garage 1.0 *");
+            Console.WriteLine(MenuHandler.line30);
+            Console.WriteLine("Alla fordon i garaget:");
+            Console.WriteLine(MenuHandler.line30);
+            for (int i = 0; i < G.Vehicles.Length; i++)
+            {
+                if (G.Vehicles[i] != null)
+                {
+                    Console.WriteLine(G.Vehicles[i].ToString2());
+                }
+            }
+            Console.WriteLine($"{MenuHandler.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
+            Console.ReadKey();
         }
         public static void ShowVehicleById(Garage garage)
         {
@@ -302,6 +235,34 @@ namespace Exercise4.UtilitesClasses
             Console.WriteLine($"{MenuHandler.vTab}Inget fordon hittades.");
             Console.WriteLine($"{MenuHandler.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
             Console.ReadKey();
+            ///==============================
+            ///
+
+            Console.Write($"{MenuHandler.vTab}Ange Id på fordonet du vill visa: ");
+            string? idInput = Console.ReadLine();
+            if (int.TryParse(idInput, out int id_))
+            {
+                if (id_ >= 0 && id_ < garage.Vehicles.Length)
+                {
+                    if (garage.Vehicles[id_] != null)
+                    {
+                        Console.WriteLine(garage.Vehicles[id_].ToString2());
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{MenuHandler.vTab}Inget fordon med Id {id} hittades i garaget.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"{MenuHandler.vTab}Ogiltigt Id. Vänligen ange ett nummer mellan 0 och {garage.Vehicles.Length - 1}.");
+                }
+            }
+            else
+            {
+                Console.WriteLine($"{MenuHandler.vTab}Ogiltig inmatning. Vänligen ange ett giltigt nummer.");
+            }
+
         }
         internal static void SearchVehicle(Garage garage)
         {
