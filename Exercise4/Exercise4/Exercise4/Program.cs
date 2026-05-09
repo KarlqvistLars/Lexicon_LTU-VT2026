@@ -6,7 +6,8 @@ namespace Exercise4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Välkommen till Garage Management System 1.0!");
+            Console.WriteLine(" * Garage 1.0 *  Välkommen!  ");
+            Console.WriteLine(MenuHandler.line30);
             Console.Write("Ange antal platser i Garage: ");
             int size = int.TryParse(Console.ReadLine(), out int result) ? result : 0;
             if (size<=0)

@@ -1,4 +1,5 @@
-﻿using RasterEdge.Imaging.Basic.Core;
+﻿using Exercise4.UtilitesClasses;
+using RasterEdge.Imaging.Basic.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace Exercise4
 
         public override string ToString()
         {
-            return $"Motorcykel nr: {Uuid}\n  Färg: {Color}\n  Hjul: {Wheels} st\n  Vikt: {Whight} Kg\n  Längd: {Length} m\n  Kubik: {CubicInch} cc\n";
+            return $"Motorcykel nr: {Uuid}\n{MenuHandler.vTab}Färg: {Color}\n{MenuHandler.vTab}Vikt: {Whight} Kg\n{MenuHandler.vTab}Längd: {Length} m\n{MenuHandler.vTab}Kubik: {CubicInch} cc\n";
         }
     }
 }
