@@ -1,4 +1,6 @@
-﻿namespace Exercise4.UtilitesClasses
+﻿using static Exercise4.UtilitesClasses.GarageManager;
+
+namespace Exercise4.UtilitesClasses
 {
     public class GarageUtilities
     {
@@ -21,7 +23,18 @@
             Console.WriteLine($" {Title}");
             Console.ResetColor();
             Console.WriteLine("================================");
-            GarageManager.AddCar(G != null ? G : throw new InvalidOperationException($"{MenuHandler.vTab}Garage is not initialized."));
+            Console.Write($"{MenuHandler.vTab}Registreringsnummer: ");
+            string reg = ReadRegnumInput(G, VType.Car);
+            Console.Write($"{MenuHandler.vTab}Färg: ");
+            string? color = Console.ReadLine();
+            Console.Write($"{MenuHandler.vTab}Vikt: ");
+            int weight = int.TryParse(Console.ReadLine(), out int w) ? w : 0;
+            Console.Write($"{MenuHandler.vTab}Längd: ");
+            int length = int.TryParse(Console.ReadLine(), out int l) ? l : 0;
+            Console.Write($"{MenuHandler.vTab}Antal dörrar: ");
+            int doors = int.TryParse(Console.ReadLine(), out int d) ? d : 0;
+            Vehicle vehicle = new Car(reg.ToString(), color ?? string.Empty, weight, length, 4, doors);
+            G.AddVehicle(vehicle);
         }
         internal static void AddBus(Garage G)
         {
@@ -39,7 +52,18 @@
             Console.WriteLine($" {Title}");
             Console.ResetColor();
             Console.WriteLine("================================");
-            GarageManager.AddBus(G != null ? G : throw new InvalidOperationException($"{MenuHandler.vTab}Garage is not initialized."));
+            Console.Write($"{MenuHandler.vTab}Registreringsnummer: ");
+            string reg = ReadRegnumInput(G, VType.Bus);
+            Console.Write($"{MenuHandler.vTab}Färg: ");
+            string? color = Console.ReadLine();
+            Console.Write($"{MenuHandler.vTab}Vikt: ");
+            int weight = int.TryParse(Console.ReadLine(), out int w) ? w : 0;
+            Console.Write($"{MenuHandler.vTab}Längd: ");
+            int length = int.TryParse(Console.ReadLine(), out int l) ? l : 0;
+            Console.Write($"{MenuHandler.vTab}Antal säten: ");
+            int seats = int.TryParse(Console.ReadLine(), out int s) ? s : 0;
+            Vehicle vehicle = new Bus(reg, color ?? string.Empty, weight, length, seats, 6);
+            G.AddVehicle(vehicle);
         }
         internal static void AddMotorcycle(Garage G)
         {
@@ -57,7 +81,18 @@
             Console.WriteLine($" {Title}");
             Console.ResetColor();
             Console.WriteLine("================================");
-            GarageManager.AddMC(G != null ? G : throw new InvalidOperationException($"{MenuHandler.vTab}Garage is not initialized."));
+            Console.Write($"{MenuHandler.vTab}Registreringsnummer: ");
+            string reg = ReadRegnumInput(G, VType.Motorcycle);
+            Console.Write($"{MenuHandler.vTab}Färg: ");
+            string? color = Console.ReadLine();
+            Console.Write($"{MenuHandler.vTab}Vikt: ");
+            int weight = int.TryParse(Console.ReadLine(), out int w) ? w : 0;
+            Console.Write($"{MenuHandler.vTab}Längd: ");
+            int length = int.TryParse(Console.ReadLine(), out int l) ? l : 0;
+            Console.Write($"{MenuHandler.vTab}Motorstorlek: ");
+            int engineSize = int.TryParse(Console.ReadLine(), out int e) ? e : 0;
+            Vehicle vehicle = new Motorcycle(reg, color ?? string.Empty, weight, length, engineSize, 2);
+            G.AddVehicle(vehicle);
         }
         internal static void AddBoat(Garage G)
         {
@@ -75,7 +110,22 @@
             Console.WriteLine($" {Title}");
             Console.ResetColor();
             Console.WriteLine("================================");
-            GarageManager.AddBoat(G != null ? G : throw new InvalidOperationException($"{MenuHandler.vTab}Garage is not initialized."));
+            Console.Write($"{MenuHandler.vTab}Registreringsnummer: ");
+            string reg = ReadRegnumInput(G, VType.Boat);
+            Console.Write($"{MenuHandler.vTab}Färg: ");
+            string? color = Console.ReadLine();
+            Console.Write($"{MenuHandler.vTab}Vikt: ");
+            int weight = int.TryParse(Console.ReadLine(), out int w) ? w : 0;
+            Console.Write($"{MenuHandler.vTab}Längd: ");
+            int length = int.TryParse(Console.ReadLine(), out int l) ? l : 0;
+            Console.Write($"{MenuHandler.vTab}Max vattendjup: ");
+            int maxDepth = int.TryParse(Console.ReadLine(), out int d) ? d : 0;
+            Console.Write($"{MenuHandler.vTab}Max hastighet: ");
+            int maxSpeed = int.TryParse(Console.ReadLine(), out int s) ? s : 0;
+            Console.Write($"{MenuHandler.vTab}Deplacement: ");
+            int deplacement = int.TryParse(Console.ReadLine(), out int depl) ? depl : 0;
+            Vehicle vehicle = new Boat(reg, color ?? string.Empty, weight, length, maxDepth, maxSpeed, deplacement);
+            G.AddVehicle(vehicle);
         }
         internal static void AddAirplane(Garage G)
         {
@@ -93,30 +143,84 @@
             Console.WriteLine($" {Title}");
             Console.ResetColor();
             Console.WriteLine("================================");
-            GarageManager.AddAirplane(G != null ? G : throw new InvalidOperationException($"{MenuHandler.vTab}Garage is not initialized."));
+            Console.Write($"{MenuHandler.vTab}Registreringsnummer: ");
+            string reg = ReadRegnumInput(G, VType.Airplane);
+            Console.Write($"{MenuHandler.vTab}Färg: ");
+            string? color = Console.ReadLine();
+            Console.Write($"{MenuHandler.vTab}Vikt: ");
+            int weight = int.TryParse(Console.ReadLine(), out int w) ? w : 0;
+            Console.Write($"{MenuHandler.vTab}Längd: ");
+            int length = int.TryParse(Console.ReadLine(), out int l) ? l : 0;
+            Console.Write($"{MenuHandler.vTab}Vingbredd: ");
+            int wSpan = int.TryParse(Console.ReadLine(), out int ws) ? ws : 0;
+            Console.Write($"{MenuHandler.vTab}Lyftkapacitet: ");
+            int liftCapacity = int.TryParse(Console.ReadLine(), out int lc) ? lc : 0;
+            Console.Write($"{MenuHandler.vTab}Antal passagerare: ");
+            int passengers = int.TryParse(Console.ReadLine(), out int p) ? p : 0;
+            Vehicle vehicle = new Airplane(reg, color ?? string.Empty, weight, length, liftCapacity, wSpan, passengers);
+            G.AddVehicle(vehicle);
         }
-        internal static void AddRandomVehicles(Garage G)
+        internal static void AddRandomVehicles(Garage G, int count = 0)
         {
+            string Title = "Lägg till slumpade fordon";
             Console.Clear();
-            Console.WriteLine(" * Garage 1.0 *");
-            Console.WriteLine(MenuHandler.line30);
-            Console.WriteLine("Lägg till slumpade fordon");
-            Console.WriteLine(MenuHandler.line30);
-            Console.Write("Hur många: ");
-            int count = int.TryParse(Console.ReadLine(), out int n) ? n : 0;
-            GarageManager.AddRandomVehicles(count, G != null ? G : throw new InvalidOperationException($"{MenuHandler.vTab}Garage is not initialized."));
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(" * ");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write("Garage 1.0");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(" * ");
+            Console.ResetColor();
+            Console.WriteLine("================================");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($" {Title}");
+            Console.ResetColor();
+            Console.WriteLine("================================");
+            if (count == 0)
+            {
+                Console.Write("Hur många: ");
+                count = int.TryParse(Console.ReadLine(), out int n) ? n : 0;
+            }
+            for (int i = 0; i < count; i++)
+            {
+                Random random = new Random();
+                int number = random.Next(1, 6);
+                switch (number)
+                {
+                    case 1:
+                        G.AddVehicle(new Car("ABC " + (i + 100).ToString(), "Röd", 1200, 4, 4, 4));
+                        break;
+                    case 2:
+                        G.AddVehicle(new Bus("BBC " + (i + 100).ToString(), "Blå", 12000, 12, 48, 6));
+                        break;
+                    case 3:
+                        G.AddVehicle(new Motorcycle("MCB " + (i + 100).ToString(), "Svart", 140, 2, 900, 2));
+                        break;
+                    case 4:
+                        G.AddVehicle(new Boat("BA" + (i + 55020).ToString(), "Vit", 1200, 4, 2m, 24.6m, 1200));
+                        break;
+                    case 5:
+                        G.AddVehicle(new Airplane(GenerateRandom(), "Silver", 15000, 20, 7000, 20, 28));
+                        break;
+                    default:
+                        break;
+                }
+            }
+            Console.WriteLine($"{MenuHandler.vTab}{count} st slumpade fordon har lagts till i garaget.");
+            Console.WriteLine($"{MenuHandler.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
+            Console.ReadKey();
         }
         internal static void AddStartVehicles()
         {
             int count = 20;
-            GarageManager.AddRandomVehicles(count, MenuHandler.garage != null ? MenuHandler.garage : throw new InvalidOperationException($"{MenuHandler.vTab}Garage is not initialized."));
+            AddRandomVehicles(MenuHandler.garage != null ? MenuHandler.garage : throw new InvalidOperationException($"{MenuHandler.vTab}Garage is not initialized."), count);
         }
         /// <summary>
         /// Alla menyer under "Ta bort fordon".
         /// </summary>
         internal static void RemoveVehicle(Garage G)
         {
-            string Title = "Ta bort fordon...";
+            string Title = "Ta bort fordon.";
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write(" * ");
@@ -131,11 +235,17 @@
             Console.ResetColor();
             Console.WriteLine("================================");
             SearchVehicle(G);
-            Console.WriteLine($"{MenuHandler.vTab}Välj fordons Id att ta bort: ");
-            string id = Console.ReadLine() ?? string.Empty;
-
-            G.RemoveVehicle(id);
-
+            Console.WriteLine($"{MenuHandler.vTab}Välj fordons regnr. att ta bort: ");
+            string? regNumber = Console.ReadLine()?.ToUpper();
+            if (CheckUniqNumber(G, regNumber))
+            {
+                G.RemoveVehicle(regNumber ?? string.Empty);
+                Console.WriteLine($"{MenuHandler.vTab}Fordonet med registreringsnummer {regNumber} har tagits bort.");
+            }
+            else
+            {
+                Console.WriteLine($"{MenuHandler.vTab}Inget fordon med registreringsnummer {regNumber} hittades i garaget.");
+            }
             Console.WriteLine($"{MenuHandler.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
             Console.ReadKey();
         }
