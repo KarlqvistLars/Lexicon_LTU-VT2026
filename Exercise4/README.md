@@ -74,9 +74,9 @@ Applikationen skall fel hantera indata på ett robust sätt, så att den inte kr
 ## Lösning
 Skiss på klasserna.
 <br>
+![UML](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise4/Exercise4/Bilder/UnifiedModelingLanguageDigram20260508.jpg)
+<br>
+## Top level - Exercise4
 ![UML](Exercise4/Exercise4/Bilder/UnifiedModelingLanguageDigram20260508.jpg)
-<br>### Top level - Exercise4
-![UML](Exercise4/Exercise4/Bilder/UnifiedModelingLanguageDigram20260508.jpg)
-
 
 ### [Tillbaka](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/tree/main)
