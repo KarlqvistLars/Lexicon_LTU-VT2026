@@ -2,7 +2,7 @@
 
 namespace Exercise4.UtilitesClasses
 {
-    static public class GarageManager
+    static public class Utilities
     {
         public enum VType
         {
@@ -131,17 +131,17 @@ namespace Exercise4.UtilitesClasses
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(" * ");
+            Console.Write($"{MenuHandler.vTab}* ");
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.Write("Garage 1.0");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(" * ");
             Console.ResetColor();
-            Console.WriteLine("================================");
+            Console.WriteLine($"{MenuHandler.line30}{MenuHandler.line30}");
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($" {title}");
+            Console.WriteLine($"{MenuHandler.vTab}{title}");
             Console.ResetColor();
-            Console.WriteLine("================================");
+            Console.WriteLine($"{MenuHandler.line30}{MenuHandler.line30}");
         }
     }
 }

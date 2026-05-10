@@ -28,18 +28,18 @@
       <FileName>UtilitesClasses\MenuHandler.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Exercise4.UtilitesClasses.GarageManager">
+  <Class Name="Exercise4.UtilitesClasses.Utilities">
     <Position X="2" Y="8.25" Width="1.5" />
     <NestedTypes>
-      <Enum Name="Exercise4.UtilitesClasses.GarageManager.VType" Collapsed="true">
+      <Enum Name="Exercise4.UtilitesClasses.Utilities.VType" Collapsed="true">
         <TypeIdentifier>
-          <NewMemberFileName>UtilitesClasses\GarageManager.cs</NewMemberFileName>
+          <NewMemberFileName>UtilitesClasses\Utilities.cs</NewMemberFileName>
         </TypeIdentifier>
       </Enum>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAIAAQAAAAAAICCAAUAAAAEAAABAAAAACAAAAAAAAA=</HashCode>
-      <FileName>UtilitesClasses\GarageManager.cs</FileName>
+      <HashCode>AAAAAAQAAAAAAICAAAAAAAACAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>UtilitesClasses\Utilities.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Exercise4.Airplane">

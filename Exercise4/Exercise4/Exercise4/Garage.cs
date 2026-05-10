@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 
 namespace Exercise4
 {
@@ -26,13 +23,13 @@ namespace Exercise4
         {
             for (int i = 0; i < _capacity; i++)
             {
-                if (_vehicles[i] == null|| _vehicles[i].Uuid == "")
+                if (_vehicles[i] == null || _vehicles[i].Uuid == "")
                 {
                     _vehicles[i] = vehicle;
                     return;
                 }
             }
-            Console.WriteLine("Garage is full, cannot add "+ vehicle.Type +" with UUID: " + vehicle.Uuid);
+            Console.WriteLine("Garage is full, cannot add " + vehicle.Type + " with UUID: " + vehicle.Uuid);
         }
         public void RemoveVehicle(string uuid)
         {
@@ -41,7 +38,6 @@ namespace Exercise4
                 if (_vehicles[i] != null && _vehicles[i].Uuid == uuid)
                 {
                     _vehicles[i] = new Vehicle();
-                    Console.WriteLine(this.ToString());
                     return;
                 }
             }

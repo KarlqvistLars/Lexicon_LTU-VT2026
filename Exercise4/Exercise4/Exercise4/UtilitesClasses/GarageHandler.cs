@@ -1,8 +1,8 @@
-﻿using static Exercise4.UtilitesClasses.GarageManager;
+﻿using static Exercise4.UtilitesClasses.Utilities;
 
 namespace Exercise4.UtilitesClasses
 {
-    public class GarageUtilities
+    public class GarageHandler
     {
         /// <summary>
         /// Alla menyer under "Lägg till fordon".
@@ -10,7 +10,7 @@ namespace Exercise4.UtilitesClasses
         internal static void AddCar(Garage G)
         {
             string Title = "Lägg till Bil...";
-            GarageManager.ShowHeader(Title);
+            Utilities.ShowHeader(Title);
             Console.Write($"{MenuHandler.vTab}Registreringsnummer: ");
             string reg = ReadRegnumInput(G, VType.Car);
             Console.Write($"{MenuHandler.vTab}Färg: ");
@@ -27,7 +27,7 @@ namespace Exercise4.UtilitesClasses
         internal static void AddBus(Garage G)
         {
             string Title = "Lägg till Buss";
-            GarageManager.ShowHeader(Title);
+            Utilities.ShowHeader(Title);
             Console.Write($"{MenuHandler.vTab}Registreringsnummer: ");
             string reg = ReadRegnumInput(G, VType.Bus);
             Console.Write($"{MenuHandler.vTab}Färg: ");
@@ -44,7 +44,7 @@ namespace Exercise4.UtilitesClasses
         internal static void AddMotorcycle(Garage G)
         {
             string Title = $" Lägg till MC";
-            GarageManager.ShowHeader(Title);
+            Utilities.ShowHeader(Title);
             Console.Write($"{MenuHandler.vTab}Registreringsnummer: ");
             string reg = ReadRegnumInput(G, VType.Motorcycle);
             Console.Write($"{MenuHandler.vTab}Färg: ");
@@ -61,7 +61,7 @@ namespace Exercise4.UtilitesClasses
         internal static void AddBoat(Garage G)
         {
             string Title = $"Lägg till Båt";
-            GarageManager.ShowHeader(Title);
+            Utilities.ShowHeader(Title);
             Console.Write($"{MenuHandler.vTab}Registreringsnummer: ");
             string reg = ReadRegnumInput(G, VType.Boat);
             Console.Write($"{MenuHandler.vTab}Färg: ");
@@ -82,7 +82,7 @@ namespace Exercise4.UtilitesClasses
         internal static void AddAirplane(Garage G)
         {
             string Title = $"Lägg till FLP";
-            GarageManager.ShowHeader(Title);
+            Utilities.ShowHeader(Title);
             Console.Write($"{MenuHandler.vTab}Registreringsnummer: ");
             string reg = ReadRegnumInput(G, VType.Airplane);
             Console.Write($"{MenuHandler.vTab}Färg: ");
@@ -103,7 +103,7 @@ namespace Exercise4.UtilitesClasses
         internal static void AddRandomVehicles(Garage G, int count = 0)
         {
             string Title = "Lägg till slumpade fordon";
-            GarageManager.ShowHeader(Title);
+            Utilities.ShowHeader(Title);
             if (count == 0)
             {
                 Console.Write("Hur många: ");
@@ -149,9 +149,9 @@ namespace Exercise4.UtilitesClasses
         internal static void RemoveVehicle(Garage G)
         {
             string Title = "Ta bort fordon.";
-            GarageManager.ShowHeader(Title);
+            Utilities.ShowHeader(Title);
             SearchVehicle(G);
-            Console.WriteLine($"{MenuHandler.vTab}Välj fordons regnr. att ta bort: ");
+            Console.Write($"{MenuHandler.vTab}Välj fordons regnr. att ta bort: ");
             string? regNumber = Console.ReadLine()?.ToUpper();
             if (CheckUniqNumber(G, regNumber))
             {
@@ -168,7 +168,7 @@ namespace Exercise4.UtilitesClasses
         internal static void RemoveVehicleById()
         {
             string Title = $"Ta bort fordon på Regnummer";
-            GarageManager.ShowHeader(Title);
+            Utilities.ShowHeader(Title);
             Console.ReadKey();
             throw new NotImplementedException("RemoveVehicleById is not implemented yet.");
         }
@@ -178,35 +178,12 @@ namespace Exercise4.UtilitesClasses
         public static void ShowAllVehicles(Garage G)
         {
             string Title = "Visa alla fordon av";
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(" * ");
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write("Garage 1.0");
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine(" * ");
-            Console.ResetColor();
-            Console.WriteLine("================================");
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($" {Title} {G.Capacity} platser.");
-            Console.ResetColor();
-            Console.WriteLine("================================");
-            Console.WriteLine($"{MenuHandler.vTab}Tryck tangen för att fortsätta...");
+            Utilities.ShowHeader(Title);
+            Console.WriteLine($" Tryck tangen för att fortsätta...");
             Console.ReadKey();
-            MenuHandler.garage?.Vehicles.ToList().ForEach(v => { if (v != null) Console.WriteLine(v.ToString2()); });
-            Console.WriteLine($"{MenuHandler.line30}{MenuHandler.line30}");
-            Console.WriteLine($"{MenuHandler.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
-            Console.ReadKey();
-
-
-            Console.Clear();
-            Console.WriteLine(" * Garage 1.0 *");
-            Console.WriteLine(MenuHandler.line30);
-            Console.WriteLine("Alla fordon i garaget:");
-            Console.WriteLine(MenuHandler.line30);
             for (int i = 0; i < G.Vehicles.Length; i++)
             {
-                if (G.Vehicles[i] != null)
+                if (G.Vehicles[i]?.Uuid != null)
                 {
                     Console.WriteLine(G.Vehicles[i].ToString2());
                 }
@@ -214,15 +191,32 @@ namespace Exercise4.UtilitesClasses
             Console.WriteLine($"{MenuHandler.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
             Console.ReadKey();
         }
+        private static bool ShowGarageInventory(Vehicle v)
+        {
+            bool listExist = false;
+            if (v != null)
+            {
+                if (v.Uuid == null)
+                {
+                    Console.WriteLine($"{MenuHandler.vTab}Empty slot.");
+                    listExist = false;
+                }
+                else
+                {
+                    Console.WriteLine(v.ToString2());
+                    listExist = true;
+                }
+            }
+            return listExist;
+        }
         public static void ShowVehicleById(Garage garage)
         {
-            Console.Clear();
-            Console.WriteLine($"{MenuHandler.vTab}Visa fordon på Id...");
-            Console.Write($"{MenuHandler.vTab}Ange Id: ");
-            string id = Console.ReadLine() ?? string.Empty;
-            foreach (var v in garage?.Vehicles ?? new Vehicle[0])
+            Utilities.ShowHeader("Visa fordon på regnr");
+            Console.Write($"{MenuHandler.vTab}Ange regnr: ");
+            string regNumber = Console.ReadLine() ?? string.Empty;
+            foreach (Vehicle v in garage?.Vehicles ?? new Vehicle[0])
             {
-                if (v != null && v.Uuid.Equals(id, StringComparison.OrdinalIgnoreCase))
+                if (v != null && v.Uuid.Equals(regNumber, StringComparison.OrdinalIgnoreCase))
                 {
                     Console.WriteLine($"{MenuHandler.line30}{MenuHandler.line30}");
                     Console.WriteLine(v.ToString());
@@ -235,44 +229,14 @@ namespace Exercise4.UtilitesClasses
             Console.WriteLine($"{MenuHandler.vTab}Inget fordon hittades.");
             Console.WriteLine($"{MenuHandler.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
             Console.ReadKey();
-            ///==============================
-            ///
-
-            Console.Write($"{MenuHandler.vTab}Ange Id på fordonet du vill visa: ");
-            string? idInput = Console.ReadLine();
-            if (int.TryParse(idInput, out int id_))
-            {
-                if (id_ >= 0 && id_ < garage.Vehicles.Length)
-                {
-                    if (garage.Vehicles[id_] != null)
-                    {
-                        Console.WriteLine(garage.Vehicles[id_].ToString2());
-                    }
-                    else
-                    {
-                        Console.WriteLine($"{MenuHandler.vTab}Inget fordon med Id {id} hittades i garaget.");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine($"{MenuHandler.vTab}Ogiltigt Id. Vänligen ange ett nummer mellan 0 och {garage.Vehicles.Length - 1}.");
-                }
-            }
-            else
-            {
-                Console.WriteLine($"{MenuHandler.vTab}Ogiltig inmatning. Vänligen ange ett giltigt nummer.");
-            }
-
         }
         internal static void SearchVehicle(Garage garage)
         {
-            Console.Clear();
-            Console.WriteLine("Sök fordon...");
-            Console.WriteLine(MenuHandler.line30);
-            garage?.Vehicles.ToList().ForEach(v => { if (v != null) Console.WriteLine(v.ToString2()); });
-            Console.WriteLine(MenuHandler.line30);
-            Console.WriteLine($"{MenuHandler.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
+            Console.WriteLine("Tryck tanget för att söka fordon...(alla visas)");
             Console.ReadKey();
+            Console.WriteLine($"{MenuHandler.line30}{MenuHandler.line30}");
+            garage?.Vehicles.ToList().ForEach(v => { if (v != null) Console.WriteLine(v.ToString2()); });
+            Console.WriteLine($"{MenuHandler.line30}{MenuHandler.line30}");
         }
     }
 }

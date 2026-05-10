@@ -27,19 +27,7 @@
             int menuHight = 8;
             while (true)
             {
-                Console.Clear();
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.Write(" * ");
-                Console.ForegroundColor = ConsoleColor.Blue;
-                Console.Write("Garage 1.0");
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine(" * ");
-                Console.ResetColor();
-                Console.WriteLine("================================");
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($" {Title}");
-                Console.ResetColor();
-                Console.WriteLine("================================");
+                Utilities.ShowHeader(Title);
                 foreach (var item in Items)
                 {
                     Console.WriteLine($"{item.Key}. {item.Text}");
