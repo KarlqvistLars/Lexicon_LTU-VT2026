@@ -23,7 +23,11 @@
         static void ExitGarage()
         {
             // Här kan allt sparas eller städas upp innan programmet avslutas
-            Console.WriteLine("Programmet avslutas...");
+            Console.Write($"{Utilities.vTab}Programmet avslutas");
+            Thread.Sleep(500);
+            for (int i = 0; i < 4; i++) { Console.Write("."); Thread.Sleep(500); }
+            Console.WriteLine(".");
+            Thread.Sleep(1000);
             MenuMain.running = false;
         }
 
