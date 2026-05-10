@@ -8,28 +8,28 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Exercise4.Vehicle">
-    <Position X="7.25" Y="8.5" Width="1.5" />
+    <Position X="9" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAIAIQUAAAAAABAAAAAAAQABQAAgAAAAAA=</HashCode>
       <FileName>Vehicle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Exercise4.Garage">
-    <Position X="3.75" Y="8.25" Width="1.5" />
+    <Position X="7.25" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAgAAEAAAAAAQCAAIAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Garage.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Exercise4.UtilitesClasses.MenuHandler">
-    <Position X="5.5" Y="9.25" Width="1.5" />
+    <Position X="2" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EABAAAAABAAAAAAAAAAAAAAIEAAAAAAACBAAAAAAAAA=</HashCode>
       <FileName>UtilitesClasses\MenuHandler.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Exercise4.UtilitesClasses.Utilities">
-    <Position X="2" Y="8.25" Width="1.5" />
+    <Position X="5.5" Y="9.5" Width="1.5" />
     <NestedTypes>
       <Enum Name="Exercise4.UtilitesClasses.Utilities.VType" Collapsed="true">
         <TypeIdentifier>
@@ -43,13 +43,13 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Exercise4.Airplane">
-    <Position X="9" Y="8.5" Width="1.5" />
-    <InheritanceLine Type="Exercise4.Vehicle" FixedFromPoint="true" FixedToPoint="true">
+    <Position X="10.75" Y="8.25" Width="1.5" />
+    <InheritanceLine Type="Exercise4.Vehicle" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="8" Y="8.5" />
-        <Point X="8" Y="8.125" />
-        <Point X="9.812" Y="8.125" />
-        <Point X="9.812" Y="8.5" />
+        <Point X="9.75" Y="8.25" />
+        <Point X="9.75" Y="7.872" />
+        <Point X="11.562" Y="7.872" />
+        <Point X="11.562" Y="8.25" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -58,13 +58,13 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Exercise4.Boat">
-    <Position X="10.75" Y="8.5" Width="1.5" />
+    <Position X="12.5" Y="8.25" Width="1.5" />
     <InheritanceLine Type="Exercise4.Vehicle" ManuallyRouted="true" FixedToPoint="true">
       <Path>
-        <Point X="8" Y="8.5" />
-        <Point X="8" Y="8.125" />
-        <Point X="11.5" Y="8.125" />
-        <Point X="11.5" Y="8.5" />
+        <Point X="9.75" Y="8.25" />
+        <Point X="9.75" Y="7.875" />
+        <Point X="13.25" Y="7.875" />
+        <Point X="13.25" Y="8.25" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -73,13 +73,13 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Exercise4.Bus">
-    <Position X="14.25" Y="8.5" Width="1.5" />
+    <Position X="16" Y="8.25" Width="1.5" />
     <InheritanceLine Type="Exercise4.Vehicle" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="8" Y="8.5" />
-        <Point X="8" Y="8.125" />
-        <Point X="15" Y="8.125" />
-        <Point X="15" Y="8.5" />
+        <Point X="9.75" Y="8.25" />
+        <Point X="9.75" Y="7.875" />
+        <Point X="16.75" Y="7.875" />
+        <Point X="16.75" Y="8.25" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -88,13 +88,13 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Exercise4.Car">
-    <Position X="16" Y="8.5" Width="1.5" />
+    <Position X="17.75" Y="8.25" Width="1.5" />
     <InheritanceLine Type="Exercise4.Vehicle" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="8" Y="8.5" />
-        <Point X="8" Y="8.125" />
-        <Point X="16.75" Y="8.125" />
-        <Point X="16.75" Y="8.5" />
+        <Point X="9.75" Y="8.25" />
+        <Point X="9.75" Y="7.875" />
+        <Point X="18.5" Y="7.875" />
+        <Point X="18.5" Y="8.25" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -103,18 +103,39 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Exercise4.Motorcycle">
-    <Position X="12.5" Y="8.5" Width="1.5" />
+    <Position X="14.25" Y="8.25" Width="1.5" />
     <InheritanceLine Type="Exercise4.Vehicle" ManuallyRouted="true" FixedToPoint="true">
       <Path>
-        <Point X="8" Y="8.5" />
-        <Point X="8" Y="8.125" />
-        <Point X="13.25" Y="8.125" />
-        <Point X="13.25" Y="8.5" />
+        <Point X="9.75" Y="8.25" />
+        <Point X="9.75" Y="7.875" />
+        <Point X="15" Y="7.875" />
+        <Point X="15" Y="8.25" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAQAgAAQAAAAgA=</HashCode>
       <FileName>VehicleClasses\Motorcycle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise4.UtilitesClasses.MenuItem">
+    <Position X="3.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAACAAAAAQ=</HashCode>
+      <FileName>UtilitesClasses\MenuItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise4.UtilitesClasses.Menu2">
+    <Position X="3.75" Y="8.25" Width="1.5" />
+    <NestedTypes>
+      <Class Name="Exercise4.UtilitesClasses.Menu2.ConsoleHelper" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>UtilitesClasses\MenuItem.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>EABAAAAAAAAAAAAAAAAAAEAAEAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>UtilitesClasses\Menu2.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

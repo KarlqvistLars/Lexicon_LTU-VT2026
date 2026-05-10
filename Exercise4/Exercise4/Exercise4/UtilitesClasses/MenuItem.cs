@@ -23,9 +23,11 @@
             Items = items;
         }
 
+
         public bool running = true;
-        internal bool Show()
+        public bool Show()
         {
+            //StreamWriter sw = new StreamWriter($"C:/test/input.txt", append: true);
             int menuHight = 8;
             while (running)
             {
@@ -40,18 +42,21 @@
                     Console.WriteLine();
                     menuHight--;
                 }
-                //Console.WriteLine("items " + Items.Length);
-                //Console.Write($"{Utilities.vTab}Välj: ");
+                Console.Write($"{Utilities.vTab}Välj: ");
                 menuHight = 8;
-                string input = ReadRequiredLine($"{Utilities.vTab}Välj: ");
+                string? input = Console.ReadLine();
+                //sw.WriteLine(input);
 
-                MenuItem selected = Items.First(i => i.Key.Equals(input));
-
-
+                MenuItem? selected = Items.FirstOrDefault(i => i.Key == input);
                 if (selected != null)
                 {
                     if (selected.Key == "0") { running = false; }
-                    selected.Action.Invoke();
+                    Console.WriteLine(selected.Key.ToString() + " selected.");
+
+                    Console.WriteLine($"Selected: {selected?.Text}");
+                    Console.WriteLine(selected?.Action == null ? "Action är NULL" : "Action finns");
+
+                    selected?.Action?.Invoke();
                 }
                 else
                 {
@@ -61,27 +66,14 @@
             }
             return false;
         }
-
-        static string ReadRequiredLine(string message)
+        public static class ConsoleHelper
         {
-            string? input;
-
-            do
+            public static void WriteAt(int left, int top, string text)
             {
-                Console.Write(message);
-                input = Console.ReadLine();
-
-                if (input == null)
-                {
-                    Console.WriteLine("Ingen input kunde läsas.");
-                    return "";
-                }
-
-                input = input.Trim();
-
-            } while (input == "");
-
-            return input;
+                Console.SetCursorPosition(left, top);
+                Console.Write(text);
+            }
         }
+
     }
 }
