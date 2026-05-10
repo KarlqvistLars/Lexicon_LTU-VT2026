@@ -46,13 +46,13 @@ namespace Exercise4
         {
             get => _type ?? string.Empty;
         }
-        internal string ToString2()
+        public virtual string ToString2()
         {
-            return $"{MenuHandler.line30}{MenuHandler.line30}\n{MenuHandler.vTab}{Type} nr: {Uuid}\n{MenuHandler.vTab}Färg: {Color}\tVikt: {Whight} Kg\t{MenuHandler.vTab}Längd: {Length} m";
+            return $"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}{Type} nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\tVikt: {Whight} Kg\t{Utilities.vTab}Längd: {Length} m";
         }
-        //public override string ToString()
-        //{
-        //    return $"{Type} nr: {Uuid}\n  Färg: {Color}\n  Vikt: {Whight} Kg\n  Längd: {Length} m\n==============================";
-        //}
+        public override string ToString()
+        {
+            return $"{Type} nr: {Uuid}\n  Färg: {Color}\n  Vikt: {Whight} Kg\n  Längd: {Length} m\n";
+        }
     }
 }

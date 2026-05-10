@@ -4,9 +4,11 @@ namespace Exercise4.UtilitesClasses
 {
     static public class Utilities
     {
+        static public string line30 { get; } = "==============================";
+        static public string vTab { get; } = "   ";
         public enum VType
         {
-            None,
+            None = 0,
             Car = 1,
             Bus = 2,
             Motorcycle = 3,
@@ -131,17 +133,17 @@ namespace Exercise4.UtilitesClasses
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write($"{MenuHandler.vTab}* ");
+            Console.Write($"{vTab}* ");
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.Write("Garage 1.0");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(" * ");
             Console.ResetColor();
-            Console.WriteLine($"{MenuHandler.line30}{MenuHandler.line30}");
+            Console.WriteLine($"{line30}{line30}");
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"{MenuHandler.vTab}{title}");
+            Console.WriteLine($"{vTab}{title}");
             Console.ResetColor();
-            Console.WriteLine($"{MenuHandler.line30}{MenuHandler.line30}");
+            Console.WriteLine($"{line30}{line30}");
         }
     }
 }

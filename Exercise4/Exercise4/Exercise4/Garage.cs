@@ -1,35 +1,37 @@
-﻿using System.Text;
+﻿using Exercise4.UtilitesClasses;
+using System.Text;
 
 namespace Exercise4
 {
     public class Garage
     {
-        private int _capacity;
+        private static int _capacity;
         private readonly Vehicle[] _vehicles;
         public Garage(int capacity)
         {
-            this._capacity = capacity;
-            _vehicles = new Vehicle[this._capacity];
+            _capacity = capacity;
+            _vehicles = new Vehicle[_capacity];
         }
         public Vehicle[] Vehicles
         {
             get => _vehicles;
         }
-        public int Capacity
+        static public int Capacity
         {
             get => _capacity;
         }
-        public void AddVehicle(Vehicle vehicle)
+        public bool AddVehicle(Vehicle vehicle)
         {
             for (int i = 0; i < _capacity; i++)
             {
                 if (_vehicles[i] == null || _vehicles[i].Uuid == "")
                 {
                     _vehicles[i] = vehicle;
-                    return;
+                    return true;
                 }
             }
-            Console.WriteLine("Garage is full, cannot add " + vehicle.Type + " with UUID: " + vehicle.Uuid);
+            Console.WriteLine($"{Utilities.vTab}Garage is full, cannot add {vehicle.Type} with UUID: {vehicle.Uuid}");
+            return false;
         }
         public void RemoveVehicle(string uuid)
         {
@@ -37,7 +39,7 @@ namespace Exercise4
             {
                 if (_vehicles[i] != null && _vehicles[i].Uuid == uuid)
                 {
-                    _vehicles[i] = new Vehicle();
+                    _vehicles[i] = null;
                     return;
                 }
             }

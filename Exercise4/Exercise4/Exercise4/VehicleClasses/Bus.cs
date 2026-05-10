@@ -28,12 +28,12 @@ namespace Exercise4
 
         public override string ToString()
         {
-            return $"{MenuHandler.vTab}Buss nr: {Uuid}\n{MenuHandler.vTab}Färg: {Color}\n{MenuHandler.vTab}Vikt: {Whight} Kg\n{MenuHandler.vTab}Längd: {Length} m\nAntal sittplatser: {NumberOfSeats} st\n{MenuHandler.vTab}Hjul: {Wheels} st";
+            return $"{Utilities.vTab}Buss nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\n{Utilities.vTab}Vikt: {Whight} Kg\n{Utilities.vTab}Längd: {Length} m\n{Utilities.vTab}Antal sittplatser: {NumberOfSeats} st\n{Utilities.vTab}Hjul: {Wheels} st";
         }
-
-        //public string ToString2()
-        //{
-        //    return $"{MenuHandler.line30}{MenuHandler.line30}\n{MenuHandler.vTab}Buss nr: {Uuid}\tFärg: {Color}\tVikt: {Whight} Kg\t{MenuHandler.vTab}Längd: {Length} m\tAntal sittplatser: {NumberOfSeats} st\t{MenuHandler.vTab}Hjul: {Wheels} st\n";
-        //}
+        string thisType = "Buss";
+        public override string ToString2()
+        {
+            return $"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}\u001b[4m{thisType} nr: {Uuid}\u001b[0m\n{Utilities.vTab}Färg: {Color}\tVikt: {Whight} Kg\tLängd: {Length} m\n{Utilities.vTab}\u001b[4mSpecifikt för {thisType}:\u001b[0m\n{Utilities.vTab}Antal sittplatser: {NumberOfSeats} st, Hjul: {Wheels} st";
+        }
     }
 }

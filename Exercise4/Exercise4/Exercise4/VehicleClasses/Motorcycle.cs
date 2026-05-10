@@ -25,11 +25,12 @@ namespace Exercise4
 
         public override string ToString()
         {
-            return $"{MenuHandler.vTab}Motorcykel nr: {Uuid}\n{MenuHandler.vTab}Färg: {Color}\n{MenuHandler.vTab}Vikt: {Whight} Kg\n{MenuHandler.vTab}Längd: {Length} m\n{MenuHandler.vTab}Kubik: {CubicInch} cc\n";
+            return $"{Utilities.vTab}Motorcykel nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\n{Utilities.vTab}Vikt: {Whight} Kg\n{Utilities.vTab}Längd: {Length} m\n{Utilities.vTab}Kubik: {CubicInch} cc\n";
         }
-        //public string ToString2()
-        //{
-        //    return $"Motorcykel nr: {Uuid}\n{MenuHandler.vTab}Färg: {Color}\n{MenuHandler.vTab}Vikt: {Whight} Kg\n{MenuHandler.vTab}Längd: {Length} m\n{MenuHandler.vTab}Kubik: {CubicInch} cc\n";
-        //}
+        string thisType = "Motorcykel";
+        public override string ToString2()
+        {
+            return $"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}\u001b[4m{thisType} nr: {Uuid}\u001b[0m\n{Utilities.vTab}Färg: {Color}, Vikt: {Whight} Kg, Längd: {Length} m\n{Utilities.vTab}\u001b[4mSpecifikt för {thisType}:\u001b[0m\n{Utilities.vTab}Kubik: {CubicInch} cc";
+        }
     }
 }

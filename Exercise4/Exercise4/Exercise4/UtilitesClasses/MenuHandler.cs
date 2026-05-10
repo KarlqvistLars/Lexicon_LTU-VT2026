@@ -1,69 +1,192 @@
 ﻿namespace Exercise4.UtilitesClasses
 {
-
     static public class MenuHandler
     {
-        static public string line30 { get; } = "==============================";
-        static string e30 { get; } = "                              ";
-        static public string vTab { get; } = "   ";
-        static bool running = true;
-        static int choice = 0;
-        static public Garage? garage { get; private set; }
+        public static Garage? garage { get; set; }
+        public static bool Running { get; set; } = true;
         public static bool StartGarage(int garageSize, bool populate = false)
         {
             if (populate == false)
             {
                 garage = new Garage(garageSize);
-                MenuMain.Show();
+                MenuMain();
             }
             else
             {
                 garage = new Garage(20);
                 GarageHandler.AddStartVehicles();
-                MenuMain.Show();
+                MenuMain();
             }
             return true;
         }
-        static void ExitGarage()
+        public static void ExitGarage()
         {
-            Console.WriteLine("Programmet avslutas...");
             // Här kan allt sparas eller städas upp innan programmet avslutas
-            running = false;
-            System.Environment.Exit(0);
+            string closing = "Programmet avslutas...";
+            Console.Write(Utilities.vTab);
+            foreach (var item in closing) { Console.Write(item); Thread.Sleep(50); }
+            Running = false;
         }
-
-        static Menu MenuMain = new Menu("Huvudmeny", new MenuItem[]
+        public static void MenuMain()
         {
-            new MenuItem("1", "Lägg till fordon", () => MenuAddVehicle?.Show()),
-            new MenuItem("2", "Ta bort fordon", () => MenuRemoveVehicle?.Show()),
-            new MenuItem("3", "Visa fordon", () => MenuShowVehicle?.Show()),
-            new MenuItem("0", "Avsluta", ExitGarage)
-        });
 
-        public static Menu MenuAddVehicle = new Menu("Lägg till fordon", new MenuItem[]
-         {
-            new MenuItem("1","Bil", () => GarageHandler.AddCar(garage ?? throw new InvalidOperationException($"{vTab}Garage is not initialized."))),
-            new MenuItem("2","Buss", () => GarageHandler.AddBus(garage ?? throw new InvalidOperationException($"{vTab}Garage is not initialized."))),
-            new MenuItem("3","Motorcykel", () => GarageHandler.AddMotorcycle(garage ?? throw new InvalidOperationException($"{vTab}Garage is not initialized."))),
-            new MenuItem("4","Båt", () => GarageHandler.AddBoat(garage ?? throw new InvalidOperationException($"{vTab}Garage is not initialized."))),
-            new MenuItem("5","Flygplan", () => GarageHandler.AddAirplane(garage ?? throw new InvalidOperationException($"{vTab}Garage is not initialized."))),
-            new MenuItem("6","Slumässigt", () => GarageHandler.AddRandomVehicles(garage ?? throw new InvalidOperationException($"{vTab}Garage is not initialized."))),
-            new MenuItem("0","Tillbaka", () => MenuMain.Show())
-         });
+            while (Running)
+            {
+                Utilities.ShowHeader("Huvudmeny");
+                Console.WriteLine("1. Lägg till fordon");
+                Console.WriteLine("2. Ta bort fordon");
+                Console.WriteLine("3. Visa fordon");
+                Console.WriteLine("0. Avsluta");
+                TomRaderMenu(4);
+                Console.Write($"{Utilities.vTab}Välj: ");
+                string? input = Console.ReadLine();
+                switch (input)
+                {
+                    case "1":
+                        MenuAddVehicle();
+                        break;
 
-        public static Menu MenuRemoveVehicle = new Menu("Ta bort fordon", new MenuItem[]
+                    case "2":
+                        MenuRemoveVehicle();
+                        break;
+
+                    case "3":
+                        MenuShowVehicle();
+                        break;
+
+                    case "0":
+                        MenuHandler.ExitGarage();
+                        break;
+
+                    default:
+                        Console.WriteLine("Ogiltigt val");
+                        Console.ReadKey();
+                        break;
+                }
+            }
+        }
+        static void MenuAddVehicle()
         {
-            new MenuItem("1", "Sök och ta bort fordon", () => GarageHandler.RemoveVehicle(garage ?? throw new InvalidOperationException($"{vTab}Garage is not initialized."))),
-            new MenuItem("2", "Ta bort fordon på Id.", GarageHandler.RemoveVehicleById),
-            new MenuItem("0","Tillbaka", () => MenuMain.Show())
-        });
+            bool running = true;
 
-        public static Menu MenuShowVehicle = new Menu("Visa fordon", new MenuItem[]
+            while (running)
+            {
+                Utilities.ShowHeader("Lägg till fordon");
+                Console.WriteLine("1. Bil");
+                Console.WriteLine("2. Buss");
+                Console.WriteLine("3. Motorcykel");
+                Console.WriteLine("4. Båt");
+                Console.WriteLine("5. Flygplan");
+                Console.WriteLine("6. Slumässigt");
+                Console.WriteLine("0. Tillbaka");
+                TomRaderMenu(1);
+                Console.Write($"{Utilities.vTab}Välj: ");
+                string? input = Console.ReadLine();
+                switch (input)
+                {
+                    case "1":
+                        GarageHandler.AddCar(garage);
+                        break;
+                    case "2":
+                        GarageHandler.AddBus(garage);
+                        break;
+                    case "3":
+                        GarageHandler.AddMotorcycle(garage);
+                        break;
+                    case "4":
+                        GarageHandler.AddBoat(garage);
+                        break;
+                    case "5":
+                        GarageHandler.AddAirplane(garage);
+                        break;
+                    case "6":
+                        GarageHandler.AddRandomVehicles(garage);
+                        break;
+                    case "0":
+                        running = false;
+                        break;
+
+                    default:
+                        Console.WriteLine("Ogiltigt val");
+                        Console.ReadKey();
+                        break;
+                }
+            }
+        }
+        static void MenuRemoveVehicle()
         {
-            new MenuItem("1", "Visa alla",  () => GarageHandler.ShowAllVehicles(garage ?? throw new InvalidOperationException($"{vTab}Garage is not initialized."))),
-            new MenuItem("2", "Visa fordon", () => GarageHandler.ShowVehicleById(garage ?? throw new InvalidOperationException($"{vTab}Garage is not initialized."))),
-            new MenuItem("3", "Sök fordon", () => GarageHandler.SearchVehicle(garage ?? throw new InvalidOperationException($"{vTab}Garage is not initialized."))),
-            new MenuItem("0","Tillbaka", () => MenuMain.Show())
-        });
+            bool running = true;
+
+            while (running)
+            {
+                Utilities.ShowHeader("Ta bort fordon");
+                Console.WriteLine("1. Sök och ta bort fordon");
+                Console.WriteLine("2. Ta bort fordon på regnummer");
+                Console.WriteLine("0. Tillbaka");
+                TomRaderMenu(5);
+                Console.Write($"{Utilities.vTab}Välj: ");
+                string? input = Console.ReadLine();
+                switch (input)
+                {
+                    case "1":
+                        GarageHandler.RemoveVehicle(garage);
+                        break;
+                    case "2":
+                        GarageHandler.RemoveVehicleById(garage);
+                        break;
+                    case "0":
+                        running = false;
+                        break;
+
+                    default:
+                        Console.WriteLine("Ogiltigt val");
+                        Console.ReadKey();
+                        break;
+                }
+            }
+        }
+        static void MenuShowVehicle()
+        {
+            bool running = true;
+
+            while (running)
+            {
+                Utilities.ShowHeader("Visa fordon");
+                Console.WriteLine("1. Visa alla");
+                Console.WriteLine("2. Visa fordon");
+                Console.WriteLine("3. Sök fordon");
+                Console.WriteLine("0. Tillbaka");
+                TomRaderMenu(4);
+                Console.Write($"{Utilities.vTab}Välj: ");
+                string? input = Console.ReadLine();
+                switch (input)
+                {
+                    case "1":
+                        GarageHandler.ShowAllVehicles(garage);
+                        break;
+                    case "2":
+                        GarageHandler.ShowVehicleById(garage);
+                        break;
+                    case "3":
+                        GarageHandler.SearchVehicle(garage);
+                        break;
+                    case "0":
+                        running = false;
+                        break;
+
+                    default:
+                        Console.WriteLine("Ogiltigt val");
+                        Console.ReadKey();
+                        break;
+                }
+            }
+        }
+        static void TomRaderMenu(int count)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                Console.WriteLine();
+            }
+        }
     }
 }

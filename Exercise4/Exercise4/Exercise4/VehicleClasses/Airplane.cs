@@ -31,11 +31,12 @@ namespace Exercise4
         }
         public override string ToString()
         {
-            return $"{MenuHandler.vTab}Flygplan nr: {Uuid}\n{MenuHandler.vTab}Färg: {Color}\n{MenuHandler.vTab}Vikt: {Whight} Kg\n{MenuHandler.vTab}Längd: {Length} m\n{MenuHandler.vTab}Lyftkapacitet: {LiftCapacity} kg\n{MenuHandler.vTab}Vingspann: {WingSpan} m\n{MenuHandler.vTab}Passagerare: {Passengers} st\n";
+            return $"{Utilities.vTab}Flygplan nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\n{Utilities.vTab}Vikt: {Whight} Kg\n{Utilities.vTab}Längd: {Length} m\n{Utilities.vTab}Lyftkapacitet: {LiftCapacity} kg\n{Utilities.vTab}Vingspann: {WingSpan} m\n{Utilities.vTab}Passagerare: {Passengers} st\n";
         }
-        //public string ToString2()
-        //{
-        //    return $"Flygplan nr: {Uuid}\n{MenuHandler.vTab}Färg: {Color}\n{MenuHandler.vTab}Vikt: {Whight} Kg\n{MenuHandler.vTab}Längd: {Length} m\n{MenuHandler.vTab}Lyftkapacitet: {LiftCapacity} kg\n{MenuHandler.vTab}Vingspann: {WingSpan} m\n{MenuHandler.vTab}Passagerare: {Passengers} st\n";
-        //}
+        string thisType = "Flygplan";
+        public override string ToString2()
+        {
+            return $"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}\u001b[4m{thisType} nr: {Uuid}\u001b[0m\n{Utilities.vTab}Färg: {Color}, Vikt: {Whight} Kg, Längd: {Length} m\n{Utilities.vTab}\u001b[4mSpecifikt för {thisType}:\u001b[0m\n{Utilities.vTab}Lyftkapacitet: {LiftCapacity} kg, Vingspann: {WingSpan} m, Pax: {Passengers} st";
+        }
     }
 }
