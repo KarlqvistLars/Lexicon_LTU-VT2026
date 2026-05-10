@@ -33,7 +33,7 @@ namespace Exercise4
         string thisType = "Buss";
         public override string ToString2()
         {
-            return $"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}{thisType} nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\tVikt: {Whight} Kg\tLängd: {Length} m\n{Utilities.vTab}Specifikt för {thisType}:\n{Utilities.vTab}Antal sittplatser: {NumberOfSeats} st\tHjul: {Wheels} st";
+            return $"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}\u001b[4m{thisType} nr: {Uuid}\u001b[0m\n{Utilities.vTab}Färg: {Color}\tVikt: {Whight} Kg\tLängd: {Length} m\n{Utilities.vTab}\u001b[4mSpecifikt för {thisType}:\u001b[0m\n{Utilities.vTab}Antal sittplatser: {NumberOfSeats} st, Hjul: {Wheels} st";
         }
     }
 }

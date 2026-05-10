@@ -24,7 +24,7 @@
   <Class Name="Exercise4.UtilitesClasses.MenuHandler">
     <Position X="5.5" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EABAAAAABAAAAAAAAAAAAAAIEAgAAAAACBAAAAAAAAA=</HashCode>
+      <HashCode>EABAAAAABAAAAAAAAAAAAAAIEAAAAAAACBAAAAAAAAA=</HashCode>
       <FileName>UtilitesClasses\MenuHandler.cs</FileName>
     </TypeIdentifier>
   </Class>

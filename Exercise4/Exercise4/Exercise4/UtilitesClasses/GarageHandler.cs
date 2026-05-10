@@ -104,7 +104,6 @@ namespace Exercise4.UtilitesClasses
         {
             string Title = "Lägg till slumpade fordon";
             Utilities.ShowHeader(Title);
-            bool isAddedOk = false;
             int countNok = 0;
             if (count == 0)
             {
@@ -115,6 +114,7 @@ namespace Exercise4.UtilitesClasses
             {
                 Random random = new();
                 int number = random.Next(1, 6);
+                bool isAddedOk = false;
                 switch (number)
                 {
                     case 1:
@@ -142,7 +142,7 @@ namespace Exercise4.UtilitesClasses
             }
             Console.WriteLine($"{Utilities.vTab}{count - countNok} st slumpade fordon har lagts till i garaget.");
             Console.WriteLine($"{Utilities.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
-            Console.ReadKey();
+            Console.ReadLine();
         }
         internal static void AddStartVehicles()
         {
@@ -183,16 +183,22 @@ namespace Exercise4.UtilitesClasses
         /// </summary>
         public static void ShowAllVehicles(Garage G)
         {
+            bool fordonVisade = false;
             string Title = "Visa alla fordon av";
             Utilities.ShowHeader(Title);
-            Console.WriteLine($" Tryck tangen för att fortsätta...");
+            Console.WriteLine($"{Utilities.vTab}Tryck tangen för att fortsätta...");
             Console.ReadKey();
             for (int i = 0; i < G.Vehicles.Length; i++)
             {
                 if (G.Vehicles[i]?.Uuid != null)
                 {
                     Console.WriteLine(G.Vehicles[i].ToString2());
+                    fordonVisade = true;
                 }
+            }
+            if (!fordonVisade)
+            {
+                Console.WriteLine($"{Utilities.vTab}Inga fordon hittades.\n{Utilities.vTab}Garaget är tomt.");
             }
             Console.WriteLine($"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
             Console.ReadKey();

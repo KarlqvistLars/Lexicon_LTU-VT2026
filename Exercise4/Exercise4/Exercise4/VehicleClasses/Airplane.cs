@@ -36,7 +36,7 @@ namespace Exercise4
         string thisType = "Flygplan";
         public override string ToString2()
         {
-            return $"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}{thisType} nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\tVikt: {Whight} Kg\tLängd: {Length} m\n{Utilities.vTab}Specifikt för {thisType}:\n{Utilities.vTab}Lyftkapacitet: {LiftCapacity} kg\tVingspann: {WingSpan} m\tPassagerare: {Passengers} st";
+            return $"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}\u001b[4m{thisType} nr: {Uuid}\u001b[0m\n{Utilities.vTab}Färg: {Color}, Vikt: {Whight} Kg, Längd: {Length} m\n{Utilities.vTab}\u001b[4mSpecifikt för {thisType}:\u001b[0m\n{Utilities.vTab}Lyftkapacitet: {LiftCapacity} kg, Vingspann: {WingSpan} m, Pax: {Passengers} st";
         }
     }
 }

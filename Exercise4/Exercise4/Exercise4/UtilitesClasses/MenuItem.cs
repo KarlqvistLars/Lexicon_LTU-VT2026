@@ -24,7 +24,7 @@
         }
 
         public bool running = true;
-        public bool Show()
+        internal bool Show()
         {
             int menuHight = 8;
             while (running)
@@ -40,10 +40,14 @@
                     Console.WriteLine();
                     menuHight--;
                 }
-                Console.Write($"{Utilities.vTab}Välj: ");
+                //Console.WriteLine("items " + Items.Length);
+                //Console.Write($"{Utilities.vTab}Välj: ");
                 menuHight = 8;
-                string? input = Console.ReadLine();
-                MenuItem? selected = Items.FirstOrDefault(i => i.Key == input);
+                string input = ReadRequiredLine($"{Utilities.vTab}Välj: ");
+
+                MenuItem selected = Items.First(i => i.Key.Equals(input));
+
+
                 if (selected != null)
                 {
                     if (selected.Key == "0") { running = false; }
@@ -57,14 +61,27 @@
             }
             return false;
         }
-        public static class ConsoleHelper
-        {
-            public static void WriteAt(int left, int top, string text)
-            {
-                Console.SetCursorPosition(left, top);
-                Console.Write(text);
-            }
-        }
 
+        static string ReadRequiredLine(string message)
+        {
+            string? input;
+
+            do
+            {
+                Console.Write(message);
+                input = Console.ReadLine();
+
+                if (input == null)
+                {
+                    Console.WriteLine("Ingen input kunde läsas.");
+                    return "";
+                }
+
+                input = input.Trim();
+
+            } while (input == "");
+
+            return input;
+        }
     }
 }

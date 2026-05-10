@@ -23,11 +23,7 @@
         static void ExitGarage()
         {
             // Här kan allt sparas eller städas upp innan programmet avslutas
-            Console.Write($"{Utilities.vTab}Programmet avslutas");
-            Thread.Sleep(500);
-            for (int i = 0; i < 4; i++) { Console.Write("."); Thread.Sleep(500); }
-            Console.WriteLine(".");
-            Thread.Sleep(1000);
+            Console.Write($"{Utilities.vTab}Programmet avslutas...");
             MenuMain.running = false;
         }
 
@@ -53,7 +49,7 @@
         public static Menu MenuRemoveVehicle = new Menu("Ta bort fordon", new MenuItem[]
         {
             new MenuItem("1", "Sök och ta bort fordon", () => GarageHandler.RemoveVehicle(garage ?? throw new InvalidOperationException($"{Utilities.vTab}Garage is not initialized."))),
-            new MenuItem("2", "Ta bort fordon på Id.", GarageHandler.RemoveVehicleById),
+            new MenuItem("2", "Ta bort fordon på regnummer", GarageHandler.RemoveVehicleById),
             new MenuItem("0","Tillbaka", () => MenuMain.Show())
         });
 
