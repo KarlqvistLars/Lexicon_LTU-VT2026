@@ -2,14 +2,14 @@
 {
     public class Menu2
     {
-        private static Garage _garage = new Garage(Garage.Capacity);
+        static private Garage _garage = new Garage(Garage.Capacity);
 
-        private Menu2()
+        public Menu2()
         {
             _garage = MenuHandler.garage;
         }
 
-        static public void MenuMain2()
+        public void MenuMain2()
         {
             bool running = true;
 
@@ -114,10 +114,10 @@
                 switch (input)
                 {
                     case "1":
-                        //ShowVehicleMenu();
+                        GarageHandler.RemoveVehicle(_garage);
                         break;
                     case "2":
-                        //ShowPersonMenu();
+                        GarageHandler.RemoveVehicleById(_garage);
                         break;
                     case "0":
                         running = false;
@@ -151,10 +151,10 @@
                         GarageHandler.ShowAllVehicles(_garage);
                         break;
                     case "2":
-                        //ShowPersonMenu();
+                        GarageHandler.ShowVehicleById(_garage);
                         break;
                     case "3":
-                        //ShowPersonMenu();
+                        GarageHandler.SearchVehicle(_garage);
                         break;
                     case "0":
                         running = false;

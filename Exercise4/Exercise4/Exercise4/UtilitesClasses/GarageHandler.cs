@@ -171,7 +171,7 @@ namespace Exercise4.UtilitesClasses
             Console.WriteLine($"{Utilities.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
             Console.ReadKey();
         }
-        internal static void RemoveVehicleById()
+        internal static void RemoveVehicleById(Garage G)
         {
             string Title = $"Ta bort fordon på Regnummer";
             Utilities.ShowHeader(Title);

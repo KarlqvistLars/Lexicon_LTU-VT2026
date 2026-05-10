@@ -10,14 +10,16 @@
             if (populate == false)
             {
                 garage = new Garage(garageSize);
-                Menu2.MenuMain2();
+                Menu2 menu2 = new();
+                menu2.MenuMain2();
                 //MenuMain.Show();
             }
             else
             {
                 garage = new Garage(20);
                 GarageHandler.AddStartVehicles();
-                Menu2.MenuMain2();
+                Menu2 menu2 = new();
+                menu2.MenuMain2();
                 //MenuMain.Show();
             }
             return true;
@@ -52,7 +54,7 @@
         static public Menu MenuRemoveVehicle = new Menu("Ta bort fordon", new MenuItem[]
         {
             new MenuItem("1", "Sök och ta bort fordon", () => GarageHandler.RemoveVehicle(garage ?? throw new InvalidOperationException($"{Utilities.vTab}Garage is not initialized."))),
-            new MenuItem("2", "Ta bort fordon på regnummer.", GarageHandler.RemoveVehicleById),
+            //new MenuItem("2", "Ta bort fordon på regnummer.", GarageHandler.RemoveVehicleById(garage ?? throw new InvalidOperationException($"{Utilities.vTab}Garage is not initialized."))),
             new MenuItem("0","Tillbaka", () => MenuMain.Show())
         });
 
