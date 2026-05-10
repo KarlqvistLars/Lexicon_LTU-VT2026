@@ -1,7 +1,14 @@
 ﻿namespace Exercise4.UtilitesClasses
 {
-    static public class Menu2
+    public class Menu2
     {
+        private static Garage _garage = new Garage(Garage.Capacity);
+
+        private Menu2()
+        {
+            _garage = MenuHandler.garage;
+        }
+
         static public void MenuMain2()
         {
             bool running = true;
@@ -62,13 +69,23 @@
                 switch (input)
                 {
                     case "1":
-                        //ShowVehicleMenu();
+                        GarageHandler.AddCar(_garage);
                         break;
-
                     case "2":
-                        //ShowPersonMenu();
+                        GarageHandler.AddBus(_garage);
                         break;
-
+                    case "3":
+                        GarageHandler.AddMotorcycle(_garage);
+                        break;
+                    case "4":
+                        GarageHandler.AddBoat(_garage);
+                        break;
+                    case "5":
+                        GarageHandler.AddAirplane(_garage);
+                        break;
+                    case "6":
+                        GarageHandler.AddRandomVehicles(_garage);
+                        break;
                     case "0":
                         running = false;
                         break;
@@ -99,11 +116,9 @@
                     case "1":
                         //ShowVehicleMenu();
                         break;
-
                     case "2":
                         //ShowPersonMenu();
                         break;
-
                     case "0":
                         running = false;
                         break;
@@ -133,13 +148,14 @@
                 switch (input)
                 {
                     case "1":
-                        //ShowVehicleMenu();
+                        GarageHandler.ShowAllVehicles(_garage);
                         break;
-
                     case "2":
                         //ShowPersonMenu();
                         break;
-
+                    case "3":
+                        //ShowPersonMenu();
+                        break;
                     case "0":
                         running = false;
                         break;

@@ -5,18 +5,18 @@ namespace Exercise4
 {
     public class Garage
     {
-        private int _capacity;
+        private static int _capacity;
         private readonly Vehicle[] _vehicles;
         public Garage(int capacity)
         {
-            this._capacity = capacity;
-            _vehicles = new Vehicle[this._capacity];
+            _capacity = capacity;
+            _vehicles = new Vehicle[_capacity];
         }
         public Vehicle[] Vehicles
         {
             get => _vehicles;
         }
-        public int Capacity
+        static public int Capacity
         {
             get => _capacity;
         }
