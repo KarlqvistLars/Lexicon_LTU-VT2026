@@ -259,7 +259,9 @@ namespace Exercise4.UtilitesClasses
         }
         private static bool ShowGarageSearch(Garage G, VType vT, string regNumber, string color, string weight, string length)
         {
+            int counter = 0;
             bool listExist = false;
+            string[] fordon = { "fordon", "bilar", "bussar", "motorcyklar", "båtar", "flygplan" };
             foreach (Vehicle v in G.Vehicles)
             {
                 if (v != null &&
@@ -269,16 +271,20 @@ namespace Exercise4.UtilitesClasses
                     (string.IsNullOrEmpty(weight) || v.Whight.ToString().Equals(weight, StringComparison.OrdinalIgnoreCase)) &&
                     (string.IsNullOrEmpty(length) || v.Length.ToString().Equals(length, StringComparison.OrdinalIgnoreCase)))
                 {
-                    Console.WriteLine($"{Utilities.line30} {Utilities.line30}");
+                    Console.WriteLine($"{Utilities.line30}{Utilities.line30}");
                     Console.WriteLine(v.ToString());
                     Console.WriteLine($"{Utilities.line30}{Utilities.line30}");
                     listExist = true;
+                    counter++;
                 }
             }
             Console.WriteLine($"{Utilities.line30}{Utilities.line30}");
+            Console.WriteLine($"{Utilities.vTab}Det fanns {counter} {fordon[(int)vT]} som matchade sökkriterierna.");
+            Console.WriteLine($"{Utilities.vTab}Regnummer: {(string.IsNullOrEmpty(regNumber) ? "Alla" : regNumber)}, Färg: {(string.IsNullOrEmpty(color) ? "Alla" : color)}, Vikt: {(string.IsNullOrEmpty(weight) ? "Alla" : weight)}, Längd: {(string.IsNullOrEmpty(length) ? "Alla" : length)}");
             if (!listExist)
             {
-                Console.WriteLine($"{Utilities.vTab}Inga fordon matchade sökkriterierna.");
+                Console.WriteLine($"{Utilities.vTab}Det fanns inga {fordon[(int)vT]} som matchade sökkriterierna.");
+                Console.WriteLine($"{Utilities.vTab}Regnummer: {(string.IsNullOrEmpty(regNumber) ? "Alla" : regNumber)}, Färg: {(string.IsNullOrEmpty(color) ? "Alla" : color)}, Vikt: {(string.IsNullOrEmpty(weight) ? "Alla" : weight)}, Längd: {(string.IsNullOrEmpty(length) ? "Alla" : length)}");
             }
             return listExist;
         }
