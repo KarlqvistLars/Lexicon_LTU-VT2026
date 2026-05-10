@@ -21,13 +21,6 @@
       <FileName>Garage.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Exercise4.UtilitesClasses.MenuHandler">
-    <Position X="2" Y="8.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>EABAAAAABAAAAAAAAAAAAAAIEAAAAAAACBAAAAAAAAA=</HashCode>
-      <FileName>UtilitesClasses\MenuHandler.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Exercise4.UtilitesClasses.Utilities">
     <Position X="5.5" Y="9.5" Width="1.5" />
     <NestedTypes>
@@ -117,25 +110,11 @@
       <FileName>VehicleClasses\Motorcycle.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Exercise4.UtilitesClasses.MenuItem">
-    <Position X="3.75" Y="11.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAACAAAAAQ=</HashCode>
-      <FileName>UtilitesClasses\MenuItem.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Exercise4.UtilitesClasses.Menu2">
+  <Class Name="Exercise4.UtilitesClasses.MenuHandler">
     <Position X="3.75" Y="8.25" Width="1.5" />
-    <NestedTypes>
-      <Class Name="Exercise4.UtilitesClasses.Menu2.ConsoleHelper" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>UtilitesClasses\MenuItem.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>EABAAAAAAAAAAAAAAAAAAEAAEAAAAAAACAAAAAAAAAA=</HashCode>
-      <FileName>UtilitesClasses\Menu2.cs</FileName>
+      <HashCode>EABAAAAABAAAAAAAAAAAAEAAEAAAAAAICAAAAAAAAAA=</HashCode>
+      <FileName>UtilitesClasses\MenuHandler.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

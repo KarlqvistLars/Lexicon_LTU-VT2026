@@ -203,24 +203,6 @@ namespace Exercise4.UtilitesClasses
             Console.WriteLine($"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
             Console.ReadKey();
         }
-        private static bool ShowGarageInventory(Vehicle v)
-        {
-            bool listExist = false;
-            if (v != null)
-            {
-                if (v.Uuid == null)
-                {
-                    Console.WriteLine($"{Utilities.vTab}Empty slot.");
-                    listExist = false;
-                }
-                else
-                {
-                    Console.WriteLine(v.ToString2());
-                    listExist = true;
-                }
-            }
-            return listExist;
-        }
         public static void ShowVehicleById(Garage garage)
         {
             Utilities.ShowHeader("Visa fordon på regnr");
@@ -230,7 +212,7 @@ namespace Exercise4.UtilitesClasses
             {
                 if (v != null && v.Uuid != null && v.Uuid.Equals(regNumber, StringComparison.OrdinalIgnoreCase))
                 {
-                    Console.WriteLine($"{Utilities.line30} {Utilities.line30}");
+                    Console.WriteLine($"{Utilities.line30}{Utilities.line30}");
                     Console.WriteLine(v.ToString());
                     Console.WriteLine($"{Utilities.line30}{Utilities.line30}");
                     Console.WriteLine($"{Utilities.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
@@ -244,11 +226,61 @@ namespace Exercise4.UtilitesClasses
         }
         internal static void SearchVehicle(Garage garage)
         {
-            Console.WriteLine("Tryck tanget för att söka fordon...(alla visas)");
-            Console.ReadKey();
+            string Title = "Sök fordon";
+            Utilities.ShowHeader(Title);
+            Console.WriteLine("Sök parametrar:\n" +
+                "Välj en siffra, skriv en sökterm eller\ntryck Enter för att hoppa över:");
+            Console.Write("Du vill söka en:\n1. Bil\n2. Buss\n3. Motorcykel\n4. Båt\n5. Flygplan? ");
+            int vehichleType = int.TryParse(Console.ReadLine(), out int res) ? res : 0;
+            Console.Write("\nmed regstrerings nummer(Enter för att hoppa över): ");
+            string regNumber = Console.ReadLine() ?? string.Empty;
+            if (vehichleType == 1 || vehichleType == 2 || vehichleType == 3 || vehichleType == 4 || vehichleType == 5)
+            {
+                if (!string.IsNullOrEmpty(regNumber))
+                {
+                    Console.WriteLine(((VType)vehichleType).ToString());
+                    regNumber = ReadRegnumInput(garage, (VType)vehichleType);
+                }
+            }
+            else
+            {
+                Console.WriteLine(((VType)vehichleType).ToString());
+                regNumber = "";
+            }
+            Console.Write("\nsom har färgen(Enter för att hoppa över): ");
+            string? color = Console.ReadLine() ?? string.Empty;
+            Console.Write("\nsom väger(Enter för att hoppa över): ");
+            string? weight = Console.ReadLine() ?? string.Empty;
+            Console.Write("\noch har längden(Enter för att hoppa över): ");
+            string? length = Console.ReadLine() ?? string.Empty;
+            ShowGarageSearch(garage, (VType)vehichleType, regNumber, color, weight, length);
+            Console.WriteLine("Tryck på Enter för att fortsätta...");
+            Console.ReadLine();
+        }
+        private static bool ShowGarageSearch(Garage G, VType vT, string regNumber, string color, string weight, string length)
+        {
+            bool listExist = false;
+            foreach (Vehicle v in G.Vehicles)
+            {
+                if (v != null &&
+                    (vT == VType.None || v.Type.Equals(vT.ToString(), StringComparison.OrdinalIgnoreCase)) &&
+                    (string.IsNullOrEmpty(regNumber) || v.Uuid.Equals(regNumber, StringComparison.OrdinalIgnoreCase)) &&
+                    (string.IsNullOrEmpty(color) || v.Color.Equals(color, StringComparison.OrdinalIgnoreCase)) &&
+                    (string.IsNullOrEmpty(weight) || v.Whight.ToString().Equals(weight, StringComparison.OrdinalIgnoreCase)) &&
+                    (string.IsNullOrEmpty(length) || v.Length.ToString().Equals(length, StringComparison.OrdinalIgnoreCase)))
+                {
+                    Console.WriteLine($"{Utilities.line30} {Utilities.line30}");
+                    Console.WriteLine(v.ToString());
+                    Console.WriteLine($"{Utilities.line30}{Utilities.line30}");
+                    listExist = true;
+                }
+            }
             Console.WriteLine($"{Utilities.line30}{Utilities.line30}");
-            garage?.Vehicles.ToList().ForEach(v => { if (v != null) Console.WriteLine(v.ToString2()); });
-            Console.WriteLine($"{Utilities.line30}{Utilities.line30}");
+            if (!listExist)
+            {
+                Console.WriteLine($"{Utilities.vTab}Inga fordon matchade sökkriterierna.");
+            }
+            return listExist;
         }
     }
 }

@@ -39,7 +39,7 @@ namespace Exercise4
             {
                 if (_vehicles[i] != null && _vehicles[i].Uuid == uuid)
                 {
-                    _vehicles[i] = new Vehicle();
+                    _vehicles[i] = null;
                     return;
                 }
             }

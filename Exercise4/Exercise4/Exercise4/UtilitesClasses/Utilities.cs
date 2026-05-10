@@ -5,11 +5,10 @@ namespace Exercise4.UtilitesClasses
     static public class Utilities
     {
         static public string line30 { get; } = "==============================";
-        static string e30 { get; } = "                              ";
         static public string vTab { get; } = "   ";
         public enum VType
         {
-            None,
+            None = 0,
             Car = 1,
             Bus = 2,
             Motorcycle = 3,
