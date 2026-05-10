@@ -7,14 +7,19 @@ namespace Exercise4
         static void Main(string[] args)
         {
             Utilities.ShowHeader("Välkommen!");
-            Console.Write($"Tryck Enter\nFör standardstorlek 20 platser\nEller ange antal garageplatser: ");
-            int size = int.TryParse(Console.ReadLine(), out int result) ? result : 0;
-            if (size < 0 || size > 100)
+            Console.Write($"Tryck Enter\nFör standardstorlek 20 platser\nEller ange (1-100)st garageplatser: ");
+            string str = Console.ReadLine();
+            if (string.IsNullOrEmpty(str))
+            {
+                str = "20";
+            }
+            int size = int.TryParse(str, out int result) ? result : 0;
+            if (size <= 0 || size > 100)
             {
                 Console.WriteLine("Ogiltigt antal garageplatser. Programmet avslutas.");
                 return;
             }
-            else if (size == 0)
+            else if (size == 20)
             {
                 if (MenuHandler.StartGarage(20, true))
                 {
