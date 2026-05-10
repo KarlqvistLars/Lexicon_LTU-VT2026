@@ -3,7 +3,6 @@
 
     static public class MenuHandler
     {
-        static bool running = true;
         static int choice = 0;
         static public Garage? garage { get; private set; }
         public static bool StartGarage(int garageSize, bool populate = false)
@@ -23,10 +22,9 @@
         }
         static void ExitGarage()
         {
-            Console.WriteLine("Programmet avslutas...");
             // Här kan allt sparas eller städas upp innan programmet avslutas
-            running = false;
-            System.Environment.Exit(0);
+            Console.WriteLine("Programmet avslutas...");
+            MenuMain.running = false;
         }
 
         static Menu MenuMain = new Menu("Huvudmeny", new MenuItem[]

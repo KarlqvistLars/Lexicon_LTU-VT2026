@@ -31,9 +31,10 @@ namespace Exercise4
             return $"{Utilities.vTab}Bil nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\n{Utilities.vTab}Vikt: {Whight} Kg\n{Utilities.vTab}Längd: {Length} m\n{Utilities.vTab}Hjul: {Wheels} st\n{Utilities.vTab}Dörrar: {NumberOfDoors} st";
         }
 
-        //public string ToString2()
-        //{
-        //    return $"{MenuHandler.line30}{MenuHandler.line30}\n{MenuHandler.vTab}Bil nr: {Uuid}\tFärg: {Color}\tVikt: {Whight} Kg\t{MenuHandler.vTab}Längd: {Length} m\n{MenuHandler.vTab}Hjul: {Wheels} st\tDörrar: {NumberOfDoors} st\n";
-        //}
+        string thisType = "Bil";
+        public override string ToString2()
+        {
+            return $"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}{thisType} nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\tVikt: {Whight} Kg\tLängd: {Length} m\n{Utilities.vTab}Specifikt för {thisType}:\n{Utilities.vTab}Hjul: {Wheels} st\tDörrar: {NumberOfDoors} st";
+        }
     }
 }

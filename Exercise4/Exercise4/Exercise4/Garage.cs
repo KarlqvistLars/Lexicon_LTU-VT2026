@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Exercise4.UtilitesClasses;
+using System.Text;
 
 namespace Exercise4
 {
@@ -19,17 +20,18 @@ namespace Exercise4
         {
             get => _capacity;
         }
-        public void AddVehicle(Vehicle vehicle)
+        public bool AddVehicle(Vehicle vehicle)
         {
             for (int i = 0; i < _capacity; i++)
             {
                 if (_vehicles[i] == null || _vehicles[i].Uuid == "")
                 {
                     _vehicles[i] = vehicle;
-                    return;
+                    return true;
                 }
             }
-            Console.WriteLine("Garage is full, cannot add " + vehicle.Type + " with UUID: " + vehicle.Uuid);
+            Console.WriteLine($"{Utilities.vTab}Garage is full, cannot add {vehicle.Type} with UUID: {vehicle.Uuid}");
+            return false;
         }
         public void RemoveVehicle(string uuid)
         {

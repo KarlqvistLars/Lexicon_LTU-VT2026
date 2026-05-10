@@ -27,9 +27,10 @@ namespace Exercise4
         {
             return $"{Utilities.vTab}Motorcykel nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\n{Utilities.vTab}Vikt: {Whight} Kg\n{Utilities.vTab}Längd: {Length} m\n{Utilities.vTab}Kubik: {CubicInch} cc\n";
         }
-        //public string ToString2()
-        //{
-        //    return $"Motorcykel nr: {Uuid}\n{MenuHandler.vTab}Färg: {Color}\n{MenuHandler.vTab}Vikt: {Whight} Kg\n{MenuHandler.vTab}Längd: {Length} m\n{MenuHandler.vTab}Kubik: {CubicInch} cc\n";
-        //}
+        string thisType = "Motorcykel";
+        public override string ToString2()
+        {
+            return $"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}{thisType} nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\tVikt: {Whight} Kg\tLängd: {Length} m\n{Utilities.vTab}Specifikt för {thisType}:\n{Utilities.vTab}Kubik: {CubicInch} cc";
+        }
     }
 }

@@ -104,37 +104,43 @@ namespace Exercise4.UtilitesClasses
         {
             string Title = "Lägg till slumpade fordon";
             Utilities.ShowHeader(Title);
+            bool isAddedOk = false;
+            int countNok = 0;
             if (count == 0)
             {
-                Console.Write("Hur många: ");
+                Console.Write($"{Utilities.vTab}Hur många: ");
                 count = int.TryParse(Console.ReadLine(), out int n) ? n : 0;
             }
             for (int i = 0; i < count; i++)
             {
-                Random random = new Random();
+                Random random = new();
                 int number = random.Next(1, 6);
                 switch (number)
                 {
                     case 1:
-                        G.AddVehicle(new Car("ABC " + (i + 100).ToString(), "Röd", 1200, 4, 4, 4));
+                        isAddedOk = G.AddVehicle(new Car("ABC " + (i + 100).ToString(), "Röd", 1200, 4, 4, 4));
                         break;
                     case 2:
-                        G.AddVehicle(new Bus("BBC " + (i + 100).ToString(), "Blå", 12000, 12, 48, 6));
+                        isAddedOk = G.AddVehicle(new Bus("BBC " + (i + 100).ToString(), "Blå", 12000, 12, 48, 6));
                         break;
                     case 3:
-                        G.AddVehicle(new Motorcycle("MCB " + (i + 100).ToString(), "Svart", 140, 2, 900, 2));
+                        isAddedOk = G.AddVehicle(new Motorcycle("MCB " + (i + 100).ToString(), "Svart", 140, 2, 900, 2));
                         break;
                     case 4:
-                        G.AddVehicle(new Boat("BA" + (i + 55020).ToString(), "Vit", 1200, 4, 2m, 24.6m, 1200));
+                        isAddedOk = G.AddVehicle(new Boat("BA" + (i + 55020).ToString(), "Vit", 1200, 4, 2m, 24.6m, 1200));
                         break;
                     case 5:
-                        G.AddVehicle(new Airplane(GenerateRandom(), "Silver", 15000, 20, 7000, 20, 28));
+                        isAddedOk = G.AddVehicle(new Airplane(GenerateRandom(), "Silver", 15000, 20, 7000, 20, 28));
                         break;
                     default:
                         break;
                 }
+                if (!isAddedOk)
+                {
+                    countNok++;
+                }
             }
-            Console.WriteLine($"{Utilities.vTab}{count} st slumpade fordon har lagts till i garaget.");
+            Console.WriteLine($"{Utilities.vTab}{count - countNok} st slumpade fordon har lagts till i garaget.");
             Console.WriteLine($"{Utilities.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
             Console.ReadKey();
         }
@@ -188,7 +194,7 @@ namespace Exercise4.UtilitesClasses
                     Console.WriteLine(G.Vehicles[i].ToString2());
                 }
             }
-            Console.WriteLine($"{Utilities.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
+            Console.WriteLine($"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
             Console.ReadKey();
         }
         private static bool ShowGarageInventory(Vehicle v)
@@ -213,10 +219,10 @@ namespace Exercise4.UtilitesClasses
         {
             Utilities.ShowHeader("Visa fordon på regnr");
             Console.Write($"{Utilities.vTab}Ange regnr: ");
-            string regNumber = Console.ReadLine() ?? string.Empty;
+            string? regNumber = Console.ReadLine() ?? string.Empty;
             foreach (Vehicle v in garage?.Vehicles ?? new Vehicle[0])
             {
-                if (v != null && v.Uuid.Equals(regNumber, StringComparison.OrdinalIgnoreCase))
+                if (v != null && v.Uuid != null && v.Uuid.Equals(regNumber, StringComparison.OrdinalIgnoreCase))
                 {
                     Console.WriteLine($"{Utilities.line30} {Utilities.line30}");
                     Console.WriteLine(v.ToString());

@@ -33,9 +33,10 @@ namespace Exercise4
         {
             return $"{Utilities.vTab}Flygplan nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\n{Utilities.vTab}Vikt: {Whight} Kg\n{Utilities.vTab}Längd: {Length} m\n{Utilities.vTab}Lyftkapacitet: {LiftCapacity} kg\n{Utilities.vTab}Vingspann: {WingSpan} m\n{Utilities.vTab}Passagerare: {Passengers} st\n";
         }
-        //public string ToString2()
-        //{
-        //    return $"Flygplan nr: {Uuid}\n{MenuHandler.vTab}Färg: {Color}\n{MenuHandler.vTab}Vikt: {Whight} Kg\n{MenuHandler.vTab}Längd: {Length} m\n{MenuHandler.vTab}Lyftkapacitet: {LiftCapacity} kg\n{MenuHandler.vTab}Vingspann: {WingSpan} m\n{MenuHandler.vTab}Passagerare: {Passengers} st\n";
-        //}
+        string thisType = "Flygplan";
+        public override string ToString2()
+        {
+            return $"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}{thisType} nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\tVikt: {Whight} Kg\tLängd: {Length} m\n{Utilities.vTab}Specifikt för {thisType}:\n{Utilities.vTab}Lyftkapacitet: {LiftCapacity} kg\tVingspann: {WingSpan} m\tPassagerare: {Passengers} st";
+        }
     }
 }

@@ -22,10 +22,12 @@
             Title = title;
             Items = items;
         }
-        public void Show()
+
+        public bool running = true;
+        public bool Show()
         {
             int menuHight = 8;
-            while (true)
+            while (running)
             {
                 Utilities.ShowHeader(Title);
                 foreach (var item in Items)
@@ -38,20 +40,22 @@
                     Console.WriteLine();
                     menuHight--;
                 }
-                Console.Write("Välj: ");
+                Console.Write($"{Utilities.vTab}Välj: ");
                 menuHight = 8;
                 string? input = Console.ReadLine();
                 MenuItem? selected = Items.FirstOrDefault(i => i.Key == input);
                 if (selected != null)
                 {
+                    if (selected.Key == "0") { running = false; }
                     selected.Action.Invoke();
                 }
                 else
                 {
-                    Console.WriteLine("Felaktigt val.");
+                    Console.WriteLine($"{Utilities.vTab}Felaktigt val.");
                     Console.ReadKey();
                 }
             }
+            return false;
         }
         public static class ConsoleHelper
         {

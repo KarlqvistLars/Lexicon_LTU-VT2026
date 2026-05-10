@@ -39,9 +39,10 @@ namespace Exercise4
             return $"{Utilities.vTab}Båt nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\n{Utilities.vTab}Vikt: {Whight} Kg\n{Utilities.vTab}Längd: {Length} m\n{Utilities.vTab}Maxdjup: {MaxWaterDepth} m\n{Utilities.vTab}Maxhastighet: {MaxSpeed} kn\n{Utilities.vTab}Deplacement: {Deplacement} ton\n";
         }
 
-        //public string ToString2()
-        //{
-        //    return $"Båt nr: {Uuid}\n{MenuHandler.vTab}Färg: {Color}\n{MenuHandler.vTab}Vikt: {Whight} Kg\n{MenuHandler.vTab}Längd: {Length} m\n{MenuHandler.vTab}Maxdjup: {MaxWaterDepth} m\n{MenuHandler.vTab}Maxhastighet: {MaxSpeed} kn\n{MenuHandler.vTab}Deplacement: {Deplacement} ton\n";
-        //}
+        string thisType = "Båt";
+        public override string ToString2()
+        {
+            return $"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}{thisType} nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\tVikt: {Whight} Kg\tLängd: {Length} m\n{Utilities.vTab}Specifikt för {thisType}:\n{Utilities.vTab}Maxdjup: {MaxWaterDepth} m\tMaxhastighet: {MaxSpeed} kn\tDeplacement: {Deplacement} ton";
+        }
     }
 }
