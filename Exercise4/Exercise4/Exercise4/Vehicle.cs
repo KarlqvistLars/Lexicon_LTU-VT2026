@@ -48,7 +48,7 @@ namespace Exercise4
         }
         internal string ToString2()
         {
-            return $"{MenuHandler.line30}{MenuHandler.line30}\n{MenuHandler.vTab}{Type} nr: {Uuid}\n{MenuHandler.vTab}Färg: {Color}\tVikt: {Whight} Kg\t{MenuHandler.vTab}Längd: {Length} m";
+            return $"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}{Type} nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\tVikt: {Whight} Kg\t{Utilities.vTab}Längd: {Length} m";
         }
         //public override string ToString()
         //{

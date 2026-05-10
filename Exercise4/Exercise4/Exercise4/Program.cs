@@ -6,11 +6,10 @@ namespace Exercise4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(" * Garage 1.0 *  Välkommen!  ");
-            Console.WriteLine(MenuHandler.line30);
+            Utilities.ShowHeader("Välkommen!");
             Console.Write($"Tryck Enter\nFör standardstorlek 20 platser\nEller ange antal garageplatser: ");
             int size = int.TryParse(Console.ReadLine(), out int result) ? result : 0;
-            if (size < 0)
+            if (size < 0 || size > 100)
             {
                 Console.WriteLine("Ogiltigt antal garageplatser. Programmet avslutas.");
                 return;

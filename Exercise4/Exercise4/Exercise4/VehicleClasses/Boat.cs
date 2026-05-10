@@ -36,7 +36,7 @@ namespace Exercise4
 
         public override string ToString()
         {
-            return $"{MenuHandler.vTab}Båt nr: {Uuid}\n{MenuHandler.vTab}Färg: {Color}\n{MenuHandler.vTab}Vikt: {Whight} Kg\n{MenuHandler.vTab}Längd: {Length} m\n{MenuHandler.vTab}Maxdjup: {MaxWaterDepth} m\n{MenuHandler.vTab}Maxhastighet: {MaxSpeed} kn\n{MenuHandler.vTab}Deplacement: {Deplacement} ton\n";
+            return $"{Utilities.vTab}Båt nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\n{Utilities.vTab}Vikt: {Whight} Kg\n{Utilities.vTab}Längd: {Length} m\n{Utilities.vTab}Maxdjup: {MaxWaterDepth} m\n{Utilities.vTab}Maxhastighet: {MaxSpeed} kn\n{Utilities.vTab}Deplacement: {Deplacement} ton\n";
         }
 
         //public string ToString2()

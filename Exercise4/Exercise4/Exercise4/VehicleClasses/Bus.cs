@@ -28,7 +28,7 @@ namespace Exercise4
 
         public override string ToString()
         {
-            return $"{MenuHandler.vTab}Buss nr: {Uuid}\n{MenuHandler.vTab}Färg: {Color}\n{MenuHandler.vTab}Vikt: {Whight} Kg\n{MenuHandler.vTab}Längd: {Length} m\nAntal sittplatser: {NumberOfSeats} st\n{MenuHandler.vTab}Hjul: {Wheels} st";
+            return $"{Utilities.vTab}Buss nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\n{Utilities.vTab}Vikt: {Whight} Kg\n{Utilities.vTab}Längd: {Length} m\n{Utilities.vTab}Antal sittplatser: {NumberOfSeats} st\n{Utilities.vTab}Hjul: {Wheels} st";
         }
 
         //public string ToString2()
