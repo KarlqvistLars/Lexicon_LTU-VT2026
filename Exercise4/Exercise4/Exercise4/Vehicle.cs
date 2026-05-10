@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Exercise4.UtilitesClasses;
 
 namespace Exercise4
 {
@@ -17,7 +14,7 @@ namespace Exercise4
             _color = string.Empty;
             _type = string.Empty;
         }
-        public Vehicle(string uuid, string color, int whight, int length, string type="")
+        public Vehicle(string uuid, string color, int whight, int length, string type = "")
         {
             this._uuid = uuid;
             this._color = color;
@@ -48,6 +45,10 @@ namespace Exercise4
         public string Type
         {
             get => _type ?? string.Empty;
+        }
+        internal string ToString2()
+        {
+            return $"{MenuHandler.line30}{MenuHandler.line30}\n{MenuHandler.vTab}{Type} nr: {Uuid}\n{MenuHandler.vTab}Färg: {Color}\tVikt: {Whight} Kg\t{MenuHandler.vTab}Längd: {Length} m";
         }
         //public override string ToString()
         //{

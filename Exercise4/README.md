@@ -78,5 +78,7 @@ Skiss på klasserna.
 <br>
 ## Top level - Exercise4
 ![UML](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise4/Exercise4/Bilder/TopLevelExercise4.jpg)
+![UML](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise4/Exercise4/Bilder/FilStruktur.jpg)
+
 
 ### [Tillbaka](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/tree/main)

@@ -1,9 +1,4 @@
 ﻿using Exercise4.UtilitesClasses;
-using RasterEdge.Imaging.Basic.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Exercise4
 {
@@ -21,7 +16,7 @@ namespace Exercise4
         {
             get => _cubicInch;
             set => _cubicInch = value;
-        }        
+        }
         public int Wheels
         {
             get => _wheels;
@@ -30,7 +25,11 @@ namespace Exercise4
 
         public override string ToString()
         {
-            return $"Motorcykel nr: {Uuid}\n{MenuHandler.vTab}Färg: {Color}\n{MenuHandler.vTab}Vikt: {Whight} Kg\n{MenuHandler.vTab}Längd: {Length} m\n{MenuHandler.vTab}Kubik: {CubicInch} cc\n";
+            return $"{MenuHandler.vTab}Motorcykel nr: {Uuid}\n{MenuHandler.vTab}Färg: {Color}\n{MenuHandler.vTab}Vikt: {Whight} Kg\n{MenuHandler.vTab}Längd: {Length} m\n{MenuHandler.vTab}Kubik: {CubicInch} cc\n";
         }
+        //public string ToString2()
+        //{
+        //    return $"Motorcykel nr: {Uuid}\n{MenuHandler.vTab}Färg: {Color}\n{MenuHandler.vTab}Vikt: {Whight} Kg\n{MenuHandler.vTab}Längd: {Length} m\n{MenuHandler.vTab}Kubik: {CubicInch} cc\n";
+        //}
     }
 }
