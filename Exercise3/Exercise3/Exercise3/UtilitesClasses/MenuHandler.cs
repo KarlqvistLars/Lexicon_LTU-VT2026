@@ -1,4 +1,5 @@
-﻿namespace Exercise3.UtilitesClasses
+﻿//#define COLORS
+namespace Exercise3.UtilitesClasses
 {
     static public class MenuHandler
     {
@@ -22,12 +23,25 @@
             }
             return true;
         }
+#if COLORS
+        static ConsoleColor[] colors = new ConsoleColor[] { ConsoleColor.Red, ConsoleColor.Blue, ConsoleColor.Green, ConsoleColor.Yellow, ConsoleColor.White };
+#endif
         public static void ExitGarage()
         {
             // Här kan allt sparas eller städas upp innan programmet avslutas
             string closing = "Programmet avslutas...";
             Console.Write(Utilities.vTab);
-            foreach (var item in closing) { Console.Write(item); Thread.Sleep(50); }
+#if COLORS
+            Random rand = new Random();
+#endif
+            foreach (var item in closing)
+            {
+#if COLORS
+                Console.ForegroundColor = colors[rand.Next(0, colors.Length)];
+#endif
+                Console.Write(item);
+                Thread.Sleep(50);
+            }
             Utilities.SaveVehicles(garage, filePath);
             Running = false;
         }
@@ -209,14 +223,6 @@
 
                     case "2":
                         //MenuRemoveVehicle();
-                        break;
-
-                    case "3":
-                        //MenuShowVehicle();
-                        break;
-
-                    case "4":
-                        //MenuLoadVehicleFromFile();
                         break;
 
                     case "0":

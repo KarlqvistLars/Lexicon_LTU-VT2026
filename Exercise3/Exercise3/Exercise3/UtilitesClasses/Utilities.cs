@@ -20,7 +20,7 @@ namespace Exercise3.UtilitesClasses
         internal static string ReadRegnumInput(Garage garage, VType type)
         {
             bool isValid = false;
-            string? regNumber;
+            string? regNumber = string.Empty;
             do
             {
                 regNumber = Console.ReadLine()?.ToUpper();
@@ -34,6 +34,7 @@ namespace Exercise3.UtilitesClasses
                         else
                         {
                             Console.WriteLine("Ogiltigt registreringsnummer. \nFormatet för bil ska vara 3 bokstäver följt av 3 siffror (exempel: ABC 123).");
+                            Console.Write("Försök igen: ");
                         }
                         break;
                     case VType.Bus:
@@ -44,6 +45,7 @@ namespace Exercise3.UtilitesClasses
                         else
                         {
                             Console.WriteLine("Ogiltigt registreringsnummer. \nFormatet för bil ska vara 3 bokstäver följt av 3 siffror (exempel: ABC 123).");
+                            Console.Write("Försök igen: ");
                         }
                         break;
                     case VType.Motorcycle:
@@ -54,6 +56,7 @@ namespace Exercise3.UtilitesClasses
                         else
                         {
                             Console.WriteLine("Ogiltigt registreringsnummer. \nFormatet för bil ska vara 3 bokstäver följt av 3 siffror (exempel: ABC 123).");
+                            Console.Write("Försök igen: ");
                         }
                         break;
                     case VType.Boat:
@@ -64,6 +67,7 @@ namespace Exercise3.UtilitesClasses
                         else
                         {
                             Console.WriteLine("Ogiltigt registreringsnummer. \nFormatet för båt ska vara 2 bokstäver följt av 5 siffror (exempel: AB12345).");
+                            Console.Write("Försök igen: ");
                         }
                         break;
                     case VType.Airplane:
@@ -74,6 +78,7 @@ namespace Exercise3.UtilitesClasses
                         else
                         {
                             Console.WriteLine("Formatet för flygplan ska vara SE- följt av 3 bokstäver (exempel: SE-ABC).");
+                            Console.Write("Försök igen: ");
                         }
                         break;
                     default:

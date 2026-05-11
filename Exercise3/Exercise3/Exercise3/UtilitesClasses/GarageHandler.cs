@@ -113,7 +113,7 @@ namespace Exercise3.UtilitesClasses
             for (int i = 0; i < count; i++)
             {
                 Random random = new();
-                int number = random.Next(1, 6);
+                int number = random.Next(1, 7);
                 bool isAddedOk = false;
                 switch (number)
                 {
@@ -131,6 +131,9 @@ namespace Exercise3.UtilitesClasses
                         break;
                     case 5:
                         isAddedOk = G.AddVehicle(new Airplane(GenerateRandom(), "Silver", 15000, 20, 7000, 20, 28));
+                        break;
+                    case 6:
+                        isAddedOk = G.AddVehicle(new Motorcycle("MCC " + (i + 100).ToString(), "Rosa", 180, 2, 900, 3));
                         break;
                     default:
                         break;
@@ -201,6 +204,10 @@ namespace Exercise3.UtilitesClasses
                     Console.WriteLine($"{G.Vehicles[i].ToString2()}");
                     fordonVisade = true;
                 }
+                else
+                {
+                    count--;
+                }
             }
             if (!fordonVisade)
             {
@@ -241,10 +248,10 @@ namespace Exercise3.UtilitesClasses
             Console.Write("Du vill söka en:\n1. Bil\n2. Buss\n3. Motorcykel\n4. Båt\n5. Flygplan?\nAnge val: ");
             int vehichleType = int.TryParse(Console.ReadLine(), out int res) ? res : 0;
             Console.Write($"\nDu söker {fordon[vehichleType]} med registrerings nummer (Enter för att hoppa över): ");
-            string regNumber = Console.ReadLine() ?? string.Empty;
+            string regNumber;
             if (vehichleType == 1 || vehichleType == 2 || vehichleType == 3 || vehichleType == 4 || vehichleType == 5)
             {
-                if (!string.IsNullOrEmpty(regNumber)) { regNumber = ReadRegnumInput(garage, (VType)vehichleType); }
+                regNumber = ReadRegnumInput(garage, (VType)vehichleType);
             }
             else
             {
