@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Exercise4.UtilitesClasses
 {
@@ -144,6 +145,64 @@ namespace Exercise4.UtilitesClasses
             Console.WriteLine($"{vTab}{title}");
             Console.ResetColor();
             Console.WriteLine($"{line30}{line30}");
+        }
+
+        public static void SaveVehicles(Garage garage, string filePath)
+        {
+            if (!File.Exists(filePath))
+            {
+                File.Create(filePath).Close();
+            }
+            StringBuilder sb = new();
+            sb.AppendLine($"GarageCapacity:{Garage.Capacity}");
+            foreach (var vehicle in garage.Vehicles)
+            {
+                if (vehicle != null)
+                {
+                    switch (vehicle.Type)
+                    {
+                        case "Car":
+                            sb.AppendLine($"Type:Car,Uuid:{vehicle.Uuid},Color:{vehicle.Color},Whight:{vehicle.Whight},Length:{vehicle.Length},{((Car)vehicle).ToStringTypeSpec()}");
+                            break;
+                        case "Bus":
+                            sb.AppendLine($"Type:Bus,Uuid:{vehicle.Uuid},Color:{vehicle.Color},Whight:{vehicle.Whight},Length:{vehicle.Length},{((Bus)vehicle).ToStringTypeSpec()}");
+                            break;
+                        case "Motorcycle":
+                            sb.AppendLine($"Type:Motorcycle,Uuid:{vehicle.Uuid},Color:{vehicle.Color},Whight:{vehicle.Whight},Length:{vehicle.Length},{((Motorcycle)vehicle).ToStringTypeSpec()}");
+                            break;
+                        case "Boat":
+                            sb.AppendLine($"Type:Boat,Uuid:{vehicle.Uuid},Color:{vehicle.Color},Whight:{vehicle.Whight},Length:{vehicle.Length},{((Boat)vehicle).ToStringTypeSpec()}");
+                            break;
+                        case "Airplane":
+                            sb.AppendLine($"Type:Airplane,Uuid:{vehicle.Uuid},Color:{vehicle.Color},Whight:{vehicle.Whight},Length:{vehicle.Length},{((Airplane)vehicle).ToStringTypeSpec()}");
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+            File.WriteAllText(filePath, sb.ToString());
+            sb.Clear();
+        }
+
+        public static Vehicle[] LoadVehicles(string filePath, Garage garage)
+        {
+            Vehicle[] vehicles = garage.Vehicles;
+            Garage garageLoading = new Garage(20);
+            if (!File.Exists(filePath)) { return vehicles; }
+            var lines = File.ReadAllLines(filePath);
+            foreach (var line in lines)
+            {
+                if (string.IsNullOrWhiteSpace(line)) { continue; }
+                var parts = line.Split(',');
+                if (parts.Length < 3) { continue; }
+                var name = parts[0].Split(':')[1].Trim();
+                var born = parts[1].Split(':')[1].Trim();
+                var hourlyRate = parts[2].Split(':')[1].Trim();
+                Vehicle vehicle = new();
+                garage.AddVehicle(vehicle);
+            }
+            return vehicles;
         }
     }
 }

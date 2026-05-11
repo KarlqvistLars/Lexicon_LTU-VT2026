@@ -180,7 +180,7 @@ namespace Exercise4.UtilitesClasses
         /// <summary>
         /// Alla menyer under "Visa fordon".
         /// </summary>
-        public static void ShowAllVehicles(Garage G)
+        internal static void ShowAllVehicles(Garage G)
         {
             bool fordonVisade = false;
             string Title = "Visa alla fordon av";
@@ -203,7 +203,7 @@ namespace Exercise4.UtilitesClasses
             Console.WriteLine($"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
             Console.ReadKey();
         }
-        public static void ShowVehicleById(Garage garage)
+        internal static void ShowVehicleById(Garage garage)
         {
             Utilities.ShowHeader("Visa fordon på regnr");
             Console.Write($"{Utilities.vTab}Ange regnr: ");
@@ -250,7 +250,7 @@ namespace Exercise4.UtilitesClasses
             Console.Write("\nmed längden (Enter för att hoppa över): ");
             string? length = Console.ReadLine() ?? string.Empty;
             ShowGarageSearch(garage, (VType)vehichleType, regNumber, color, weight, length);
-            Console.WriteLine("Tryck på Enter för att fortsätta...");
+            Console.WriteLine($"\n{Utilities.vTab}Tryck på Enter för att fortsätta...");
             Console.ReadLine();
         }
         private static bool ShowGarageSearch(Garage G, VType vT, string regNumber, string color, string weight, string length)

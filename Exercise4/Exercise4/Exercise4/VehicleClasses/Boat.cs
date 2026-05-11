@@ -44,5 +44,9 @@ namespace Exercise4
         {
             return $"{Utilities.vTab}\u001b[4m{thisType} nr: {Uuid}\u001b[0m\n{Utilities.vTab}Färg: {Color}, Vikt: {Whight} Kg, Längd: {Length} m\n{Utilities.vTab}\u001b[4mSpecifikt för {thisType}:\u001b[0m\n{Utilities.vTab}Maxdjup: {MaxWaterDepth} m, Maxhastighet: {MaxSpeed} kn, Deplacement: {Deplacement} t";
         }
+        public string ToStringTypeSpec()
+        {
+            return $"{this.Type}:[MaxWaterDepth:{MaxWaterDepth},MaxSpeed:{MaxSpeed},Deplacement:{Deplacement}]";
+        }
     }
 }

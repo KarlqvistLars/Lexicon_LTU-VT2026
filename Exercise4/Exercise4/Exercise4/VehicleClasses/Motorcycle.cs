@@ -32,5 +32,9 @@ namespace Exercise4
         {
             return $"{Utilities.vTab}\u001b[4m{thisType} nr: {Uuid}\u001b[0m\n{Utilities.vTab}Färg: {Color}, Vikt: {Whight} Kg, Längd: {Length} m\n{Utilities.vTab}\u001b[4mSpecifikt för {thisType}:\u001b[0m\n{Utilities.vTab}Kubik: {CubicInch} cc";
         }
+        public string ToStringTypeSpec()
+        {
+            return $"{this.Type}:[Wheels:{Wheels},CubicInch:{CubicInch}]";
+        }
     }
 }
