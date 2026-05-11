@@ -13,8 +13,8 @@
             }
             else
             {
-                garage = new Garage(20);
-                GarageHandler.AddStartVehicles();
+                garage = new Garage(20); // Standardstorlek
+                GarageHandler.AddStartVehicles(15); // Lägg till 15 slumpmässiga fordon
                 MenuMain();
             }
             return true;

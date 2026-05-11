@@ -34,7 +34,7 @@ namespace Exercise4
         string thisType = "Bil";
         public override string ToString2()
         {
-            return $"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}\u001b[4m{thisType} nr: {Uuid}\u001b[0m\n{Utilities.vTab}Färg: {Color}\tVikt: {Whight} Kg\tLängd: {Length} m\n{Utilities.vTab}\u001b[4mSpecifikt för {thisType}:\u001b\n[0m{Utilities.vTab}Hjul: {Wheels} st, Dörrar: {NumberOfDoors} st";
+            return $"{Utilities.vTab}\u001b[4m{thisType} nr: {Uuid}\u001b[0m\n{Utilities.vTab}Färg: {Color}\tVikt: {Whight} Kg\tLängd: {Length} m\n{Utilities.vTab}\u001b[4mSpecifikt för {thisType}:\u001b\n[0m{Utilities.vTab}Hjul: {Wheels} st, Dörrar: {NumberOfDoors} st";
         }
     }
 }
