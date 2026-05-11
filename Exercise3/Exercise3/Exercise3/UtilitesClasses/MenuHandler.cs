@@ -86,7 +86,7 @@
                 Console.WriteLine("3. Motorcykel");
                 Console.WriteLine("4. Båt");
                 Console.WriteLine("5. Flygplan");
-                Console.WriteLine("6. Slumässigt");
+                Console.WriteLine("6. Slumpmässigt");
                 Console.WriteLine("0. Tillbaka");
                 TomRaderMenu(1);
                 Console.Write($"{Utilities.vTab}Välj: ");
@@ -140,7 +140,7 @@
                         GarageHandler.RemoveVehicle(garage);
                         break;
                     case "2":
-                        GarageHandler.RemoveVehicleById(garage);
+                        GarageHandler.RemoveVehicleByRegnummer(garage);
                         break;
                     case "0":
                         running = false;
@@ -176,7 +176,7 @@
                         GarageHandler.ShowVehicleById(garage);
                         break;
                     case "3":
-                        GarageHandler.SearchVehicle(garage);
+                        GarageHandler.SearchVehicleAndShow(garage);
                         break;
                     case "0":
                         running = false;

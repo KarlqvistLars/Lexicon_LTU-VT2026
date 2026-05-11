@@ -155,7 +155,16 @@ namespace Exercise3.UtilitesClasses
         {
             string Title = "Ta bort fordon.";
             Utilities.ShowHeader(Title);
-            SearchVehicle(G);
+            if (SearchVehicle(G)) { RemoveVehicleById(G); }
+        }
+        internal static void RemoveVehicleByRegnummer(Garage G)
+        {
+            string Title = $"Ta bort fordon på Regnummer";
+            Utilities.ShowHeader(Title);
+            RemoveVehicleById(G);
+        }
+        internal static void RemoveVehicleById(Garage G)
+        {
             Console.Write($"{Utilities.vTab}Välj fordons regnr. att ta bort: ");
             string? regNumber = Console.ReadLine()?.ToUpper();
             if (CheckUniqNumber(G, regNumber))
@@ -163,19 +172,12 @@ namespace Exercise3.UtilitesClasses
                 G.RemoveVehicle(regNumber ?? string.Empty);
                 Console.WriteLine($"{Utilities.vTab}Fordonet med registreringsnummer {regNumber} har tagits bort.");
             }
-            else
-            {
-                Console.WriteLine($"{Utilities.vTab}Inget fordon med registreringsnummer {regNumber} hittades i garaget.");
-            }
+            //else
+            //{
+            //    Console.WriteLine($"{Utilities.vTab}Inget fordon med registreringsnummer {regNumber} hittades i garaget.");
+            //}
             Console.WriteLine($"{Utilities.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
             Console.ReadKey();
-        }
-        internal static void RemoveVehicleById(Garage G)
-        {
-            string Title = $"Ta bort fordon på Regnummer";
-            Utilities.ShowHeader(Title);
-            Console.ReadKey();
-            throw new NotImplementedException("RemoveVehicleById is not implemented yet.");
         }
         /// <summary>
         /// Alla menyer under "Visa fordon".
@@ -191,10 +193,12 @@ namespace Exercise3.UtilitesClasses
             for (int i = 0; i < G.Vehicles.Length; i++)
             {
                 count++;
+                string text = $"{count} {Utilities.line30}";
+                text = text.Length > 30 ? text[..30] : text;
                 if (G.Vehicles[i]?.Uuid != null)
                 {
-                    Console.WriteLine($"{Utilities.line30}{Utilities.line30}");
-                    Console.WriteLine($"{count}.  {G.Vehicles[i].ToString2()}");
+                    Console.WriteLine($"{text}{Utilities.line30}");
+                    Console.WriteLine($"{G.Vehicles[i].ToString2()}");
                     fordonVisade = true;
                 }
             }
@@ -226,8 +230,9 @@ namespace Exercise3.UtilitesClasses
             Console.WriteLine($"{Utilities.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
             Console.ReadKey();
         }
-        internal static void SearchVehicle(Garage garage)
+        internal static bool SearchVehicleAndShow(Garage garage)
         {
+            bool fordonVisade = false;
             string[] fordon = { "fordon", "bilar", "bussar", "motorcyklar", "båtar", "flygplan" };
             string Title = "Sök fordon";
             Utilities.ShowHeader(Title);
@@ -251,9 +256,39 @@ namespace Exercise3.UtilitesClasses
             string? weight = Console.ReadLine() ?? string.Empty;
             Console.Write("\nmed längden (Enter för att hoppa över): ");
             string? length = Console.ReadLine() ?? string.Empty;
-            ShowGarageSearch(garage, (VType)vehichleType, regNumber, color, weight, length);
+            fordonVisade = ShowGarageSearch(garage, (VType)vehichleType, regNumber, color, weight, length);
             Console.WriteLine($"\n{Utilities.vTab}Tryck på Enter för att fortsätta...");
             Console.ReadLine();
+            return fordonVisade;
+        }
+        internal static bool SearchVehicle(Garage garage)
+        {
+            bool fordonVisade = false;
+            string[] fordon = { "fordon", "bilar", "bussar", "motorcyklar", "båtar", "flygplan" };
+            string Title = "Sök fordon";
+            Utilities.ShowHeader(Title);
+            Console.WriteLine("Sök parametrar:\n" +
+                "Välj en siffra, skriv en sökterm eller\ntryck Enter för att hoppa över:");
+            Console.Write("Du vill söka en:\n1. Bil\n2. Buss\n3. Motorcykel\n4. Båt\n5. Flygplan?\nAnge val: ");
+            int vehichleType = int.TryParse(Console.ReadLine(), out int res) ? res : 0;
+            Console.Write($"\nDu söker {fordon[vehichleType]} med registrerings nummer (Enter för att hoppa över): ");
+            string regNumber = Console.ReadLine() ?? string.Empty;
+            if (vehichleType == 1 || vehichleType == 2 || vehichleType == 3 || vehichleType == 4 || vehichleType == 5)
+            {
+                if (!string.IsNullOrEmpty(regNumber)) { regNumber = ReadRegnumInput(garage, (VType)vehichleType); }
+            }
+            else
+            {
+                regNumber = "";
+            }
+            Console.Write("\nsom har färgen (Enter för att hoppa över): ");
+            string? color = Console.ReadLine() ?? string.Empty;
+            Console.Write("\noch väger (Enter för att hoppa över): ");
+            string? weight = Console.ReadLine() ?? string.Empty;
+            Console.Write("\nmed längden (Enter för att hoppa över): ");
+            string? length = Console.ReadLine() ?? string.Empty;
+            fordonVisade = ShowGarageSearch(garage, (VType)vehichleType, regNumber, color, weight, length);
+            return fordonVisade;
         }
         private static bool ShowGarageSearch(Garage G, VType vT, string regNumber, string color, string weight, string length)
         {
