@@ -1,4 +1,4 @@
-# C# Övning 4 - Garage 1.0
+# C# Övning 3 - Garage 1.0
 
 ### Ett första övergripande projekt
 För att koppla samman mycket av det ni lärt er, så skall vi nu bygga en
