@@ -17,17 +17,17 @@ också finnas subklasser till fordon, alltså att varje fordonstyp är en egen s
 Utöver detta krävs det funktionalitet som hanterar att fordon ställs in i garaget, att fordon kan
 tas ut ur garaget, samt att vi kan få en presentation av vad som finns i garaget och söka i det. <br>
 ### I mer programmerings-vänliga termer skall vi alltså som minimum ha:<br>
-- [ ] En kollektion av fordon; klassen Garage.  <br>
+- [x] En kollektion av fordon; klassen Garage.  <br>
 - [x] En fordonsklass, klassen Vehicle.<br>
 - [x] Ett antal subklasser till fordon.<br>
-- [ ] Ett användargränssnitt som låter oss använda funktionaliteten hos ett garage. Här
+- [x] Ett användargränssnitt som låter oss använda funktionaliteten hos ett garage. Här
 sker all interaktion med användaren.<br>
 
 ### Kravspecifikation
 Fordonen ska implementeras som klassen Vehicle och subklasser till den.<br>
 - [x] Vehicle innehåller samtliga egenskaper som ska finnas i samtliga fordonstyper.
 T.ex. registreringsnummer, färg, antal hjul och andra egenskaper ni kan komma på.<br>
-- [ ] Registreringsnumret är unikt
+- [x] Registreringsnumret är unikt
 #### - [ ] Det måste minst finnas följande subklasser:<br>
 - [x] ○ Motorcycle<br>
 - [x] ○ Airplane<br>
@@ -35,11 +35,11 @@ T.ex. registreringsnummer, färg, antal hjul och andra egenskaper ni kan komma p
 - [x] ○ Bus<br>
 - [x] ○ Boat<br>
 ### Dessa skall implementera minst en egen egenskap var, t.ex:<br>
-- [ ] ○ Number of Engines
-- [ ] ○ Cylinder volume
-- [ ] ○ Fueltype (Gasoline/Diesel)
-- [ ] ○ Number of seats
-- [ ] ○ Length
+- [x] ○ Number of Engines
+- [x] ○ Cylinder volume
+- [x] ○ Fueltype (Gasoline/Diesel)
+- [x] ○ Number of seats
+- [x] ○ Length
 Klassen behöver inte ärva från någon annan klass eller implementera något annat interface.
 Samlingen av fordon ska internt i klassen hanteras som en array. Den interna arrayen ska
 var privat. Vid instansieringen av ett nytt garage måste kapaciteten anges som argument till
@@ -52,21 +52,21 @@ konstruktorn.<br>
 - [x] Lägga till och ta bort fordon ur garaget<br>
 - [x] Sätta en kapacitet (antal parkeringsplatser) vid instansieringen av ett nytt garage<br>
 - [x] Möjlighet att populera (sätta in bilar) i garaget med ett antal fordon från start.
-- [ ] Hitta ett specifikt fordon via registreringsnumret. Det ska fungera med både ABC123
+- [x] Hitta ett specifikt fordon via registreringsnumret. Det ska fungera med både ABC123
 samt Abc123 eller AbC123.<br>
-- [ ] Söka efter fordon utifrån en egenskap eller flera (alla möjliga kombinationer från
+- [x] Söka efter fordon utifrån en egenskap eller flera (alla möjliga kombinationer från
 basklassen Vehicle). <br>
 #### Exempelvis:<br>
-- [ ] ○ Alla svarta fordon med fyra hjul.<br>
-- [ ] ○ Alla motorcyklar som är rosa och har 3 hjul.<br>
-- [ ] ○ Alla lastbilar<br>
-- [ ] ○ Alla röda fordon<br><br>
-- [ ] Användaren ska få feedback på att saker gått bra eller dåligt. Till exempel när vi
+- [x] ○ Alla svarta fordon med fyra hjul.<br>
+- [x] ○ Alla motorcyklar som är rosa och har 3 hjul.<br>
+- [x] ○ Alla lastbilar<br>
+- [x] ○ Alla röda fordon<br><br>
+- [x] Användaren ska få feedback på att saker gått bra eller dåligt. Till exempel när vi
 parkerat ett fordon vill vi få en bekräftelse på att fordonet är parkerat. Om det inte går
 vill användaren få veta varför.
 Programmet ska vara en konsolapplikation med ett textbaserat användargränssnitt.<br>
 ### Från gränssnittet skall det gå att:<br>
-- [ ] Navigera till samtlig funktionalitet från garage via gränssnittet<br>
+- [x] Navigera till samtlig funktionalitet från garage via gränssnittet<br>
 - [x] Skapa ett garage med en användar-specificerad storlek<br>
 - [x] Det skall gå att stänga av applikationen från gränssnittet<br>
 Applikationen skall fel hantera indata på ett robust sätt, så att den inte kraschar vid felaktig inmatning eller användning.
