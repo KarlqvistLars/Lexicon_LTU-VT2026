@@ -1,57 +1,32 @@
-﻿namespace Exercise2b
+﻿using Exercise3.UtilitesClasses;
+
+namespace Exercise3
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int lines = 0;
-            while (lines == 0)
+            Utilities.ShowHeader("Välkommen!");
+            Console.Write($"{Utilities.vTab}Tryck Enter för standardstorlek 20 platser\n{Utilities.vTab}Eller ange (1-100)st garageplatser: ");
+            string? str = Console.ReadLine();
+            if (string.IsNullOrEmpty(str))
             {
-                Console.Write("Ange antal personer att lägga till: ");
-                lines = int.TryParse(Console.ReadLine(), out int result) ? result : 0;
-                lines = lines <= 0 ? 0 : lines;
-            }
-            Console.WriteLine($"Ange {lines} st personer enl. formatet (Förnamn Efternamn Ålder [optional: Lön]): ");
-            var persons = new List<Person>();
-            for (int i = 0; i < lines; i++)
-            {
-                var cmdArgs = Console.ReadLine().Split();
-                if (cmdArgs.Length == 3)
+                if (MenuHandler.StartGarage(20, true))
                 {
-                    var person = new Person(cmdArgs[0], cmdArgs[1], int.Parse(cmdArgs[2]));
-                    if (!person.ErrFlag)
-                    {
-                        persons.Add(person);
-                    }
-                    else
-                    {
-                        i--;
-                    }
-                }
-                else if (cmdArgs.Length == 4)
-                {
-                    var person = new Person(cmdArgs[0], cmdArgs[1], int.Parse(cmdArgs[2]), decimal.TryParse(cmdArgs[3], out decimal salary) ? salary : 0);
-                    if (!person.ErrFlag)
-                    {
-                        persons.Add(person);
-                    }
-                    else
-                    {
-                        i--;
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Felaktigt antal argument. Förväntat 3 eller 4 argument.");
-                    i--;
+                    return;
                 }
             }
-            Console.Write("Ange bonusens storlek: ");
-            var bonus = decimal.Parse(Console.ReadLine());
-            persons.ForEach(p => p.IncreaseSalary(bonus));
-            persons.ForEach(p => Console.WriteLine(p.ToString()));
+            int size = int.TryParse(str, out int result) ? result : 0;
+            if (size <= 0 || size > 100)
+            {
+                Console.WriteLine("Ogiltigt antal garageplatser. Programmet avslutas.");
+                return;
+            }
+            else if (MenuHandler.StartGarage(size))
+            {
+                return;
+            }
+            return;
         }
     }
 }
-
-

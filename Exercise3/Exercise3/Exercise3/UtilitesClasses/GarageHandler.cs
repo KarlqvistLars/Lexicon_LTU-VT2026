@@ -1,6 +1,6 @@
-﻿using static Exercise4.UtilitesClasses.Utilities;
+﻿using static Exercise3.UtilitesClasses.Utilities;
 
-namespace Exercise4.UtilitesClasses
+namespace Exercise3.UtilitesClasses
 {
     public class GarageHandler
     {

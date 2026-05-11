@@ -1,7 +1,7 @@
-﻿using Exercise4.UtilitesClasses;
+﻿using Exercise3.UtilitesClasses;
 using System.Text;
 
-namespace Exercise4
+namespace Exercise3
 {
     public class Garage
     {

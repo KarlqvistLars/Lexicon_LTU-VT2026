@@ -2,7 +2,7 @@
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Exercise4.UtilitesClasses
+namespace Exercise3.UtilitesClasses
 {
     static public class Utilities
     {

@@ -1,6 +1,6 @@
-﻿using Exercise4.UtilitesClasses;
+﻿using Exercise3.UtilitesClasses;
 
-namespace Exercise4
+namespace Exercise3
 {
     public class Airplane : Vehicle
     {
