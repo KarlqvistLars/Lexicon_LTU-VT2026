@@ -76,6 +76,10 @@ Skiss på klasserna.
 <br>
 ![UML](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise3/Exercise3/Bilder/UnifiedModelingLanguageDigram20260508.jpg)
 <br>
+
+## [Manual Övning 3](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise3/Exercise3/Docs/Manual%C3%96vning3_20260511.pdf)
+En lite kortare manual och beskriving av programmet.
+
 ## Top level - Exercise4
 ![UML](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise3/Exercise3/Bilder/TopLevelExercise4.jpg)
 ![UML](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise3/Exercise3/Bilder/FilStruktur.jpg)
