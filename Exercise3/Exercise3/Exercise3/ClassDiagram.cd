@@ -15,14 +15,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Exercise3.Garage">
-    <Position X="7.25" Y="7.75" Width="1.5" />
+    <Position X="5.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAgAAEAAAAAAQCAAIAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Garage.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Exercise3.UtilitesClasses.Utilities">
-    <Position X="5.5" Y="8.25" Width="1.5" />
+    <Position X="3.75" Y="6.75" Width="1.5" />
     <NestedTypes>
       <Enum Name="Exercise3.UtilitesClasses.Utilities.VType" Collapsed="true">
         <TypeIdentifier>
@@ -111,7 +111,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Exercise3.UtilitesClasses.MenuHandler">
-    <Position X="3.75" Y="8.25" Width="1.5" />
+    <Position X="7.25" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EABAAAAABAAAAAAAAAAAAAAAFAAAAEAICBAAAAAAAAA=</HashCode>
       <FileName>UtilitesClasses\MenuHandler.cs</FileName>

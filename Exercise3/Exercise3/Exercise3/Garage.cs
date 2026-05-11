@@ -49,7 +49,7 @@ namespace Exercise3
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"Garage [Capacity={_capacity}]");
-            sb.AppendLine("==============================");
+            sb.AppendLine(Utilities.line30);
             if (_vehicles.Length > 0 && _vehicles.Any(v => v != null))
             {
                 foreach (var vehicle in _vehicles)
