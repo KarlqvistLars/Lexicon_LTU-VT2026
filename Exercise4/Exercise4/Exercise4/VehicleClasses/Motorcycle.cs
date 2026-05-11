@@ -34,7 +34,7 @@ namespace Exercise4
         }
         public string ToStringTypeSpec()
         {
-            return $"{this.Type}:[Wheels:{Wheels},CubicInch:{CubicInch}]";
+            return $"[Wheels:{Wheels};CubicInch:{CubicInch}]";
         }
     }
 }

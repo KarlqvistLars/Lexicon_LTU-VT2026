@@ -38,7 +38,7 @@ namespace Exercise4
 
         public string ToStringTypeSpec()
         {
-            return $"{this.Type}:[Wheels:{Wheels},NumberOfSeats:{NumberOfSeats}]";
+            return $"[Wheels:{Wheels};NumberOfSeats:{NumberOfSeats}]";
         }
     }
 }

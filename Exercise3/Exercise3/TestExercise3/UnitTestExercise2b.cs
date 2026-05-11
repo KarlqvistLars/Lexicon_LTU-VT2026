@@ -1,9 +1,8 @@
-using Exercise3;
-using Microsoft.VisualStudio.TestPlatform.TestHost;
+using Exercise2b;
 
-namespace TestExercise3
+namespace TestExercise2b
 {
-    public class UnitTestExercise3
+    public class UnitTestExercise2b
     {
         [Fact]
         public void TestToString1()

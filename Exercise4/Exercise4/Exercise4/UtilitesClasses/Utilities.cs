@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿//#define TESTMODE
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Exercise4.UtilitesClasses
@@ -132,7 +133,9 @@ namespace Exercise4.UtilitesClasses
         }
         internal static void ShowHeader(string title)
         {
+#if !TESTMODE
             Console.Clear();
+#endif
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write($"{vTab}* ");
             Console.ForegroundColor = ConsoleColor.Blue;
@@ -146,11 +149,11 @@ namespace Exercise4.UtilitesClasses
             Console.ResetColor();
             Console.WriteLine($"{line30}{line30}");
         }
-
         public static void SaveVehicles(Garage garage, string filePath)
         {
             if (!File.Exists(filePath))
             {
+                Directory.CreateDirectory(Path.GetDirectoryName(filePath));
                 File.Create(filePath).Close();
             }
             StringBuilder sb = new();
@@ -162,19 +165,19 @@ namespace Exercise4.UtilitesClasses
                     switch (vehicle.Type)
                     {
                         case "Car":
-                            sb.AppendLine($"Type:Car,Uuid:{vehicle.Uuid},Color:{vehicle.Color},Weight:{vehicle.Weight},Length:{vehicle.Length},{((Car)vehicle).ToStringTypeSpec()}");
+                            sb.AppendLine($"Type:Car;Uuid:{vehicle.Uuid};Color:{vehicle.Color};Weight:{vehicle.Weight};Length:{vehicle.Length}{((Car)vehicle).ToStringTypeSpec()}");
                             break;
                         case "Bus":
-                            sb.AppendLine($"Type:Bus,Uuid:{vehicle.Uuid},Color:{vehicle.Color},Weight:{vehicle.Weight},Length:{vehicle.Length},{((Bus)vehicle).ToStringTypeSpec()}");
+                            sb.AppendLine($"Type:Bus;Uuid:{vehicle.Uuid};Color:{vehicle.Color};Weight:{vehicle.Weight};Length:{vehicle.Length}{((Bus)vehicle).ToStringTypeSpec()}");
                             break;
                         case "Motorcycle":
-                            sb.AppendLine($"Type:Motorcycle,Uuid:{vehicle.Uuid},Color:{vehicle.Color},Weight:{vehicle.Weight},Length:{vehicle.Length},{((Motorcycle)vehicle).ToStringTypeSpec()}");
+                            sb.AppendLine($"Type:Motorcycle;Uuid:{vehicle.Uuid};Color:{vehicle.Color};Weight:{vehicle.Weight};Length:{vehicle.Length}{((Motorcycle)vehicle).ToStringTypeSpec()}");
                             break;
                         case "Boat":
-                            sb.AppendLine($"Type:Boat,Uuid:{vehicle.Uuid},Color:{vehicle.Color},Weight:{vehicle.Weight},Length:{vehicle.Length},{((Boat)vehicle).ToStringTypeSpec()}");
+                            sb.AppendLine($"Type:Boat;Uuid:{vehicle.Uuid};Color:{vehicle.Color};Weight:{vehicle.Weight};Length:{vehicle.Length}{((Boat)vehicle).ToStringTypeSpec()}");
                             break;
                         case "Airplane":
-                            sb.AppendLine($"Type:Airplane,Uuid:{vehicle.Uuid},Color:{vehicle.Color},Weight:{vehicle.Weight},Length:{vehicle.Length},{((Airplane)vehicle).ToStringTypeSpec()}");
+                            sb.AppendLine($"Type:Airplane;Uuid:{vehicle.Uuid};Color:{vehicle.Color};Weight:{vehicle.Weight};Length:{vehicle.Length}{((Airplane)vehicle).ToStringTypeSpec()}");
                             break;
                         default:
                             break;
@@ -184,25 +187,79 @@ namespace Exercise4.UtilitesClasses
             File.WriteAllText(filePath, sb.ToString());
             sb.Clear();
         }
-
-        public static Vehicle[] LoadVehicles(Garage garage, string filePath)
+        public static string LoadVehicles(Garage garage, string filePath)
         {
-            Vehicle[] vehicles = garage.Vehicles;
-            Garage garageLoading = new Garage(20);
-            if (!File.Exists(filePath)) { return vehicles; }
+            if (!File.Exists(filePath)) { return $"{filePath} existerar ej inga fordon har laddats."; }
             var lines = File.ReadAllLines(filePath);
+            int capacity = int.Parse(lines[0].Split(':')[1]);
+
+            Vehicle[] vehicles = garage.Vehicles;
+
+            Garage garageLoading = new Garage(capacity);
+            int vehicleCount = 0;
             foreach (var line in lines)
             {
+                Vehicle v = new Vehicle();
                 if (string.IsNullOrWhiteSpace(line)) { continue; }
-                var parts = line.Split(',');
-                if (parts.Length < 3) { continue; }
-                var name = parts[0].Split(':')[1].Trim();
-                var born = parts[1].Split(':')[1].Trim();
-                var hourlyRate = parts[2].Split(':')[1].Trim();
-                Vehicle vehicle = new();
-                garage.AddVehicle(vehicle);
+                var vehicleParts = line.Split('[');
+                var parts = vehicleParts[0].Split(';');
+                if (parts.Length < 4) { continue; }
+                var type = parts[0].Split(':')[1].Trim();
+                var uuid = parts[1].Split(':')[1].Trim();
+                var color = parts[2].Split(':')[1].Trim();
+                var weight = int.Parse(parts[3].Split(':')[1].Trim());
+                var length = int.Parse(parts[4].Split(':')[1].Trim());
+                //Console.WriteLine($"Comm[{type}][{uuid}][{color}][{weight}][{length}]");
+                var specificData = vehicleParts[1].Trim(']');
+                //Console.WriteLine($"Spec[{specificData}]");
+                switch (type)
+                {
+                    case "Car":
+                        var carData = specificData.Split(';');
+                        var wheels = (carData[0].Split(':')[1].Trim());
+                        var numberOfDoors = int.Parse(carData[1].Split(':')[1].Trim(']'));
+                        //Console.WriteLine($"Spec[{wheels}][{numberOfDoors}]");
+                        v = new Car(uuid, color, weight, length, numberOfDoors, int.TryParse(wheels, out int cw) ? cw : 0);
+                        break;
+                    case "Bus":
+                        var busData = specificData.Split(';');
+                        var busWheels = (busData[0].Split(':')[1].Trim());
+                        var busSeats = int.Parse(busData[1].Split(':')[1].Trim(']'));
+                        //Console.WriteLine($"Spec[{busWheels}][{busSeats}]");
+                        v = new Bus(uuid, color, weight, length, busSeats, int.TryParse(busWheels, out int bw) ? bw : 0);
+                        break;
+                    case "Motorcycle":
+                        var motoData = specificData.Split(';');
+                        var motoWheels = (motoData[0].Split(':')[1].Trim());
+                        var cubicInch = int.Parse(motoData[1].Split(':')[1].Trim(']'));
+                        //Console.WriteLine($"Spec[{motoWheels}][{cubicInch}]");
+                        v = new Motorcycle(uuid, color, weight, length, cubicInch, int.TryParse(motoWheels, out int mw) ? mw : 0);
+                        break;
+                    case "Boat":
+                        var boatData = specificData.Split(';');
+                        var maxDepth = boatData[0].Split(':')[1].Trim();
+                        var maxSpeed = boatData[1].Split(':')[1].Trim(']');
+                        var deplacement = boatData[2].Split(':')[1].Trim(']');
+                        //Console.WriteLine($"Spec[{maxDepth}][{maxSpeed}][{deplacement}]");
+                        v = new Boat(uuid, color, weight, length, decimal.TryParse(maxDepth, out decimal md) ? md : 0, decimal.TryParse(maxSpeed, out decimal msp) ? msp : 0, decimal.TryParse(deplacement, out decimal d) ? d : 0);
+                        break;
+                    case "Airplane":
+                        var planeData = specificData.Split(';');
+                        var planeLiftCapacity = planeData[0].Split(':')[1].Trim(']');
+                        var planeWingspan = planeData[1].Split(':')[1].Trim();
+                        var planePax = planeData[2].Split(':')[1].Trim();
+                        //Console.WriteLine($"Spec[{planeLiftCapacity}][{planeWingspan}][{planePax}]");
+                        v = new Airplane(uuid, color, weight, length, int.TryParse(planeLiftCapacity, out int lc) ? lc : 0, decimal.TryParse(planeWingspan, out decimal ws) ? ws : 0, int.TryParse(planePax, out int pax) ? pax : 0);
+                        break;
+                    default:
+                        break;
+                }
+                garageLoading.AddVehicle(v);
+                vehicleCount++;
             }
-            return vehicles;
+
+            MenuHandler.garage = garageLoading;
+            return $"{vehicleCount} st fordon har laddats från {filePath}.";
         }
     }
 }

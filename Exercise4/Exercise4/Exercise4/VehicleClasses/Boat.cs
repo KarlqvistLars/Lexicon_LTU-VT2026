@@ -46,7 +46,7 @@ namespace Exercise4
         }
         public string ToStringTypeSpec()
         {
-            return $"{this.Type}:[MaxWaterDepth:{MaxWaterDepth},MaxSpeed:{MaxSpeed},Deplacement:{Deplacement}]";
+            return $"[MaxWaterDepth:{MaxWaterDepth};MaxSpeed:{MaxSpeed};Deplacement:{Deplacement}]";
         }
     }
 }

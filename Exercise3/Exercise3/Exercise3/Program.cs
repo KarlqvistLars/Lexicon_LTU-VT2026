@@ -1,4 +1,4 @@
-﻿namespace Exercise3
+﻿namespace Exercise2b
 {
     internal class Program
     {

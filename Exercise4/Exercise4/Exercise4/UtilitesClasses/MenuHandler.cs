@@ -2,6 +2,7 @@
 {
     static public class MenuHandler
     {
+        static readonly string filePath = "c:/test1/vehicles.txt";
         public static Garage? garage { get; set; }
         public static bool Running { get; set; } = true;
         public static bool StartGarage(int garageSize, bool populate = false)
@@ -15,6 +16,8 @@
             {
                 garage = new Garage(20); // Standardstorlek
                 GarageHandler.AddStartVehicles(15); // Lägg till 15 slumpmässiga fordon
+                Console.WriteLine(Utilities.LoadVehicles(garage, filePath));
+                Console.ReadKey();
                 MenuMain();
             }
             return true;
@@ -25,7 +28,7 @@
             string closing = "Programmet avslutas...";
             Console.Write(Utilities.vTab);
             foreach (var item in closing) { Console.Write(item); Thread.Sleep(50); }
-            Utilities.SaveVehicles(garage, $"c:/test/vehicles.txt");
+            Utilities.SaveVehicles(garage, filePath);
             Running = false;
         }
         public static void MenuMain()

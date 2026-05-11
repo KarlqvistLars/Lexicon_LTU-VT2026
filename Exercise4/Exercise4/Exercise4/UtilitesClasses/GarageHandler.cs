@@ -187,12 +187,14 @@ namespace Exercise4.UtilitesClasses
             Utilities.ShowHeader(Title);
             Console.WriteLine($"{Utilities.vTab}Tryck tangen för att fortsätta...");
             Console.ReadKey();
+            int count = 0;
             for (int i = 0; i < G.Vehicles.Length; i++)
             {
+                count++;
                 if (G.Vehicles[i]?.Uuid != null)
                 {
                     Console.WriteLine($"{Utilities.line30}{Utilities.line30}");
-                    Console.WriteLine(G.Vehicles[i].ToString2());
+                    Console.WriteLine($"{count}.  {G.Vehicles[i].ToString2()}");
                     fordonVisade = true;
                 }
             }

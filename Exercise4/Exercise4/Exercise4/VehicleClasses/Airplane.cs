@@ -40,7 +40,7 @@ namespace Exercise4
         }
         public string ToStringTypeSpec()
         {
-            return $"{this.Type}:[LiftCapacity:{LiftCapacity},WingSpan:{WingSpan},Passengers:{Passengers}]";
+            return $"[LiftCapacity:{LiftCapacity};WingSpan:{WingSpan};Passengers:{Passengers}]";
         }
     }
 }
