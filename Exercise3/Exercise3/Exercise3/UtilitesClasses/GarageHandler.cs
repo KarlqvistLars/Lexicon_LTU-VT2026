@@ -1,6 +1,6 @@
-﻿using static Exercise4.UtilitesClasses.Utilities;
+﻿using static Exercise3.UtilitesClasses.Utilities;
 
-namespace Exercise4.UtilitesClasses
+namespace Exercise3.UtilitesClasses
 {
     public class GarageHandler
     {
@@ -180,19 +180,21 @@ namespace Exercise4.UtilitesClasses
         /// <summary>
         /// Alla menyer under "Visa fordon".
         /// </summary>
-        public static void ShowAllVehicles(Garage G)
+        internal static void ShowAllVehicles(Garage G)
         {
             bool fordonVisade = false;
             string Title = "Visa alla fordon av";
             Utilities.ShowHeader(Title);
             Console.WriteLine($"{Utilities.vTab}Tryck tangen för att fortsätta...");
             Console.ReadKey();
+            int count = 0;
             for (int i = 0; i < G.Vehicles.Length; i++)
             {
+                count++;
                 if (G.Vehicles[i]?.Uuid != null)
                 {
                     Console.WriteLine($"{Utilities.line30}{Utilities.line30}");
-                    Console.WriteLine(G.Vehicles[i].ToString2());
+                    Console.WriteLine($"{count}.  {G.Vehicles[i].ToString2()}");
                     fordonVisade = true;
                 }
             }
@@ -203,7 +205,7 @@ namespace Exercise4.UtilitesClasses
             Console.WriteLine($"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}Tryck på valfri tangent för att återgå till huvudmenyn...");
             Console.ReadKey();
         }
-        public static void ShowVehicleById(Garage garage)
+        internal static void ShowVehicleById(Garage garage)
         {
             Utilities.ShowHeader("Visa fordon på regnr");
             Console.Write($"{Utilities.vTab}Ange regnr: ");
@@ -250,7 +252,7 @@ namespace Exercise4.UtilitesClasses
             Console.Write("\nmed längden (Enter för att hoppa över): ");
             string? length = Console.ReadLine() ?? string.Empty;
             ShowGarageSearch(garage, (VType)vehichleType, regNumber, color, weight, length);
-            Console.WriteLine("Tryck på Enter för att fortsätta...");
+            Console.WriteLine($"\n{Utilities.vTab}Tryck på Enter för att fortsätta...");
             Console.ReadLine();
         }
         private static bool ShowGarageSearch(Garage G, VType vT, string regNumber, string color, string weight, string length)
@@ -264,7 +266,7 @@ namespace Exercise4.UtilitesClasses
                     (vT == VType.None || v.Type.Equals(vT.ToString(), StringComparison.OrdinalIgnoreCase)) &&
                     (string.IsNullOrEmpty(regNumber) || v.Uuid.Equals(regNumber, StringComparison.OrdinalIgnoreCase)) &&
                     (string.IsNullOrEmpty(color) || v.Color.Equals(color, StringComparison.OrdinalIgnoreCase)) &&
-                    (string.IsNullOrEmpty(weight) || v.Whight.ToString().Equals(weight, StringComparison.OrdinalIgnoreCase)) &&
+                    (string.IsNullOrEmpty(weight) || v.Weight.ToString().Equals(weight, StringComparison.OrdinalIgnoreCase)) &&
                     (string.IsNullOrEmpty(length) || v.Length.ToString().Equals(length, StringComparison.OrdinalIgnoreCase)))
                 {
                     Console.WriteLine($"{Utilities.line30}{Utilities.line30}");

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Exercise3
+﻿namespace Exercise2b
 {
     public class Person
     {
@@ -21,7 +16,7 @@ namespace Exercise3
             this.Age = age;
         }
 
-        public Person(string firstName, string lastName, int age, decimal salary)  : this(firstName, lastName, age)
+        public Person(string firstName, string lastName, int age, decimal salary) : this(firstName, lastName, age)
         {
             this.ErrFlag = false;
             this.Salary = salary;
@@ -39,10 +34,13 @@ namespace Exercise3
             get { return _firstName; }
             set
             {
-                if(value == null || value.Length < 3){
+                if (value == null || value.Length < 3)
+                {
                     Console.WriteLine("First name cannot be less than 3 symbols");
                     ErrFlag = true;
-                }else{
+                }
+                else
+                {
                     _firstName = value;
                 }
             }
@@ -79,7 +77,7 @@ namespace Exercise3
                 else
                 {
                     _age = value;
-                }   
+                }
             }
         }
 
@@ -105,15 +103,16 @@ namespace Exercise3
             if (this._salary == 0)
             {
                 return $"{_firstName} {_lastName} is {_age} years old.";
-            } else
+            }
+            else
             {
                 return $"{_firstName} {_lastName} receives {_salary:F2} dollars.";
             }
         }
-        
+
         public void IncreaseSalary(decimal percentage)
         {
-            if (this.Age>=30)
+            if (this.Age >= 30)
             {
                 _salary += _salary * percentage / 100;
             }

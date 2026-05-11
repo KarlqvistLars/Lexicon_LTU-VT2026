@@ -10,7 +10,7 @@
   <Class Name="Exercise4.Vehicle">
     <Position X="9" Y="8.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAIAIQUAAAAAABAAAAAAAQABQAAgAAAAAA=</HashCode>
+      <HashCode>AAABAAAAAAAIAIQUAAAAAABAACAAAAAABQAAgAAAAAA=</HashCode>
       <FileName>Vehicle.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -31,7 +31,7 @@
       </Enum>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAQAAAAAAICAAAAAAAACAASAAAAAACAAAABAAAA=</HashCode>
+      <HashCode>ACAAAAQAAAAAAICCAAAAAAACAASAAAAAACAAAAAAAAA=</HashCode>
       <FileName>UtilitesClasses\Utilities.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -46,7 +46,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAABAAAAAQAAAAEAAAAAAAAAAQEAgAEAAIAAAAAAAA=</HashCode>
+      <HashCode>AAAABAgAAAQAAAAEAAAAAAAAAAQEAgAEAAIAAAAAAAA=</HashCode>
       <FileName>VehicleClasses\Airplane.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -61,7 +61,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAQAAAAEAAQEQAAEAEAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAwAAAAEAAQEQAAEAEAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>VehicleClasses\Boat.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -76,7 +76,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AABAAAAAAAAAAAAEAAAAAAAAAAAEAAAQAgAEAAAAAAA=</HashCode>
+      <HashCode>AABAAAgAAAAAAAAEAAAAAAAAAAAEAAAQAgAEAAAAAAA=</HashCode>
       <FileName>VehicleClasses\Bus.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -91,7 +91,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAABAAAAEAAAAAAAAAAAEAAAQAAAAEAAAAAA=</HashCode>
+      <HashCode>AAAAAEgAAABAAAAEAAAAAAAAAAAEAAAQAAAAEAAAAAA=</HashCode>
       <FileName>VehicleClasses\Car.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -106,14 +106,14 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAQAgAAQAAAAgA=</HashCode>
+      <HashCode>AAAAAAgAAAAAAAAEAAAAAAAAAAAEAAAQAgAAQAAAAgA=</HashCode>
       <FileName>VehicleClasses\Motorcycle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Exercise4.UtilitesClasses.MenuHandler">
     <Position X="3.75" Y="8.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EABAAAAABAAAAAAAAAAAAEAAEAAAAAAICAAAAAAAAAA=</HashCode>
+      <HashCode>EABAAAAABAAAAAAAAAAAAAAAFAAAAAAICBAAAAAAAAA=</HashCode>
       <FileName>UtilitesClasses\MenuHandler.cs</FileName>
     </TypeIdentifier>
   </Class>

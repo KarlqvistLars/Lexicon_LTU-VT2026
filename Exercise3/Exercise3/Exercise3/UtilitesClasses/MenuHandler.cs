@@ -1,7 +1,8 @@
-﻿namespace Exercise4.UtilitesClasses
+﻿namespace Exercise3.UtilitesClasses
 {
     static public class MenuHandler
     {
+        static readonly string filePath = "c:/test1/vehicles.txt";
         public static Garage? garage { get; set; }
         public static bool Running { get; set; } = true;
         public static bool StartGarage(int garageSize, bool populate = false)
@@ -15,6 +16,8 @@
             {
                 garage = new Garage(20); // Standardstorlek
                 GarageHandler.AddStartVehicles(15); // Lägg till 15 slumpmässiga fordon
+                Console.WriteLine(Utilities.LoadVehicles(garage, filePath));
+                Console.ReadKey();
                 MenuMain();
             }
             return true;
@@ -25,6 +28,7 @@
             string closing = "Programmet avslutas...";
             Console.Write(Utilities.vTab);
             foreach (var item in closing) { Console.Write(item); Thread.Sleep(50); }
+            Utilities.SaveVehicles(garage, filePath);
             Running = false;
         }
         public static void MenuMain()
@@ -36,6 +40,7 @@
                 Console.WriteLine("1. Lägg till fordon");
                 Console.WriteLine("2. Ta bort fordon");
                 Console.WriteLine("3. Visa fordon");
+                Console.WriteLine("4. Hämta fordon från fil");
                 Console.WriteLine("0. Avsluta");
                 TomRaderMenu(4);
                 Console.Write($"{Utilities.vTab}Välj: ");
@@ -54,6 +59,10 @@
                         MenuShowVehicle();
                         break;
 
+                    case "4":
+                        MenuLoadVehicleFromFile();
+                        break;
+
                     case "0":
                         MenuHandler.ExitGarage();
                         break;
@@ -65,7 +74,7 @@
                 }
             }
         }
-        static void MenuAddVehicle()
+        private static void MenuAddVehicle()
         {
             bool running = true;
 
@@ -105,7 +114,6 @@
                     case "0":
                         running = false;
                         break;
-
                     default:
                         Console.WriteLine("Ogiltigt val");
                         Console.ReadKey();
@@ -113,7 +121,7 @@
                 }
             }
         }
-        static void MenuRemoveVehicle()
+        private static void MenuRemoveVehicle()
         {
             bool running = true;
 
@@ -145,16 +153,16 @@
                 }
             }
         }
-        static void MenuShowVehicle()
+        private static void MenuShowVehicle()
         {
             bool running = true;
 
             while (running)
             {
                 Utilities.ShowHeader("Visa fordon");
-                Console.WriteLine("1. Visa alla");
-                Console.WriteLine("2. Visa fordon");
-                Console.WriteLine("3. Sök fordon");
+                Console.WriteLine("1. Visa alla fordon");
+                Console.WriteLine("2. Visa fordon via regnummer");
+                Console.WriteLine("3. Sök fordon på typ, regnummer, färg, vikt, längd");
                 Console.WriteLine("0. Tillbaka");
                 TomRaderMenu(4);
                 Console.Write($"{Utilities.vTab}Välj: ");
@@ -181,7 +189,48 @@
                 }
             }
         }
-        static void TomRaderMenu(int count)
+        private static void MenuLoadVehicleFromFile()
+        {
+            bool running = true;
+
+            while (running)
+            {
+                Utilities.ShowHeader("Hämta fordon från fil");
+                Console.WriteLine("Denna meny är ännu inte implementerad.");
+                Console.WriteLine("0. Tillbaka");
+                TomRaderMenu(6);
+                Console.Write($"{Utilities.vTab}Välj: ");
+                string? input = Console.ReadLine();
+                switch (input)
+                {
+                    case "1":
+                        //MenuAddVehicle();
+                        break;
+
+                    case "2":
+                        //MenuRemoveVehicle();
+                        break;
+
+                    case "3":
+                        //MenuShowVehicle();
+                        break;
+
+                    case "4":
+                        //MenuLoadVehicleFromFile();
+                        break;
+
+                    case "0":
+                        running = false;
+                        break;
+
+                    default:
+                        Console.WriteLine("Ogiltigt val");
+                        Console.ReadKey();
+                        break;
+                }
+            }
+        }
+        private static void TomRaderMenu(int count)
         {
             for (int i = 0; i < count; i++)
             {
