@@ -6,7 +6,7 @@ namespace Exercise4
     {
         private string? _uuid;
         private string? _color;
-        private int _whight;
+        private int _weight;
         private int _length;
         private string? _type;
         public Vehicle()
@@ -14,11 +14,11 @@ namespace Exercise4
             _color = string.Empty;
             _type = string.Empty;
         }
-        public Vehicle(string uuid, string color, int whight, int length, string type = "")
+        public Vehicle(string uuid, string color, int weight, int length, string type = "")
         {
             this._uuid = uuid;
             this._color = color;
-            this._whight = whight;
+            this._weight = weight;
             this._length = length;
             this._type = type;
         }
@@ -32,10 +32,10 @@ namespace Exercise4
             get => _color ?? string.Empty;
             set => _color = value;
         }
-        public int Whight
+        public int Weight
         {
-            get => _whight;
-            set => _whight = value;
+            get => _weight;
+            set => _weight = value;
         }
         public int Length
         {
@@ -48,11 +48,11 @@ namespace Exercise4
         }
         public virtual string ToString2()
         {
-            return $"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}{Type} nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\tVikt: {Whight} Kg\t{Utilities.vTab}Längd: {Length} m";
+            return $"{Utilities.line30}{Utilities.line30}\n{Utilities.vTab}{Type} nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\tVikt: {Weight} Kg\t{Utilities.vTab}Längd: {Length} m";
         }
         public override string ToString()
         {
-            return $"{Type} nr: {Uuid}\n  Färg: {Color}\n  Vikt: {Whight} Kg\n  Längd: {Length} m\n";
+            return $"{Type} nr: {Uuid}\n  Färg: {Color}\n  Vikt: {Weight} Kg\n  Längd: {Length} m\n";
         }
     }
 }

@@ -8,8 +8,8 @@ namespace Exercise4
         decimal maxSpeed;
         decimal deplacement;
 
-        public Boat(string uuid, string color, int whight, int length, decimal maxWaterDepth, decimal maxSpeed, decimal deplacement)
-            : base(uuid, color, whight, length, "Boat")
+        public Boat(string uuid, string color, int weight, int length, decimal maxWaterDepth, decimal maxSpeed, decimal deplacement)
+            : base(uuid, color, weight, length, "Boat")
         {
             this.maxWaterDepth = maxWaterDepth;
             this.maxSpeed = maxSpeed;
@@ -36,13 +36,13 @@ namespace Exercise4
 
         public override string ToString()
         {
-            return $"{Utilities.vTab}Båt nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\n{Utilities.vTab}Vikt: {Whight} Kg\n{Utilities.vTab}Längd: {Length} m\n{Utilities.vTab}Maxdjup: {MaxWaterDepth} m\n{Utilities.vTab}Maxhastighet: {MaxSpeed} kn\n{Utilities.vTab}Deplacement: {Deplacement} ton\n";
+            return $"{Utilities.vTab}Båt nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\n{Utilities.vTab}Vikt: {Weight} Kg\n{Utilities.vTab}Längd: {Length} m\n{Utilities.vTab}Maxdjup: {MaxWaterDepth} m\n{Utilities.vTab}Maxhastighet: {MaxSpeed} kn\n{Utilities.vTab}Deplacement: {Deplacement} ton\n";
         }
 
         string thisType = "Båt";
         public override string ToString2()
         {
-            return $"{Utilities.vTab}\u001b[4m{thisType} nr: {Uuid}\u001b[0m\n{Utilities.vTab}Färg: {Color}, Vikt: {Whight} Kg, Längd: {Length} m\n{Utilities.vTab}\u001b[4mSpecifikt för {thisType}:\u001b[0m\n{Utilities.vTab}Maxdjup: {MaxWaterDepth} m, Maxhastighet: {MaxSpeed} kn, Deplacement: {Deplacement} t";
+            return $"{Utilities.vTab}\u001b[4m{thisType} nr: {Uuid}\u001b[0m\n{Utilities.vTab}Färg: {Color}, Vikt: {Weight} Kg, Längd: {Length} m\n{Utilities.vTab}\u001b[4mSpecifikt för {thisType}:\u001b[0m\n{Utilities.vTab}Maxdjup: {MaxWaterDepth} m, Maxhastighet: {MaxSpeed} kn, Deplacement: {Deplacement} t";
         }
         public string ToStringTypeSpec()
         {

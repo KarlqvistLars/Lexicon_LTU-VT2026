@@ -7,8 +7,8 @@ namespace Exercise4
         private int _numberOfSeats;
         private int _wheels;
 
-        public Bus(string uuid, string color, int whight, int length, int numberOfSeats, int wheels)
-            : base(uuid, color, whight, length, "Bus")
+        public Bus(string uuid, string color, int weight, int length, int numberOfSeats, int wheels)
+            : base(uuid, color, weight, length, "Bus")
         {
             this._numberOfSeats = numberOfSeats;
             this._wheels = wheels;
@@ -28,12 +28,12 @@ namespace Exercise4
 
         public override string ToString()
         {
-            return $"{Utilities.vTab}Buss nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\n{Utilities.vTab}Vikt: {Whight} Kg\n{Utilities.vTab}Längd: {Length} m\n{Utilities.vTab}Antal sittplatser: {NumberOfSeats} st\n{Utilities.vTab}Hjul: {Wheels} st";
+            return $"{Utilities.vTab}Buss nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\n{Utilities.vTab}Vikt: {Weight} Kg\n{Utilities.vTab}Längd: {Length} m\n{Utilities.vTab}Antal sittplatser: {NumberOfSeats} st\n{Utilities.vTab}Hjul: {Wheels} st";
         }
         string thisType = "Buss";
         public override string ToString2()
         {
-            return $"{Utilities.vTab}\u001b[4m{thisType} nr: {Uuid}\u001b[0m\n{Utilities.vTab}Färg: {Color}\tVikt: {Whight} Kg\tLängd: {Length} m\n{Utilities.vTab}\u001b[4mSpecifikt för {thisType}:\u001b[0m\n{Utilities.vTab}Antal sittplatser: {NumberOfSeats} st, Hjul: {Wheels} st";
+            return $"{Utilities.vTab}\u001b[4m{thisType} nr: {Uuid}\u001b[0m\n{Utilities.vTab}Färg: {Color}\tVikt: {Weight} Kg\tLängd: {Length} m\n{Utilities.vTab}\u001b[4mSpecifikt för {thisType}:\u001b[0m\n{Utilities.vTab}Antal sittplatser: {NumberOfSeats} st, Hjul: {Wheels} st";
         }
 
         public string ToStringTypeSpec()

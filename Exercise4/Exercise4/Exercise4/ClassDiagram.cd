@@ -10,7 +10,7 @@
   <Class Name="Exercise4.Vehicle">
     <Position X="9" Y="8.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAIAIQUAAAAAABAAAAAAAQABQAAgAAAAAA=</HashCode>
+      <HashCode>AAABAAAAAAAIAIQUAAAAAABAACAAAAAABQAAgAAAAAA=</HashCode>
       <FileName>Vehicle.cs</FileName>
     </TypeIdentifier>
   </Class>

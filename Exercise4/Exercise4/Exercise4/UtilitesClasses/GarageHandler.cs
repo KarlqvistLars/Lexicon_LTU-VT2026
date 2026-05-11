@@ -264,7 +264,7 @@ namespace Exercise4.UtilitesClasses
                     (vT == VType.None || v.Type.Equals(vT.ToString(), StringComparison.OrdinalIgnoreCase)) &&
                     (string.IsNullOrEmpty(regNumber) || v.Uuid.Equals(regNumber, StringComparison.OrdinalIgnoreCase)) &&
                     (string.IsNullOrEmpty(color) || v.Color.Equals(color, StringComparison.OrdinalIgnoreCase)) &&
-                    (string.IsNullOrEmpty(weight) || v.Whight.ToString().Equals(weight, StringComparison.OrdinalIgnoreCase)) &&
+                    (string.IsNullOrEmpty(weight) || v.Weight.ToString().Equals(weight, StringComparison.OrdinalIgnoreCase)) &&
                     (string.IsNullOrEmpty(length) || v.Length.ToString().Equals(length, StringComparison.OrdinalIgnoreCase)))
                 {
                     Console.WriteLine($"{Utilities.line30}{Utilities.line30}");

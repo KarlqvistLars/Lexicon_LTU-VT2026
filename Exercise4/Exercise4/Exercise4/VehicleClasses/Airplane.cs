@@ -7,8 +7,8 @@ namespace Exercise4
         int liftCapacity;
         decimal wingSpan;
         private int passengers;
-        public Airplane(string uuid, string color, int whight, int length, int liftCapacity, decimal wingSpan, int passengers)
-            : base(uuid, color, whight, length, "Airplane")
+        public Airplane(string uuid, string color, int weight, int length, int liftCapacity, decimal wingSpan, int passengers)
+            : base(uuid, color, weight, length, "Airplane")
         {
             this.liftCapacity = liftCapacity;
             this.wingSpan = wingSpan;
@@ -31,12 +31,12 @@ namespace Exercise4
         }
         public override string ToString()
         {
-            return $"{Utilities.vTab}Flygplan nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\n{Utilities.vTab}Vikt: {Whight} Kg\n{Utilities.vTab}Längd: {Length} m\n{Utilities.vTab}Lyftkapacitet: {LiftCapacity} kg\n{Utilities.vTab}Vingspann: {WingSpan} m\n{Utilities.vTab}Passagerare: {Passengers} st\n";
+            return $"{Utilities.vTab}Flygplan nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\n{Utilities.vTab}Vikt: {Weight} Kg\n{Utilities.vTab}Längd: {Length} m\n{Utilities.vTab}Lyftkapacitet: {LiftCapacity} kg\n{Utilities.vTab}Vingspann: {WingSpan} m\n{Utilities.vTab}Passagerare: {Passengers} st\n";
         }
         string thisType = "Flygplan";
         public override string ToString2()
         {
-            return $"{Utilities.vTab}\u001b[4m{thisType} nr: {Uuid}\u001b[0m\n{Utilities.vTab}Färg: {Color}, Vikt: {Whight} Kg, Längd: {Length} m\n{Utilities.vTab}\u001b[4mSpecifikt för {thisType}:\u001b[0m\n{Utilities.vTab}Lyftkapacitet: {LiftCapacity} kg, Vingspann: {WingSpan} m, Pax: {Passengers} st";
+            return $"{Utilities.vTab}\u001b[4m{thisType} nr: {Uuid}\u001b[0m\n{Utilities.vTab}Färg: {Color}, Vikt: {Weight} Kg, Längd: {Length} m\n{Utilities.vTab}\u001b[4mSpecifikt för {thisType}:\u001b[0m\n{Utilities.vTab}Lyftkapacitet: {LiftCapacity} kg, Vingspann: {WingSpan} m, Pax: {Passengers} st";
         }
         public string ToStringTypeSpec()
         {

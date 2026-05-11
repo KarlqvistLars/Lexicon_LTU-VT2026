@@ -162,19 +162,19 @@ namespace Exercise4.UtilitesClasses
                     switch (vehicle.Type)
                     {
                         case "Car":
-                            sb.AppendLine($"Type:Car,Uuid:{vehicle.Uuid},Color:{vehicle.Color},Whight:{vehicle.Whight},Length:{vehicle.Length},{((Car)vehicle).ToStringTypeSpec()}");
+                            sb.AppendLine($"Type:Car,Uuid:{vehicle.Uuid},Color:{vehicle.Color},Weight:{vehicle.Weight},Length:{vehicle.Length},{((Car)vehicle).ToStringTypeSpec()}");
                             break;
                         case "Bus":
-                            sb.AppendLine($"Type:Bus,Uuid:{vehicle.Uuid},Color:{vehicle.Color},Whight:{vehicle.Whight},Length:{vehicle.Length},{((Bus)vehicle).ToStringTypeSpec()}");
+                            sb.AppendLine($"Type:Bus,Uuid:{vehicle.Uuid},Color:{vehicle.Color},Weight:{vehicle.Weight},Length:{vehicle.Length},{((Bus)vehicle).ToStringTypeSpec()}");
                             break;
                         case "Motorcycle":
-                            sb.AppendLine($"Type:Motorcycle,Uuid:{vehicle.Uuid},Color:{vehicle.Color},Whight:{vehicle.Whight},Length:{vehicle.Length},{((Motorcycle)vehicle).ToStringTypeSpec()}");
+                            sb.AppendLine($"Type:Motorcycle,Uuid:{vehicle.Uuid},Color:{vehicle.Color},Weight:{vehicle.Weight},Length:{vehicle.Length},{((Motorcycle)vehicle).ToStringTypeSpec()}");
                             break;
                         case "Boat":
-                            sb.AppendLine($"Type:Boat,Uuid:{vehicle.Uuid},Color:{vehicle.Color},Whight:{vehicle.Whight},Length:{vehicle.Length},{((Boat)vehicle).ToStringTypeSpec()}");
+                            sb.AppendLine($"Type:Boat,Uuid:{vehicle.Uuid},Color:{vehicle.Color},Weight:{vehicle.Weight},Length:{vehicle.Length},{((Boat)vehicle).ToStringTypeSpec()}");
                             break;
                         case "Airplane":
-                            sb.AppendLine($"Type:Airplane,Uuid:{vehicle.Uuid},Color:{vehicle.Color},Whight:{vehicle.Whight},Length:{vehicle.Length},{((Airplane)vehicle).ToStringTypeSpec()}");
+                            sb.AppendLine($"Type:Airplane,Uuid:{vehicle.Uuid},Color:{vehicle.Color},Weight:{vehicle.Weight},Length:{vehicle.Length},{((Airplane)vehicle).ToStringTypeSpec()}");
                             break;
                         default:
                             break;
@@ -185,7 +185,7 @@ namespace Exercise4.UtilitesClasses
             sb.Clear();
         }
 
-        public static Vehicle[] LoadVehicles(string filePath, Garage garage)
+        public static Vehicle[] LoadVehicles(Garage garage, string filePath)
         {
             Vehicle[] vehicles = garage.Vehicles;
             Garage garageLoading = new Garage(20);
