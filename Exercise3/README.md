@@ -45,7 +45,7 @@ Samlingen av fordon ska internt i klassen hanteras som en array. Den interna arr
 var privat. Vid instansieringen av ett nytt garage måste kapaciteten anges som argument till
 konstruktorn.<br>
 
-**[X] Vi ska EJ använda oss av en List<'Vehicle> internt i Garage klassen!!!!**<br>
+ ☑️ **Vi ska EJ använda oss av en List<'Vehicle> internt i Garage klassen!!!!**<br>
 ### Funktionalitet - Det ska gå att:
 - [x] Lista samtliga parkerade fordon<br>
 - [x] Lista fordonstyper och hur många av varje som står i garaget<br>
