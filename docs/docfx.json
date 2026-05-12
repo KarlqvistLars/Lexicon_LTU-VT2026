@@ -38,9 +38,8 @@
         "IncludePrivateMembers": "true",
         "IncludeInternalMembers": "true"
       }
-    }
-  ],
-      {
+    },
+    {
       "src": [
         {
           "src": "..",
