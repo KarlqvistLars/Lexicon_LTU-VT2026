@@ -78,7 +78,8 @@ Skiss på klasserna.
 <br>
 
 ## [Manual Övning 3](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise3/Exercise3/Docs/Manual%C3%96vning3_20260511.pdf)
-En lite kortare manual och beskriving av programmet.
+En lite kortare manual och beskriving av programmet.<br>
+Samt en **[DocFX referens](https://karlqvistlars.github.io/Lexicon_LTU-VT2026/api/Exercise3/Exercise3.html)** till projektet.
 
 ## Top level - Exercise4
 ![UML](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Exercise3/Exercise3/Bilder/TopLevelExercise4.jpg)
