@@ -17,81 +17,88 @@ namespace Exercise3.UtilitesClasses
             Boat = 4,
             Airplane = 5
         }
-        internal static string ReadRegnumInput(Garage garage, VType type)
+
+        internal static string InputRegNum(Garage G, VType type)
         {
-            bool isValid = false;
-            string? regNumber = string.Empty;
+            bool isValid = true;
+            string regNum = string.Empty;
             do
             {
-                regNumber = Console.ReadLine()?.ToUpper();
-                switch (type)
-                {
-                    case VType.Car:
-                        if (Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{3} [0-9]{3}$"))
-                        {
-                            isValid = true;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Ogiltigt registreringsnummer. \nFormatet för bil ska vara 3 bokstäver följt av 3 siffror (exempel: ABC 123).");
-                            Console.Write("Försök igen: ");
-                        }
-                        break;
-                    case VType.Bus:
-                        if (Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{3} [0-9]{3}$"))
-                        {
-                            isValid = true;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Ogiltigt registreringsnummer. \nFormatet för bil ska vara 3 bokstäver följt av 3 siffror (exempel: ABC 123).");
-                            Console.Write("Försök igen: ");
-                        }
-                        break;
-                    case VType.Motorcycle:
-                        if (Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{3} [0-9]{3}$"))
-                        {
-                            isValid = true;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Ogiltigt registreringsnummer. \nFormatet för bil ska vara 3 bokstäver följt av 3 siffror (exempel: ABC 123).");
-                            Console.Write("Försök igen: ");
-                        }
-                        break;
-                    case VType.Boat:
-                        if (Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{2}[0-9]{5}$"))
-                        {
-                            isValid = true;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Ogiltigt registreringsnummer. \nFormatet för båt ska vara 2 bokstäver följt av 5 siffror (exempel: AB12345).");
-                            Console.Write("Försök igen: ");
-                        }
-                        break;
-                    case VType.Airplane:
-                        if (Regex.IsMatch(regNumber ?? string.Empty, @"SE-[A-Z]{3}$"))
-                        {
-                            isValid = true;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Formatet för flygplan ska vara SE- följt av 3 bokstäver (exempel: SE-ABC).");
-                            Console.Write("Försök igen: ");
-                        }
-                        break;
-                    default:
-                        break;
-                }
-                if (CheckUniqNumber(garage, regNumber))
+                regNum = Console.ReadLine().ToUpper() ?? string.Empty;
+                isValid = ReadRegnumInput(G, type, regNum);
+                if (CheckUniqNumber(G, regNum))
                 {
                     Console.WriteLine("Det finns redan ett fordon med detta registreringsnummer.\n Försök igen:");
                     isValid = false;
                 }
             } while (!isValid);
+            return regNum;
+        }
+        public static bool ReadRegnumInput(Garage garage, VType type, string regNumber)
+        {
+            bool isValid = false;
+            switch (type)
+            {
 
-            return regNumber ?? string.Empty;
+                case VType.Car:
+                    if (Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{3} [0-9]{3}$"))
+                    {
+                        isValid = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ogiltigt registreringsnummer. \nFormatet för bil ska vara 3 bokstäver följt av 3 siffror (exempel: ABC 123).");
+                        Console.Write("Försök igen: ");
+                    }
+                    break;
+                case VType.Bus:
+                    if (Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{3} [0-9]{3}$"))
+                    {
+                        isValid = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ogiltigt registreringsnummer. \nFormatet för bil ska vara 3 bokstäver följt av 3 siffror (exempel: ABC 123).");
+                        Console.Write("Försök igen: ");
+                    }
+                    break;
+                case VType.Motorcycle:
+                    if (Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{3} [0-9]{3}$"))
+                    {
+                        isValid = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ogiltigt registreringsnummer. \nFormatet för bil ska vara 3 bokstäver följt av 3 siffror (exempel: ABC 123).");
+                        Console.Write("Försök igen: ");
+                    }
+                    break;
+                case VType.Boat:
+                    if (Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{2}[0-9]{5}$"))
+                    {
+                        isValid = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ogiltigt registreringsnummer. \nFormatet för båt ska vara 2 bokstäver följt av 5 siffror (exempel: AB12345).");
+                        Console.Write("Försök igen: ");
+                    }
+                    break;
+                case VType.Airplane:
+                    if (Regex.IsMatch(regNumber ?? string.Empty, @"SE-[A-Z]{3}$"))
+                    {
+                        isValid = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Formatet för flygplan ska vara SE- följt av 3 bokstäver (exempel: SE-ABC).");
+                        Console.Write("Försök igen: ");
+                    }
+                    break;
+                default:
+                    break;
+            }
+            return isValid;
         }
         internal static string GenerateRandom()
         {
