@@ -40,6 +40,20 @@
       }
     }
   ],
+      {
+      "src": [
+        {
+          "src": "..",
+          "files": [ "Exercise3/Exercise3/Exercise3/Exercise3.csproj" ]
+        }
+      ],
+      "dest": "api/Exercise3/",
+      "properties": {
+        "IncludePrivateMembers": "true",
+        "IncludeInternalMembers": "true"
+      }
+    }
+  ],
   "build": {
     "content": [
       {
