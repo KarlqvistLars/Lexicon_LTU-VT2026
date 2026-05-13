@@ -16,7 +16,7 @@ namespace Exercise3
         {
             get => _vehicles;
         }
-        static public int Capacity
+        public int Capacity
         {
             get => _capacity;
         }
@@ -33,17 +33,18 @@ namespace Exercise3
             Console.WriteLine($"{Utilities.vTab}Garage is full, cannot add {vehicle.Type} with UUID: {vehicle.Uuid}");
             return false;
         }
-        public void RemoveVehicle(string uuid)
+        public bool RemoveVehicle(string uuid)
         {
             for (int i = 0; i < _capacity; i++)
             {
                 if (_vehicles[i] != null && _vehicles[i].Uuid == uuid)
                 {
                     _vehicles[i] = null;
-                    return;
+                    return true;
                 }
             }
             Console.WriteLine("Vehicle with UUID: " + uuid + " not found");
+            return false;
         }
         public override string ToString()
         {
