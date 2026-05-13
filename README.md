@@ -6,3 +6,4 @@
 ### [Övning 2 FlowControl(modifiering av given kod)](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/blob/main/Ovn2_FlowControl/README.md)
 ### [Övning 2b](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/tree/main/Exercise2b)
 ### [Övning 3](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/tree/main/Exercise3)
+### [Övning 4](https://github.com/KarlqvistLars/Lexicon_Exercise4/blob/main/README.md)
