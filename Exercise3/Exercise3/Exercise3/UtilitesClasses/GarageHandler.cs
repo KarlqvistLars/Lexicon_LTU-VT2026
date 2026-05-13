@@ -206,7 +206,7 @@ namespace Exercise3.UtilitesClasses
         {
             string Title = "Ta bort fordon.";
             ShowHeader(Title);
-            if (SearchVehicle(G)) { RemoveVehicleById(G); }
+            if (NewSearchVehicle(G)) { RemoveVehicleById(G); }
         }
         internal static void RemoveVehicleByRegnummer(Garage G)
         {
@@ -328,9 +328,11 @@ namespace Exercise3.UtilitesClasses
                 "Välj en siffra, skriv en sökterm eller\ntryck Enter för att hoppa över:");
             Console.Write("Du vill söka en:\n1. Bil\n2. Buss\n3. Motorcykel\n4. Båt\n5. Flygplan?\nAnge val: ");
             int vehichleType = int.TryParse(Console.ReadLine(), out int res) ? res : 0;
+
             Console.Write($"\nDu söker {fordon[vehichleType]} med registrerings nummer (Enter för att hoppa över): ");
 
-            string regNumber = Utilities.InputRegNum(garage, (Utilities.VType)vehichleType);
+            string regNumber = Utilities.InputRegNum(garage, (Utilities.VType)vehichleType, true);
+            //string regNumber = Utilities.InputRegNum(garage, (Utilities.VType)vehichleType, false);
 
             Console.Write("\nsom har färgen (Enter för att hoppa över): ");
             string? color = Console.ReadLine() ?? string.Empty;
@@ -348,12 +350,21 @@ namespace Exercise3.UtilitesClasses
             string[] fordon = { "fordon", "bilar", "bussar", "motorcyklar", "båtar", "flygplan" };
             foreach (Vehicle v in G.Vehicles)
             {
-                if (v != null &&
-                    (vT == VType.None || v.Type.Equals(vT.ToString(), StringComparison.OrdinalIgnoreCase)) &&
-                    (string.IsNullOrEmpty(regNumber) || v.Uuid.Equals(regNumber, StringComparison.OrdinalIgnoreCase)) &&
+                if (string.IsNullOrEmpty(regNumber))
+                {
+                    if (v != null &&
+                        (vT == VType.None || v.Type.Equals(vT.ToString(), StringComparison.OrdinalIgnoreCase)) &&
                     (string.IsNullOrEmpty(color) || v.Color.Equals(color, StringComparison.OrdinalIgnoreCase)) &&
                     (string.IsNullOrEmpty(weight) || v.Weight.ToString().Equals(weight, StringComparison.OrdinalIgnoreCase)) &&
                     (string.IsNullOrEmpty(length) || v.Length.ToString().Equals(length, StringComparison.OrdinalIgnoreCase)))
+                    {
+                        Console.WriteLine($"{line30}{line30}");
+                        Console.WriteLine(v.ToString2());
+                        listExist = true;
+                        counter++;
+                    }
+                }
+                else if (v != null && v.Uuid.Equals(regNumber, StringComparison.OrdinalIgnoreCase))
                 {
                     Console.WriteLine($"{line30}{line30}");
                     Console.WriteLine(v.ToString2());
@@ -371,5 +382,104 @@ namespace Exercise3.UtilitesClasses
             }
             return listExist;
         }
+
+        internal static bool NewSearchVehicle(Garage garage)
+        {
+            bool fordonVisade = false;
+            string[] fordon = { "fordon", "bilar", "bussar", "motorcyklar", "båtar", "flygplan" };
+            string Title = "Sök fordon";
+            ShowHeader(Title);
+            Console.WriteLine("Sök parametrar:\n" +
+                "Välj en siffra, skriv en sökterm eller\ntryck Enter för att hoppa över:");
+            Console.Write("Du vill söka en:\n1. Bil\n2. Buss\n3. Motorcykel\n4. Båt\n5. Flygplan?\nAnge val: ");
+            int vehichleType = int.TryParse(Console.ReadLine(), out int res) ? res : 0;
+
+            Console.Write($"\nDu söker {fordon[vehichleType]} med registrerings nummer (Enter för att hoppa över): ");
+
+            string regNumber = Utilities.InputRegNum(garage, (Utilities.VType)vehichleType, true);
+            //string regNumber = Utilities.InputRegNum(garage, (Utilities.VType)vehichleType, false);
+
+            Console.Write("\nsom har färgen (Enter för att hoppa över): ");
+            string? color = Console.ReadLine() ?? string.Empty;
+            Console.Write("\noch väger (Enter för att hoppa över): ");
+            string? weight = Console.ReadLine() ?? string.Empty;
+            Console.Write("\nmed längden (Enter för att hoppa över): ");
+            string? length = Console.ReadLine() ?? string.Empty;
+            fordonVisade = NewShowGarageSearch(garage, (VType)vehichleType, regNumber, color, weight, length);
+            return fordonVisade;
+        }
+
+        private static bool NewShowGarageSearch(Garage G, VType vT, string regNumber, string color, string weight, string length)
+        {
+            int counter = 0;
+            bool listExist = false;
+            string[] fordon = { "fordon", "bilar", "bussar", "motorcyklar", "båtar", "flygplan" };
+
+            Vehicle[] searchType = new Vehicle[G.Capacity];
+            Vehicle[] searchReg = new Vehicle[G.Capacity];
+            Vehicle[] searchColor = new Vehicle[G.Capacity];
+            Vehicle[] searchWeight = new Vehicle[G.Capacity];
+            Vehicle[] searchLength = new Vehicle[G.Capacity];
+
+            for (int i = 0; i < G.Capacity; i++)
+            {
+                if (G.Vehicles[i]?.Type != null && (vT == VType.None || G.Vehicles[i]?.Type == vT.ToString()))
+                {
+                    searchType[i] = G.Vehicles[i];
+                }
+            }
+            for (int i = 0; i < G.Capacity; i++)
+            {
+                if (searchType[i]?.Uuid != null && (string.IsNullOrEmpty(regNumber) || searchType[i]?.Uuid == regNumber?.ToString()))
+                {
+                    searchReg[i] = searchType[i];
+                }
+            }
+            for (int i = 0; i < G.Capacity; i++)
+            {
+                if (searchReg[i]?.Color != null && (string.IsNullOrEmpty(color) || searchReg[i]?.Color == color))
+                {
+                    searchColor[i] = searchReg[i];
+                }
+            }
+            for (int i = 0; i < G.Capacity; i++)
+            {
+                if (searchColor[i]?.Weight != null && (string.IsNullOrEmpty(weight) || searchColor[i]?.Weight.ToString() == weight))
+                {
+                    searchWeight[i] = searchColor[i];
+                }
+            }
+            for (int i = 0; i < G.Capacity; i++)
+            {
+                if (searchWeight[i]?.Length != null && (string.IsNullOrEmpty(length) || searchWeight[i]?.Length.ToString() == length))
+                {
+                    searchLength[i] = searchWeight[i];
+                }
+            }
+
+
+            foreach (var item in searchLength)
+            {
+
+                if (item != null)
+                {
+                    Console.WriteLine($"{line30}{line30}");
+                    Console.WriteLine(item.ToString2());
+                    listExist = true;
+                    counter++;
+                }
+            }
+
+            Console.WriteLine($"{line30}{line30}");
+            Console.WriteLine($"{vTab}Det fanns {counter} {fordon[(int)vT]} som matchade sökkriterierna.");
+            Console.WriteLine($"{vTab}Regnummer: {(string.IsNullOrEmpty(regNumber) ? "Alla" : regNumber)}, Färg: {(string.IsNullOrEmpty(color) ? "Alla" : color)}, Vikt: {(string.IsNullOrEmpty(weight) ? "Alla" : weight)}, Längd: {(string.IsNullOrEmpty(length) ? "Alla" : length)}");
+            if (!listExist)
+            {
+                Console.WriteLine($"{vTab}Det fanns inga {fordon[(int)vT]} som matchade sökkriterierna.");
+                Console.WriteLine($"{vTab}Regnummer: {(string.IsNullOrEmpty(regNumber) ? "Alla" : regNumber)}, Färg: {(string.IsNullOrEmpty(color) ? "Alla" : color)}, Vikt: {(string.IsNullOrEmpty(weight) ? "Alla" : weight)}, Längd: {(string.IsNullOrEmpty(length) ? "Alla" : length)}");
+            }
+            return listExist;
+        }
+
     }
 }

@@ -10,7 +10,9 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'" />
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants);UNIT_TEST</DefineConstants>
+  </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="EdgePDF.Viewer" Version="12.6.1" />

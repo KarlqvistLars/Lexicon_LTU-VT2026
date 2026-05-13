@@ -35,15 +35,15 @@ namespace Exercise3.Tests
             bool isAddedOk6 = G.AddVehicle(new Car("ABC 135", "Röd", 1200, 4, 4, 4));
             bool isAddedOk7 = G.AddVehicle(new Car("ABC 136", "Röd", 1200, 4, 4, 4));
             int capacity = G.Capacity;
-            bool result1 = ReadRegnumInput(G, VType.Car, REGNUM1);
-            bool result2 = ReadRegnumInput(G, VType.Motorcycle, REGNUM2);
-            bool result3 = ReadRegnumInput(G, VType.Bus, REGNUM3);
-            bool result4 = ReadRegnumInput(G, VType.Car, REGNUM4);
-            bool result5 = ReadRegnumInput(G, VType.Boat, REGNUM5);
-            bool result6 = ReadRegnumInput(G, VType.Boat, REGNUM6);
-            bool result7 = ReadRegnumInput(G, VType.Airplane, REGNUM7);
-            bool result8 = ReadRegnumInput(G, VType.Airplane, REGNUM8);
-            bool result9 = ReadRegnumInput(G, VType.Airplane, REGNUM9);
+            string[] result1 = ReadRegnumInput(VType.Car, REGNUM1);
+            string[] result2 = ReadRegnumInput(VType.Motorcycle, REGNUM2);
+            string[] result3 = ReadRegnumInput(VType.Bus, REGNUM3);
+            string[] result4 = ReadRegnumInput(VType.Car, REGNUM4);
+            string[] result5 = ReadRegnumInput(VType.Boat, REGNUM5);
+            string[] result6 = ReadRegnumInput(VType.Boat, REGNUM6);
+            string[] result7 = ReadRegnumInput(VType.Airplane, REGNUM7);
+            string[] result8 = ReadRegnumInput(VType.Airplane, REGNUM8);
+            string[] result9 = ReadRegnumInput(VType.Airplane, REGNUM9);
             string tostring = G.ToString();
 
             // Assert
@@ -58,15 +58,15 @@ namespace Exercise3.Tests
             Assert.False(isAddedOk7);
             Assert.Equal(2, v.Length);
             Assert.Equal(2, capacity);
-            Assert.True(result1);
-            Assert.False(result2);
-            Assert.False(result3);
-            Assert.False(result4);
-            Assert.False(result5);
-            Assert.False(result6);
-            Assert.True(result7);
-            Assert.False(result8);
-            Assert.False(result9);
+            Assert.Equal("true", result1[0]);
+            Assert.Equal("false", result2[0]);
+            Assert.Equal("false", result3[0]);
+            Assert.Equal("false", result4[0]);
+            Assert.Equal("false", result5[0]);
+            Assert.Equal("false", result6[0]);
+            Assert.Equal("true", result7[0]);
+            Assert.Equal("false", result8[0]);
+            Assert.Equal("false", result9[0]);
             Assert.Equal(tostring, G.ToString());
         }
     }
