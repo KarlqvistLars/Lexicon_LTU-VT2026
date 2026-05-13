@@ -181,9 +181,10 @@ namespace Exercise3.UtilitesClasses
                         GarageHandler.ShowVehicleById(garage);
                         break;
                     case "3":
-                        GarageHandler.SearchVehicle(garage);
+                        GarageHandler.NewSearchVehicle(garage);
                         Console.WriteLine("Sökning klar, tryck Enter för att fortsätta...");
                         Console.ReadLine();
+
                         break;
                     case "0":
                         running = false;

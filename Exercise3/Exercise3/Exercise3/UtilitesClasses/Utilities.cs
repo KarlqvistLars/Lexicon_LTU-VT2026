@@ -18,27 +18,37 @@ namespace Exercise3.UtilitesClasses
             Airplane = 5
         }
 
-        internal static string InputRegNum(Garage G, VType type)
+        public static string InputRegNum(Garage G, VType type, bool skipUniqCheck = false)
         {
             bool running = true;
-            string[] RegNumCheck = new string[2];
+            string[] RegNumCheck = new string[3];
             bool isUniq = false;
             string regNum = Console.ReadLine().ToUpper() ?? string.Empty;
             do
             {
                 RegNumCheck = ReadRegnumInput(type, regNum);
-                isUniq = CheckUniqNumber(G, regNum);
+                isUniq = CheckUniqNumber(G, regNum, skipUniqCheck);
+                regNum = RegNumCheck[2];
+
                 if ((RegNumCheck[0] == "true" && isUniq) || string.IsNullOrEmpty(regNum))
                 {
                     running = false;
                 }
                 else
                 {
-                    Console.WriteLine(RegNumCheck[1]);
-                    Console.Write($"{vTab}Försök igen: ");
-                    regNum = Console.ReadLine().ToUpper() ?? string.Empty;
+                    if (skipUniqCheck)
+                    {
+                        running = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine(RegNumCheck[1]);
+                        Console.Write($"{vTab}Försök igen: ");
+                        regNum = Console.ReadLine().ToUpper() ?? string.Empty;
+                    }
                 }
-            } while (running);
+            }
+            while (running);
             return regNum;
         }
         /// <summary>
@@ -49,7 +59,7 @@ namespace Exercise3.UtilitesClasses
         /// <returns></returns>
         public static string[] ReadRegnumInput(VType type, string regNumber)
         {
-            string[] result = new string[2];
+            string[] result = new string[3];
             result[0] = "false";
             switch (type)
             {
@@ -104,6 +114,10 @@ namespace Exercise3.UtilitesClasses
                     }
                     break;
                 default:
+                    if ((Regex.IsMatch(regNumber ?? string.Empty, @"SE-[A-Z]{3}$")) || (Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{2}[0-9]{5}$")) || (Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{3} [0-9]{3}$")))
+                    {
+                        result[2] = regNumber;
+                    }
                     break;
             }
             return result;
@@ -139,6 +153,15 @@ namespace Exercise3.UtilitesClasses
             }
             Console.WriteLine("Total number of " + type.ToString() + ": " + count);
         }
+        /// <summary>
+        /// Returnerar false om det redan finns ett fordon med samma registreringsnummer i garaget, annars true. 
+        /// Kan overridea för att tillåta dubbletter (används vid redigering av fordon där
+        /// registreringsnumret inte ändras).
+        /// </summary>
+        /// <param name="garage"></param>
+        /// <param name="regNumber"></param>
+        /// <param name="overRide"></param>Default false. Man vill stoppa möjligheten att använda detta nummer.
+        /// <returns></returns>
         internal static bool CheckUniqNumber(Garage garage, string? regNumber, bool overRide = false)
         {
             bool output = true;
