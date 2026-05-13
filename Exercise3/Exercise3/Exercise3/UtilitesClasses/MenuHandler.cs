@@ -1,4 +1,4 @@
-﻿//#define COLORS
+﻿
 namespace Exercise3.UtilitesClasses
 {
     static public class MenuHandler
@@ -17,32 +17,23 @@ namespace Exercise3.UtilitesClasses
             {
                 garage = new Garage(20); // Standardstorlek
                 GarageHandler.AddStartVehicles(15); // Lägg till 15 slumpmässiga fordon
-                Console.WriteLine(Utilities.LoadVehicles(garage, filePath));
-                Console.ReadKey();
                 MenuMain();
             }
             return true;
         }
-#if COLORS
-        static ConsoleColor[] colors = new ConsoleColor[] { ConsoleColor.Red, ConsoleColor.Blue, ConsoleColor.Green, ConsoleColor.Yellow, ConsoleColor.White };
-#endif
         public static void ExitGarage()
         {
             // Här kan allt sparas eller städas upp innan programmet avslutas
             string closing = "Programmet avslutas...";
             Console.Write(Utilities.vTab);
-#if COLORS
-            Random rand = new Random();
-#endif
             foreach (var item in closing)
             {
-#if COLORS
-                Console.ForegroundColor = colors[rand.Next(0, colors.Length)];
-#endif
                 Console.Write(item);
                 Thread.Sleep(50);
             }
+#if !UNIT_TEST
             Utilities.SaveVehicles(garage, filePath);
+#endif
             Running = false;
         }
         public static void MenuMain()
@@ -82,7 +73,7 @@ namespace Exercise3.UtilitesClasses
                         break;
 
                     default:
-                        Console.WriteLine("Ogiltigt val");
+                        Console.WriteLine($"{Utilities.vTab}Ogiltigt val");
                         Console.ReadKey();
                         break;
                 }
@@ -190,7 +181,9 @@ namespace Exercise3.UtilitesClasses
                         GarageHandler.ShowVehicleById(garage);
                         break;
                     case "3":
-                        GarageHandler.SearchVehicleAndShow(garage);
+                        GarageHandler.SearchVehicle(garage);
+                        Console.WriteLine("Sökning klar, tryck Enter för att fortsätta...");
+                        Console.ReadLine();
                         break;
                     case "0":
                         running = false;
@@ -210,7 +203,7 @@ namespace Exercise3.UtilitesClasses
             while (running)
             {
                 Utilities.ShowHeader("Hämta fordon från fil");
-                Console.WriteLine("Denna meny är ännu inte implementerad.");
+                Console.WriteLine($"1. Ladda sparade fordon i befintlig garage storlek.\n{Utilities.vTab}Det aktuella garaget sparas automatiskt vid avslut.");
                 Console.WriteLine("0. Tillbaka");
                 TomRaderMenu(6);
                 Console.Write($"{Utilities.vTab}Välj: ");
@@ -218,7 +211,8 @@ namespace Exercise3.UtilitesClasses
                 switch (input)
                 {
                     case "1":
-                        //MenuAddVehicle();
+                        Console.WriteLine(Utilities.LoadVehicles(garage, filePath));
+                        Console.ReadKey();
                         break;
 
                     case "2":

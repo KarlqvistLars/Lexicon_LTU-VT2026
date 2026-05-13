@@ -20,85 +20,93 @@ namespace Exercise3.UtilitesClasses
 
         internal static string InputRegNum(Garage G, VType type)
         {
-            bool isValid = true;
-            string regNum = string.Empty;
+            bool running = true;
+            string[] RegNumCheck = new string[2];
+            bool isUniq = false;
+            string regNum = Console.ReadLine().ToUpper() ?? string.Empty;
             do
             {
-                regNum = Console.ReadLine().ToUpper() ?? string.Empty;
-                isValid = ReadRegnumInput(G, type, regNum);
-                if (CheckUniqNumber(G, regNum))
+                RegNumCheck = ReadRegnumInput(type, regNum);
+                isUniq = CheckUniqNumber(G, regNum);
+                if ((RegNumCheck[0] == "true" && isUniq) || string.IsNullOrEmpty(regNum))
                 {
-                    Console.WriteLine("Det finns redan ett fordon med detta registreringsnummer.\n Försök igen:");
-                    isValid = false;
+                    running = false;
                 }
-            } while (!isValid);
+                else
+                {
+                    Console.WriteLine(RegNumCheck[1]);
+                    Console.Write($"{vTab}Försök igen: ");
+                    regNum = Console.ReadLine().ToUpper() ?? string.Empty;
+                }
+            } while (running);
             return regNum;
         }
-        public static bool ReadRegnumInput(Garage garage, VType type, string regNumber)
+        /// <summary>
+        /// Ett filter för att validera registreringsnummer baserat på fordonstypen. Använder regex för att kontrollera formatet.
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="regNumber"></param>
+        /// <returns></returns>
+        public static string[] ReadRegnumInput(VType type, string regNumber)
         {
-            bool isValid = false;
+            string[] result = new string[2];
+            result[0] = "false";
             switch (type)
             {
-
                 case VType.Car:
                     if (Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{3} [0-9]{3}$"))
                     {
-                        isValid = true;
+                        result[0] = "true";
                     }
                     else
                     {
-                        Console.WriteLine("Ogiltigt registreringsnummer. \nFormatet för bil ska vara 3 bokstäver följt av 3 siffror (exempel: ABC 123).");
-                        Console.Write("Försök igen: ");
+                        result[1] = $"{vTab}Ogiltigt registreringsnummer. \n{vTab}Formatet för bil ska vara 3 bokstäver följt av 3 siffror (exempel: ABC 123).";
                     }
                     break;
                 case VType.Bus:
                     if (Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{3} [0-9]{3}$"))
                     {
-                        isValid = true;
+                        result[0] = "true";
                     }
                     else
                     {
-                        Console.WriteLine("Ogiltigt registreringsnummer. \nFormatet för bil ska vara 3 bokstäver följt av 3 siffror (exempel: ABC 123).");
-                        Console.Write("Försök igen: ");
+                        result[1] = $"{vTab}Ogiltigt registreringsnummer. \n{vTab}Formatet för buss ska vara 3 bokstäver följt av 3 siffror (exempel: ABC 123).";
                     }
                     break;
                 case VType.Motorcycle:
                     if (Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{3} [0-9]{3}$"))
                     {
-                        isValid = true;
+                        result[0] = "true";
                     }
                     else
                     {
-                        Console.WriteLine("Ogiltigt registreringsnummer. \nFormatet för bil ska vara 3 bokstäver följt av 3 siffror (exempel: ABC 123).");
-                        Console.Write("Försök igen: ");
+                        result[1] = $"{vTab}Ogiltigt registreringsnummer. \n{vTab}Formatet för motorcykel ska vara 3 bokstäver följt av 3 siffror (exempel: ABC 123).";
                     }
                     break;
                 case VType.Boat:
                     if (Regex.IsMatch(regNumber ?? string.Empty, @"^[A-Z]{2}[0-9]{5}$"))
                     {
-                        isValid = true;
+                        result[0] = "true";
                     }
                     else
                     {
-                        Console.WriteLine("Ogiltigt registreringsnummer. \nFormatet för båt ska vara 2 bokstäver följt av 5 siffror (exempel: AB12345).");
-                        Console.Write("Försök igen: ");
+                        result[1] = $"{vTab}Ogiltigt registreringsnummer. \n{vTab}Formatet för båt ska vara 2 bokstäver följt av 5 siffror (exempel: AB12345).";
                     }
                     break;
                 case VType.Airplane:
                     if (Regex.IsMatch(regNumber ?? string.Empty, @"SE-[A-Z]{3}$"))
                     {
-                        isValid = true;
+                        result[0] = "true";
                     }
                     else
                     {
-                        Console.WriteLine("Formatet för flygplan ska vara SE- följt av 3 bokstäver (exempel: SE-ABC).");
-                        Console.Write("Försök igen: ");
+                        result[1] = $"{vTab}Ogiltigt registreringsnummer. \n{vTab}Formatet för flygplan ska vara SE- följt av 3 bokstäver (exempel: SE-ABC).";
                     }
                     break;
                 default:
                     break;
             }
-            return isValid;
+            return result;
         }
         internal static string GenerateRandom()
         {
@@ -131,14 +139,15 @@ namespace Exercise3.UtilitesClasses
             }
             Console.WriteLine("Total number of " + type.ToString() + ": " + count);
         }
-        internal static bool CheckUniqNumber(Garage garage, string? regNumber)
+        internal static bool CheckUniqNumber(Garage garage, string? regNumber, bool overRide = false)
         {
-            bool output = false;
+            bool output = true;
             for (int i = 0; i < garage.Vehicles.Length; i++)
             {
-                if (garage.Vehicles[i]?.Uuid?.ToString() == regNumber?.ToString()) // ?.ToString() added to avoid possible null reference exception
+                if (garage.Vehicles[i]?.Uuid?.ToString() == regNumber?.ToString() && !overRide) // ?.ToString() added to avoid possible null reference exception
                 {
-                    output = true;
+                    output = false;
+                    Console.WriteLine($"{vTab}Registreringsnummer finns redan.");
                 }
             }
             return output;
@@ -169,7 +178,7 @@ namespace Exercise3.UtilitesClasses
                 File.Create(filePath).Close();
             }
             StringBuilder sb = new();
-            sb.AppendLine($"GarageCapacity:{Garage.Capacity}");
+            sb.AppendLine($"GarageCapacity:{garage.Capacity}");
             foreach (var vehicle in garage.Vehicles)
             {
                 if (vehicle != null)
@@ -201,7 +210,7 @@ namespace Exercise3.UtilitesClasses
         }
         public static string LoadVehicles(Garage garage, string filePath)
         {
-            if (!File.Exists(filePath)) { return $"{filePath} existerar ej inga fordon har laddats."; }
+            if (!File.Exists(filePath)) { return $"{Utilities.vTab}{filePath} existerar ej inga fordon har laddats."; }
             var lines = File.ReadAllLines(filePath);
             int capacity = int.Parse(lines[0].Split(':')[1]);
 
@@ -211,7 +220,7 @@ namespace Exercise3.UtilitesClasses
             int vehicleCount = 0;
             foreach (var line in lines)
             {
-                Vehicle v = new Vehicle();
+                Vehicle v = new();
                 if (string.IsNullOrWhiteSpace(line)) { continue; }
                 var vehicleParts = line.Split('[');
                 var parts = vehicleParts[0].Split(';');
@@ -271,7 +280,7 @@ namespace Exercise3.UtilitesClasses
             }
 
             MenuHandler.garage = garageLoading;
-            return $"{vehicleCount} st fordon har laddats från {filePath}.";
+            return $"{Utilities.vTab}{vehicleCount} st fordon har laddats från {filePath}.\n{Utilities.vTab}Tryck Enter för att fortsätta...";
         }
     }
 }
