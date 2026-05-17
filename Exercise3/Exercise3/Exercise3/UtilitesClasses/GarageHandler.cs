@@ -382,7 +382,6 @@ namespace Exercise3.UtilitesClasses
             }
             return listExist;
         }
-
         internal static bool NewSearchVehicle(Garage garage)
         {
             bool fordonVisade = false;
@@ -408,7 +407,6 @@ namespace Exercise3.UtilitesClasses
             fordonVisade = NewShowGarageSearch(garage, (VType)vehichleType, regNumber, color, weight, length);
             return fordonVisade;
         }
-
         private static bool NewShowGarageSearch(Garage G, VType vT, string regNumber, string color, string weight, string length)
         {
             int counter = 0;
@@ -480,6 +478,5 @@ namespace Exercise3.UtilitesClasses
             }
             return listExist;
         }
-
     }
 }
