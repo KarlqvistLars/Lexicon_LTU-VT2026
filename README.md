@@ -17,7 +17,7 @@ Dokumentation av övningarna 1, 1b, 2, 2b och 3.
 ```
 ### [Övning 2b](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/tree/main/Ovn2_FlowControl)
 ```
-Övning 2 - Flöde via loopar och strängmanipulation
+Övning 2b - Flöde via loopar och strängmanipulation
 ```
 ### [Övning 3](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/tree/main/Exercise3)
 ```
