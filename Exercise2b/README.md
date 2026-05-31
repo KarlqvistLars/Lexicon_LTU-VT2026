@@ -1,4 +1,4 @@
-# C# Övning 3 - Encapsulation
+# C# Övning 2b - Encapsulation
 
 ### 1. Sort Persons by Name and Age
 

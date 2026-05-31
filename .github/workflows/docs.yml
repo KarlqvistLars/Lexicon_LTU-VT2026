@@ -51,6 +51,12 @@ jobs:
       - name: Build Exercise 2 and create XML docs
         run: dotnet build Exercise2/Exercise2/Exercise2/Exercise2.csproj --configuration Release --no-restore
 
+      - name: Restore Exercise 3
+        run: dotnet restore Exercise3/Exercise3/Exercise3/Exercise3.csproj
+
+      - name: Build Exercise 3 and create XML docs
+        run: dotnet build Exercise3/Exercise3/Exercise3/Exercise3.csproj --configuration Release --no-restore
+
       - name: Install DocFX
         run: dotnet tool install -g docfx
 
