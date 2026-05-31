@@ -7,7 +7,6 @@ namespace Exercise3
         decimal maxWaterDepth;
         decimal maxSpeed;
         decimal deplacement;
-
         public Boat(string uuid, string color, int weight, int length, decimal maxWaterDepth, decimal maxSpeed, decimal deplacement)
             : base(uuid, color, weight, length, "Boat")
         {
@@ -15,30 +14,25 @@ namespace Exercise3
             this.maxSpeed = maxSpeed;
             this.deplacement = deplacement;
         }
-
         public decimal MaxWaterDepth
         {
             get => maxWaterDepth;
             set => maxWaterDepth = value;
         }
-
         public decimal MaxSpeed
         {
             get => maxSpeed;
             set => maxSpeed = value;
         }
-
         public decimal Deplacement
         {
             get => deplacement;
             set => deplacement = value;
         }
-
         public override string ToString()
         {
             return $"{Utilities.vTab}Båt nr: {Uuid}\n{Utilities.vTab}Färg: {Color}\n{Utilities.vTab}Vikt: {Weight} Kg\n{Utilities.vTab}Längd: {Length} m\n{Utilities.vTab}Maxdjup: {MaxWaterDepth} m\n{Utilities.vTab}Maxhastighet: {MaxSpeed} kn\n{Utilities.vTab}Deplacement: {Deplacement} kg\n";
         }
-
         string thisType = "Båt";
         public override string ToString2()
         {
