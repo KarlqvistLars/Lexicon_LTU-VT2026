@@ -3,6 +3,7 @@
 ```
 Dokumentation av övningarna 1, 1b, 2, 2b och 3.
 ```
+## C#-Kursen
 ### [Övning 1](https://github.com/KarlqvistLars/Lexicon_LTU-VT2026/tree/main/Exercise1)
 ```
 Övning 1 - Personalregister.
@@ -27,7 +28,7 @@ Dokumentation av övningarna 1, 1b, 2, 2b och 3.
 ```
 Övning 4 - Garage 2.0 (Nytt repository: Exercise_4)
 ```
-
+## ASP.NET WebApi-kursen
 ### [ASP.NET Övning 3 och 4](https://github.com/KarlqvistLars/MovieAPI)
 ```
 Övning 3 och 4 - MovieAPI (Nytt repository)
